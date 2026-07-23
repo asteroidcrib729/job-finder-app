@@ -88,9 +88,11 @@ If you also want Telegram notifications:
 ---
 
 ### Step 5: Enable GitHub Actions Workflow Permissions
-1. In your GitHub Repository, go to **Settings** -> **Actions** -> **General**.
-2. Scroll to **Workflow permissions** and select **Read and write permissions**.
-3. Click **Save**.
+1. Open your repository's Actions settings directly: **[https://github.com/asteroidcrib729/job-finder-app/settings/actions](https://github.com/asteroidcrib729/job-finder-app/settings/actions)**
+   *(Or navigate to **Settings** tab -> expand **Actions** in the left sidebar -> click **General**)*.
+2. Scroll down to the **Workflow permissions** section.
+3. Select **Read and write permissions**.
+4. Click **Save**.
 
 That's it! GitHub Actions will now run automatically **every 3 hours**, search for new fresh-graduate software engineer jobs in Karachi & Remote, and push alerts straight to your phone.
 
