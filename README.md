@@ -47,12 +47,20 @@ Targeted specifically for **Fresh Engineering Graduates, Junior, Entry-Level, an
 ## 🛠️ Step-by-Step Setup Guide
 
 ### Step 1: Set Up Discord Webhook (Push Notifications to Phone)
-1. Open Discord on your PC or phone and create or select a personal server.
-2. Go to **Server Settings** -> **Integrations** -> **Webhooks** -> Click **New Webhook**.
-3. Name your bot (e.g., `Job Finder Alert Bot`) and select the channel where you want notifications.
-4. Click **Copy Webhook URL**.
 
-> 💡 *Download the Discord app on your phone and enable push notifications for this channel so every new job post triggers an instant mobile notification!*
+#### On Desktop App or Web Browser (`discord.com`):
+1. **Create or Open a Server**: In Discord, click the **`+`** icon on the left sidebar -> **Create My Own** -> **For me and my friends** -> **Create**.
+2. **Open Channel Settings**: Hover over your text channel (e.g., `#general` or `#job-alerts`) and click the **⚙️ Edit Channel** gear icon.
+3. **Open Integrations**: In the left sidebar of the channel settings, click **Integrations**.
+4. **Create Webhook**: Click **Webhooks** (or **Create Webhook**) -> Click **New Webhook**.
+5. **Copy URL**: Set a name (e.g., `Job Finder Bot`) and click **Copy Webhook URL**.
+
+#### On Discord Mobile App (iOS / Android):
+1. Tap and hold your channel name -> Tap **Edit Channel**.
+2. Tap **Integrations** -> Tap **Webhooks** -> Tap **Create Webhook**.
+3. Tap the created webhook and tap **Copy Webhook URL**.
+
+> 💡 *Download the Discord mobile app and enable push notifications for this channel so every new job post triggers an instant mobile notification!*
 
 ---
 
