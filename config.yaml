@@ -2,10 +2,11 @@
 
 # Target Search Keywords tailored for Fresh Graduates & Junior Developers
 search_keywords:
-  - "Software Engineer"
   - "Junior Software Engineer"
   - "Associate Software Engineer"
+  - "Fresh Software Engineer"
   - "Python Developer"
+  - "Junior Full Stack Developer"
 
 # Target Locations (Karachi and Remote)
 locations:
@@ -22,46 +23,10 @@ jobspy:
   hours_old: 72
   country_indeed: "Pakistan"
 
-# Experience Level Filters (LinkedIn/Indeed support entry_level & associate)
-experience_levels:
-  - "entry_level"
-  - "associate"
-
 # Local Scrapers Configuration
 local_scrapers:
   rozee_enabled: true
 
-# Notification Providers
+# Notification Provider (Discord)
 notifications:
   discord_enabled: true
-  telegram_enabled: true
-
-# Client-side Title Filtering to avoid Senior/Lead/Manager spam for fresh grads
-filtering:
-  title_include_keywords:
-    - "software"
-    - "developer"
-    - "engineer"
-    - "python"
-    - "backend"
-    - "fullstack"
-    - "full stack"
-    - "frontend"
-    - "web"
-    - "associate"
-    - "junior"
-    - "fresh"
-    - "trainee"
-    - "entry"
-    - "graduate"
-  title_exclude_keywords:
-    - "senior"
-    - "sr."
-    - "sr "
-    - "lead"
-    - "principal"
-    - "architect"
-    - "manager"
-    - "director"
-    - "head of"
-    - "vp"
