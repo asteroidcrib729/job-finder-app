@@ -42,12 +42,23 @@ class TelegramNotifier:
         return success_count > 0
 
     def _build_message(self, job: Job) -> str:
-        location_icon = "🌐" if job.is_remote else "📍"
+        if job.is_priority_location:
+            location_str = f"⭐ <b>{job.location}</b> (Priority Karachi Hub)"
+        elif job.is_remote:
+            location_str = "🌐 <b>Remote</b>"
+        else:
+            location_str = f"📍 <b>{job.location}</b>"
+
+        email_block = ""
+        if job.recruiter_email:
+            email_block = f"\n📧 <b>Direct Recruiter Email:</b> <code>{job.recruiter_email}</code>\n"
+
         return (
             f"🚨 <b>New Job Alert ({job.platform})</b>\n\n"
             f"💼 <b>Role:</b> {job.title}\n"
             f"🏢 <b>Company:</b> {job.company}\n"
-            f"{location_icon} <b>Location:</b> {job.location}\n"
-            f"🕒 <b>Posted:</b> {job.date_posted}\n\n"
+            f"Location: {location_str}\n"
+            f"🕒 <b>Posted:</b> {job.date_posted}\n"
+            f"{email_block}\n"
             f"🔗 <a href='{job.url}'>Click Here to Apply Directly</a>"
         )

@@ -2,8 +2,8 @@ name: Automated Job Discovery & Phone Alert Pipeline
 
 on:
   schedule:
-    # Runs every 3 hours automatically
-    - cron: '0 */3 * * *'
+    # Runs every 3 hours at off-peak minute 17 to avoid GitHub queue delays
+    - cron: '17 */3 * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI anytime
 
 permissions:

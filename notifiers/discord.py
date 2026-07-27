@@ -57,13 +57,28 @@ class DiscordNotifier:
 
     def _build_embed(self, job: Job) -> dict:
         color = PLATFORM_COLORS.get(job.platform.lower(), 0x7289DA)
-        location_badge = "🌐 Remote" if job.is_remote else f"📍 {job.location}"
+        
+        # Priority location badge
+        if job.is_priority_location:
+            location_badge = f"⭐ **{job.location}** (Priority Karachi Hub)"
+            color = 0xF1C40F  # Gold color for priority location
+        elif job.is_remote:
+            location_badge = "🌐 Remote"
+        else:
+            location_badge = f"📍 {job.location}"
 
         fields = [
             {"name": "🏢 Company", "value": job.company, "inline": True},
             {"name": "📍 Location", "value": location_badge, "inline": True},
             {"name": "🏷️ Platform", "value": job.platform, "inline": True},
         ]
+
+        if job.recruiter_email:
+            fields.append({
+                "name": "📧 Direct Recruiter Email", 
+                "value": f"`{job.recruiter_email}`\n👉 **[Click to Send Resume](mailto:{job.recruiter_email}?subject=Application%20for%20{requests.utils.quote(job.title)})**", 
+                "inline": False
+            })
 
         if job.date_posted:
             fields.append({"name": "🕒 Posted", "value": job.date_posted, "inline": True})
@@ -74,10 +89,10 @@ class DiscordNotifier:
             "title": f"🆕 {job.title}",
             "url": job.url,
             "color": color,
-            "description": f"{description_snippet}\n\n👉 **[Click Here to Apply on {job.platform}]({job.url})**" if description_snippet else f"👉 **[Click Here to Apply on {job.platform}]({job.url})**",
+            "description": f"{description_snippet}\n\n👉 **[Click Here to Open Listing on {job.platform}]({job.url})**" if description_snippet else f"👉 **[Click Here to Open Listing on {job.platform}]({job.url})**",
             "fields": fields,
             "footer": {
-                "text": "Automated Fresh Graduate & Junior Job Discovery Pipeline"
+                "text": "Faraz Hussain | Fresh Graduate & Junior Job Discovery Pipeline"
             }
         }
         return embed

@@ -13,6 +13,8 @@ class Job:
     is_remote: bool = False
     description: Optional[str] = ""
     job_id: Optional[str] = None
+    recruiter_email: Optional[str] = ""
+    is_priority_location: bool = False
 
     def __post_init__(self):
         if not self.job_id:
@@ -30,5 +32,7 @@ class Job:
             "platform": self.platform,
             "date_posted": self.date_posted,
             "is_remote": self.is_remote,
-            "description": self.description[:200] if self.description else ""
+            "description": self.description[:200] if self.description else "",
+            "recruiter_email": self.recruiter_email,
+            "is_priority_location": self.is_priority_location
         }

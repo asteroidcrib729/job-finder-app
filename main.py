@@ -14,7 +14,8 @@ from config import load_config
 from scrapers.base import Job
 from scrapers.jobspy_adapter import fetch_jobspy_jobs
 from scrapers.rozee_scraper import fetch_rozee_jobs
-from filtering.filter import filter_fresh_grad_jobs
+from scrapers.linkedin_posts_scraper import fetch_linkedin_plain_posts
+from filtering.resume_filter import filter_jobs_for_faraz
 from storage.tracker import JobTracker
 from notifiers.manager import NotificationManager
 
@@ -39,12 +40,12 @@ def run_job_finder(dry_run: bool = False, test_notify: bool = False):
         return
 
     logger.info("==========================================")
-    logger.info("🚀 Starting Job Discovery Pipeline")
+    logger.info("🚀 Starting Job Discovery Pipeline for Faraz Hussain")
     logger.info("==========================================")
 
     raw_jobs: List[Job] = []
 
-    # 1. Scrape via JobSpy (LinkedIn, Indeed, Glassdoor, Google Jobs, Bayt)
+    # 1. Scrape via JobSpy (LinkedIn, Indeed, Google Jobs)
     logger.info("--- 1. Running JobSpy Scraper ---")
     jobspy_jobs = fetch_jobspy_jobs(config)
     logger.info(f"JobSpy fetched {len(jobspy_jobs)} raw jobs.")
@@ -56,20 +57,26 @@ def run_job_finder(dry_run: bool = False, test_notify: bool = False):
     logger.info(f"Rozee.pk fetched {len(rozee_jobs)} raw jobs.")
     raw_jobs.extend(rozee_jobs)
 
+    # 3. Scrape Plain LinkedIn Recruiter Posts with Direct Emails
+    logger.info("--- 3. Running LinkedIn Plain Recruiter Posts Scraper ---")
+    linkedin_posts = fetch_linkedin_plain_posts(config)
+    logger.info(f"LinkedIn Posts fetched {len(linkedin_posts)} recruiter announcements.")
+    raw_jobs.extend(linkedin_posts)
+
     if not raw_jobs:
         logger.info("No job postings fetched in this run.")
         return
 
-    # 3. Client-side title & experience level filtering
-    logger.info("--- 3. Filtering Fresh Graduate & Junior Positions ---")
-    relevant_jobs = filter_fresh_grad_jobs(raw_jobs, config)
+    # 4. Resume-based Qualification, Strict Experience & Location Filtering
+    logger.info("--- 4. Filtering Roles Aligned with Faraz's Resume Profile & Experience ---")
+    relevant_jobs = filter_jobs_for_faraz(raw_jobs, config)
 
-    # 4. Deduplicate against seen jobs state
-    logger.info("--- 4. Deduplicating against Previously Notified Jobs ---")
+    # 5. Deduplicate against seen jobs state
+    logger.info("--- 5. Deduplicating against Previously Notified Jobs ---")
     tracker = JobTracker()
     new_jobs = tracker.filter_new_jobs(relevant_jobs)
 
-    logger.info(f"Found {len(new_jobs)} NEW un-notified job postings.")
+    logger.info(f"Found {len(new_jobs)} NEW un-notified job postings matching Faraz's profile.")
 
     if dry_run:
         logger.info("⚡ DRY-RUN ENABLED: Skipping notification delivery and state saving.")
