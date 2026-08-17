@@ -7,11 +7,19 @@ logger = logging.getLogger(__name__)
 
 # Faraz Hussain's Core Tech Stack Skills
 FARAZ_SKILLS = [
-    "python", "javascript", "typescript", "react", "next.js", "nextjs", 
+    "python", "javascript", "typescript", "react.js", "reactjs", "react developer",
     "node.js", "nodejs", "express", "django", "flask", "fastapi", "tailwind",
     "postgresql", "mysql", "sql server", "sql", "mongodb", "c#", "java",
     "rest", "api", "git", "web", "frontend", "backend", "fullstack", "full stack",
     "software engineer", "software developer", "html", "css"
+]
+
+# Required Software Engineering / Developer Title Tokens
+ALLOWED_TITLE_TOKENS = [
+    "software", "developer", "engineer", "frontend", "front-end", "backend", "back-end",
+    "fullstack", "full stack", "full-stack", "web", "programmer", "coder", "intern",
+    "trainee", "react", "python", "node", "javascript", "typescript", "django", "flask",
+    "fastapi", "stack", "technology"
 ]
 
 # Preferred Karachi Locations
@@ -31,7 +39,8 @@ IRRELEVANT_DOMAINS = [
     "flutter", "android developer", "kotlin", "devops engineer",
     "cloud security", "cyber security", "network engineer", "telecom", "fpga",
     "autocad", "graphic designer", "ui/ux designer", "seo specialist", "content writer",
-    "digital marketing", "marketing specialist", "sales", "business development", "accountant", "hr executive"
+    "digital marketing", "marketing specialist", "sales", "business development", "accountant", "hr executive",
+    "cad", "cam", "creo", "operator", "data entry", "accounts", "finance", "media", "textile", "receptionist"
 ]
 
 # Excluded titles for Experienced / Senior / Lead positions
@@ -113,15 +122,25 @@ def filter_jobs_for_faraz(jobs: List[Job], config: dict) -> List[Job]:
 
     for job in jobs:
         title_lower = job.title.lower()
-        desc_lower = job.description.lower()
         full_text = f"{job.title} {job.description}".lower()
 
-        # 1. Reject Senior / Lead / Principal titles
+        # 1. Reject Senior / Lead / Principal / Manager titles
         if any(ex in title_lower for ex in EXCLUDED_TITLES):
             logger.debug(f"[Filter] Rejected senior title: '{job.title}' ({job.company})")
             continue
 
-        # 2. Strict Experience Check (Reject >= 2 years requirement)
+        # 2. Check for Irrelevant Domains
+        if any(domain in title_lower for domain in IRRELEVANT_DOMAINS):
+            logger.debug(f"[Filter] Rejected irrelevant domain title: '{job.title}' ({job.company})")
+            continue
+
+        # 3. Must have a Software/Tech title indicator
+        has_tech_title = any(token in title_lower for token in ALLOWED_TITLE_TOKENS)
+        if not has_tech_title:
+            logger.debug(f"[Filter] Rejected non-software title: '{job.title}' ({job.company})")
+            continue
+
+        # 4. Strict Experience Check (Reject >= 2 years requirement)
         req_years = parse_required_experience_years(full_text)
         if any(y >= 2 for y in req_years):
             # Allow only if explicitly fresh-friendly (e.g. 0-2 years, fresh to 2 years, fresh graduate)
@@ -132,19 +151,14 @@ def filter_jobs_for_faraz(jobs: List[Job], config: dict) -> List[Job]:
                 logger.debug(f"[Filter] Rejected high experience job (requires {max(req_years)} yrs): '{job.title}' ({job.company})")
                 continue
 
-        # 3. Location Check (On-site MUST be Karachi, prioritize preferred hubs)
+        # 5. Location Check (On-site MUST be Karachi, prioritize preferred hubs)
         is_loc_valid, is_priority = is_location_valid_for_faraz(job)
         if not is_loc_valid:
             continue
         
         job.is_priority_location = is_priority
 
-        # 4. Check for Irrelevant Domains
-        if any(domain in title_lower for domain in IRRELEVANT_DOMAINS):
-            logger.debug(f"[Filter] Rejected irrelevant domain title: '{job.title}' ({job.company})")
-            continue
-
-        # 5. Tech Stack & Role Relevance Matching
+        # 6. Tech Stack & Role Relevance Matching
         skill_matches = [skill for skill in FARAZ_SKILLS if skill in full_text]
         if not skill_matches:
             logger.debug(f"[Filter] Rejected non-tech stack role: '{job.title}' ({job.company})")
