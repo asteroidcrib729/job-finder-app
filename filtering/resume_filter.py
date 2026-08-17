@@ -11,7 +11,7 @@ FARAZ_SKILLS = [
     "node.js", "nodejs", "express", "django", "flask", "fastapi", "tailwind",
     "postgresql", "mysql", "sql server", "sql", "mongodb", "c#", "java",
     "rest", "api", "git", "web", "frontend", "backend", "fullstack", "full stack",
-    "software engineer", "software developer"
+    "software engineer", "software developer", "html", "css"
 ]
 
 # Preferred Karachi Locations
@@ -28,20 +28,17 @@ PREFERRED_KARACHI_HUBS = [
 # Irrelevant domains for Faraz's software/full-stack profile
 IRRELEVANT_DOMAINS = [
     "salesforce", "sap", "embedded", "hardware", "ios developer", "swift",
-    "flutter", "react native", "android developer", "kotlin", "devops engineer",
+    "flutter", "android developer", "kotlin", "devops engineer",
     "cloud security", "cyber security", "network engineer", "telecom", "fpga",
-    "autocad", "graphic designer", "ui/ux designer", "seo specialist", "content writer"
+    "autocad", "graphic designer", "ui/ux designer", "seo specialist", "content writer",
+    "digital marketing", "marketing specialist", "sales", "business development", "accountant", "hr executive"
 ]
 
 # Excluded titles for Experienced / Senior / Lead positions
 EXCLUDED_TITLES = [
     "senior", "sr.", "sr ", "lead", "principal", "architect", 
-    "staff engineer", "manager", "director", "head of", "vp", "executive"
-]
-
-# Explicit Entry/Junior Indicators
-ENTRY_INDICATORS = [
-    "junior", "jr.", "associate", "entry", "fresh", "fresher", "trainee", "graduate", "intern", "internship"
+    "staff engineer", "manager", "director", "head of", "vp", "executive",
+    "specialist iii", "level 3", "tier 3"
 ]
 
 def parse_required_experience_years(text: str) -> List[int]:
@@ -105,12 +102,12 @@ def is_location_valid_for_faraz(job: Job) -> Tuple[bool, bool]:
 
 def filter_jobs_for_faraz(jobs: List[Job], config: dict) -> List[Job]:
     """
-    Strict filter for Faraz Hussain:
-    - Rejects any job requiring >= 2 years experience.
-    - Ensures generic titles explicitly verify as fresh graduate/entry/0-1 yr.
-    - Rejects Senior/Lead/Architect/Manager roles.
+    Intelligent balanced filter for Faraz Hussain:
+    - Rejects any job requiring >= 2 years experience (unless explicitly permitting fresh/0-2 yrs).
+    - Rejects Senior/Lead/Architect/Manager/Principal roles.
     - Rejects non-Karachi on-site roles.
-    - Highlights preferred Karachi locations.
+    - Highlights preferred Karachi locations (Gulshan, Jauhar, Shahrah-e-Faisal, PECHS, NASTP, Nazimabad).
+    - Accepts all tech roles matching Faraz's software/web development stack.
     """
     approved_jobs: List[Job] = []
 
@@ -119,7 +116,7 @@ def filter_jobs_for_faraz(jobs: List[Job], config: dict) -> List[Job]:
         desc_lower = job.description.lower()
         full_text = f"{job.title} {job.description}".lower()
 
-        # 1. Reject Senior / Lead titles
+        # 1. Reject Senior / Lead / Principal titles
         if any(ex in title_lower for ex in EXCLUDED_TITLES):
             logger.debug(f"[Filter] Rejected senior title: '{job.title}' ({job.company})")
             continue
@@ -127,34 +124,27 @@ def filter_jobs_for_faraz(jobs: List[Job], config: dict) -> List[Job]:
         # 2. Strict Experience Check (Reject >= 2 years requirement)
         req_years = parse_required_experience_years(full_text)
         if any(y >= 2 for y in req_years):
-            # Exception check: if text explicitly says "0-1" or "0 to 1", check if min is <= 1
-            if not ("0-1" in full_text or "0 to 1" in full_text or "fresh" in full_text or "intern" in title_lower):
+            # Allow only if explicitly fresh-friendly (e.g. 0-2 years, fresh to 2 years, fresh graduate)
+            is_fresh_friendly = any(phrase in full_text for phrase in [
+                "0-2", "0 to 2", "fresh to 2", "fresh", "fresher", "graduate", "intern", "trainee", "entry level", "entry-level"
+            ])
+            if not is_fresh_friendly:
                 logger.debug(f"[Filter] Rejected high experience job (requires {max(req_years)} yrs): '{job.title}' ({job.company})")
                 continue
 
-        # 3. Entry-Level Title / Description Verification
-        has_entry_title = any(ind in title_lower for ind in ENTRY_INDICATORS)
-        has_entry_desc = any(ind in desc_lower for ind in ["fresh graduate", "fresher", "0-1 year", "0 to 1 year", "entry level", "trainee", "internship", "no experience required"])
-
-        # If title does NOT have explicit junior/associate indicator, description MUST confirm entry-level or 0-1 yr
-        if not has_entry_title and not has_entry_desc:
-            # Rejection rule for unconfirmed generic titles
-            logger.debug(f"[Filter] Rejected unconfirmed generic title: '{job.title}' ({job.company})")
-            continue
-
-        # 4. Location Check (On-site MUST be Karachi, prioritize preferred hubs)
+        # 3. Location Check (On-site MUST be Karachi, prioritize preferred hubs)
         is_loc_valid, is_priority = is_location_valid_for_faraz(job)
         if not is_loc_valid:
             continue
         
         job.is_priority_location = is_priority
 
-        # 5. Check for Irrelevant Domains
+        # 4. Check for Irrelevant Domains
         if any(domain in title_lower for domain in IRRELEVANT_DOMAINS):
             logger.debug(f"[Filter] Rejected irrelevant domain title: '{job.title}' ({job.company})")
             continue
 
-        # 6. Tech Stack Matching
+        # 5. Tech Stack & Role Relevance Matching
         skill_matches = [skill for skill in FARAZ_SKILLS if skill in full_text]
         if not skill_matches:
             logger.debug(f"[Filter] Rejected non-tech stack role: '{job.title}' ({job.company})")
@@ -162,5 +152,5 @@ def filter_jobs_for_faraz(jobs: List[Job], config: dict) -> List[Job]:
 
         approved_jobs.append(job)
 
-    logger.info(f"[ResumeFilter] Filtered {len(jobs)} scraped jobs -> {len(approved_jobs)} strictly relevant entry-level positions for Faraz Hussain.")
+    logger.info(f"[ResumeFilter] Filtered {len(jobs)} scraped jobs -> {len(approved_jobs)} qualified positions for Faraz Hussain.")
     return approved_jobs

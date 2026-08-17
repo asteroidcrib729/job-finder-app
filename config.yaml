@@ -2,11 +2,19 @@
 
 # Target Search Keywords tailored for Fresh Graduates & Junior Developers
 search_keywords:
+  - "Software Engineer"
   - "Junior Software Engineer"
   - "Associate Software Engineer"
-  - "Fresh Software Engineer"
+  - "Software Developer"
   - "Python Developer"
   - "Junior Full Stack Developer"
+  - "Full Stack Developer"
+  - "React Developer"
+  - "Node.js Developer"
+  - "Web Developer"
+  - "Software Engineer Trainee"
+  - "Graduate Software Engineer"
+  - "Software Developer Intern"
 
 # Target Locations (Karachi and Remote)
 locations:
