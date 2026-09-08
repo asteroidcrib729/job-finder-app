@@ -31,6 +31,16 @@ Google Jobs extraction and third-party search availability are external constrai
 
 Sanitized source-health/count data from both actual artifacts is retained in **tests/fixtures/production_health.json**, without job descriptions, recruiter details or raw challenge URLs. The regression suite covers both incidents, total-outage/delivery/state failure preservation, the optional-only probe case, Google cursor warnings, rejected non-post hits, provider failures, summary explanations and dry-run state suppression.
 
-Raw downloaded reports/logs remain in ignored **.cache/incidents/**. Production state is preserved. The published fix will be verified with Linux CI and a manual Actions dry run; results are recorded below once available.
+Raw downloaded reports/logs remain in ignored **.cache/incidents/**. Production state is preserved. The published fix was verified with Linux CI and a manual Actions dry run; results follow.
 
 Local validation: **73 tests passed**, **54/54 synthetic matching cases agreed**, workflow YAML parsed, and production data files were unchanged. A bounded Google reproduction returned zero rows with google_jobs_cursor_missing.
+
+## Published verification
+
+- Fix commit: **68fdf80** on main.
+- [Linux/Python 3.11 CI](https://github.com/asteroidcrib729/job-finder-app/actions/runs/34237249338): **success**, all 73 tests passed.
+- [Manual Actions dry run](https://github.com/asteroidcrib729/job-finder-app/actions/runs/34237275969): **success** with an explicit partial-coverage warning. State persistence was skipped, the delivery list was empty, and the branch remained at the fix commit after the run.
+- The dry run respected saved cadence: primary vacancy queries were not due. Three Google probes remained unverified because of the missing cursor; one recruiter query failed at the provider and one returned two leads, both rejected by the unchanged matcher.
+- This validates the workflow outcome, source diagnostics, cadence handling and side-effect suppression. It does not establish recovered Google availability or a fresh complete LinkedIn/Indeed/Rozee sweep. Those sources were successfully exercised in the earlier incident runs; their future availability remains monitored.
+
+A subsequent scheduled live run was not manually triggered. It uses the same corrected operational assessment; real delivery and Git state failures continue to fail the workflow.
