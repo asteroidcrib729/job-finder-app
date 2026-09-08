@@ -1,40 +1,91 @@
-# Job Finder App Configuration
+profile_path: candidate-profile.yaml
 
-# Target Search Keywords tailored for Fresh Graduates & Junior Developers
 search_keywords:
-  - "Software Engineer"
   - "Junior Software Engineer"
-  - "Associate Software Engineer"
-  - "Software Developer"
-  - "Python Developer"
-  - "Junior Full Stack Developer"
-  - "Full Stack Developer"
-  - "React Developer"
-  - "Node.js Developer"
-  - "Web Developer"
-  - "Software Engineer Trainee"
+  - "Next.js Developer"
+  - "React Frontend Developer"
+  - "TypeScript Full Stack Developer"
+  - "Node.js Backend Developer"
+  - "Python Django Developer"
+  - "Python Flask Developer"
   - "Graduate Software Engineer"
-  - "Software Developer Intern"
 
-# Target Locations (Karachi and Remote)
-locations:
-  - "Karachi, Pakistan"
-  - "Remote"
+search_tracks:
+  - id: karachi_local
+    location: "Karachi, Pakistan"
+    remote: false
+    country_indeed: Pakistan
+    sites: [linkedin, indeed, google]
+  - id: pakistan_remote
+    location: Pakistan
+    remote: true
+    country_indeed: Pakistan
+    sites: [linkedin, indeed]
+  - id: global_remote
+    location: ""
+    remote: true
+    country_indeed: USA
+    sites: [linkedin, google]
 
-# JobSpy Scraper Options
 jobspy:
-  sites:
-    - "linkedin"
-    - "indeed"
-    - "google"
-  results_wanted: 15
-  hours_old: 72
-  country_indeed: "Pakistan"
+  enabled: true
+  sites: [linkedin, indeed, google]
+  results_wanted: 25
+  max_pages: 1
+  max_queries: 56
+  hours_old: 168
+  query_timeout: 90
+  max_seconds: 900
+  linkedin_fetch_description: true
+  interval_hours: 3
+  low_yield_interval_hours: 12
 
-# Local Scrapers Configuration
 local_scrapers:
   rozee_enabled: true
+  keywords: [Junior Software Engineer, Next.js Developer, Python Developer, React Developer]
+  max_queries: 4
+  max_pages: 2
+  interval_hours: 3
+  detail_cache_hours: 6
+  max_details: 12
+  timeout: 12
 
-# Notification Provider (Discord)
+linkedin_posts:
+  enabled: true
+  interval_hours: 6
+  detail_cache_hours: 6
+  max_results: 6
+  max_checks: 8
+  timeout: 8
+  queries:
+    - 'site:linkedin.com/posts "Karachi" hiring ("Next.js" OR "React" OR "Python" OR "Full Stack")'
+    - 'site:linkedin.com/posts "Remote" hiring ("Junior" OR "Graduate") ("Python" OR "React" OR "Node")'
+
+# Optional pilots; enable individually after inspecting dry-run results.
+remote_feeds:
+  remotive_enabled: false
+  wwr_enabled: false
+  interval_hours: 6
+  max_jobs: 100
+
+matching:
+  max_age_hours: 168
+  min_score: 60
+  allow_hybrid: true
+  allow_internships: true
+  allow_contracts: true
+  allow_one_year_stretch: true
+  remote_salary_policy: prefer_usd
+  preferred_neighborhoods: []
+
 notifications:
   discord_enabled: true
+  send_review: false
+  review_digest: true
+  max_per_run: 20
+  max_attempts: 3
+  max_retry_wait: 30
+
+state:
+  retention_days: 30
+  pending_days: 7

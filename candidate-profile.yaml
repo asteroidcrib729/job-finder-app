@@ -1,0 +1,26 @@
+version: "2026-09-07"
+resume_reviewed: "2026-09-07"
+location: "Karachi, Pakistan"
+education:
+  degree: Bachelor of Software Engineering
+  institution: Mohammad Ali Jinnah University
+  start: "2022-09"
+  end: "2026-07"
+  cgpa: 3.7
+experience:
+  - role: Full Stack Developer Intern
+    employer: Tech Venture Solution
+    start: "2025-07"
+    end: "2025-09"
+    type: internship
+  - role: Python Developer Intern
+    employer: Grow Intern
+    start: "2024-03"
+    end: "2024-04"
+    type: internship
+# Month precision, not full-time-equivalent professional years.
+professional_months: 0
+internship_months: 5
+demonstrated_skills: [javascript, typescript, nextjs, react, tailwind, nodejs, python, django, flask, git, rest]
+listed_skills: [csharp, java, fastapi, postgresql, mysql, sqlserver, mongodb, html, css, aws, azure]
+role_families: [software, frontend, backend, fullstack, python]

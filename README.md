@@ -1,143 +1,152 @@
-# 🚀 Automated Job Finder & Instant Phone Alert Pipeline
+# Job Finder App
 
-An automated, open-source Python application designed to continuously discover fresh software engineering roles across **LinkedIn**, **Indeed**, **Glassdoor**, **Google Jobs**, **Bayt**, and **Rozee.pk**, deduplicate postings, and push instant notifications directly to your mobile phone via **Discord** (and/or **Telegram**) powered by **GitHub Actions**.
+A Python job-discovery pipeline for Faraz Hussain's graduate/junior software profile. GitHub Actions runs searches every three hours, checks qualifications and location, ranks matches, and sends Discord alerts. JSON files in the repository retain delivery and discovery state.
 
-Targeted specifically for **Fresh Engineering Graduates, Junior, Entry-Level, and Associate Software Engineers** looking for **Remote** opportunities or positions in **Karachi, Pakistan**.
+## Matching behavior
 
----
+The [candidate profile](candidate-profile.yaml) records Next.js/React/TypeScript/Node and Python/Django/Flask internship evidence separately from listed skills. Update it when your experience changes; the PDF remains local and ignored.
 
-## 🏗️ Architecture
+- **Qualified:** compatible role, experience and location, adequate description/date evidence, and sufficient fit.
+- **Review:** plausible but incomplete or a stretch: unknown remote eligibility/pay, one-year requirements, incomplete descriptions, or recruiter announcements.
+- **Rejected:** explicit incompatibility, such as a senior role, unsupported mandatory stack, non-Karachi local work, restricted-country remote work, or stale/closed listing.
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    GitHub Actions Workflow                  │
-│                     (Runs every 3 hours)                    │
-└──────────────────────────────┬──────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────┐
-│                     Scraping Layer                          │
-│ ├── python-jobspy (LinkedIn, Indeed, Glassdoor, Google, Bayt)│
-│ └── Custom BS4 Scraper (Rozee.pk Karachi & Remote)          │
-└──────────────────────────────┬──────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────┐
-│                     Filtering Engine                        │
-│ Filters for Fresh Grad / Associate / Junior tech titles &   │
-│ excludes Senior / Lead / Manager positions                  │
-└──────────────────────────────┬──────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────┐
-│                  Deduplication & State                      │
-│ Checks data/seen_jobs.json & commits state to repo         │
-└──────────────────────────────┬──────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────┐
-│                   Instant Phone Push Alerts                 │
-│ ├── Discord Webhook Embed Cards (Mobile App Notification)   │
-│ └── Telegram Bot API (Optional Secondary Push Channel)      │
-└─────────────────────────────────────────────────────────────┘
-```
+Scores order candidates; they are not probabilities. Every decision includes reasons and gaps. The default sends qualified matches only. Review candidates remain visible in run reports. Setting **notifications.send_review: true** also sends review digests of up to five candidates, subject to the same candidate cap. Set **notifications.review_digest: false** for individual review cards.
 
----
+Local Karachi and remote searches are independent. Remote does not establish Pakistan eligibility or USD pay. The default **prefer_usd** policy puts remote jobs with unknown/non-USD pay into review; Karachi jobs have no USD requirement. A disclosed salary currency is not verification of contractual payment arrangements.
 
-## 🛠️ Step-by-Step Setup Guide
+## Sources
 
-### Step 1: Set Up Discord Webhook (Push Notifications to Phone)
+| Source | Implementation |
+| --- | --- |
+| LinkedIn / Indeed / Google | JobSpy with source-specific parameters and isolated query timeouts. LinkedIn descriptions are requested. Indeed remote queries omit the incompatible date parameter; age is checked locally. |
+| Rozee.pk | Public embedded JSON, with structured-data/card fallbacks. Karachi city ID 1184 was verified on 2026-09-07. Actual location, creation date, description, and experience are extracted. Loading placeholders are not jobs. Bounded pagination follows source offsets. |
+| LinkedIn recruiter posts | Configurable DDGS discovery and accessible post content. Explicit role sections become separate review leads with original-post provenance. Queries have saved cadence and bounded detail caches. |
+| Remotive / We Work Remotely | Optional public-feed adapters, disabled by default for separate evaluation. Remotive cadence is at least six hours. |
 
-#### On Desktop App or Web Browser (`discord.com`):
-1. **Create or Open a Server**: In Discord, click the **`+`** icon on the left sidebar -> **Create My Own** -> **For me and my friends** -> **Create**.
-2. **Open Channel Settings**: Hover over your text channel (e.g., `#general` or `#job-alerts`) and click the **⚙️ Edit Channel** gear icon.
-3. **Open Integrations**: In the left sidebar of the channel settings, click **Integrations**.
-4. **Create Webhook**: Click **Webhooks** (or **Create Webhook**) -> Click **New Webhook**.
-5. **Copy URL**: Set a name (e.g., `Job Finder Bot`) and click **Copy Webhook URL**.
+Sources can block requests or change formats. Blocked, timed-out, partial, and parse-failed queries are distinguished from valid empty searches. Rozee captured-page parsing succeeded during development, but later application dry runs received HTTP 403. Continuous source availability is not guaranteed.
 
-#### On Discord Mobile App (iOS / Android):
-1. Tap and hold your channel name -> Tap **Edit Channel**.
-2. Tap **Integrations** -> Tap **Webhooks** -> Tap **Create Webhook**.
-3. Tap the created webhook and tap **Copy Webhook URL**.
+Remotive's public feed has a 24-hour delay and recommends at most four fetches daily. Preserve source attribution and original listing links for both remote feeds. [Remotive API](https://github.com/remotive-com/remote-jobs-api), [WWR RSS](https://weworkremotely.com/remote-job-rss-feed).
 
-> 💡 *Download the Discord mobile app and enable push notifications for this channel so every new job post triggers an instant mobile notification!*
+## Installation and tests
 
----
+Use Python 3.11 to match Actions; local tests also ran on Python 3.12.
 
-### Step 2: (Optional) Set Up Telegram Bot
-If you also want Telegram notifications:
-1. Open Telegram and search for `@BotFather`.
-2. Send `/newbot`, follow the prompts, and copy the `HTTP API Token`.
-3. Open Telegram and search for `@userinfobot` to get your personal `Chat ID`.
+~~~powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.lock
+python -m pip check
+python -m unittest discover -s tests -v
+~~~
 
----
+The lock file pins direct and transitive dependencies. The package set resolved for Python 3.11/Linux; local test execution used Python 3.12/Windows. CI performs the actual Linux tests. Update pins deliberately and validate adapter fixtures.
 
-### Step 3: Push Repository to GitHub
-1. Create a **Private** repository on GitHub.
-2. Initialize and push this codebase to your repository:
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: initial job finder app setup"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/job-finder.html.git
-   git push -u origin main
-   ```
+## Offline evaluation and live dry runs
 
----
+These commands send no Discord messages and do not save delivery/discovery state:
 
-### Step 4: Add GitHub Repository Secrets
-1. In your GitHub Repository, go to **Settings** -> **Secrets and variables** -> **Actions**.
-2. Click **New repository secret** and add the following:
-   - `DISCORD_WEBHOOK_URL`: Your copied Discord Webhook URL.
-   - `TELEGRAM_BOT_TOKEN`: (Optional) Your Telegram bot token.
-   - `TELEGRAM_CHAT_ID`: (Optional) Your Telegram chat ID.
+~~~powershell
+# Fixed-date synthetic regression benchmark.
+python -m evaluation tests/fixtures/matching.json
 
----
+# Evaluate saved job evidence using the current date/profile.
+python main.py --replay output/latest/run.json --report-dir output/replay
 
-### Step 5: Enable GitHub Actions Workflow Permissions
-1. Open your repository's Actions settings directly: **[https://github.com/asteroidcrib729/job-finder-app/settings/actions](https://github.com/asteroidcrib729/job-finder-app/settings/actions)**
-   *(Or navigate to **Settings** tab -> expand **Actions** in the left sidebar -> click **General**)*.
-2. Scroll down to the **Workflow permissions** section.
-3. Select **Read and write permissions**.
-4. Click **Save**.
-
-That's it! GitHub Actions will now run automatically **every 3 hours**, search for new fresh-graduate software engineer jobs in Karachi & Remote, and push alerts straight to your phone.
-
----
-
-## 🧪 Local Testing Commands
-
-You can run and test the script locally before or alongside GitHub Actions:
-
-### 1. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 2. Test Notification Setup
-Verify your Discord Webhook or Telegram credentials by sending a test card:
-```bash
-# On Windows PowerShell
-$env:DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/..."
-python main.py --test-notify
-```
-
-### 3. Run Dry-Run (Scrape & Filter Without Sending Alerts)
-```bash
+# Live source requests and an evaluation report.
 python main.py --dry-run
-```
+~~~
 
-### 4. Run Full Pipeline Locally
-```bash
+Replay makes no job-board requests. Dry run does make requests, respecting configured budgets. Both can write reports. Use **--state** and **--discovery-state** for isolated evaluation paths; missing state files are not created by dry-run/replay.
+
+Outputs:
+
+- **output/latest/run.json:** normalized job evidence, decisions, source health, versions, counts, query yield/budgets, and delivery outcomes.
+- **output/latest/summary.md:** concise run summary.
+- **output/benchmark.json:** benchmark decisions and metrics.
+
+Reports redact emails and webhook-shaped URLs, retain job descriptions/listing URLs, and are ignored by Git. Actions uploads run reports for 14 days. Inspect them before sharing externally.
+
+The synthetic benchmark has 54 cases. Passing them is regression evidence, not a production accuracy estimate. Real-job benchmarks use the same candidates/job/expected schema with qualified, review, and rejected labels. Keep held-out examples separate from tuning examples.
+
+## Configuration
+
+[config.yaml](config.yaml) defines defaults. **--config path/to/override.yaml** recursively merges overrides and validates them; lists replace entire lists. Unknown settings fail at startup.
+
+| Setting | Purpose |
+| --- | --- |
+| search_keywords | Focused JobSpy role/technology queries. |
+| search_tracks | Karachi, Pakistan-remote, and global-remote locations/countries/source lists. |
+| jobspy.results_wanted / max_pages / max_queries / max_seconds / query_timeout | Retrieval depth, request count, total JobSpy time, and per-query wall-clock budget. |
+| jobspy.hours_old | Discovery lookback; successful-query timestamps permit bounded recovery after gaps. |
+| jobspy.linkedin_fetch_description | Qualification evidence; disabling this moves incomplete results into review. |
+| jobspy.interval_hours / low_yield_interval_hours | Minimum query interval; successful queries with no qualified/review candidates use the longer interval. Defaults 3/12 hours. |
+| local_scrapers | Enable flag, keywords, max_queries, max_pages (2), max_details, timeout, interval_hours (3), detail_cache_hours (6). |
+| linkedin_posts | Enable flag, queries, result/check budgets, timeout, interval_hours (6), detail_cache_hours (6). |
+| remote_feeds | Remotive/WWR flags, cadence, result cap. |
+| matching.max_age_hours / min_score | Publication-age and fit thresholds. Unknown dates go to review. |
+| matching.allow_* | Hybrid, internship, contract, one-year stretch handling. |
+| matching.remote_salary_policy | prefer_usd reviews other/unknown pay; require_usd rejects disclosed non-USD and reviews unknown; any removes the currency gate. |
+| matching.preferred_neighborhoods | Optional small ordering preference after Karachi compatibility; empty by default. |
+| notifications.max_per_run | Send cap; unsent eligible jobs remain pending. |
+| notifications.send_review / review_digest | Opt-in review delivery; digest groups up to five candidates with shared acknowledgements. Never overrides a rejection. |
+| state.retention_days / pending_days | Separate acknowledged-history retention and queued-candidate expiry. |
+
+Rozee and recruiter detail caches hold at most 200 normalized entries per source in discovery state. Expired/future-dated entries are discarded; failures never fall back to stale content. Current Rozee listing facts override cached descriptions. Zero detail_cache_hours disables caching; zero interval_hours disables the base interval (JobSpy's low-yield interval is separate). Minimum intervals are checked on scheduled runs, so actual gaps may be longer.
+
+Minimum salary and acceptable time zones still need user decisions. New canonical skill names require aliases in the matcher; validation prevents silently ineffective profile entries.
+
+## Discord and delivery state
+
+Set **DISCORD_WEBHOOK_URL** in repository Actions secrets. It is the only notification credential; Telegram is not implemented.
+
+~~~powershell
+# Explicitly sends one message.
+python main.py --test-notify
+
+# Normal discovery, delivery, and state persistence.
 python main.py
-```
+~~~
 
----
+Delivery records individual outcomes and requests Discord message confirmation. Server/rate-limit retries are bounded; network timeouts are uncertain because Discord may already have accepted a message.
 
-## ⚙️ Customizing Keywords & Filters
+**data/seen_jobs.json** migrates from the legacy hash/timestamp object on the first live save. Its versioned journal contains seen IDs/legacy aliases, pending payloads, and receipt timestamps/message IDs. Atomic replacement protects prior state from interrupted writes. Corrupt state stops dispatch; a successful message never marks a failed message seen.
 
-All search parameters are configured in [`config.yaml`](file:///c:/Users/DESKTOP-Q2TMP8U/Downloads/Source%20Codes/Job%20Finder/config.yaml):
-- Edit `search_keywords` to add or remove job titles.
-- Edit `locations` to add other cities or countries.
-- Edit `filtering.title_exclude_keywords` to tune out unwanted job titles.
+Pending jobs are reevaluated later, including runs with no new scraped jobs. Permanent payload/authentication failures remain visible for repair rather than being blindly retried. Successful source timestamps are stored separately in **data/discovery_state.json**. Do not reset production state to evaluate matcher changes.
+
+Exactly-once delivery is not guaranteed across an uncertain network outcome or a crash between Discord acceptance and remote state persistence. State pushes reconcile concurrent changes and retry three times. Persistent failure requires reconciling the retained recovery artifact before relying on the next run's history.
+
+Each state save keeps its previous valid JSON in a sibling **.bak** file. Corruption stops dispatch and cannot overwrite that backup. Export a separate recovery candidate:
+
+~~~powershell
+python -m storage.recover --backup data/seen_jobs.json.bak --output output/recovered-delivery.json
+python -m storage.recover --kind discovery --backup data/discovery_state.json.bak --output output/recovered-discovery.json
+~~~
+
+Compare delivery recovery candidates with later Discord receipts and Git history before replacing live state. A previous snapshot may lack recent successful acknowledgements; automatic fallback could duplicate alerts.
+
+## Relevance feedback
+
+Copy a job ID from a card or saved run report, then label it locally:
+
+~~~powershell
+python -m feedback label --job-id "ID_FROM_REPORT" --label relevant --note "Junior React role in Karachi"
+python -m feedback export
+python -m evaluation output/user-benchmark.json --output output/user-evaluation.json
+~~~
+
+Labels are **relevant**, **not_relevant**, or **uncertain**. Feedback defaults to ignored **output/feedback.json** and never changes delivery history. Exported cases retain capture time, so later evaluation does not turn historical relevance labels into age failures. Keep tuning and held-out feedback in separate files.
+
+## GitHub Actions
+
+The default-branch production workflow runs at minute 17 every three hours UTC and supports manual dispatch. It checks out current production state after acquiring a shared concurrency group, installs pinned packages, runs offline tests, executes discovery, commits valid state even after degraded execution, and uploads reports.
+
+Feature-branch manual dispatch cannot send production alerts. A separate read-only CI workflow tests code pushes/pull requests without a Discord secret.
+
+Exit codes: **0** healthy/valid-empty/idle; **1** fatal configuration/state failure; **2** degraded source or delivery outcome. State commit/push failures are surfaced. The writer builds a state-only commit on the latest remote tree using a temporary index, preserving concurrent code changes. Acknowledgements override pending jobs; retention pruning and queue retirement are reconciled against the starting state. Normal fast-forward pushes retry branch races. Persistent failures retain state files/backups in a seven-day recovery artifact. There is no force push or working-tree rebase.
+
+## Development records
+
+- [Audit memory](development-plans/MEMORY.md)
+- [Issue register](development-plans/ISSUES.md)
+- [Solution plan](development-plans/SOLUTIONS.md)
+- [Implementation and validation record](development-plans/IMPLEMENTATION.md)

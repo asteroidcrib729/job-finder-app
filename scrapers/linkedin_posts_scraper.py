@@ -1,130 +1,141 @@
-import logging
+"""Recruiter announcements are review leads, not verified single vacancies."""
 import re
-import requests
-from typing import List, Set
-from scrapers.base import Job
+import time
+from urllib.parse import urlsplit
+from bs4 import BeautifulSoup
+from scrapers.base import Job, canonical_url, clean_text, utc_now
+from scrapers.common import SourceError, SourceResult, QueryOutcome, get_public, host_allowed
+from scrapers.cache import DetailCache, query_due, query_key
+from scrapers.post_roles import split_post_roles
+from scrapers.structured import jsonld_objects
 
-logger = logging.getLogger(__name__)
+EMAIL_REGEX = r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
 
-EMAIL_REGEX = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
 
-# Disallowed old years and relative time markers
-OLD_TIME_MARKERS = ["1y ago", "2y ago", "3y ago", "4y ago", "5y ago", "2020", "2021", "2022", "2023", "2024", "2025"]
+def valid_post_url(url):
+    return host_allowed(url, ("linkedin.com",)) and any(
+        urlsplit(url).path.startswith(path) for path in ("/posts/", "/feed/update/"))
 
-CHECK_HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-}
 
-def is_post_active_and_recent(url: str, text: str) -> bool:
-    """Verifies that the LinkedIn post is from recent months and not deleted."""
-    text_lower = text.lower()
-    
-    # 1. Reject if snippet indicates an old year
-    if any(marker in text_lower for marker in OLD_TIME_MARKERS):
-        logger.debug(f"[LinkedInPosts] Dropped stale post from past years: {url}")
-        return False
+def inspect_post(url, timeout=8):
+    if not valid_post_url(url):
+        raise SourceError("unsupported", "not_linkedin_post")
+    response = get_public(url, ("linkedin.com",), timeout=timeout)
+    soup = BeautifulSoup(response.text, "html.parser")
+    text = soup.get_text(" ", strip=True)
+    if any(marker in text.lower() for marker in ("this post was deleted", "post not found")):
+        return {"status": "closed", "text": "", "posted_at": ""}
+    posted = ""
+    content = ""
+    for data in jsonld_objects(soup):
+        if data.get("@type") in ("SocialMediaPosting", "Article"):
+            content = clean_text(data.get("articleBody"))
+            posted = clean_text(data.get("datePublished"))
+            break
+    if not content:
+        node = soup.select_one(".attributed-text-segment-list__content, .share-update-card__update-text")
+        content = node.get_text("\n", strip=True) if node else ""
+    return {"status": "active" if content else "unverified", "text": content, "posted_at": posted}
 
-    # 2. Quick check if URL is accessible / not a deleted 404
+
+def is_post_active_and_recent(url, text=""):
+    """Compatibility check; unknown publication dates cannot be called recent."""
+    from datetime import datetime, timezone
+    from scrapers.base import parse_date
     try:
-        res = requests.get(url, headers=CHECK_HEADERS, timeout=5, allow_redirects=True)
-        if res.status_code in [404, 410]:
-            logger.debug(f"[LinkedInPosts] Dropped deleted post ({res.status_code}): {url}")
-            return False
-        if "post not found" in res.text.lower() or "this post was deleted" in res.text.lower():
-            logger.debug(f"[LinkedInPosts] Dropped deleted post content: {url}")
-            return False
-    except Exception:
-        pass  # If network timeout on check, allow based on time filter
+        post = inspect_post(url)
+    except SourceError:
+        return False
+    date = parse_date(post["posted_at"])
+    return bool(post["status"] == "active" and date and 0 <= (datetime.now(timezone.utc) - date).days <= 30)
 
-    return True
 
-def fetch_linkedin_plain_posts(config: dict) -> List[Job]:
-    """
-    Scrapes fresh LinkedIn recruiter status posts (published in the last month)
-    using DDGS with timelimit='m' and extracts direct recruiter email addresses.
-    """
+def fetch_linkedin_plain_posts(config, discovery=None):
+    result = SourceResult("LinkedIn Post")
+    options = config["linkedin_posts"]
+    if not options["enabled"]:
+        result.report.skipped = True
+        return result
+    discovery = discovery or {}
+    queries = [query for query in options["queries"] if query_due(
+        discovery, query_key("posts", query), options["interval_hours"])]
+    cache = DetailCache(discovery, "posts", options["detail_cache_hours"])
+    if not queries:
+        result.report.skipped = True
+        result.report.notes.append("queries_not_due")
+        cache.publish(result)
+        return result
     try:
         from ddgs import DDGS
     except ImportError:
-        try:
-            from duckduckgo_search import DDGS
-        except ImportError:
-            logger.error("[LinkedInPosts] ddgs package is not installed. Skipping recruiter post scraping.")
-            return []
-
-    queries = [
-        'site:linkedin.com/posts "Karachi" ("hiring" OR "send your CV" OR "apply at") ("Software Engineer" OR "Python" OR "React" OR "Full Stack")',
-        'site:linkedin.com/posts "Karachi" ("we are hiring" OR "looking for") ("Junior" OR "Associate" OR "Fresh" OR "Software Developer")',
-        'site:linkedin.com/posts "Remote" ("hiring" OR "send CV") ("Python Developer" OR "React Developer" OR "Full Stack" OR "Node")',
-        'site:linkedin.com/posts "Karachi" ("careers@" OR "hr@" OR "jobs@") ("developer" OR "engineer")',
-        'site:linkedin.com/feed/update "Karachi" ("hiring" OR "send CV") ("developer" OR "engineer")'
-    ]
-
-    found_jobs: List[Job] = []
-    seen_urls: Set[str] = set()
-
-    try:
-        ddgs = DDGS()
+        result.report.queries.append(QueryOutcome("posts", "unsupported", reason="ddgs_missing"))
+        return result
+    checked, seen, blocked = 0, set(), False
+    with DDGS(timeout=options["timeout"]) as search:
         for query in queries:
-            logger.info(f"[LinkedInPosts] Querying (Past Month): {query[:65]}...")
+            before = time.monotonic()
+            query_id = query_key("posts", query)
             try:
-                # timelimit='m' restricts results strictly to the past month (no 3-4 year old posts)
-                results = list(ddgs.text(query, timelimit='m', max_results=6))
-                for item in results:
-                    title = item.get("title", "")
-                    post_url = item.get("href", "")
-                    snippet = item.get("body", "")
-
-                    if not post_url or post_url in seen_urls:
+                rows = list(search.text(query, timelimit="m", max_results=options["max_results"]))
+                invalid, count, incomplete = 0, 0, False
+                for row in rows:
+                    url = clean_text(row.get("href"))
+                    if not valid_post_url(url):
+                        invalid += 1
                         continue
-
-                    # Ensure it is a genuine LinkedIn post or feed update
-                    if not ("/posts/" in post_url or "/feed/update/" in post_url):
+                    url = canonical_url(url)
+                    if url in seen:
                         continue
-
-                    seen_urls.add(post_url)
-                    full_text = f"{title} {snippet}"
-
-                    # Verify freshness and active status
-                    if not is_post_active_and_recent(post_url, full_text):
-                        continue
-
-                    # Extract any email addresses in the post snippet/title
-                    emails = re.findall(EMAIL_REGEX, full_text)
-                    extracted_email = ""
-                    if emails:
-                        valid_emails = [e for e in emails if not any(inv in e.lower() for inv in ["example.com", "domain.com", "w3.org", "schema.org", "sentry.io"])]
-                        if valid_emails:
-                            extracted_email = valid_emails[0]
-
-                    clean_title = title.replace(" | LinkedIn", "").replace(" on LinkedIn: ", " - ")
-                    if len(clean_title) > 85:
-                        clean_title = clean_title[:82] + "..."
-
-                    is_remote = "remote" in query.lower() or "remote" in full_text.lower() or "work from home" in full_text.lower()
-                    location = "Remote" if is_remote else "Karachi, Pakistan"
-
-                    found_jobs.append(
-                        Job(
-                            title=clean_title or "Hiring Announcement (LinkedIn Recruiter Post)",
-                            company="LinkedIn Recruiter Post",
-                            location=location,
-                            url=post_url,
-                            platform="LinkedIn Post",
-                            date_posted="Past Month (Fresh)",
-                            is_remote=is_remote,
-                            description=snippet,
-                            recruiter_email=extracted_email
-                        )
-                    )
-
-            except Exception as e:
-                logger.warning(f"[LinkedInPosts] Error during query execution: {e}")
-                continue
-
-    except Exception as e:
-        logger.error(f"[LinkedInPosts] Failed to initialize DDGS: {e}")
-
-    logger.info(f"[LinkedInPosts] Discovered {len(found_jobs)} active, fresh LinkedIn recruiter posts.")
-    return found_jobs
+                    seen.add(url)
+                    title = clean_text(row.get("title")).replace(" | LinkedIn", "")
+                    snippet = clean_text(row.get("body"))
+                    post = cache.get(url)
+                    if post and (post.get("status") not in {"active", "closed"} or
+                                 not all(isinstance(post.get(key), str) for key in ("text", "posted_at"))):
+                        cache.discard(url)
+                        post = None
+                    cached = post is not None
+                    post = post or {"status": "unverified", "text": "", "posted_at": ""}
+                    if not cached and not blocked and checked < options["max_checks"]:
+                        checked += 1
+                        try:
+                            post = inspect_post(url, options["timeout"])
+                            if post["status"] in {"active", "closed"}:
+                                cache.put(url, post)
+                        except SourceError as exc:
+                            post["status"] = "closed" if exc.status == "closed" else "unverified"
+                            result.report.notes.append("post_" + exc.status)
+                            blocked = exc.status == "blocked"
+                            cache.discard(url)
+                    incomplete = incomplete or post["status"] == "unverified"
+                    text = post["text"] or snippet
+                    # Only explicitly stated location; the query is not evidence.
+                    location = ""
+                    for city in ("Karachi", "Lahore", "Islamabad", "Hyderabad", "Rawalpindi"):
+                        if re.search(r"\b" + city + r"\b", text + " " + title, re.I):
+                            location = city + ", Pakistan"
+                            break
+                    emails = re.findall(EMAIL_REGEX, post["text"])
+                    emails = [email for email in emails if not email.endswith(("@example.com", "@domain.com"))]
+                    try:
+                        result.append(Job(title=title or "Recruiter hiring announcement",
+                            company="", location=location, url=url, platform="LinkedIn Post",
+                            description=text, description_status="full" if post["text"] else "snippet",
+                            kind="lead", posted_at=post["posted_at"], date_source="post_metadata",
+                            active_status=post["status"], recruiter_email=emails[0] if emails else "",
+                            query_id=query_id, search_track="recruiter_leads",
+                            evidence_warnings=["cached_post"] if cached else []))
+                        count += 1
+                    except ValueError:
+                        invalid += 1
+                result.report.queries.append(QueryOutcome(query_id, "partial" if invalid or incomplete else "success" if rows else "valid_empty",
+                    len(rows), count, invalid, round(time.monotonic() - before, 2),
+                    "unverified_posts" if incomplete else ""))
+                if not invalid and not incomplete:
+                    result.updates[query_id] = {"last_success": utc_now(), "unique": count}
+            except Exception as exc:
+                result.report.queries.append(QueryOutcome(query_id, "failed",
+                    duration_seconds=round(time.monotonic() - before, 2), reason=type(exc).__name__))
+    result[:] = [role for post in result for role in split_post_roles(post)]
+    cache.publish(result)
+    return result

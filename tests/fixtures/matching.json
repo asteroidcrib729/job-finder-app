@@ -1,0 +1,785 @@
+{
+  "benchmark_type": "synthetic_regression",
+  "evaluated_at": "2026-09-07T12:00:00+00:00",
+  "candidates": [
+    {
+      "id": "nextjs",
+      "expected": "qualified",
+      "job": {
+        "title": "Next.js Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/nextjs",
+        "platform": "Fixture",
+        "description": "Next.js required.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "ruby_mandatory",
+      "expected": "rejected",
+      "job": {
+        "title": "Software Engineer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/ruby_mandatory",
+        "platform": "Fixture",
+        "description": "Must have Ruby on Rails expertise.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "no_description",
+      "expected": "review",
+      "job": {
+        "title": "Software Engineer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/no_description",
+        "platform": "Fixture",
+        "description": "",
+        "description_status": "missing",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "graduate_5_years",
+      "expected": "rejected",
+      "job": {
+        "title": "Software Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/graduate_5_years",
+        "platform": "Fixture",
+        "description": "Requires 5 years experience. Must be a university graduate.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "international_5_years",
+      "expected": "rejected",
+      "job": {
+        "title": "Software Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/international_5_years",
+        "platform": "Fixture",
+        "description": "Requires 5 years experience at an international company.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "degree_duration",
+      "expected": "qualified",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/degree_duration",
+        "platform": "Fixture",
+        "description": "A 4 year degree is required. No experience required. Python.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "one_to_three",
+      "expected": "review",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/one_to_three",
+        "platform": "Fixture",
+        "description": "Python. 1 to 3 years experience required.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "hyderabad",
+      "expected": "rejected",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Hyderabad, Pakistan",
+        "url": "https://example.test/jobs/hyderabad",
+        "platform": "Fixture",
+        "description": "Python and Django. Fresh graduates welcome.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "country_only",
+      "expected": "review",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Pakistan",
+        "url": "https://example.test/jobs/country_only",
+        "platform": "Fixture",
+        "description": "Python and Django. Fresh graduates welcome.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "us_only",
+      "expected": "rejected",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "United States",
+        "url": "https://example.test/jobs/us_only",
+        "platform": "Fixture",
+        "description": "Python. Remote, US residents only.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00",
+        "is_remote": true
+      }
+    },
+    {
+      "id": "negative_wfh",
+      "expected": "rejected",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Lahore, Pakistan",
+        "url": "https://example.test/jobs/negative_wfh",
+        "platform": "Fixture",
+        "description": "Python. Work from home is not permitted.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "academy",
+      "expected": "qualified",
+      "job": {
+        "title": "Software Developer - Academy",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/academy",
+        "platform": "Fixture",
+        "description": "Python React.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "sales_product",
+      "expected": "qualified",
+      "job": {
+        "title": "Software Engineer - Sales Platform",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/sales_product",
+        "platform": "Fixture",
+        "description": "Python React.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "civil_api",
+      "expected": "rejected",
+      "job": {
+        "title": "Civil Engineer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/civil_api",
+        "platform": "Fixture",
+        "description": "Join a rapidly growing company.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "written_five",
+      "expected": "rejected",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/written_five",
+        "platform": "Fixture",
+        "description": "Python. Minimum five years of experience required.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "positive_fullstack",
+      "expected": "qualified",
+      "job": {
+        "title": "Junior Full Stack Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/positive_fullstack",
+        "platform": "Fixture",
+        "description": "React, TypeScript, Next.js, Node.js. 0-1 years experience.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "zero_two",
+      "expected": "qualified",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/zero_two",
+        "platform": "Fixture",
+        "description": "Python. 0-2 years experience.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "zero_to_two",
+      "expected": "qualified",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/zero_to_two",
+        "platform": "Fixture",
+        "description": "Python. 0 to 2 years experience.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "en_dash",
+      "expected": "qualified",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/en_dash",
+        "platform": "Fixture",
+        "description": "Python. 0–2 years experience.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "six_months",
+      "expected": "review",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/six_months",
+        "platform": "Fixture",
+        "description": "Python. Six months of experience required.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "preferred_three",
+      "expected": "qualified",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/preferred_three",
+        "platform": "Fixture",
+        "description": "Python. Three years of experience preferred.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "senior",
+      "expected": "rejected",
+      "job": {
+        "title": "Senior Python Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/senior",
+        "platform": "Fixture",
+        "description": "Python and Django. Fresh graduates welcome.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "sr",
+      "expected": "rejected",
+      "job": {
+        "title": "Sr Python Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/sr",
+        "platform": "Fixture",
+        "description": "Python and Django. Fresh graduates welcome.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "lead",
+      "expected": "rejected",
+      "job": {
+        "title": "Lead Python Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/lead",
+        "platform": "Fixture",
+        "description": "Python and Django. Fresh graduates welcome.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "level_iii",
+      "expected": "rejected",
+      "job": {
+        "title": "Software Engineer III",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/level_iii",
+        "platform": "Fixture",
+        "description": "Python React.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "react_or_vue",
+      "expected": "qualified",
+      "job": {
+        "title": "Frontend Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/react_or_vue",
+        "platform": "Fixture",
+        "description": "React or Vue required.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "react_and_rust",
+      "expected": "rejected",
+      "job": {
+        "title": "Frontend Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/react_and_rust",
+        "platform": "Fixture",
+        "description": "React and Rust required.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "vue_preferred",
+      "expected": "qualified",
+      "job": {
+        "title": "Frontend Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/vue_preferred",
+        "platform": "Fixture",
+        "description": "React required. Vue preferred.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "javascript_not_java",
+      "expected": "qualified",
+      "job": {
+        "title": "JavaScript Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/javascript_not_java",
+        "platform": "Fixture",
+        "description": "JavaScript required.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "empty_location",
+      "expected": "review",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "",
+        "url": "https://example.test/jobs/empty_location",
+        "platform": "Fixture",
+        "description": "Python and Django. Fresh graduates welcome.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "karachi_hybrid",
+      "expected": "qualified",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/karachi_hybrid",
+        "platform": "Fixture",
+        "description": "Python and Django. Fresh graduates welcome.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00",
+        "work_mode": "hybrid"
+      }
+    },
+    {
+      "id": "lahore_hybrid",
+      "expected": "rejected",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Lahore, Pakistan",
+        "url": "https://example.test/jobs/lahore_hybrid",
+        "platform": "Fixture",
+        "description": "Python and Django. Fresh graduates welcome.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00",
+        "work_mode": "hybrid"
+      }
+    },
+    {
+      "id": "accented_karachi",
+      "expected": "qualified",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Karāchi, Pakistan",
+        "url": "https://example.test/jobs/accented_karachi",
+        "platform": "Fixture",
+        "description": "Python and Django. Fresh graduates welcome.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "no_remote",
+      "expected": "rejected",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Lahore, Pakistan",
+        "url": "https://example.test/jobs/no_remote",
+        "platform": "Fixture",
+        "description": "Python. No remote work.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "worldwide_usd",
+      "expected": "qualified",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Worldwide",
+        "url": "https://example.test/jobs/worldwide_usd",
+        "platform": "Fixture",
+        "description": "Python Django. Remote worldwide.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00",
+        "is_remote": true,
+        "salary_text": "USD 1000 per month"
+      }
+    },
+    {
+      "id": "worldwide_unknown_pay",
+      "expected": "review",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Worldwide",
+        "url": "https://example.test/jobs/worldwide_unknown_pay",
+        "platform": "Fixture",
+        "description": "Python Django. Remote worldwide.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00",
+        "is_remote": true
+      }
+    },
+    {
+      "id": "worldwide_pkr",
+      "expected": "review",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Worldwide",
+        "url": "https://example.test/jobs/worldwide_pkr",
+        "platform": "Fixture",
+        "description": "Python and Django. Fresh graduates welcome.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00",
+        "is_remote": true,
+        "salary_text": "PKR 200000 monthly"
+      }
+    },
+    {
+      "id": "cad_not_usd",
+      "expected": "review",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Worldwide",
+        "url": "https://example.test/jobs/cad_not_usd",
+        "platform": "Fixture",
+        "description": "Python and Django. Fresh graduates welcome.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00",
+        "is_remote": true,
+        "salary_text": "CAD 100000 yearly"
+      }
+    },
+    {
+      "id": "ambiguous_dollar",
+      "expected": "review",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Worldwide",
+        "url": "https://example.test/jobs/ambiguous_dollar",
+        "platform": "Fixture",
+        "description": "Python and Django. Fresh graduates welcome.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00",
+        "is_remote": true,
+        "salary_text": "$1000 monthly"
+      }
+    },
+    {
+      "id": "pakistan_remote_usd",
+      "expected": "qualified",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Pakistan",
+        "url": "https://example.test/jobs/pakistan_remote_usd",
+        "platform": "Fixture",
+        "description": "Python and Django. Fresh graduates welcome.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00",
+        "is_remote": true,
+        "salary_text": "USD 1000 monthly"
+      }
+    },
+    {
+      "id": "global_unknown_eligibility",
+      "expected": "review",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Remote",
+        "url": "https://example.test/jobs/global_unknown_eligibility",
+        "platform": "Fixture",
+        "description": "Python and Django. Fresh graduates welcome.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00",
+        "is_remote": true,
+        "salary_text": "USD 1000 monthly"
+      }
+    },
+    {
+      "id": "eu_only",
+      "expected": "rejected",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Remote - EU-only",
+        "url": "https://example.test/jobs/eu_only",
+        "platform": "Fixture",
+        "description": "Python and Django. Fresh graduates welcome.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00",
+        "is_remote": true,
+        "salary_text": "USD 1000 monthly"
+      }
+    },
+    {
+      "id": "must_reside_us",
+      "expected": "rejected",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Worldwide",
+        "url": "https://example.test/jobs/must_reside_us",
+        "platform": "Fixture",
+        "description": "Python. Must reside in the United States.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00",
+        "is_remote": true
+      }
+    },
+    {
+      "id": "stale",
+      "expected": "rejected",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/stale",
+        "platform": "Fixture",
+        "description": "Python and Django. Fresh graduates welcome.",
+        "description_status": "full",
+        "posted_at": "2026-08-01T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "unknown_date",
+      "expected": "review",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/unknown_date",
+        "platform": "Fixture",
+        "description": "Python and Django. Fresh graduates welcome.",
+        "description_status": "full",
+        "posted_at": ""
+      }
+    },
+    {
+      "id": "expired",
+      "expected": "rejected",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/expired",
+        "platform": "Fixture",
+        "description": "Python and Django. Fresh graduates welcome.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00",
+        "expires_at": "2026-09-01T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "closed",
+      "expected": "rejected",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/closed",
+        "platform": "Fixture",
+        "description": "Python and Django. Fresh graduates welcome.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00",
+        "active_status": "closed"
+      }
+    },
+    {
+      "id": "unverified",
+      "expected": "review",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/unverified",
+        "platform": "Fixture",
+        "description": "Python and Django. Fresh graduates welcome.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00",
+        "active_status": "unverified"
+      }
+    },
+    {
+      "id": "snippet",
+      "expected": "review",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/snippet",
+        "platform": "Fixture",
+        "description": "Python and Django. Fresh graduates welcome.",
+        "description_status": "snippet",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "recruiter_lead",
+      "expected": "review",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/recruiter_lead",
+        "platform": "Fixture",
+        "description": "Python and Django. Fresh graduates welcome.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00",
+        "kind": "lead"
+      }
+    },
+    {
+      "id": "null_description",
+      "expected": "review",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/null_description",
+        "platform": "Fixture",
+        "description": null,
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "company_age",
+      "expected": "qualified",
+      "job": {
+        "title": "Junior Python Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/company_age",
+        "platform": "Fixture",
+        "description": "Our company has operated for 10 years. Python Django. Fresh graduates welcome.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "python_backend",
+      "expected": "qualified",
+      "job": {
+        "title": "Junior Backend Developer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/python_backend",
+        "platform": "Fixture",
+        "description": "Python Django Flask required.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    },
+    {
+      "id": "missing_skill_primary",
+      "expected": "review",
+      "job": {
+        "title": "Software Engineer",
+        "company": "Fixture",
+        "location": "Karachi, Pakistan",
+        "url": "https://example.test/jobs/missing_skill_primary",
+        "platform": "Fixture",
+        "description": "Git and API knowledge.",
+        "description_status": "full",
+        "posted_at": "2026-09-06T12:00:00+00:00"
+      }
+    }
+  ]
+}

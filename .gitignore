@@ -11,3 +11,6 @@ ENV/
 *.log
 *.csv
 Resume - Faraz Hussain.pdf
+output/
+.cache/
+data/*.tmp

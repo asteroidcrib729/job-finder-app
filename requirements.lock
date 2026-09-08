@@ -1,0 +1,40 @@
+# Exact runtime closure of the inspected environment. Python >=3.11.
+# CI installs this file directly on Python 3.11/Linux; local validation used 3.12/Windows.
+annotated-types==0.7.0
+anyio==4.14.2
+beautifulsoup4==4.15.0
+brotli==1.2.0
+certifi==2026.5.20
+charset-normalizer==3.4.7
+click==8.4.2
+colorama==0.4.1; sys_platform == "win32"
+ddgs==9.15.0
+fake-useragent==2.2.0
+h11==0.16.0
+h2==4.4.1
+hpack==4.2.0
+httpcore==1.0.9
+httpx==0.28.1
+hyperframe==6.1.0
+idna==2.8
+lxml==6.1.1
+markdownify==0.13.1
+numpy==1.26.3
+pandas==2.3.3
+primp==1.3.1
+pydantic==2.13.4
+pydantic_core==2.46.4
+python-dateutil==2.9.0.post0
+python-jobspy==1.1.82
+pytz==2026.2
+PyYAML==6.0.3
+regex==2024.11.6
+requests==2.34.2
+six==1.17.0
+socksio==1.0.0
+soupsieve==2.9.1
+tls-client==1.0.1
+typing_extensions==4.15.0
+typing-inspection==0.4.2
+tzdata==2026.3
+urllib3==1.26.20
