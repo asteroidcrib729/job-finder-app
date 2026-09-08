@@ -9,6 +9,10 @@ on:
         description: "Scrape and evaluate without Discord messages or state writes"
         type: boolean
         default: false
+      verification_sample:
+        description: "Refresh searches and send at most 3 jobs; use labeled review candidates only if no qualified jobs exist"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -52,6 +56,7 @@ jobs:
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           JOB_FINDER_DRY_RUN: ${{ inputs.dry_run || false }}
+          JOB_FINDER_VERIFICATION_SAMPLE: ${{ inputs.verification_sample || false }}
         run: python -m workflow_runner
 
       # A degraded scrape or partial delivery must not discard valid acknowledgements.

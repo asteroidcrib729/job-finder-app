@@ -97,13 +97,25 @@ def read_replay(path):
 
 
 def run_job_finder(dry_run=False, test_notify=False, config_path=None, replay_path=None,
-                   state_path=SEEN_JOBS_FILE, discovery_path=DISCOVERY_FILE, report_dir=None):
+                   state_path=SEEN_JOBS_FILE, discovery_path=DISCOVERY_FILE, report_dir=None,
+                   verification_sample=False):
     report_dir = report_dir or BASE_DIR / "output" / "latest"
     dry_run = dry_run or replay_path is not None
     report = {"started_at": utc_now(), "health": "failed", "environment": environment_versions(),
               "sources": [], "counts": {}, "jobs": [], "deliveries": []}
     try:
         config = load_config(config_path)
+        if verification_sample:
+            # Manual verification only: refresh within existing request budgets,
+            # cap delivery at three jobs and leave repository defaults untouched.
+            config["notifications"]["max_per_run"] = 3
+            config["jobspy"]["interval_hours"] = 0
+            config["jobspy"]["low_yield_interval_hours"] = 0
+            config["jobspy"]["max_queries"] = min(12, config["jobspy"]["max_queries"])
+            config["jobspy"]["max_seconds"] = min(300, config["jobspy"]["max_seconds"])
+            config["local_scrapers"]["interval_hours"] = 0
+            config["linkedin_posts"]["interval_hours"] = 0
+        report["verification_sample"] = verification_sample
         report["profile_version"] = config["profile"]["version"]
         report["matcher_version"] = MATCHER_VERSION
         report["mode"] = "replay" if replay_path else "dry_run" if dry_run else "live"
@@ -154,9 +166,15 @@ def run_job_finder(dry_run=False, test_notify=False, config_path=None, replay_pa
             "post_detail_requests": config["linkedin_posts"]["max_checks"],
         }
         eligible_tiers = {"qualified", "review"} if config["notifications"]["send_review"] else {"qualified"}
+        if verification_sample:
+            eligible_tiers = {"qualified"} if tiers["qualified"] else {"review"}
+            report["verification_tier"] = next(iter(eligible_tiers))
         eligible = [job for job in candidates if job.decision["tier"] in eligible_tiers]
         new = tracker.filter_new_jobs(eligible)
         report["counts"]["already_notified"] = len(eligible) - len(new)
+        if verification_sample:
+            report["counts"]["outside_verification_sample"] = max(0, len(new) - 3)
+            new = new[:3]
         report["counts"]["new_candidates"] = len(new)
         active_sources = [source for source in sources if not source.report.skipped]
         degraded = any(source.report.status not in {"success", "valid_empty"} for source in active_sources)

@@ -19,6 +19,34 @@ def source(jobs=()):
 
 
 class PipelineTests(OfflineTestCase):
+    def test_verification_caps_review_sample_and_prefers_qualified_candidates(self):
+        for qualified in (False, True):
+            with self.subTest(qualified=qualified), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                reviews = [job(str(i), kind="lead", posted_at=utc_now()) for i in range(5)]
+                rows = reviews + [job("senior", title="Senior Python Developer", posted_at=utc_now())]
+                if qualified:
+                    rows.append(job("qualified", posted_at=utc_now()))
+                with patch.dict("os.environ", {"DISCORD_WEBHOOK_URL": "https://example.test/webhook"}), \
+                     patch("main.fetch_jobspy_jobs", return_value=source(rows)) as scrape, \
+                     patch("main.fetch_rozee_jobs", return_value=source()), \
+                     patch("main.fetch_linkedin_plain_posts", return_value=source()), \
+                     patch("main.fetch_remote_feeds", return_value=source()), \
+                     patch("notifiers.discord.requests.post", return_value=response(200, {"id": "verification-message"})) as post:
+                    code = run_job_finder(verification_sample=True, state_path=root / "state",
+                        discovery_path=root / "discovery", report_dir=root / "report")
+                self.assertEqual(code, 0)
+                report = json.loads((root / "report/run.json").read_text())
+                expected = 1 if qualified else 3
+                self.assertEqual(report["counts"]["delivered"], expected)
+                self.assertEqual(report["counts"]["already_notified"], 0)
+                self.assertEqual(report["verification_tier"], "qualified" if qualified else "review")
+                self.assertEqual(len(JobTracker(root / "state").receipts), expected)
+                self.assertFalse(JobTracker(root / "state").pending)
+                self.assertEqual(post.call_count, 1)
+                self.assertEqual(scrape.call_args.args[0]["jobspy"]["interval_hours"], 0)
+                self.assertFalse(load_config()["notifications"]["send_review"])
+
     def test_replay_never_scrapes_sends_or_writes_state(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

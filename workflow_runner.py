@@ -16,7 +16,8 @@ def main():
         with Path(os.environ["GITHUB_OUTPUT"]).open("a", encoding="utf-8") as handle:
             handle.write(f"persist_state={'false' if dry_run else 'true'}\n")
     directory = BASE_DIR / "output" / "latest"
-    code = run_job_finder(dry_run=dry_run, report_dir=directory)
+    code = run_job_finder(dry_run=dry_run, report_dir=directory,
+        verification_sample=os.getenv("JOB_FINDER_VERIFICATION_SAMPLE", "false").lower() == "true")
     try:
         report = read_json(directory / "run.json", {})
         if not report.get("finished_at"):

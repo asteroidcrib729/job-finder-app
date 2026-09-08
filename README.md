@@ -153,3 +153,6 @@ CLI exit codes remain **0** healthy/valid-empty/idle, **1** fatal configuration/
 
 
 For production diagnosis, use the manual workflow input **dry_run: true**. This runs the same discovery and health classification on GitHub without Discord messages or state commits. Source warnings remain in the Actions summary and run artifact; Google missing-cursor results are unverified rather than claimed as healthy empty. See [the initial production incident](development-plans/PRODUCTION-INCIDENT-2026-09-08.md).
+
+
+For an explicitly requested Discord verification, dispatch with **dry_run: false** and **verification_sample: true**. This refreshes source searches within a bounded sample (at most 12 JobSpy queries/300 seconds), sends at most three jobs, and uses clearly labeled review candidates only when the sample contains no qualified jobs. It does not change scheduled-run defaults, resend acknowledged jobs, or override rejection rules. Successful notifications are journaled normally; review candidates outside the sample are not queued.
