@@ -1,0 +1,835 @@
+[
+  {
+    "run_id": "34193004929",
+    "health": "degraded",
+    "counts": {
+      "raw": 608,
+      "unique": 348,
+      "qualified": 0,
+      "review": 21,
+      "rejected": 327,
+      "missing_descriptions": 0,
+      "already_notified": 0,
+      "new_candidates": 0,
+      "delivered": 0,
+      "delivery_failed_or_uncertain": 0,
+      "pending_remaining": 0
+    },
+    "deliveries": [],
+    "sources": [
+      {
+        "source": "JobSpy",
+        "queries": [
+          {
+            "query_id": "jobspy:6f8f31f9e8e59893",
+            "status": "success",
+            "raw": 17,
+            "converted": 17,
+            "invalid": 0,
+            "duration_seconds": 23.67,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:300960d0b464f72c",
+            "status": "success",
+            "raw": 5,
+            "converted": 5,
+            "invalid": 0,
+            "duration_seconds": 0.99,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:8a1566e9df6df54c",
+            "status": "partial",
+            "raw": 0,
+            "converted": 0,
+            "invalid": 0,
+            "duration_seconds": 0.62,
+            "reason": "upstream_warning"
+          },
+          {
+            "query_id": "jobspy:564dcb1e69c2bda5",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 23.8,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:4af583cbf609f6d2",
+            "status": "valid_empty",
+            "raw": 0,
+            "converted": 0,
+            "invalid": 0,
+            "duration_seconds": 0.66,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:3e0afc5d6e9d5093",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 26.35,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:991bcc7f58aae5be",
+            "status": "partial",
+            "raw": 0,
+            "converted": 0,
+            "invalid": 0,
+            "duration_seconds": 0.62,
+            "reason": "upstream_warning"
+          },
+          {
+            "query_id": "jobspy:ca57136b9f3f20eb",
+            "status": "success",
+            "raw": 14,
+            "converted": 14,
+            "invalid": 0,
+            "duration_seconds": 26.01,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:75a6ec1c92addf72",
+            "status": "success",
+            "raw": 2,
+            "converted": 2,
+            "invalid": 0,
+            "duration_seconds": 0.77,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:8307d3b3f65ffc0c",
+            "status": "partial",
+            "raw": 0,
+            "converted": 0,
+            "invalid": 0,
+            "duration_seconds": 0.61,
+            "reason": "upstream_warning"
+          },
+          {
+            "query_id": "jobspy:5bb01656cc0c1a0c",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 26.74,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:0930cd84b775eb4a",
+            "status": "valid_empty",
+            "raw": 0,
+            "converted": 0,
+            "invalid": 0,
+            "duration_seconds": 0.66,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:b1aab01b2a34cf34",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 30.97,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:5a4a0958f8e32e84",
+            "status": "success",
+            "raw": 13,
+            "converted": 13,
+            "invalid": 0,
+            "duration_seconds": 19.47,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:05a7339ccbca312e",
+            "status": "success",
+            "raw": 1,
+            "converted": 1,
+            "invalid": 0,
+            "duration_seconds": 0.88,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:2e43096f1b960dff",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 32.32,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:8bf5691f934003fc",
+            "status": "valid_empty",
+            "raw": 0,
+            "converted": 0,
+            "invalid": 0,
+            "duration_seconds": 0.68,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:d521773e3ff80bc0",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 28.96,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:f0010df233070912",
+            "status": "success",
+            "raw": 18,
+            "converted": 18,
+            "invalid": 0,
+            "duration_seconds": 19.08,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:48eff308264948d5",
+            "status": "success",
+            "raw": 2,
+            "converted": 2,
+            "invalid": 0,
+            "duration_seconds": 0.78,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:3acd114688309471",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 23.1,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:3c6f90c1864a7fd4",
+            "status": "valid_empty",
+            "raw": 0,
+            "converted": 0,
+            "invalid": 0,
+            "duration_seconds": 0.65,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:f5643d7891555dcc",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 29.81,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:ec171cf453203d61",
+            "status": "success",
+            "raw": 20,
+            "converted": 20,
+            "invalid": 0,
+            "duration_seconds": 25.69,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:2ba684532f92b59e",
+            "status": "success",
+            "raw": 1,
+            "converted": 1,
+            "invalid": 0,
+            "duration_seconds": 0.82,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:f322d9cbeebf8ae5",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 25.25,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:aa7c94e10072c3ec",
+            "status": "valid_empty",
+            "raw": 0,
+            "converted": 0,
+            "invalid": 0,
+            "duration_seconds": 0.8,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:7ea6953079cf86fb",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 27.4,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:c1437b145efe8212",
+            "status": "success",
+            "raw": 9,
+            "converted": 9,
+            "invalid": 0,
+            "duration_seconds": 12.86,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:c3aa6e77462b7ed1",
+            "status": "valid_empty",
+            "raw": 0,
+            "converted": 0,
+            "invalid": 0,
+            "duration_seconds": 0.66,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:5aec78d19fa3c488",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 25.66,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:b03d99535554bd87",
+            "status": "valid_empty",
+            "raw": 0,
+            "converted": 0,
+            "invalid": 0,
+            "duration_seconds": 0.65,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:bcd8124a5769b5c4",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 27.27,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:de3fa268e20b281b",
+            "status": "success",
+            "raw": 20,
+            "converted": 20,
+            "invalid": 0,
+            "duration_seconds": 20.02,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:98020ae1dc0e5aa2",
+            "status": "valid_empty",
+            "raw": 0,
+            "converted": 0,
+            "invalid": 0,
+            "duration_seconds": 0.65,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:c08f6ae5fb3d3a63",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 26.55,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:c9912c83d071d927",
+            "status": "valid_empty",
+            "raw": 0,
+            "converted": 0,
+            "invalid": 0,
+            "duration_seconds": 0.67,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:7c683ac77a7891df",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 29.17,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:18569cf04d29f7e6",
+            "status": "success",
+            "raw": 17,
+            "converted": 17,
+            "invalid": 0,
+            "duration_seconds": 17.7,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:bb581eeebc9fb46c",
+            "status": "success",
+            "raw": 2,
+            "converted": 2,
+            "invalid": 0,
+            "duration_seconds": 0.8,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:a5e85e1d9cdcef50",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 25.07,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:dc5dffc2afda457e",
+            "status": "valid_empty",
+            "raw": 0,
+            "converted": 0,
+            "invalid": 0,
+            "duration_seconds": 0.64,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:f0d527d9cdc6a307",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 30.76,
+            "reason": ""
+          }
+        ],
+        "notes": [
+          "source_paused_after_repeated_failures"
+        ],
+        "skipped": false,
+        "status": "partial"
+      },
+      {
+        "source": "Rozee.pk",
+        "queries": [
+          {
+            "query_id": "rozee:363d786037541af2cc10:0",
+            "status": "success",
+            "raw": 21,
+            "converted": 21,
+            "invalid": 0,
+            "duration_seconds": 1.67,
+            "reason": ""
+          },
+          {
+            "query_id": "rozee:363d786037541af2cc10:20",
+            "status": "success",
+            "raw": 20,
+            "converted": 20,
+            "invalid": 0,
+            "duration_seconds": 2.21,
+            "reason": ""
+          },
+          {
+            "query_id": "rozee:b393f45444f6974489b2:0",
+            "status": "success",
+            "raw": 7,
+            "converted": 7,
+            "invalid": 0,
+            "duration_seconds": 1.18,
+            "reason": ""
+          },
+          {
+            "query_id": "rozee:f84d3b15adbf76bcd46e:0",
+            "status": "success",
+            "raw": 8,
+            "converted": 8,
+            "invalid": 0,
+            "duration_seconds": 1.11,
+            "reason": ""
+          },
+          {
+            "query_id": "rozee:7a5a27d54e497485cbac:0",
+            "status": "success",
+            "raw": 9,
+            "converted": 9,
+            "invalid": 0,
+            "duration_seconds": 1.22,
+            "reason": ""
+          }
+        ],
+        "notes": [
+          "rozee:363d786037541af2cc10:page_budget_reached"
+        ],
+        "skipped": false,
+        "status": "success"
+      },
+      {
+        "source": "LinkedIn Post",
+        "queries": [
+          {
+            "query_id": "posts:abc8e0cf74850e983d3d",
+            "status": "partial",
+            "raw": 1,
+            "converted": 0,
+            "invalid": 1,
+            "duration_seconds": 2.14,
+            "reason": ""
+          },
+          {
+            "query_id": "posts:233b30a94114788547e3",
+            "status": "success",
+            "raw": 2,
+            "converted": 2,
+            "invalid": 0,
+            "duration_seconds": 2.32,
+            "reason": ""
+          }
+        ],
+        "notes": [],
+        "skipped": false,
+        "status": "partial"
+      },
+      {
+        "source": "Remote feeds",
+        "queries": [],
+        "notes": [],
+        "skipped": true,
+        "status": "skipped"
+      }
+    ]
+  },
+  {
+    "run_id": "34220455004",
+    "health": "degraded",
+    "counts": {
+      "raw": 478,
+      "unique": 237,
+      "qualified": 0,
+      "review": 21,
+      "rejected": 216,
+      "missing_descriptions": 0,
+      "already_notified": 0,
+      "new_candidates": 0,
+      "delivered": 0,
+      "delivery_failed_or_uncertain": 0,
+      "pending_remaining": 0
+    },
+    "deliveries": [],
+    "sources": [
+      {
+        "source": "JobSpy",
+        "queries": [
+          {
+            "query_id": "jobspy:8a1566e9df6df54c",
+            "status": "partial",
+            "raw": 0,
+            "converted": 0,
+            "invalid": 0,
+            "duration_seconds": 0.7,
+            "reason": "upstream_warning"
+          },
+          {
+            "query_id": "jobspy:991bcc7f58aae5be",
+            "status": "partial",
+            "raw": 0,
+            "converted": 0,
+            "invalid": 0,
+            "duration_seconds": 0.7,
+            "reason": "upstream_warning"
+          },
+          {
+            "query_id": "jobspy:8307d3b3f65ffc0c",
+            "status": "partial",
+            "raw": 0,
+            "converted": 0,
+            "invalid": 0,
+            "duration_seconds": 0.69,
+            "reason": "upstream_warning"
+          },
+          {
+            "query_id": "jobspy:6f8f31f9e8e59893",
+            "status": "success",
+            "raw": 18,
+            "converted": 18,
+            "invalid": 0,
+            "duration_seconds": 25.61,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:564dcb1e69c2bda5",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 41.49,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:3e0afc5d6e9d5093",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 30.86,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:ca57136b9f3f20eb",
+            "status": "success",
+            "raw": 9,
+            "converted": 9,
+            "invalid": 0,
+            "duration_seconds": 9.68,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:5bb01656cc0c1a0c",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 28.08,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:b1aab01b2a34cf34",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 48.89,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:5a4a0958f8e32e84",
+            "status": "success",
+            "raw": 13,
+            "converted": 13,
+            "invalid": 0,
+            "duration_seconds": 27.55,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:2e43096f1b960dff",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 32.18,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:d521773e3ff80bc0",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 40.45,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:f0010df233070912",
+            "status": "success",
+            "raw": 16,
+            "converted": 16,
+            "invalid": 0,
+            "duration_seconds": 32.64,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:3acd114688309471",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 37.21,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:ec171cf453203d61",
+            "status": "success",
+            "raw": 20,
+            "converted": 20,
+            "invalid": 0,
+            "duration_seconds": 38.55,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:f322d9cbeebf8ae5",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 28.71,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:5aec78d19fa3c488",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 35.11,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:de3fa268e20b281b",
+            "status": "success",
+            "raw": 20,
+            "converted": 20,
+            "invalid": 0,
+            "duration_seconds": 43.42,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:c08f6ae5fb3d3a63",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 28.57,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:18569cf04d29f7e6",
+            "status": "success",
+            "raw": 17,
+            "converted": 17,
+            "invalid": 0,
+            "duration_seconds": 44.06,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:a5e85e1d9cdcef50",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 45.78,
+            "reason": ""
+          },
+          {
+            "query_id": "jobspy:f0d527d9cdc6a307",
+            "status": "success",
+            "raw": 25,
+            "converted": 25,
+            "invalid": 0,
+            "duration_seconds": 29.63,
+            "reason": ""
+          }
+        ],
+        "notes": [
+          "jobspy:300960d0b464f72c:not_due",
+          "jobspy:4af583cbf609f6d2:not_due",
+          "jobspy:75a6ec1c92addf72:not_due",
+          "jobspy:0930cd84b775eb4a:not_due",
+          "jobspy:05a7339ccbca312e:not_due",
+          "jobspy:8bf5691f934003fc:not_due",
+          "jobspy:48eff308264948d5:not_due",
+          "jobspy:3c6f90c1864a7fd4:not_due",
+          "jobspy:f5643d7891555dcc:not_due",
+          "jobspy:2ba684532f92b59e:not_due",
+          "jobspy:aa7c94e10072c3ec:not_due",
+          "jobspy:7ea6953079cf86fb:not_due",
+          "jobspy:c1437b145efe8212:not_due",
+          "jobspy:c3aa6e77462b7ed1:not_due",
+          "jobspy:b03d99535554bd87:not_due",
+          "jobspy:bcd8124a5769b5c4:not_due",
+          "jobspy:98020ae1dc0e5aa2:not_due",
+          "jobspy:c9912c83d071d927:not_due",
+          "jobspy:7c683ac77a7891df:not_due",
+          "jobspy:bb581eeebc9fb46c:not_due",
+          "jobspy:dc5dffc2afda457e:not_due",
+          "source_paused_after_repeated_failures"
+        ],
+        "skipped": false,
+        "status": "partial"
+      },
+      {
+        "source": "Rozee.pk",
+        "queries": [
+          {
+            "query_id": "rozee:363d786037541af2cc10:0",
+            "status": "success",
+            "raw": 21,
+            "converted": 21,
+            "invalid": 0,
+            "duration_seconds": 3.86,
+            "reason": ""
+          },
+          {
+            "query_id": "rozee:363d786037541af2cc10:20",
+            "status": "success",
+            "raw": 20,
+            "converted": 20,
+            "invalid": 0,
+            "duration_seconds": 1.14,
+            "reason": ""
+          },
+          {
+            "query_id": "rozee:b393f45444f6974489b2:0",
+            "status": "success",
+            "raw": 7,
+            "converted": 7,
+            "invalid": 0,
+            "duration_seconds": 1.56,
+            "reason": ""
+          },
+          {
+            "query_id": "rozee:f84d3b15adbf76bcd46e:0",
+            "status": "success",
+            "raw": 8,
+            "converted": 8,
+            "invalid": 0,
+            "duration_seconds": 2.46,
+            "reason": ""
+          },
+          {
+            "query_id": "rozee:7a5a27d54e497485cbac:0",
+            "status": "success",
+            "raw": 9,
+            "converted": 9,
+            "invalid": 0,
+            "duration_seconds": 1.6,
+            "reason": ""
+          }
+        ],
+        "notes": [
+          "rozee:363d786037541af2cc10:page_budget_reached"
+        ],
+        "skipped": false,
+        "status": "success"
+      },
+      {
+        "source": "LinkedIn Post",
+        "queries": [
+          {
+            "query_id": "posts:abc8e0cf74850e983d3d",
+            "status": "failed",
+            "raw": 0,
+            "converted": 0,
+            "invalid": 0,
+            "duration_seconds": 2.13,
+            "reason": "DDGSException"
+          }
+        ],
+        "notes": [],
+        "skipped": false,
+        "status": "failed"
+      },
+      {
+        "source": "Remote feeds",
+        "queries": [],
+        "notes": [],
+        "skipped": true,
+        "status": "skipped"
+      }
+    ]
+  }
+]

@@ -1,5 +1,7 @@
 # Implementation and validation record
 
+**Production incident update (2026-09-08):** Both initial production runs completed discovery/state persistence but were marked failed because partial source warnings triggered exit 2 and the workflow escalated that to exit 1. The operational health policy, Google diagnostic classification and recruiter search handling are corrected. See [production incident analysis](PRODUCTION-INCIDENT-2026-09-08.md) for evidence, fixes and validation. Prior statements of code completion did not establish live-source acceptance.
+
 Implementation dates: 2026-09-07 and 2026-09-08. The user subsequently authorized committing and pushing the completed implementation and updated records to main. No production workflow was manually dispatched and no Discord test message was sent during implementation. Git integration tests use disposable local repositories and local bare remotes. Repository history records the publication commit; live production acceptance is tracked separately.
 
 Python, JobSpy/custom adapters, GitHub Actions, JSON state, and Discord remain the architecture. Implemented behavior and offline tests do not establish production accuracy or continuous source availability.
@@ -66,7 +68,7 @@ Raw pages/bundles remain ignored in .cache. Repository fixtures are synthetic/sa
 
 ## Validation
 
-- **64 offline tests passed**, including 54 parameterized matching cases.
+- **73 offline tests passed**, including 54 parameterized matching cases.
 - Evaluator: **54/54 expected tiers**, synthetic regression agreement, not production accuracy.
 - Local dependency check: no broken requirements.
 - Earlier Python 3.11/Linux wheel-resolution dry run succeeded with all **38 distributions** pinned. Actual Linux CI execution remains outstanding.

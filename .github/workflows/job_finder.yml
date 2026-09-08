@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: '17 */3 * * *'
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Scrape and evaluate without Discord messages or state writes"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -46,12 +51,13 @@ jobs:
         continue-on-error: true
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        run: python main.py
+          JOB_FINDER_DRY_RUN: ${{ inputs.dry_run || false }}
+        run: python -m workflow_runner
 
       # A degraded scrape or partial delivery must not discard valid acknowledgements.
       - name: Persist delivery and discovery state
         id: state
-        if: always() && steps.pipeline.outcome != 'skipped' && steps.pipeline.outcome != ''
+        if: always() && steps.pipeline.outputs.persist_state == 'true'
         env:
           PRODUCTION_BRANCH: ${{ github.event.repository.default_branch }}
         run: python -m storage.sync_state --branch "$PRODUCTION_BRANCH"
@@ -78,6 +84,6 @@ jobs:
           if-no-files-found: ignore
           retention-days: 14
 
-      - name: Surface degraded discovery or state persistence failure
+      - name: Surface pipeline or state persistence failure
         if: always() && (steps.pipeline.outcome == 'failure' || steps.state.outcome == 'failure')
         run: exit 1

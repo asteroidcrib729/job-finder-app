@@ -13,7 +13,9 @@ class HealthHandler(logging.Handler):
 
     def emit(self, record):
         text = record.getMessage().lower()
-        if any(word in text for word in ("429", "403", "blocked", "captcha")):
+        if "initial cursor not found" in text:
+            self.codes.append("google_jobs_cursor_missing")
+        elif any(word in text for word in ("429", "403", "blocked", "captcha")):
             self.codes.append("blocked")
         elif "timeout" in text or "timed out" in text:
             self.codes.append("timed_out")

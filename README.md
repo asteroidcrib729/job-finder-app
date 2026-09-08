@@ -81,7 +81,7 @@ The synthetic benchmark has 54 cases. Passing them is regression evidence, not a
 | jobspy.linkedin_fetch_description | Qualification evidence; disabling this moves incomplete results into review. |
 | jobspy.interval_hours / low_yield_interval_hours | Minimum query interval; successful queries with no qualified/review candidates use the longer interval. Defaults 3/12 hours. |
 | local_scrapers | Enable flag, keywords, max_queries, max_pages (2), max_details, timeout, interval_hours (3), detail_cache_hours (6). |
-| linkedin_posts | Enable flag, queries, result/check budgets, timeout, interval_hours (6), detail_cache_hours (6). |
+| linkedin_posts | Enable flag, queries, web search_backends (brave/duckduckgo/yahoo), result/check budgets, timeout, interval_hours (6), detail_cache_hours (6). |
 | remote_feeds | Remotive/WWR flags, cadence, result cap. |
 | matching.max_age_hours / min_score | Publication-age and fit thresholds. Unknown dates go to review. |
 | matching.allow_* | Hybrid, internship, contract, one-year stretch handling. |
@@ -142,7 +142,7 @@ The default-branch production workflow runs at minute 17 every three hours UTC a
 
 Feature-branch manual dispatch cannot send production alerts. A separate read-only CI workflow tests code pushes/pull requests without a Discord secret.
 
-Exit codes: **0** healthy/valid-empty/idle; **1** fatal configuration/state failure; **2** degraded source or delivery outcome. State commit/push failures are surfaced. The writer builds a state-only commit on the latest remote tree using a temporary index, preserving concurrent code changes. Acknowledgements override pending jobs; retention pruning and queue retirement are reconciled against the starting state. Normal fast-forward pushes retry branch races. Persistent failures retain state files/backups in a seven-day recovery artifact. There is no force push or working-tree rebase.
+CLI exit codes remain **0** healthy/valid-empty/idle, **1** fatal configuration/state failure, and **2** degraded source or delivery outcome. Actions uses **workflow_runner.py** to distinguish partial coverage from operational failure: successful primary discovery with optional source problems produces a visible warning; total due primary discovery failure, notification failure, corruption, or failed state persistence still fails the run. A Google/recruiter probe cannot fail a cycle whose primary queries are intentionally not due. Zero qualified matches alone is not a failure. State commit/push failures are surfaced. The writer builds a state-only commit on the latest remote tree using a temporary index, preserving concurrent code changes. Acknowledgements override pending jobs; retention pruning and queue retirement are reconciled against the starting state. Normal fast-forward pushes retry branch races. Persistent failures retain state files/backups in a seven-day recovery artifact. There is no force push or working-tree rebase.
 
 ## Development records
 
@@ -150,3 +150,6 @@ Exit codes: **0** healthy/valid-empty/idle; **1** fatal configuration/state fail
 - [Issue register](development-plans/ISSUES.md)
 - [Solution plan](development-plans/SOLUTIONS.md)
 - [Implementation and validation record](development-plans/IMPLEMENTATION.md)
+
+
+For production diagnosis, use the manual workflow input **dry_run: true**. This runs the same discovery and health classification on GitHub without Discord messages or state commits. Source warnings remain in the Actions summary and run artifact; Google missing-cursor results are unverified rather than claimed as healthy empty. See [the initial production incident](development-plans/PRODUCTION-INCIDENT-2026-09-08.md).

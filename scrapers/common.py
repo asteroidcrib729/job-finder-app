@@ -21,6 +21,8 @@ class QueryOutcome:
     invalid: int = 0
     duration_seconds: float = 0
     reason: str = ""
+    site: str = ""
+    search_track: str = ""
 
 
 @dataclass

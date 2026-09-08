@@ -129,6 +129,10 @@ def fetch_jobspy_jobs(config, discovery=None, runner=None):
                 if not isinstance(rows, list):
                     raise SourceError("parse_failed", "rows_not_list")
                 warnings = payload.get("warnings", [])
+                if rows and "google_jobs_cursor_missing" in warnings:
+                    # JobSpy also emits this warning for a valid single results page.
+                    result.report.notes.append("google_initial_page_only")
+                    warnings = [code for code in warnings if code != "google_jobs_cursor_missing"]
                 converted, invalid = [], 0
                 for row in rows:
                     try:
@@ -139,8 +143,12 @@ def fetch_jobspy_jobs(config, discovery=None, runner=None):
                 query_seen.update(job.job_id for job in converted)
                 result.extend(converted)
                 status = "partial" if warnings or invalid else "success" if rows else "valid_empty"
+                if not rows and warnings == ["google_jobs_cursor_missing"]:
+                    status = "unverified"
                 result.report.queries.append(QueryOutcome(query_id, status, len(rows), len(converted), invalid,
-                    round(time.monotonic() - before, 2), ",".join(warnings)))
+                    round(time.monotonic() - before, 2), ",".join(warnings), site, track["id"]))
+                if warnings:
+                    logger.warning("JobSpy %s %s: %s", site, track["id"], ",".join(warnings))
                 if warnings:
                     failed_by_site[site] = failed_by_site.get(site, 0) + 1
                 else:
@@ -155,7 +163,8 @@ def fetch_jobspy_jobs(config, discovery=None, runner=None):
             except SourceError as exc:
                 query_complete = False
                 result.report.queries.append(QueryOutcome(query_id, exc.status,
-                    duration_seconds=round(time.monotonic() - before, 2), reason=exc.reason))
+                    duration_seconds=round(time.monotonic() - before, 2), reason=exc.reason,
+                    site=site, search_track=track["id"]))
                 failed_by_site[site] = failed_by_site.get(site, 0) + 1
                 break
         if query_complete and successful_update:

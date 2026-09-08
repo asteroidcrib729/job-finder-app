@@ -1,10 +1,12 @@
 # Job Finder App: project memory and implementation status
 
+**Production incident update (2026-09-08):** Both initial production runs completed discovery/state persistence but were marked failed because partial source warnings triggered exit 2 and the workflow escalated that to exit 1. The operational health policy, Google diagnostic classification and recruiter search handling are corrected. See [production incident analysis](PRODUCTION-INCIDENT-2026-09-08.md) for evidence, fixes and validation. Prior statements of code completion did not establish live-source acceptance.
+
 ## Current status — 2026-09-08
 
 The implementation addresses all 24 audit issues at the code level. The original Python/JobSpy/custom-adapter, GitHub Actions, JSON-state and Discord architecture is retained. The user has authorized committing and pushing the complete implementation and documentation to main.
 
-**Validation:** 64 offline tests pass, including a parameterized 54-case matching benchmark; the evaluator agrees with all 54 synthetic expected tiers. Dependency checks and workflow YAML validation pass. Synthetic agreement is regression evidence, not a measured production accuracy percentage.
+**Validation:** 73 offline tests pass, including a parameterized 54-case matching benchmark; the evaluator agrees with all 54 synthetic expected tiers. Dependency checks and workflow YAML validation pass. Synthetic agreement is regression evidence, not a measured production accuracy percentage.
 
 **Acceptance still outstanding:** live LinkedIn/Indeed/Google verification, live Rozee multi-page verification after observed HTTP 403 blocking, Linux CI execution for the published commit, and a held-out set of manually found good-fit jobs. Optional salary/time-zone preferences remain user decisions. These boundaries must not be described as resolved by offline tests.
 

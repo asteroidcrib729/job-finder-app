@@ -1,10 +1,12 @@
 # Job Finder App: implemented solutions and acceptance plan
 
+**Production incident update (2026-09-08):** Both initial production runs completed discovery/state persistence but were marked failed because partial source warnings triggered exit 2 and the workflow escalated that to exit 1. The operational health policy, Google diagnostic classification and recruiter search handling are corrected. See [production incident analysis](PRODUCTION-INCIDENT-2026-09-08.md) for evidence, fixes and validation. Prior statements of code completion did not establish live-source acceptance.
+
 ## Current status — 2026-09-08
 
 The corrective implementation for S-01 through S-24 is complete at the code level and included in the user-authorized publication to main. This file now records implemented results alongside the original design rationale and acceptance criteria.
 
-**Validation:** 64 offline tests pass and all 54 synthetic expected tiers agree. The full evidence and source limitations are in [IMPLEMENTATION.md](IMPLEMENTATION.md).
+**Validation:** 73 offline tests pass and all 54 synthetic expected tiers agree. The full evidence and source limitations are in [IMPLEMENTATION.md](IMPLEMENTATION.md).
 
 **Remaining acceptance work:** inspect published Linux CI, perform controlled live-source checks, collect held-out real-job labels and compare manually found matches through retrieval, qualification, deduplication and delivery. No production precision/recall percentage is claimed. Optional remote-feed pilots, automatic depth tuning and unprovided salary/time-zone preferences remain separate from the completed core fixes.
 

@@ -32,7 +32,7 @@ def validate_config(config):
     allowed_sections = {
         "jobspy": {"enabled", "sites", "results_wanted", "max_pages", "max_queries", "hours_old", "query_timeout", "max_seconds", "linkedin_fetch_description", "interval_hours", "low_yield_interval_hours"},
         "local_scrapers": {"rozee_enabled", "max_queries", "max_details", "timeout", "keywords", "max_pages", "interval_hours", "detail_cache_hours"},
-        "linkedin_posts": {"enabled", "max_results", "max_checks", "timeout", "queries", "interval_hours", "detail_cache_hours"},
+        "linkedin_posts": {"enabled", "max_results", "max_checks", "timeout", "queries", "interval_hours", "detail_cache_hours", "search_backends"},
         "remote_feeds": {"remotive_enabled", "wwr_enabled", "interval_hours", "max_jobs"},
         "matching": {"max_age_hours", "min_score", "allow_hybrid", "allow_internships", "allow_contracts", "allow_one_year_stretch", "remote_salary_policy", "preferred_neighborhoods"},
         "notifications": {"discord_enabled", "send_review", "review_digest", "max_per_run", "max_attempts", "max_retry_wait"},
@@ -110,6 +110,9 @@ def validate_config(config):
     if config["matching"].get("remote_salary_policy") not in {"prefer_usd", "require_usd", "any"}:
         raise ValueError("matching.remote_salary_policy must be prefer_usd, require_usd, or any")
     _strings(config["linkedin_posts"].get("queries"), "linkedin_posts.queries")
+    _strings(config["linkedin_posts"].get("search_backends"), "linkedin_posts.search_backends")
+    if set(config["linkedin_posts"]["search_backends"]) - {"brave", "duckduckgo", "yahoo", "mojeek", "startpage"}:
+        raise ValueError("linkedin_posts.search_backends must name supported web search engines")
     _strings(config["local_scrapers"].get("keywords"), "local_scrapers.keywords")
     _strings(config["matching"].get("preferred_neighborhoods"), "matching.preferred_neighborhoods", False)
     return config

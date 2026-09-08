@@ -76,12 +76,16 @@ def fetch_linkedin_plain_posts(config, discovery=None):
             before = time.monotonic()
             query_id = query_key("posts", query)
             try:
-                rows = list(search.text(query, timelimit="m", max_results=options["max_results"]))
-                invalid, count, incomplete = 0, 0, False
+                rows = list(search.text(query, timelimit="m", max_results=options["max_results"],
+                                        backend=",".join(options["search_backends"])))
+                invalid, ignored, count, incomplete = 0, 0, 0, False
                 for row in rows:
+                    if not isinstance(row, dict):
+                        invalid += 1
+                        continue
                     url = clean_text(row.get("href"))
                     if not valid_post_url(url):
-                        invalid += 1
+                        ignored += 1
                         continue
                     url = canonical_url(url)
                     if url in seen:
@@ -128,14 +132,25 @@ def fetch_linkedin_plain_posts(config, discovery=None):
                         count += 1
                     except ValueError:
                         invalid += 1
-                result.report.queries.append(QueryOutcome(query_id, "partial" if invalid or incomplete else "success" if rows else "valid_empty",
+                if ignored:
+                    result.report.notes.append(f"ignored_non_post_results:{ignored}")
+                result.report.queries.append(QueryOutcome(query_id, "partial" if invalid or incomplete else "success" if count else "valid_empty",
                     len(rows), count, invalid, round(time.monotonic() - before, 2),
                     "unverified_posts" if incomplete else ""))
                 if not invalid and not incomplete:
                     result.updates[query_id] = {"last_success": utc_now(), "unique": count}
             except Exception as exc:
-                result.report.queries.append(QueryOutcome(query_id, "failed",
-                    duration_seconds=round(time.monotonic() - before, 2), reason=type(exc).__name__))
+                # Classify known provider errors without logging raw URLs or challenge tokens.
+                from ddgs.exceptions import DDGSException, RatelimitException, TimeoutException
+                status, reason = "failed", type(exc).__name__
+                if isinstance(exc, RatelimitException):
+                    status, reason = "blocked", "search_rate_limited"
+                elif isinstance(exc, TimeoutException):
+                    status, reason = "timed_out", "search_timeout"
+                elif isinstance(exc, DDGSException):
+                    reason = "search_providers_unavailable"
+                result.report.queries.append(QueryOutcome(query_id, status,
+                    duration_seconds=round(time.monotonic() - before, 2), reason=reason))
     result[:] = [role for post in result for role in split_post_roles(post)]
     cache.publish(result)
     return result

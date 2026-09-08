@@ -23,6 +23,7 @@ from storage.tracker import JobTracker, StateError, atomic_write_json, read_json
 from storage.tracker import save_with_backup
 from storage.reconcile import validate_discovery_state
 from notifiers.manager import NotificationManager
+from run_health import assess_run
 
 logger = logging.getLogger("JobFinder")
 DISCOVERY_FILE = BASE_DIR / "data" / "discovery_state.json"
@@ -59,6 +60,14 @@ def write_report(report, directory, step_summary=True):
     lines += ["", "| Source | Outcome | Queries |", "| --- | --- | --- |"]
     for source in report.get("sources", []):
         lines.append(f"| {source['source']} | {source['status']} | {len(source['queries'])} |")
+    lines += ["", "Operational outcome: **" + assess_run(report)["status"] + "**", ""]
+    for source in report.get("sources", []):
+        problems = Counter((query.get("site") or source["source"], query["status"], query.get("reason") or "unspecified")
+                           for query in source.get("queries", []) if query["status"] not in {"success", "valid_empty"})
+        for (site, status, reason), count in problems.items():
+            lines.append(f"- {site}: {count} {status} query(s) — {reason}.")
+    if report.get("counts", {}).get("qualified") == 0:
+        lines += ["", "No candidates met the qualified-only alert policy. This alone is not a pipeline failure."]
     if report.get("error"):
         lines += ["", "Error: " + report["error"]]
     summary = "\n".join(lines) + "\n"
@@ -186,6 +195,7 @@ def run_job_finder(dry_run=False, test_notify=False, config_path=None, replay_pa
         report["counts"]["delivered"] = len(delivery.delivered_ids)
         report["counts"]["delivery_failed_or_uncertain"] = len(delivery.failed_ids)
         report["counts"]["pending_remaining"] = len(tracker.pending)
+        report["counts"]["permanent_delivery_failures"] = sum(r["status"] == "permanent_failure" for r in tracker.pending.values())
         if delivery.failed_ids or any(r["status"] == "permanent_failure" for r in tracker.pending.values()):
             report["health"] = "degraded"
         for source in sources:
@@ -199,6 +209,7 @@ def run_job_finder(dry_run=False, test_notify=False, config_path=None, replay_pa
         return 1
     finally:
         report["finished_at"] = utc_now()
+        report["operational_outcome"] = assess_run(report)
         write_report(report, report_dir)
 
 

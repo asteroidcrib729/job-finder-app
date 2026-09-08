@@ -1,10 +1,12 @@
 # Job Finder App: issue register
 
+**Production incident update (2026-09-08):** Both initial production runs completed discovery/state persistence but were marked failed because partial source warnings triggered exit 2 and the workflow escalated that to exit 1. The operational health policy, Google diagnostic classification and recruiter search handling are corrected. See [production incident analysis](PRODUCTION-INCIDENT-2026-09-08.md) for evidence, fixes and validation. Prior statements of code completion did not establish live-source acceptance.
+
 ## Current status — 2026-09-08
 
 All 24 original issues have corresponding implemented corrections and offline validation. Each issue below now begins with its resolution and links to code and checks. The original problem description, severity and baseline line references are retained for traceability; they do not describe the current implementation.
 
-**Verified:** 64 tests pass; all 54 synthetic matching cases produce their expected tiers. Source, delivery, recovery, feedback and concurrent-Git regression checks are included.
+**Verified:** 73 tests pass; all 54 synthetic matching cases produce their expected tiers. Source, delivery, recovery, feedback and concurrent-Git regression checks are included.
 
 **Production acceptance remains open:** real LinkedIn/Indeed/Google availability, live Rozee pagination after observed blocking, published Linux CI results and held-out user relevance/known-positive recall. Discord and Git cannot guarantee exactly-once delivery across a network/crash boundary. Extra source pilots and unprovided salary/time-zone preferences are follow-on decisions.
 

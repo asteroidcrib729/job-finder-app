@@ -52,6 +52,7 @@ local_scrapers:
 
 linkedin_posts:
   enabled: true
+  search_backends: [brave, duckduckgo, yahoo]
   interval_hours: 6
   detail_cache_hours: 6
   max_results: 6
