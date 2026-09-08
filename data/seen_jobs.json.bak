@@ -124,7 +124,6 @@
     "8c6f58d85157174c": 1787079790.3351054,
     "8ee270b0b5d8b0f4": 1787348784.4111898,
     "8be8addd717c9130": 1787623111.8161333,
-    "indeed:10a2f5bd1a3f8f65d6943948": 1788878186.4142764,
     "32bf5a795a66aa41": 1787931158.8596456,
     "0268bd06ced1e495": 1787663821.8742023,
     "2642ed64979bf23e": 1788287914.5528789,
@@ -140,7 +139,6 @@
     "2c11433acf6a02b8": 1786989003.302934,
     "fbe6978301dd9e17": 1788209728.4217973,
     "6bdcd74223ea961e": 1788305019.9890423,
-    "3ccf3a437732f921": 1788878186.4142764,
     "35d7867ce2d271b3": 1788272044.7213228,
     "c7869a230f563711": 1787663821.8742023,
     "ec566146d2917357": 1787738544.8325996,
@@ -149,11 +147,86 @@
     "d91947ce29767f0d": 1786989003.302934,
     "034f9dd662b5d495": 1787792027.4569943
   },
-  "pending": {},
-  "receipts": {
+  "pending": {
     "indeed:10a2f5bd1a3f8f65d6943948": {
-      "at": 1788878186.4142764,
-      "message_id": "1546891972680093828"
+      "job": {
+        "title": "Full Stack Developer (MERN + AI Integration)",
+        "company": "Sidat",
+        "location": "Karachi, PSD, PK",
+        "url": "https://pk.indeed.com/viewjob?jk=18e31c2fb7d8c1b3",
+        "platform": "Indeed",
+        "date_posted": "2026-09-08T00:00:00+00:00",
+        "is_remote": false,
+        "description": "**About the Role**\n\nWe're looking for a Full Stack Developer with a strong front\\-end foundation who's also comfortable working across the backend and, increasingly, with AI\\-powered features. While the core focus is building responsive, high\\-quality user interfaces on the MERN stack, we want someone who can integrate APIs, work with backend services, and pick up basic LLM/GenAI integration (chatbots, AI\\-assisted features, API\\-based AI tools) as our products evolve. We're looking for 1\\+ year of hands\\-on experience, strong problem\\-solving instincts, and a track record of shipping independent projects.\n\n**Key Responsibilities**\n\n* Develop responsive, interactive web applications with a primary focus on front\\-end development\n* Build reusable UI components using Next.js, React.js, HTML, CSS, Tailwind, and JavaScript\n* Integrate APIs and work with Node.js, Fastify, Express.js, and MongoDB (or equivalent: FastAPI, PostgreSQL)\n* Translate UI/UX designs into functional, responsive interfaces\n* Assist in integrating AI/LLM\\-powered features into applications (e.g. chatbots, AI\\-assisted workflows) using tools like the OpenAI API or LangChain, under guidance\n* Containerize and help deploy applications using Docker; basic exposure to CI/CD pipelines is a plus\n* Debug, optimize, and maintain clean, scalable code\n* Collaborate with designers, backend developers, and the wider team on shared projects\n\n**Requirements**\n\n* 1\\+ year of relevant experience in MERN Stack development\n* Strong proficiency in Next.js, React.js, JavaScript, HTML5, and CSS3\n* Working knowledge of Node.js, Express.js, PostgreSQL and MongoDB\n* Experience with API integration and Git\\-based workflows\n* Exposure to or interest in AI/LLM tooling (OpenAI API, LangChain, prompt engineering) is a strong plus, not mandatory\n* Basic familiarity with Docker/cloud deployment (AWS or similar) is a plus\n* At least 2–3 independent or portfolio projects you can speak to in detail — your role, decisions, and trade\\-offs\n* Strong debugging and problem\\-solving skills\n* Comfortable writing and reasoning about your own code independently — AI coding tools are welcome as an aid, not a substitute for understanding your code\n* Curiosity and willingness to pick up new tools, frameworks, or practices as projects demand\n\n**What We Offer**\n\n* Hands\\-on work on real\\-world, production web applications with growing AI integration\n* Exposure to modern front\\-end, full\\-stack, and applied AI development practices\n* Room to grow from Front\\-End into broader Full\\-Stack and AI\\-integrated engineering roles\n\n**Office Location:** Shahrah\\-e\\-Faisal, Karachi  \n**Timings:** 10:00 AM – 7:00 PM  \n**Work Location:** In\\-person\n\nInterested candidates can send their CV along with GitHub, portfolio, or project links to **apply4dev@sidat.net** with the subject line: **\"Application – Full Stack Developer (MERN \\+ AI Integration)\"**\n\nWork Location: In person",
+        "job_id": "indeed:10a2f5bd1a3f8f65d6943948",
+        "recruiter_email": "",
+        "is_priority_location": false,
+        "source_id": "in-18e31c2fb7d8c1b3",
+        "application_url": "https://pk.indeed.com/job/full-stack-developer-mern-ai-integration-18e31c2fb7d8c1b3",
+        "aliases": [
+          "3ccf3a437732f921"
+        ],
+        "source_urls": [
+          "https://pk.indeed.com/viewjob?jk=18e31c2fb7d8c1b3"
+        ],
+        "work_mode": "on_site",
+        "description_status": "full",
+        "job_level": "",
+        "job_type": "fulltime",
+        "kind": "vacancy",
+        "source_title": "",
+        "source_description": "",
+        "posted_at": "2026-09-08T00:00:00+00:00",
+        "expires_at": "",
+        "first_seen_at": "2026-09-08T14:35:50.181737+00:00",
+        "last_seen_at": "2026-09-08T14:35:50.181751+00:00",
+        "date_source": "source",
+        "active_status": "unknown",
+        "candidate_locations": "",
+        "salary_min": null,
+        "salary_max": null,
+        "salary_currency": "",
+        "salary_interval": "",
+        "salary_text": "",
+        "salary_source": "unknown",
+        "query_id": "jobspy:75a6ec1c92addf72",
+        "search_track": "karachi_local",
+        "evidence_warnings": [],
+        "decision": {
+          "tier": "qualified",
+          "score": 95,
+          "confidence": "high",
+          "reasons": [
+            "karachi_confirmed",
+            "skills:aws,css,fastapi,git,html,javascript,mongodb,nextjs,nodejs,postgresql,react,tailwind"
+          ],
+          "gaps": [],
+          "matched_skills": [
+            "aws",
+            "css",
+            "fastapi",
+            "git",
+            "html",
+            "javascript",
+            "mongodb",
+            "nextjs",
+            "nodejs",
+            "postgresql",
+            "react",
+            "tailwind"
+          ],
+          "experience": [],
+          "eligibility": "allowed",
+          "salary_status": "unknown",
+          "profile_version": "2026-09-07",
+          "matcher_version": "2.1"
+        }
+      },
+      "status": "pending",
+      "queued_at": 1788878186.0018692,
+      "attempts": 0,
+      "next_retry_at": 0
     }
-  }
+  },
+  "receipts": {}
 }
