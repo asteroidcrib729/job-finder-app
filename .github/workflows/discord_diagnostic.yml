@@ -1,0 +1,87 @@
+name: Verify Discord destination (read only)
+
+on:
+  workflow_dispatch:
+    inputs:
+      expected_server_id:
+        description: "Server ID to compare with the configured webhook"
+        required: true
+        type: string
+      message_id:
+        description: "Previously acknowledged Discord message ID to look up"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Read destination and existing message without sending
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          EXPECTED_SERVER_ID: ${{ inputs.expected_server_id }}
+          MESSAGE_ID: ${{ inputs.message_id }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import re
+          import urllib.error
+          import urllib.parse
+          import urllib.request
+
+          # No raw response, request URL, token or exception is logged.
+          class NoRedirect(urllib.request.HTTPRedirectHandler):
+              def redirect_request(self, req, fp, code, msg, headers, newurl):
+                  return None
+
+          def get_json(url):
+              request = urllib.request.Request(url, headers={"User-Agent": "JobFinder-Destination-Check/1.0"})
+              try:
+                  with urllib.request.build_opener(NoRedirect).open(request, timeout=20) as response:
+                      return response.status, json.load(response)
+              except urllib.error.HTTPError as error:
+                  return error.code, {}
+              except Exception:
+                  return "request_failed", {}
+
+          def snowflake(value):
+              return str(value) if re.fullmatch(r"[0-9]{1,22}", str(value)) else None
+
+          expected = snowflake(os.environ["EXPECTED_SERVER_ID"])
+          message_id = snowflake(os.environ["MESSAGE_ID"])
+          parsed = urllib.parse.urlsplit(os.environ.get("DISCORD_WEBHOOK_URL", ""))
+          if (not expected or not message_id or parsed.scheme != "https"
+              or parsed.netloc not in {"discord.com", "discordapp.com"}
+              or not re.fullmatch(r"/api/(?:v[0-9]+/)?webhooks/[0-9]+/[A-Za-z0-9_-]+/?", parsed.path)):
+              print("Invalid diagnostic input or unsupported webhook URL; no requests made.")
+              raise SystemExit(1)
+          base = urllib.parse.urlunsplit((parsed.scheme, parsed.netloc, parsed.path.rstrip("/"), "", ""))
+          status, webhook = get_json(base)
+          result = {"webhook_http_status": status}
+          if status == 200:
+              guild = snowflake(webhook.get("guild_id"))
+              channel = snowflake(webhook.get("channel_id"))
+              result.update(server_id=guild, channel_id=channel, server_matches=bool(guild and guild == expected))
+              status, message = get_json(base + "/messages/" + message_id)
+              result["message_http_status"] = status
+              if status == 200:
+                  actual_id = snowflake(message.get("id"))
+                  actual_channel = snowflake(message.get("channel_id"))
+                  result["message_exists"] = actual_id == message_id
+                  result["message_channel_id"] = actual_channel
+                  if guild and actual_channel and actual_id:
+                      result["message_link"] = f"https://discord.com/channels/{guild}/{actual_channel}/{actual_id}"
+          safe_output = json.dumps(result, indent=2)
+          print(safe_output)
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as summary:
+              summary.write("## Read-only Discord verification\n\n```json\n" + safe_output + "\n```\n")
+          if result.get("server_matches") is not True or result.get("message_exists") is not True:
+              raise SystemExit(1)
+          PY
