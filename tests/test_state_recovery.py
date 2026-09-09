@@ -27,6 +27,7 @@ class StateRecoveryTests(OfflineTestCase):
             item = job()
             tracker.enqueue([item])
             before = read_json(path, {})
+            # pyrefly: ignore [bad-argument-type]
             tracker.record_delivery(item, DeliveryOutcome(item.job_id, "delivered", message_id="receipt"))
             backup = path.with_name("seen.json.bak")
             self.assertEqual(read_json(backup, {}), before)
@@ -35,6 +36,7 @@ class StateRecoveryTests(OfflineTestCase):
                 JobTracker(path)
             recovered = Path(directory) / "candidate.json"
             state = export_recovery(backup, recovered)
+            # pyrefly: ignore [bad-argument-type]
             self.assertIn(item.job_id, state["pending"])
             self.assertEqual(path.read_text(), "corrupt")
             with self.assertRaises(StateError):

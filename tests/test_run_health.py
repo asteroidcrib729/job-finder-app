@@ -31,6 +31,7 @@ class RunHealthTests(OfflineTestCase):
             {"source": "LinkedIn Post", "queries": [{"status": "success", "converted": 2}]}]}
         self.assertEqual(workflow_exit_code(2, report), 1)
         self.assertIn("vacancy_discovery_unavailable", assess_run(report)["reasons"])
+        # pyrefly: ignore [unsupported-operation]
         report["sources"][0]["queries"][0] = {"status": "valid_empty", "converted": 0}
         self.assertEqual(workflow_exit_code(2, report), 0)
 
@@ -53,6 +54,7 @@ class RunHealthTests(OfflineTestCase):
             {"source": "JobSpy", "queries": [{"status": "unverified", "site": "google", "converted": 0}]},
             {"source": "Rozee.pk", "skipped": True, "queries": []}]}
         self.assertEqual(workflow_exit_code(2, report), 0)
+        # pyrefly: ignore [bad-index, unsupported-operation]
         report["sources"][0]["queries"][0]["site"] = "indeed"
         self.assertEqual(workflow_exit_code(2, report), 1)
 

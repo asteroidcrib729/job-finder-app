@@ -1,5 +1,7 @@
 # Job Finder App: project memory and implementation status
 
+**Latest update (2026-09-09):** Scheduled review alerts are enabled at the owner's request, with labeled digests of up to five jobs and the existing shared 20-job run cap. All pending Pyrefly configuration/ignore-comment changes are included. All 75 offline tests and dependency checks pass; Pyrefly reports zero errors with suppressions. The latest inspected production run had 1 already-notified qualified job, 25 review candidates and 310 rejected jobs. Discord destination/message retrieval is verified. See [filtering assessment and review-alert rollout](FILTERING-REVIEW-2026-09-09.md) for exact rule strictness, evidence, and remaining accuracy concerns. The September 8 status below is a historical implementation baseline; published Linux CI and real Discord delivery have since been verified.
+
 **Production incident update (2026-09-08):** Both initial production runs completed discovery/state persistence but were marked failed because partial source warnings triggered exit 2 and the workflow escalated that to exit 1. The operational health policy, Google diagnostic classification and recruiter search handling are corrected. See [production incident analysis](PRODUCTION-INCIDENT-2026-09-08.md) for evidence, fixes and validation. Prior statements of code completion did not establish live-source acceptance.
 
 ## Current status — 2026-09-08
@@ -17,7 +19,7 @@ The implementation addresses all 24 audit issues at the code level. The original
 - Independent Karachi and remote searches preserve actual listing work mode. Remote requires Pakistan/worldwide eligibility evidence; missing eligibility or salary disclosure goes to review under the default policy.
 - Scrapers preserve identities, complete descriptions, dates and restrictions. Rozee uses bootstrap data and corrected Karachi city ID 1184, with bounded pagination/caches. Explicit recruiter role sections have separate identities and requirements.
 - Query budgets, successful watermarks, configurable cadence, per-query yield and source-health reports expose incomplete discovery instead of treating failures as healthy empty results.
-- Qualified matches receive individual Discord cards. Review delivery is opt-in and defaults to digests of up to five candidates.
+- Qualified matches receive individual Discord cards. Review delivery is now enabled for scheduled and ordinary manual runs, using digests of up to five candidates within the shared 20-job run cap.
 - Pending jobs survive delivery caps and transient failures. Only confirmed deliveries are acknowledged. Atomic state writes keep previous valid backups; recovery exports a separate candidate for reconciliation.
 - Production workflows serialize execution. State-only commits reconcile concurrent acknowledgements, pending retirement and retention pruning while preserving other code changes.
 - Saved-run feedback labels jobs by ID and exports capture-time benchmarks without altering delivery history.

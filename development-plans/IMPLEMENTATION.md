@@ -87,4 +87,4 @@ Raw pages/bundles remain ignored in .cache. Repository fixtures are synthetic/sa
 5. Pilot optional Remotive/WWR feeds individually and measure Pakistan-eligible junior yield.
 6. Tune cadence, page depth and language parsing from measured misses.
 
-Default delivery is qualified-only. Unknown remote eligibility/pay and unknown publication dates remain review cases. Enabling notifications.send_review never overrides explicit rejection. Salary floors, time-zone overlap and stricter preference gates remain explicit user decisions.
+As of September 9, the owner enabled notifications.send_review for scheduled and ordinary manual runs. Unknown remote eligibility/pay and unknown publication dates remain labeled review cases, now delivered in digests within the shared 20-job cap. Review delivery never overrides explicit rejection. See [the filtering assessment](FILTERING-REVIEW-2026-09-09.md) for current validation and remaining accuracy concerns. Salary floors, time-zone overlap and stricter preference gates remain explicit user decisions.

@@ -10,7 +10,7 @@ The [candidate profile](candidate-profile.yaml) records Next.js/React/TypeScript
 - **Review:** plausible but incomplete or a stretch: unknown remote eligibility/pay, one-year requirements, incomplete descriptions, or recruiter announcements.
 - **Rejected:** explicit incompatibility, such as a senior role, unsupported mandatory stack, non-Karachi local work, restricted-country remote work, or stale/closed listing.
 
-Scores order candidates; they are not probabilities. Every decision includes reasons and gaps. The default sends qualified matches only. Review candidates remain visible in run reports. Setting **notifications.send_review: true** also sends review digests of up to five candidates, subject to the same candidate cap. Set **notifications.review_digest: false** for individual review cards.
+Scores order candidates; they are not probabilities. Every decision includes reasons and gaps. Scheduled and ordinary manual runs send qualified matches and labeled review candidates (**notifications.send_review: true**, enabled at the owner's request on September 9, 2026). Review digests contain up to five candidates per message, under the shared limit of 20 jobs per run. Qualified jobs rank first; deferred candidates remain queued and are reevaluated before delivery. Set **notifications.send_review: false** for qualified-only alerts or **notifications.review_digest: false** for individual review cards.
 
 Local Karachi and remote searches are independent. Remote does not establish Pakistan eligibility or USD pay. The default **prefer_usd** policy puts remote jobs with unknown/non-USD pay into review; Karachi jobs have no USD requirement. A disclosed salary currency is not verification of contractual payment arrangements.
 
@@ -88,7 +88,7 @@ The synthetic benchmark has 54 cases. Passing them is regression evidence, not a
 | matching.remote_salary_policy | prefer_usd reviews other/unknown pay; require_usd rejects disclosed non-USD and reviews unknown; any removes the currency gate. |
 | matching.preferred_neighborhoods | Optional small ordering preference after Karachi compatibility; empty by default. |
 | notifications.max_per_run | Send cap; unsent eligible jobs remain pending. |
-| notifications.send_review / review_digest | Opt-in review delivery; digest groups up to five candidates with shared acknowledgements. Never overrides a rejection. |
+| notifications.send_review / review_digest | Review delivery is enabled; digest groups up to five candidates with shared acknowledgements. Never overrides a rejection. |
 | state.retention_days / pending_days | Separate acknowledged-history retention and queued-candidate expiry. |
 
 Rozee and recruiter detail caches hold at most 200 normalized entries per source in discovery state. Expired/future-dated entries are discarded; failures never fall back to stale content. Current Rozee listing facts override cached descriptions. Zero detail_cache_hours disables caching; zero interval_hours disables the base interval (JobSpy's low-yield interval is separate). Minimum intervals are checked on scheduled runs, so actual gaps may be longer.

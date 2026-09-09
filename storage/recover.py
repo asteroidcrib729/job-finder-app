@@ -34,6 +34,7 @@ def main():
     except (StateError, OSError) as exc:
         parser.exit(1, str(exc) + "\n")
     if args.kind == "delivery":
+        # pyrefly: ignore [bad-argument-type]
         print(f"Recovery candidate: {len(state['seen'])} seen IDs, {len(state['pending'])} pending jobs.")
         print("Reconcile receipts after the backup with Discord and Git history before replacing live state; missing acknowledgements can resend alerts.")
     else:

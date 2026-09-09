@@ -81,7 +81,7 @@ matching:
 
 notifications:
   discord_enabled: true
-  send_review: false
+  send_review: true
   review_digest: true
   max_per_run: 20
   max_attempts: 3

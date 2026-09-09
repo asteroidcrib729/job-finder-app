@@ -57,6 +57,7 @@ class SourceResult(list):
 def host_allowed(url, domains):
     try:
         host = urlsplit(canonical_url(url)).hostname
+        # pyrefly: ignore [missing-attribute]
         return any(host == domain or host.endswith("." + domain) for domain in domains)
     except ValueError:
         return False

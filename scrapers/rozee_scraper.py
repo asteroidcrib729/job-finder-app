@@ -102,6 +102,7 @@ def parse_rozee(html, url):
                 company=value(".cname, .company-name, .comp-name"),
                 location=value(".location, .job-location, .jloc"), url=link, platform="Rozee.pk",
                 description=value(".description, .job-description, .jdesc"),
+                # pyrefly: ignore [bad-argument-type]
                 description_status="snippet", posted_at=date.get("datetime", "") if date else "",
                 date_source="card" if date else "unknown"))
         except ValueError:

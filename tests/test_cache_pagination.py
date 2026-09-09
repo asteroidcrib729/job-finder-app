@@ -43,7 +43,9 @@ class CachePaginationTests(OfflineTestCase):
         copy_cache = DetailCache(result.updates, "fixture", 6, now=NOW + timedelta(hours=1))
         url = next(iter(copy_cache.entries))
         data = copy_cache.get(url)
+        # pyrefly: ignore [unsupported-operation]
         data["text"] = "modified"
+        # pyrefly: ignore [unsupported-operation]
         self.assertNotEqual(copy_cache.get(url)["text"], "modified")
         self.assertEqual(DetailCache(result.updates, "fixture", 6, now=NOW + timedelta(hours=6)).entries, {})
         self.assertEqual(DetailCache(result.updates, "fixture", 6, now=NOW - timedelta(hours=1)).entries, {})

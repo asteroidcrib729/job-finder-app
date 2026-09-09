@@ -34,6 +34,7 @@ class SourceTests(OfflineTestCase):
         self.assertIsNone(linkedin["location"])
         self.assertTrue(linkedin["linkedin_fetch_description"])
         google = build_query(config, config["search_tracks"][2], "Python", "google")
+        # pyrefly: ignore [bad-argument-type]
         self.assertIn("worldwide Pakistan eligible", google["google_search_term"])
 
     def test_source_remote_flag_is_not_query_intent(self):

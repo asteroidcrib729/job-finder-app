@@ -1,5 +1,7 @@
 # Job Finder App: issue register
 
+**Latest update (2026-09-09):** Scheduled review alerts are enabled at the owner's request, with labeled digests of up to five jobs and the existing shared 20-job run cap. All pending Pyrefly configuration/ignore-comment changes are included. All 75 offline tests and dependency checks pass; Pyrefly reports zero errors with suppressions. The latest inspected production run had 1 already-notified qualified job, 25 review candidates and 310 rejected jobs. Discord destination/message retrieval is verified. See [filtering assessment and review-alert rollout](FILTERING-REVIEW-2026-09-09.md) for exact rule strictness, evidence, and remaining accuracy concerns. The September 8 status below is a historical implementation baseline; published Linux CI and real Discord delivery have since been verified.
+
 **Production incident update (2026-09-08):** Both initial production runs completed discovery/state persistence but were marked failed because partial source warnings triggered exit 2 and the workflow escalated that to exit 1. The operational health policy, Google diagnostic classification and recruiter search handling are corrected. See [production incident analysis](PRODUCTION-INCIDENT-2026-09-08.md) for evidence, fixes and validation. Prior statements of code completion did not establish live-source acceptance.
 
 ## Current status — 2026-09-08

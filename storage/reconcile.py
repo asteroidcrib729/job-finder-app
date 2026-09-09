@@ -49,6 +49,7 @@ def merge_delivery(base, local, remote):
     # Preserve every confirmed delivery from either writer. Never infer a receipt.
     seen = {}
     for key in set(local["seen"]) | set(remote["seen"]):
+        # pyrefly: ignore [bad-index]
         values = [state["seen"][key] for state in (local, remote) if key in state["seen"]]
         # Honor retention pruning when the other writer still has the baseline value.
         # A newly recorded acknowledgement wins over a concurrent removal.
@@ -68,11 +69,13 @@ def merge_delivery(base, local, remote):
 
     pending = changed_records(base["pending"], local["pending"], remote["pending"], pending_conflict)
     for key, record in list(pending.items()):
+        # pyrefly: ignore [bad-index]
         item = Job.from_dict(record["job"])
         if any(identity in seen for identity in [key, *item.aliases]):
             pending.pop(key)
     receipts = {}
     for state in (local, remote):
+        # pyrefly: ignore [missing-attribute]
         for key, value in state["receipts"].items():
             if key in seen and value["at"] >= receipts.get(key, {}).get("at", float("-inf")):
                 receipts[key] = copy.deepcopy(value)

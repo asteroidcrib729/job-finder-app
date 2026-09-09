@@ -60,6 +60,7 @@ def write_report(report, directory, step_summary=True):
     lines += ["", "| Source | Outcome | Queries |", "| --- | --- | --- |"]
     for source in report.get("sources", []):
         lines.append(f"| {source['source']} | {source['status']} | {len(source['queries'])} |")
+    # pyrefly: ignore [unsupported-operation]
     lines += ["", "Operational outcome: **" + assess_run(report)["status"] + "**", ""]
     for source in report.get("sources", []):
         problems = Counter((query.get("site") or source["source"], query["status"], query.get("reason") or "unspecified")
@@ -115,6 +116,7 @@ def run_job_finder(dry_run=False, test_notify=False, config_path=None, replay_pa
             config["jobspy"]["max_seconds"] = min(300, config["jobspy"]["max_seconds"])
             config["local_scrapers"]["interval_hours"] = 0
             config["linkedin_posts"]["interval_hours"] = 0
+        # pyrefly: ignore [bad-assignment]
         report["verification_sample"] = verification_sample
         report["profile_version"] = config["profile"]["version"]
         report["matcher_version"] = MATCHER_VERSION

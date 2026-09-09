@@ -20,6 +20,7 @@ def source(jobs=()):
 
 class PipelineTests(OfflineTestCase):
     def test_verification_caps_review_sample_and_prefers_qualified_candidates(self):
+        configured_review = load_config()["notifications"]["send_review"]
         for qualified in (False, True):
             with self.subTest(qualified=qualified), tempfile.TemporaryDirectory() as directory:
                 root = Path(directory)
@@ -45,7 +46,32 @@ class PipelineTests(OfflineTestCase):
                 self.assertFalse(JobTracker(root / "state").pending)
                 self.assertEqual(post.call_count, 1)
                 self.assertEqual(scrape.call_args.args[0]["jobspy"]["interval_hours"], 0)
-                self.assertFalse(load_config()["notifications"]["send_review"])
+                self.assertEqual(load_config()["notifications"]["send_review"], configured_review)
+
+    def test_default_live_pipeline_sends_review_digest_without_resending(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            reviews = [job(str(i), kind="lead", posted_at=utc_now()) for i in range(2)]
+            rejected = job("senior", title="Senior Python Developer", posted_at=utc_now())
+            with patch.dict("os.environ", {"DISCORD_WEBHOOK_URL": "https://example.test/webhook"}), \
+                 patch("main.fetch_jobspy_jobs", side_effect=[source(reviews + [rejected]), source(reviews + [rejected])]), \
+                 patch("main.fetch_rozee_jobs", return_value=source()), \
+                 patch("main.fetch_linkedin_plain_posts", return_value=source()), \
+                 patch("main.fetch_remote_feeds", return_value=source()), \
+                 patch("notifiers.discord.requests.post", return_value=response(200, {"id": "review-digest"})) as post:
+                for delivered in (2, 0):
+                    self.assertEqual(run_job_finder(state_path=root / "state",
+                        discovery_path=root / "discovery", report_dir=root / "report"), 0)
+                    report = json.loads((root / "report/run.json").read_text())
+                    self.assertEqual(report["counts"]["delivered"], delivered)
+                    self.assertEqual(report["counts"]["rejected"], 1)
+            self.assertEqual(post.call_count, 1)
+            payload = post.call_args.kwargs["json"]
+            self.assertIn("Review candidates", payload["content"])
+            self.assertEqual(len(payload["embeds"]), 2)
+            tracker = JobTracker(root / "state")
+            self.assertEqual(set(tracker.receipts), {item.job_id for item in reviews})
+            self.assertFalse(tracker.pending)
 
     def test_replay_never_scrapes_sends_or_writes_state(self):
         with tempfile.TemporaryDirectory() as directory:

@@ -63,8 +63,10 @@ class DeliveryTests(OfflineTestCase):
         big = job(title="x" * 1000, company="y" * 5000, description=None)
         embed = notifier._build_embed(big)
         self.assertLessEqual(len(embed["title"]), 256)
+        # pyrefly: ignore [bad-argument-type]
         self.assertTrue(all(0 < len(field["value"]) <= 1024 for field in embed["fields"]))
         size = len(embed["title"]) + len(embed["description"]) + len(embed["footer"]["text"])
+        # pyrefly: ignore [bad-argument-type]
         size += sum(len(field["name"]) + len(field["value"]) for field in embed["fields"])
         self.assertLessEqual(size, 6000)
         broken = job("broken")

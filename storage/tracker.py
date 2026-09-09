@@ -88,6 +88,7 @@ def validate_delivery_state(raw):
         if not isinstance(key, str) or not isinstance(receipt, dict):
             raise StateError("Invalid delivery receipt")
         at = receipt.get("at")
+        # pyrefly: ignore [bad-argument-type]
         if type(at) not in (int, float) or not math.isfinite(at) or not isinstance(receipt.get("message_id", ""), str):
             raise StateError("Invalid delivery receipt")
     return {"version": 2, "seen": seen, "pending": pending, "receipts": receipts}
