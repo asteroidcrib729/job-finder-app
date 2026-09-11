@@ -1,20 +1,11 @@
 {
   "cache:posts": {
-    "entries": {
-      "https://www.linkedin.com/posts/jobfound-remote-jobs_role-data-entry-salary-3600-4100-activity-7502412554422579200-qvSC": {
-        "fetched_at": "2026-09-10T16:37:40.684389+00:00",
-        "payload": {
-          "status": "active",
-          "text": "Role: Data Entry \nSalary: $3,600 - $4,100 per month\nLocation: Remote\n\n- MS Office\n- Time management, organization skills\n\nLet us know if you are Interested 👇",
-          "posted_at": "2026-09-06T17:09:01.059Z"
-        }
-      }
-    },
-    "updated_at": "2026-09-10T21:05:15.861013+00:00"
+    "entries": {},
+    "updated_at": "2026-09-10T23:12:52.468447+00:00"
   },
   "cache:rozee": {
     "entries": {},
-    "updated_at": "2026-09-10T21:05:11.438179+00:00"
+    "updated_at": "2026-09-10T23:12:52.468395+00:00"
   },
   "jobspy:05a7339ccbca312e": {
     "last_success": "2026-09-10T11:25:23.712027+00:00",
