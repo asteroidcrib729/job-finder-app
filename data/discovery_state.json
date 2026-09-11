@@ -1,11 +1,11 @@
 {
   "cache:posts": {
     "entries": {},
-    "updated_at": "2026-09-11T21:09:26.899507+00:00"
+    "updated_at": "2026-09-11T23:18:49.584268+00:00"
   },
   "cache:rozee": {
     "entries": {},
-    "updated_at": "2026-09-11T21:09:16.473537+00:00"
+    "updated_at": "2026-09-11T23:18:49.584204+00:00"
   },
   "jobspy:05a7339ccbca312e": {
     "last_success": "2026-09-11T21:00:25.009133+00:00",
@@ -368,12 +368,12 @@
     "full_descriptions": 25
   },
   "posts:233b30a94114788547e3": {
-    "last_success": "2026-09-11T11:36:37.247257+00:00",
-    "unique": 1,
+    "last_success": "2026-09-11T23:18:50.417238+00:00",
+    "unique": 0,
     "qualified": 0,
     "review": 0,
-    "rejected": 1,
-    "full_descriptions": 1
+    "rejected": 0,
+    "full_descriptions": 0
   },
   "posts:abc8e0cf74850e983d3d": {
     "last_success": "2026-09-11T21:09:27.613063+00:00",
