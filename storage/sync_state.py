@@ -88,7 +88,9 @@ def persist_state(repo, branch, attempts=3):
         with tempfile.TemporaryDirectory(prefix="job-finder-index-") as directory:
             env = {
                 "GIT_INDEX_FILE": str(Path(directory) / "index"),
-                "GIT_AUTHOR_NAME": "Job Finder Bot", "GIT_AUTHOR_EMAIL": "actions@github.com",
+                # Owner-authorized attribution, independent of the workflow trigger actor.
+                "GIT_AUTHOR_NAME": "asteroidcrib729",
+                "GIT_AUTHOR_EMAIL": "132701966+asteroidcrib729@users.noreply.github.com",
                 "GIT_COMMITTER_NAME": "Job Finder Bot", "GIT_COMMITTER_EMAIL": "actions@github.com",
             }
             # Build on the remote tree, preserving every non-state file and the checkout.

@@ -149,6 +149,8 @@ class StateRecoveryTests(OfflineTestCase):
                 result = persist_state(worker, "main")
             self.assertEqual(result["attempts"], 2)
             self.assertEqual(result["status"], "persisted")
+            self.assertEqual(git(remote, "log", "-1", "--format=%an|%ae|%cn|%ce", "main"),
+                "asteroidcrib729|132701966+asteroidcrib729@users.noreply.github.com|Job Finder Bot|actions@github.com")
             self.assertEqual(git(remote, "show", "main:app.txt"), "latest human code")
             final = json.loads(git(remote, "show", "main:data/seen_jobs.json"))
             self.assertEqual(set(final["seen"]), {"old", "local", "remote"})
