@@ -1,14 +1,23 @@
 {
   "cache:posts": {
-    "entries": {},
-    "updated_at": "2026-10-18T04:54:59.909814+00:00"
+    "entries": {
+      "https://www.linkedin.com/posts/ashwin-sree-97543a413_machine-learning-fresher-jobs-find-68-vacancies-activity-7514637760654233600-eIB0": {
+        "fetched_at": "2026-10-18T11:26:25.609412+00:00",
+        "payload": {
+          "status": "active",
+          "text": "🚨 AI JOBS UPDATE – Oct 10, 2026\n\nLooking for your next opportunity in AI? Here are some current AI/ML openings you can explore today 👇\n\n🔹 1. Junior Software Engineer – Fresher AI/ML\n🏢 Company: iCloud EMS | 📍 Remote | 💼 0–1 Yr | 🛠️ Python, AI/ML, GenAI, LLM, PyTorch\n🔗 https://lnkd.in/eFPHqV8a\n\n🔹 2. ML Engineer\n🏢 Company: Leegality | 📍 Remote | 💼 3–5 Yrs | 🛠️ ML, Python, PyTorch, CV, NLP\n🔗 https://lnkd.in/ev7ftMsE\n\n🔹 3. AI/ML Intern\n🏢 Company: LetsIntern | 📍 Remote | 💼 Fresher | 🛠️ Python, ML, Data Science\n🔗 https://lnkd.in/eQE5CAki\n\n🔹 4. GenAI Developer\n🏢 Company: RecruitBots AI | 📍 Remote | 💼 0–2 Yrs | 🛠️ ML, AI, GenAI Tools\n💰 ₹3L - 8L/yr | 🔗 https://lnkd.in/eV29mn_6\n\n🔹 5. AI Engineer\n🏢 Company: Krutrim Insights | 📍 Delhi | 💼 Fresher | 🛠️ Python, AI Fundamentals\n💰 ₹3L - 5.4L/yr | 🔗 https://lnkd.in/ej-pbmTZ\n\n🔹 6. AI/ML Trainee | GenAI\n🏢 Company: WINIT | 📍 Hyderabad | 💼 0–2 Yrs | 🛠️ Python, SQL, AWS, GenAI\n💰 ₹2L - 3L/yr | 🔗 https://lnkd.in/eTfu9-3p\n\n🔹 7. AI Associate\n🏢 Company: Advance Agility | 📍 Remote | 💼 Fresher | 🛠️ ChatGPT, Claude, Prompt Engineering\n💰 ₹2.4L - 4.2L/yr | 🔗 https://lnkd.in/efEgnpnn\n\n🔹 8. Data Scientist\n🏢 Company: Digitwin Technology | 📍 Chennai | 💼 Fresher | 🛠️ Python, ML, Data Analysis\n💰 ₹3L - 6L/yr | 🔗 https://lnkd.in/e_UqCpDG\n\n🔹 9. Computer Vision Trainee\n🏢 Company: Miracle Eye Pvt Ltd | 📍 Remote | 💼 Fresher | 🛠️ OpenCV, Python, CV\n💰 ₹2L/yr | 🔗 https://lnkd.in/e5VHhK78\n\n🔹 10. AI/ML Intern\n🏢 Company: WeIntern Pvt Ltd | 📍 Remote/Pune | 💼 Fresher | 🛠️ Python, ML, Data Science\n💰 ₹10K - 20K/month | 🔗 https://lnkd.in/e3XztRbZ\n\n💡 Career Tip: Apply early, tailor your resume to the job description, and keep your LinkedIn profile updated. Highlight your projects and practical experience with AI/ML tools.\n\n🔔 Follow for daily AI job updates, career opportunities, and AI industry news.\n\n#AIJobs #ArtificialIntelligence #MachineLearning #DataScience #AIJobsIndia #TechJobs #FreshersJobs #Jobs #Career #Hiring #GenAI #DeepLearning #NLP #ComputerVision",
+          "posted_at": "2026-10-10T10:47:37.357Z"
+        }
+      }
+    },
+    "updated_at": "2026-10-18T11:26:25.609412+00:00"
   },
   "cache:rozee": {
     "entries": {},
-    "updated_at": "2026-10-18T04:54:49.118899+00:00"
+    "updated_at": "2026-10-18T11:26:17.383107+00:00"
   },
   "jobspy:05a7339ccbca312e": {
-    "last_success": "2026-10-18T04:50:56.694097+00:00",
+    "last_success": "2026-10-18T11:24:49.082026+00:00",
     "raw": 3,
     "unique": 3,
     "qualified": 1,
@@ -26,7 +35,7 @@
     "full_descriptions": 0
   },
   "jobspy:18569cf04d29f7e6": {
-    "last_success": "2026-10-17T20:50:17.374321+00:00",
+    "last_success": "2026-10-18T11:16:44.222242+00:00",
     "raw": 20,
     "unique": 20,
     "qualified": 1,
@@ -35,7 +44,7 @@
     "full_descriptions": 20
   },
   "jobspy:2ba684532f92b59e": {
-    "last_success": "2026-10-18T04:50:58.460422+00:00",
+    "last_success": "2026-10-18T11:24:51.057102+00:00",
     "raw": 5,
     "unique": 5,
     "qualified": 1,
@@ -44,16 +53,16 @@
     "full_descriptions": 5
   },
   "jobspy:2e43096f1b960dff": {
-    "last_success": "2026-10-18T04:53:09.290114+00:00",
+    "last_success": "2026-10-18T11:25:52.408540+00:00",
     "raw": 23,
     "unique": 23,
     "qualified": 0,
-    "review": 2,
-    "rejected": 21,
-    "full_descriptions": 22
+    "review": 1,
+    "rejected": 22,
+    "full_descriptions": 23
   },
   "jobspy:300960d0b464f72c": {
-    "last_success": "2026-10-17T23:10:35.554465+00:00",
+    "last_success": "2026-10-18T11:18:11.444420+00:00",
     "raw": 1,
     "unique": 1,
     "qualified": 0,
@@ -62,12 +71,12 @@
     "full_descriptions": 1
   },
   "jobspy:3acd114688309471": {
-    "last_success": "2026-10-18T04:43:09.377773+00:00",
+    "last_success": "2026-10-18T11:20:44.855737+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
-    "review": 2,
-    "rejected": 23,
+    "review": 1,
+    "rejected": 24,
     "full_descriptions": 25
   },
   "jobspy:3c6f90c1864a7fd4": {
@@ -80,16 +89,16 @@
     "full_descriptions": 0
   },
   "jobspy:3e0afc5d6e9d5093": {
-    "last_success": "2026-10-18T04:51:59.905954+00:00",
+    "last_success": "2026-10-18T11:25:21.309321+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
-    "review": 1,
-    "rejected": 24,
+    "review": 2,
+    "rejected": 23,
     "full_descriptions": 25
   },
   "jobspy:48eff308264948d5": {
-    "last_success": "2026-10-17T20:46:24.899023+00:00",
+    "last_success": "2026-10-18T11:14:57.359471+00:00",
     "raw": 3,
     "unique": 3,
     "qualified": 0,
@@ -107,7 +116,7 @@
     "full_descriptions": 0
   },
   "jobspy:564dcb1e69c2bda5": {
-    "last_success": "2026-10-17T20:45:12.239718+00:00",
+    "last_success": "2026-10-18T11:14:56.088882+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 1,
@@ -116,7 +125,7 @@
     "full_descriptions": 25
   },
   "jobspy:5a4a0958f8e32e84": {
-    "last_success": "2026-10-17T20:49:43.584826+00:00",
+    "last_success": "2026-10-18T11:16:11.776778+00:00",
     "raw": 7,
     "unique": 7,
     "qualified": 1,
@@ -125,7 +134,7 @@
     "full_descriptions": 7
   },
   "jobspy:5aec78d19fa3c488": {
-    "last_success": "2026-10-18T04:50:04.726343+00:00",
+    "last_success": "2026-10-18T11:24:08.310811+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 1,
@@ -134,7 +143,7 @@
     "full_descriptions": 25
   },
   "jobspy:5bb01656cc0c1a0c": {
-    "last_success": "2026-10-17T20:48:41.327384+00:00",
+    "last_success": "2026-10-18T11:15:24.372572+00:00",
     "raw": 19,
     "unique": 19,
     "qualified": 0,
@@ -143,22 +152,22 @@
     "full_descriptions": 19
   },
   "jobspy:6f8f31f9e8e59893": {
-    "last_success": "2026-10-18T04:44:31.927692+00:00",
+    "last_success": "2026-10-18T11:21:31.348809+00:00",
     "raw": 20,
     "unique": 20,
     "qualified": 1,
-    "review": 2,
-    "rejected": 17,
+    "review": 1,
+    "rejected": 18,
     "full_descriptions": 20
   },
   "jobspy:75a6ec1c92addf72": {
-    "last_success": "2026-10-18T04:50:57.548309+00:00",
-    "raw": 2,
-    "unique": 2,
+    "last_success": "2026-10-18T11:24:50.056837+00:00",
+    "raw": 3,
+    "unique": 3,
     "qualified": 1,
     "review": 0,
-    "rejected": 1,
-    "full_descriptions": 2
+    "rejected": 2,
+    "full_descriptions": 3
   },
   "jobspy:7c683ac77a7891df": {
     "last_success": "2026-10-18T04:40:31.738848+00:00",
@@ -170,7 +179,7 @@
     "full_descriptions": 25
   },
   "jobspy:7ea6953079cf86fb": {
-    "last_success": "2026-10-18T04:41:15.812073+00:00",
+    "last_success": "2026-10-18T11:19:22.308737+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
@@ -188,7 +197,7 @@
     "full_descriptions": 0
   },
   "jobspy:98020ae1dc0e5aa2": {
-    "last_success": "2026-10-17T20:46:27.467361+00:00",
+    "last_success": "2026-10-18T11:15:00.567733+00:00",
     "raw": 1,
     "unique": 1,
     "qualified": 0,
@@ -197,7 +206,7 @@
     "full_descriptions": 1
   },
   "jobspy:a5e85e1d9cdcef50": {
-    "last_success": "2026-10-18T04:49:21.727355+00:00",
+    "last_success": "2026-10-18T11:23:38.099451+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 1,
@@ -224,7 +233,7 @@
     "full_descriptions": 0
   },
   "jobspy:b1aab01b2a34cf34": {
-    "last_success": "2026-10-17T20:49:34.419965+00:00",
+    "last_success": "2026-10-18T11:16:02.658044+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
@@ -233,16 +242,16 @@
     "full_descriptions": 25
   },
   "jobspy:bb581eeebc9fb46c": {
-    "last_success": "2026-10-17T20:46:26.549688+00:00",
-    "raw": 2,
-    "unique": 2,
+    "last_success": "2026-10-18T11:14:59.338783+00:00",
+    "raw": 1,
+    "unique": 1,
     "qualified": 0,
     "review": 0,
-    "rejected": 2,
-    "full_descriptions": 2
+    "rejected": 1,
+    "full_descriptions": 1
   },
   "jobspy:bcd8124a5769b5c4": {
-    "last_success": "2026-10-17T23:10:34.640155+00:00",
+    "last_success": "2026-10-18T11:18:10.494161+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
@@ -251,7 +260,7 @@
     "full_descriptions": 25
   },
   "jobspy:c08f6ae5fb3d3a63": {
-    "last_success": "2026-10-18T04:46:01.184796+00:00",
+    "last_success": "2026-10-18T11:22:38.478713+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 1,
@@ -260,7 +269,7 @@
     "full_descriptions": 25
   },
   "jobspy:c1437b145efe8212": {
-    "last_success": "2026-10-18T04:46:55.222086+00:00",
+    "last_success": "2026-10-18T11:23:00.453532+00:00",
     "raw": 10,
     "unique": 10,
     "qualified": 1,
@@ -269,7 +278,7 @@
     "full_descriptions": 10
   },
   "jobspy:c3aa6e77462b7ed1": {
-    "last_success": "2026-10-17T20:46:25.600126+00:00",
+    "last_success": "2026-10-18T11:14:58.117202+00:00",
     "raw": 0,
     "unique": 0,
     "qualified": 0,
@@ -287,7 +296,7 @@
     "full_descriptions": 0
   },
   "jobspy:ca57136b9f3f20eb": {
-    "last_success": "2026-10-17T20:49:55.232137+00:00",
+    "last_success": "2026-10-18T11:16:19.830460+00:00",
     "raw": 6,
     "unique": 6,
     "qualified": 1,
@@ -296,7 +305,7 @@
     "full_descriptions": 6
   },
   "jobspy:d521773e3ff80bc0": {
-    "last_success": "2026-10-18T04:42:12.447255+00:00",
+    "last_success": "2026-10-18T11:20:10.542202+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
@@ -314,16 +323,16 @@
     "full_descriptions": 0
   },
   "jobspy:de3fa268e20b281b": {
-    "last_success": "2026-10-18T04:50:55.767982+00:00",
-    "raw": 20,
-    "unique": 20,
+    "last_success": "2026-10-18T11:24:48.107475+00:00",
+    "raw": 19,
+    "unique": 19,
     "qualified": 1,
-    "review": 1,
+    "review": 0,
     "rejected": 18,
-    "full_descriptions": 20
+    "full_descriptions": 19
   },
   "jobspy:ec171cf453203d61": {
-    "last_success": "2026-10-17T20:50:36.088103+00:00",
+    "last_success": "2026-10-18T11:17:00.920064+00:00",
     "raw": 11,
     "unique": 11,
     "qualified": 1,
@@ -332,16 +341,16 @@
     "full_descriptions": 11
   },
   "jobspy:f0010df233070912": {
-    "last_success": "2026-10-18T04:43:27.391128+00:00",
-    "raw": 12,
-    "unique": 12,
+    "last_success": "2026-10-18T11:21:05.758156+00:00",
+    "raw": 11,
+    "unique": 11,
     "qualified": 1,
-    "review": 1,
+    "review": 0,
     "rejected": 10,
-    "full_descriptions": 12
+    "full_descriptions": 11
   },
   "jobspy:f0d527d9cdc6a307": {
-    "last_success": "2026-10-17T20:40:13.956456+00:00",
+    "last_success": "2026-10-18T11:14:31.967882+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
@@ -350,7 +359,7 @@
     "full_descriptions": 25
   },
   "jobspy:f322d9cbeebf8ae5": {
-    "last_success": "2026-10-18T04:53:59.372075+00:00",
+    "last_success": "2026-10-18T11:26:17.383071+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 1,
@@ -359,16 +368,16 @@
     "full_descriptions": 25
   },
   "jobspy:f5643d7891555dcc": {
-    "last_success": "2026-10-18T04:45:28.928340+00:00",
+    "last_success": "2026-10-18T11:22:10.850880+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
-    "review": 1,
-    "rejected": 24,
+    "review": 2,
+    "rejected": 23,
     "full_descriptions": 25
   },
   "posts:233b30a94114788547e3": {
-    "last_success": "2026-10-17T20:50:45.057528+00:00",
+    "last_success": "2026-10-18T11:26:27.310273+00:00",
     "unique": 1,
     "qualified": 0,
     "review": 0,
@@ -384,7 +393,7 @@
     "full_descriptions": 0
   },
   "rozee:363d786037541af2cc10": {
-    "last_success": "2026-10-18T04:54:59.690090+00:00",
+    "last_success": "2026-10-18T11:26:25.344983+00:00",
     "unique": 40,
     "qualified": 0,
     "review": 0,
@@ -392,7 +401,7 @@
     "full_descriptions": 40
   },
   "rozee:7a5a27d54e497485cbac": {
-    "last_success": "2026-10-18T04:54:53.052539+00:00",
+    "last_success": "2026-10-18T11:26:19.815998+00:00",
     "unique": 40,
     "qualified": 0,
     "review": 0,
@@ -400,15 +409,15 @@
     "full_descriptions": 40
   },
   "rozee:b393f45444f6974489b2": {
-    "last_success": "2026-10-18T04:54:59.908758+00:00",
-    "unique": 31,
+    "last_success": "2026-10-18T11:26:25.608499+00:00",
+    "unique": 37,
     "qualified": 0,
     "review": 0,
-    "rejected": 31,
-    "full_descriptions": 31
+    "rejected": 37,
+    "full_descriptions": 37
   },
   "rozee:f84d3b15adbf76bcd46e": {
-    "last_success": "2026-10-18T04:54:56.175121+00:00",
+    "last_success": "2026-10-18T11:26:22.255074+00:00",
     "unique": 40,
     "qualified": 0,
     "review": 0,
