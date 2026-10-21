@@ -1,23 +1,23 @@
 {
   "cache:posts": {
     "entries": {},
-    "updated_at": "2026-10-21T12:04:57.038183+00:00"
+    "updated_at": "2026-10-21T17:26:31.382658+00:00"
   },
   "cache:rozee": {
     "entries": {},
-    "updated_at": "2026-10-21T12:04:47.810479+00:00"
+    "updated_at": "2026-10-21T17:26:31.285431+00:00"
   },
   "jobspy:05a7339ccbca312e": {
-    "last_success": "2026-10-21T12:00:09.877012+00:00",
-    "raw": 6,
-    "unique": 6,
+    "last_success": "2026-10-21T17:23:08.493314+00:00",
+    "raw": 7,
+    "unique": 7,
     "qualified": 2,
     "review": 0,
-    "rejected": 4,
-    "full_descriptions": 6
+    "rejected": 5,
+    "full_descriptions": 7
   },
   "jobspy:0930cd84b775eb4a": {
-    "last_success": "2026-10-20T23:57:02.361458+00:00",
+    "last_success": "2026-10-21T17:16:53.663078+00:00",
     "raw": 0,
     "unique": 0,
     "qualified": 0,
@@ -26,16 +26,16 @@
     "full_descriptions": 0
   },
   "jobspy:18569cf04d29f7e6": {
-    "last_success": "2026-10-21T12:03:10.476158+00:00",
-    "raw": 17,
-    "unique": 17,
+    "last_success": "2026-10-21T17:25:12.701648+00:00",
+    "raw": 15,
+    "unique": 15,
     "qualified": 1,
     "review": 1,
-    "rejected": 15,
-    "full_descriptions": 17
+    "rejected": 13,
+    "full_descriptions": 15
   },
   "jobspy:2ba684532f92b59e": {
-    "last_success": "2026-10-21T12:00:10.928742+00:00",
+    "last_success": "2026-10-21T17:23:09.611397+00:00",
     "raw": 6,
     "unique": 6,
     "qualified": 2,
@@ -44,16 +44,16 @@
     "full_descriptions": 6
   },
   "jobspy:2e43096f1b960dff": {
-    "last_success": "2026-10-21T12:00:38.499827+00:00",
+    "last_success": "2026-10-21T17:23:43.418345+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 1,
-    "review": 1,
-    "rejected": 23,
+    "review": 2,
+    "rejected": 22,
     "full_descriptions": 25
   },
   "jobspy:300960d0b464f72c": {
-    "last_success": "2026-10-20T23:58:00.128858+00:00",
+    "last_success": "2026-10-21T17:17:54.744871+00:00",
     "raw": 0,
     "unique": 0,
     "qualified": 0,
@@ -62,16 +62,16 @@
     "full_descriptions": 0
   },
   "jobspy:3acd114688309471": {
-    "last_success": "2026-10-21T12:04:38.377718+00:00",
+    "last_success": "2026-10-21T17:26:18.947002+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
-    "review": 1,
-    "rejected": 24,
+    "review": 2,
+    "rejected": 23,
     "full_descriptions": 25
   },
   "jobspy:3c6f90c1864a7fd4": {
-    "last_success": "2026-10-20T23:57:03.906720+00:00",
+    "last_success": "2026-10-21T17:16:54.984665+00:00",
     "raw": 0,
     "unique": 0,
     "qualified": 0,
@@ -80,7 +80,7 @@
     "full_descriptions": 0
   },
   "jobspy:3e0afc5d6e9d5093": {
-    "last_success": "2026-10-21T11:56:56.537968+00:00",
+    "last_success": "2026-10-21T17:19:26.508598+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
@@ -89,16 +89,16 @@
     "full_descriptions": 25
   },
   "jobspy:48eff308264948d5": {
-    "last_success": "2026-10-20T23:57:04.904280+00:00",
-    "raw": 2,
-    "unique": 2,
-    "qualified": 0,
+    "last_success": "2026-10-21T17:16:55.921199+00:00",
+    "raw": 4,
+    "unique": 4,
+    "qualified": 1,
     "review": 0,
-    "rejected": 2,
-    "full_descriptions": 2
+    "rejected": 3,
+    "full_descriptions": 4
   },
   "jobspy:4af583cbf609f6d2": {
-    "last_success": "2026-10-20T23:57:01.567907+00:00",
+    "last_success": "2026-10-21T17:16:52.989135+00:00",
     "raw": 0,
     "unique": 0,
     "qualified": 0,
@@ -107,16 +107,16 @@
     "full_descriptions": 0
   },
   "jobspy:564dcb1e69c2bda5": {
-    "last_success": "2026-10-21T12:02:11.540890+00:00",
+    "last_success": "2026-10-21T17:24:36.009701+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 1,
-    "review": 3,
-    "rejected": 21,
+    "review": 4,
+    "rejected": 20,
     "full_descriptions": 25
   },
   "jobspy:5a4a0958f8e32e84": {
-    "last_success": "2026-10-21T12:02:21.203160+00:00",
+    "last_success": "2026-10-21T17:24:43.061893+00:00",
     "raw": 4,
     "unique": 4,
     "qualified": 1,
@@ -125,7 +125,7 @@
     "full_descriptions": 4
   },
   "jobspy:5aec78d19fa3c488": {
-    "last_success": "2026-10-21T11:59:48.240275+00:00",
+    "last_success": "2026-10-21T17:22:46.310970+00:00",
     "raw": 24,
     "unique": 24,
     "qualified": 1,
@@ -134,7 +134,7 @@
     "full_descriptions": 24
   },
   "jobspy:5bb01656cc0c1a0c": {
-    "last_success": "2026-10-20T23:57:31.328727+00:00",
+    "last_success": "2026-10-21T17:17:26.797415+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
@@ -143,34 +143,34 @@
     "full_descriptions": 25
   },
   "jobspy:6f8f31f9e8e59893": {
-    "last_success": "2026-10-21T11:58:23.420079+00:00",
-    "raw": 18,
-    "unique": 18,
+    "last_success": "2026-10-21T17:21:00.419963+00:00",
+    "raw": 16,
+    "unique": 16,
     "qualified": 1,
     "review": 1,
-    "rejected": 16,
-    "full_descriptions": 18
+    "rejected": 14,
+    "full_descriptions": 16
   },
   "jobspy:75a6ec1c92addf72": {
-    "last_success": "2026-10-21T11:56:25.190188+00:00",
-    "raw": 4,
-    "unique": 4,
+    "last_success": "2026-10-21T17:18:55.645488+00:00",
+    "raw": 5,
+    "unique": 5,
     "qualified": 2,
     "review": 0,
-    "rejected": 2,
-    "full_descriptions": 4
+    "rejected": 3,
+    "full_descriptions": 5
   },
   "jobspy:7c683ac77a7891df": {
-    "last_success": "2026-10-20T23:56:57.626359+00:00",
+    "last_success": "2026-10-21T17:16:49.610542+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
-    "review": 0,
-    "rejected": 25,
+    "review": 1,
+    "rejected": 24,
     "full_descriptions": 25
   },
   "jobspy:7ea6953079cf86fb": {
-    "last_success": "2026-10-21T00:04:20.798232+00:00",
+    "last_success": "2026-10-21T17:18:24.767823+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
@@ -179,7 +179,7 @@
     "full_descriptions": 25
   },
   "jobspy:8bf5691f934003fc": {
-    "last_success": "2026-10-20T23:57:03.142700+00:00",
+    "last_success": "2026-10-21T17:16:54.316078+00:00",
     "raw": 0,
     "unique": 0,
     "qualified": 0,
@@ -188,25 +188,25 @@
     "full_descriptions": 0
   },
   "jobspy:98020ae1dc0e5aa2": {
-    "last_success": "2026-10-20T23:57:07.576996+00:00",
-    "raw": 0,
-    "unique": 0,
+    "last_success": "2026-10-21T17:16:58.515530+00:00",
+    "raw": 1,
+    "unique": 1,
     "qualified": 0,
-    "review": 0,
+    "review": 1,
     "rejected": 0,
-    "full_descriptions": 0
+    "full_descriptions": 1
   },
   "jobspy:a5e85e1d9cdcef50": {
-    "last_success": "2026-10-21T11:59:18.402642+00:00",
+    "last_success": "2026-10-21T17:22:12.259931+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 1,
-    "review": 2,
-    "rejected": 22,
+    "review": 5,
+    "rejected": 19,
     "full_descriptions": 25
   },
   "jobspy:aa7c94e10072c3ec": {
-    "last_success": "2026-10-20T23:56:58.419720+00:00",
+    "last_success": "2026-10-21T17:16:50.288110+00:00",
     "raw": 0,
     "unique": 0,
     "qualified": 0,
@@ -215,7 +215,7 @@
     "full_descriptions": 0
   },
   "jobspy:b03d99535554bd87": {
-    "last_success": "2026-10-20T23:56:59.176467+00:00",
+    "last_success": "2026-10-21T17:16:51.016776+00:00",
     "raw": 0,
     "unique": 0,
     "qualified": 0,
@@ -224,16 +224,16 @@
     "full_descriptions": 0
   },
   "jobspy:b1aab01b2a34cf34": {
-    "last_success": "2026-10-21T11:58:00.186049+00:00",
+    "last_success": "2026-10-21T17:20:42.377341+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
-    "review": 2,
-    "rejected": 23,
+    "review": 3,
+    "rejected": 22,
     "full_descriptions": 25
   },
   "jobspy:bb581eeebc9fb46c": {
-    "last_success": "2026-10-20T23:57:06.835732+00:00",
+    "last_success": "2026-10-21T17:16:57.479983+00:00",
     "raw": 1,
     "unique": 1,
     "qualified": 0,
@@ -242,25 +242,25 @@
     "full_descriptions": 1
   },
   "jobspy:bcd8124a5769b5c4": {
-    "last_success": "2026-10-20T23:57:59.380212+00:00",
+    "last_success": "2026-10-21T17:17:54.053367+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
-    "review": 0,
-    "rejected": 25,
-    "full_descriptions": 25
-  },
-  "jobspy:c08f6ae5fb3d3a63": {
-    "last_success": "2026-10-21T11:57:22.266537+00:00",
-    "raw": 25,
-    "unique": 25,
-    "qualified": 1,
-    "review": 1,
+    "review": 2,
     "rejected": 23,
     "full_descriptions": 25
   },
+  "jobspy:c08f6ae5fb3d3a63": {
+    "last_success": "2026-10-21T17:19:52.362732+00:00",
+    "raw": 25,
+    "unique": 25,
+    "qualified": 1,
+    "review": 2,
+    "rejected": 22,
+    "full_descriptions": 25
+  },
   "jobspy:c1437b145efe8212": {
-    "last_success": "2026-10-21T11:57:32.798882+00:00",
+    "last_success": "2026-10-21T17:20:02.449789+00:00",
     "raw": 6,
     "unique": 6,
     "qualified": 1,
@@ -269,7 +269,7 @@
     "full_descriptions": 6
   },
   "jobspy:c3aa6e77462b7ed1": {
-    "last_success": "2026-10-20T23:57:05.650019+00:00",
+    "last_success": "2026-10-21T17:16:56.576909+00:00",
     "raw": 0,
     "unique": 0,
     "qualified": 0,
@@ -278,7 +278,7 @@
     "full_descriptions": 0
   },
   "jobspy:c9912c83d071d927": {
-    "last_success": "2026-10-20T23:56:59.985571+00:00",
+    "last_success": "2026-10-21T17:16:51.664617+00:00",
     "raw": 0,
     "unique": 0,
     "qualified": 0,
@@ -287,25 +287,25 @@
     "full_descriptions": 0
   },
   "jobspy:ca57136b9f3f20eb": {
-    "last_success": "2026-10-21T12:02:29.372824+00:00",
-    "raw": 3,
-    "unique": 3,
+    "last_success": "2026-10-21T17:24:51.513320+00:00",
+    "raw": 4,
+    "unique": 4,
     "qualified": 1,
     "review": 0,
-    "rejected": 2,
-    "full_descriptions": 3
+    "rejected": 3,
+    "full_descriptions": 4
   },
   "jobspy:d521773e3ff80bc0": {
-    "last_success": "2026-10-21T12:04:11.503784+00:00",
+    "last_success": "2026-10-21T17:25:54.571202+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
-    "review": 3,
-    "rejected": 22,
+    "review": 2,
+    "rejected": 23,
     "full_descriptions": 25
   },
   "jobspy:dc5dffc2afda457e": {
-    "last_success": "2026-10-20T23:57:00.740387+00:00",
+    "last_success": "2026-10-21T17:16:52.314241+00:00",
     "raw": 0,
     "unique": 0,
     "qualified": 0,
@@ -314,7 +314,7 @@
     "full_descriptions": 0
   },
   "jobspy:de3fa268e20b281b": {
-    "last_success": "2026-10-21T12:00:08.748045+00:00",
+    "last_success": "2026-10-21T17:23:07.533544+00:00",
     "raw": 16,
     "unique": 16,
     "qualified": 1,
@@ -323,7 +323,7 @@
     "full_descriptions": 16
   },
   "jobspy:ec171cf453203d61": {
-    "last_success": "2026-10-21T12:03:31.245856+00:00",
+    "last_success": "2026-10-21T17:25:23.290115+00:00",
     "raw": 9,
     "unique": 9,
     "qualified": 1,
@@ -332,7 +332,7 @@
     "full_descriptions": 9
   },
   "jobspy:f0010df233070912": {
-    "last_success": "2026-10-21T12:04:47.810443+00:00",
+    "last_success": "2026-10-21T17:26:31.285399+00:00",
     "raw": 8,
     "unique": 8,
     "qualified": 1,
@@ -341,30 +341,30 @@
     "full_descriptions": 8
   },
   "jobspy:f0d527d9cdc6a307": {
-    "last_success": "2026-10-21T04:55:55.133321+00:00",
+    "last_success": "2026-10-21T17:18:54.703405+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
-    "review": 0,
-    "rejected": 25,
+    "review": 1,
+    "rejected": 24,
     "full_descriptions": 25
   },
   "jobspy:f322d9cbeebf8ae5": {
-    "last_success": "2026-10-21T12:01:05.422062+00:00",
+    "last_success": "2026-10-21T17:24:09.400511+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 1,
-    "review": 1,
-    "rejected": 23,
+    "review": 2,
+    "rejected": 22,
     "full_descriptions": 25
   },
   "jobspy:f5643d7891555dcc": {
-    "last_success": "2026-10-21T11:58:52.517488+00:00",
+    "last_success": "2026-10-21T17:21:36.320146+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
-    "review": 2,
-    "rejected": 23,
+    "review": 3,
+    "rejected": 22,
     "full_descriptions": 25
   },
   "posts:233b30a94114788547e3": {
