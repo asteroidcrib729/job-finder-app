@@ -89,7 +89,10 @@ def parse_rozee(html, url):
         anchor = card.select_one("a.jtitle[href], .jtitle a[href], h3 a[href]")
         if anchor is None:
             continue
-        link = urljoin(url, anchor.get("href", ""))
+        href = anchor.get("href", "")
+        if not isinstance(href, str):
+            continue
+        link = urljoin(url, href)
         if not host_allowed(link, DOMAINS):
             invalid += 1
             continue

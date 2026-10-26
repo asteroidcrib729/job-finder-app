@@ -62,7 +62,7 @@ ROLE_PATTERNS = {
     "software": r"\b(?:software|web|application)\s+(?:engineer|developer|development)\b|\bprogrammer\b",
 }
 YEAR_PATTERN = re.compile(r"(?P<min>\d+(?:\.\d+)?)\s*(?:(?:-|to)\s*(?P<max>\d+(?:\.\d+)?)\s*)?\+?\s*(?P<unit>years?|yrs?|months?)\b")
-NUMBER_WORDS = dict(zip("zero one two three four five six seven eight nine ten eleven twelve".split(), range(13)))
+NUMBER_WORDS: dict[str, int] = dict(zip("zero one two three four five six seven eight nine ten eleven twelve".split(), range(13)))
 
 
 def skills_in(text):

@@ -47,7 +47,7 @@ def read_json(path, default):
         raise StateError(f"Cannot read state ({type(exc).__name__}); existing history retained") from exc
 
 
-def validate_delivery_state(raw):
+def validate_delivery_state(raw) -> dict:
     raw = copy.deepcopy(raw)
     pending, receipts = {}, {}
     if not isinstance(raw, dict):

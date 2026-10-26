@@ -29,17 +29,21 @@ Remotive's public feed has a 24-hour delay and recommends at most four fetches d
 
 ## Installation and tests
 
-Use Python 3.11 to match Actions; local tests also ran on Python 3.12.
+Install [Astral uv](https://docs.astral.sh/uv/getting-started/installation/) version **0.12.9**, then run the following from the repository root. Python **3.14.7** is required by both `.python-version` and `pyproject.toml`. uv creates the dedicated, ignored `.venv`; activation and globally installed Python packages are unnecessary.
 
 ~~~powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -r requirements.lock
-python -m pip check
-python -m unittest discover -s tests -v
+uv python install
+uv sync --locked
+uv pip check
+uv run --locked python -m unittest discover -s tests -v
+uv run --locked pyrefly check
 ~~~
 
-The lock file pins direct and transitive dependencies. The package set resolved for Python 3.11/Linux; local test execution used Python 3.12/Windows. CI performs the actual Linux tests. Update pins deliberately and validate adapter fixtures.
+`pyproject.toml` declares runtime dependencies and a separate development group; `uv.lock` records the exact resolution and package hashes. The application runs directly from the checkout (`package = false`), preserving its existing modules and configuration paths. `uv sync --locked --no-dev` installs runtime packages only. CI uses the same Python pin and rejects stale lockfiles. The old requirements files are superseded by these uv files.
+
+Manage packages with `uv add PACKAGE`, `uv add --dev PACKAGE`, and `uv remove PACKAGE`. Use `uv lock --upgrade-package PACKAGE` for a targeted update within the declared constraints, then `uv sync --locked` and the checks above. For an exact-pinned dependency, use `uv add PACKAGE==NEW_VERSION`. Commit the manifest and lockfile together. See [CONTRIBUTING.md](CONTRIBUTING.md) for the maintenance and commit workflow. If an external tool needs requirements format, generate it with `uv export --locked --no-dev --format requirements-txt --output-file output/requirements.txt`; do not maintain a second hand-edited lockfile.
+
+The Python 3.14 migration upgrades JobSpy to 1.4.1 and pandas/NumPy to compatible releases. The adapter uses JobSpy's current `fetch_description` option and captures both lowercase loggers and structured DataFrame error metadata. A successful install is not proof that a live job board is available; fixture/API tests and run health remain separate checks.
 
 ## Offline evaluation and live dry runs
 
@@ -47,13 +51,13 @@ These commands send no Discord messages and do not save delivery/discovery state
 
 ~~~powershell
 # Fixed-date synthetic regression benchmark.
-python -m evaluation tests/fixtures/matching.json
+uv run --locked python -m evaluation tests/fixtures/matching.json
 
 # Evaluate saved job evidence using the current date/profile.
-python main.py --replay output/latest/run.json --report-dir output/replay
+uv run --locked python main.py --replay output/latest/run.json --report-dir output/replay
 
 # Live source requests and an evaluation report.
-python main.py --dry-run
+uv run --locked python main.py --dry-run
 ~~~
 
 Replay makes no job-board requests. Dry run does make requests, respecting configured budgets. Both can write reports. Use **--state** and **--discovery-state** for isolated evaluation paths; missing state files are not created by dry-run/replay.
@@ -101,10 +105,10 @@ Set **DISCORD_WEBHOOK_URL** in repository Actions secrets. It is the only notifi
 
 ~~~powershell
 # Explicitly sends one message.
-python main.py --test-notify
+uv run --locked python main.py --test-notify
 
 # Normal discovery, delivery, and state persistence.
-python main.py
+uv run --locked python main.py
 ~~~
 
 Delivery records individual outcomes and requests Discord message confirmation. Server/rate-limit retries are bounded; network timeouts are uncertain because Discord may already have accepted a message.
@@ -118,8 +122,8 @@ Exactly-once delivery is not guaranteed across an uncertain network outcome or a
 Each state save keeps its previous valid JSON in a sibling **.bak** file. Corruption stops dispatch and cannot overwrite that backup. Export a separate recovery candidate:
 
 ~~~powershell
-python -m storage.recover --backup data/seen_jobs.json.bak --output output/recovered-delivery.json
-python -m storage.recover --kind discovery --backup data/discovery_state.json.bak --output output/recovered-discovery.json
+uv run --locked python -m storage.recover --backup data/seen_jobs.json.bak --output output/recovered-delivery.json
+uv run --locked python -m storage.recover --kind discovery --backup data/discovery_state.json.bak --output output/recovered-discovery.json
 ~~~
 
 Compare delivery recovery candidates with later Discord receipts and Git history before replacing live state. A previous snapshot may lack recent successful acknowledgements; automatic fallback could duplicate alerts.
@@ -129,9 +133,9 @@ Compare delivery recovery candidates with later Discord receipts and Git history
 Copy a job ID from a card or saved run report, then label it locally:
 
 ~~~powershell
-python -m feedback label --job-id "ID_FROM_REPORT" --label relevant --note "Junior React role in Karachi"
-python -m feedback export
-python -m evaluation output/user-benchmark.json --output output/user-evaluation.json
+uv run --locked python -m feedback label --job-id "ID_FROM_REPORT" --label relevant --note "Junior React role in Karachi"
+uv run --locked python -m feedback export
+uv run --locked python -m evaluation output/user-benchmark.json --output output/user-evaluation.json
 ~~~
 
 Labels are **relevant**, **not_relevant**, or **uncertain**. Feedback defaults to ignored **output/feedback.json** and never changes delivery history. Exported cases retain capture time, so later evaluation does not turn historical relevance labels into age failures. Keep tuning and held-out feedback in separate files.
@@ -140,7 +144,7 @@ Labels are **relevant**, **not_relevant**, or **uncertain**. Feedback defaults t
 
 The default-branch production workflow runs at minute 17 every three hours UTC and supports manual dispatch. It checks out current production state after acquiring a shared concurrency group, installs pinned packages, runs offline tests, executes discovery, commits valid state even after degraded execution, and uploads reports.
 
-At the owner's request, automated state commits use the owner's GitHub-linked noreply author identity (`asteroidcrib729`) and retain `Job Finder Bot` as committer. This applies to new state commits from scheduled and manual runs; existing history is unchanged.
+Automated state commits explicitly use **Faraz Hussain** `<132701966+asteroidcrib729@users.noreply.github.com>` as author and **github-actions[bot]** `<41898282+github-actions[bot]@users.noreply.github.com>` as committer. The state-persistence step supplies all four `GIT_AUTHOR_*`/`GIT_COMMITTER_*` values, and the writer honors them. Its defaults match this repository's workflow. Manual and scheduled triggers use the same identities; existing history is unchanged. Test and diagnostic workflows are read-only and do not create commits.
 
 Feature-branch manual dispatch cannot send production alerts. A separate read-only CI workflow tests code pushes/pull requests without a Discord secret.
 

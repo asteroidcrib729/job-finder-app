@@ -1,0 +1,28 @@
+[project]
+name = "job-finder-app"
+version = "2.1.0"
+description = "Resume-aligned job discovery and Discord alerts for Faraz Hussain"
+readme = "README.md"
+requires-python = "==3.14.7"
+authors = [{ name = "Faraz Hussain" }]
+dependencies = [
+    "beautifulsoup4==4.15.0",
+    "ddgs==9.15.0",
+    "pandas>=3.0,<4",
+    "python-jobspy==1.4.1",
+    "pyyaml==6.0.3",
+    "requests==2.34.2",
+]
+
+[project.urls]
+Repository = "https://github.com/asteroidcrib729/job-finder-app"
+
+[tool.uv]
+package = false
+required-version = "==0.12.9"
+
+[dependency-groups]
+dev = [
+    "pyrefly==1.4.0",
+    "types-pyyaml>=6.0.12.20260906",
+]

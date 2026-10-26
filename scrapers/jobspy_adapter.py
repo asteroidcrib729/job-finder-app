@@ -43,7 +43,7 @@ def build_query(config, track, keyword, site, offset=0, hours=None):
     if site != "indeed" or not track["remote"]:
         kwargs["hours_old"] = hours
     if site == "linkedin":
-        kwargs["linkedin_fetch_description"] = options["linkedin_fetch_description"]
+        kwargs["fetch_description"] = options["linkedin_fetch_description"]
     if site == "google":
         target = f"near {track['location']}" if track["location"] else "worldwide Pakistan eligible"
         freshness = "since yesterday" if hours <= 24 else "in the last week" if hours <= 168 else "in the last month"

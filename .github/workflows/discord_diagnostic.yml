@@ -21,6 +21,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e # v10.3.2
+        with:
+          version: '0.12.9'
+      - run: uv python install
       - name: Read destination and existing message without sending
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
@@ -28,7 +33,7 @@ jobs:
           MESSAGE_ID: ${{ inputs.message_id }}
         shell: bash
         run: |
-          python - <<'PY'
+          uv run --no-project --python "$(cat .python-version)" python - <<'PY'
           import json
           import os
           import re

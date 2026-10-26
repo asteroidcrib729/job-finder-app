@@ -32,7 +32,8 @@ class SourceTests(OfflineTestCase):
         self.assertEqual(local["hours_old"], 168)
         linkedin = build_query(config, config["search_tracks"][2], "Python", "linkedin")
         self.assertIsNone(linkedin["location"])
-        self.assertTrue(linkedin["linkedin_fetch_description"])
+        self.assertTrue(linkedin["fetch_description"])
+        self.assertNotIn("linkedin_fetch_description", linkedin)
         google = build_query(config, config["search_tracks"][2], "Python", "google")
         # pyrefly: ignore [bad-argument-type]
         self.assertIn("worldwide Pakistan eligible", google["google_search_term"])

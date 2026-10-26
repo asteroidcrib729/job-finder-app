@@ -1,8 +1,0 @@
-# Runtime versions are resolved in requirements.lock.
--c requirements.lock
-python-jobspy==1.1.82
-pandas==2.3.3
-requests==2.34.2
-beautifulsoup4==4.15.0
-PyYAML==6.0.3
-ddgs==9.15.0

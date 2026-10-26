@@ -8,12 +8,24 @@ from unittest.mock import patch
 from notifiers.discord import DeliveryOutcome
 from storage.reconcile import merge_delivery, merge_discovery, validate_discovery_state
 from storage.recover import export_recovery
-from storage.sync_state import Git, persist_state
+from storage.sync_state import DEFAULT_COMMIT_IDENTITY, Git, commit_identity, persist_state
 from storage.tracker import JobTracker, StateError, atomic_write_json, read_json, save_with_backup
 from tests.support import OfflineTestCase, job
 
 
 class StateRecoveryTests(OfflineTestCase):
+    def test_workflow_commit_identity_and_invalid_overrides(self):
+        import yaml
+        workflow = yaml.safe_load((Path(__file__).resolve().parents[1] / ".github/workflows/job_finder.yml").read_text())
+        state_step = next(step for step in workflow["jobs"]["scrape-and-notify"]["steps"] if step.get("id") == "state")
+        for key, value in DEFAULT_COMMIT_IDENTITY.items():
+            self.assertEqual(state_step["env"][key], value)
+        with patch.dict(os.environ, {"GIT_AUTHOR_NAME": "Fixture author"}):
+            self.assertEqual(commit_identity()["GIT_AUTHOR_NAME"], "Fixture author")
+        for bad in ("", "  ", "name\nInjected", "name\x00"):
+            with patch("storage.sync_state.os.environ", {"GIT_AUTHOR_NAME": bad}), self.assertRaises(StateError):
+                commit_identity()
+
     def state(self, pending=(), seen=None):
         return {"version": 2, "seen": seen or {},
                 "pending": {item.job_id: {"job": item.to_dict(), "status": "pending",
@@ -145,12 +157,12 @@ class StateRecoveryTests(OfflineTestCase):
                     git(human, "commit", "-m", "second human change")
                     git(human, "push", "origin", "main")
                 return original(instance, *args, **kwargs)
-            with patch.object(Git, "run", racing_run):
+            with patch.object(Git, "run", racing_run), patch.dict(os.environ, DEFAULT_COMMIT_IDENTITY):
                 result = persist_state(worker, "main")
             self.assertEqual(result["attempts"], 2)
             self.assertEqual(result["status"], "persisted")
             self.assertEqual(git(remote, "log", "-1", "--format=%an|%ae|%cn|%ce", "main"),
-                "asteroidcrib729|132701966+asteroidcrib729@users.noreply.github.com|Job Finder Bot|actions@github.com")
+                "Faraz Hussain|132701966+asteroidcrib729@users.noreply.github.com|github-actions[bot]|41898282+github-actions[bot]@users.noreply.github.com")
             self.assertEqual(git(remote, "show", "main:app.txt"), "latest human code")
             final = json.loads(git(remote, "show", "main:data/seen_jobs.json"))
             self.assertEqual(set(final["seen"]), {"old", "local", "remote"})
