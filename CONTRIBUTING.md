@@ -55,7 +55,7 @@ The maintainer records meaningful operational changes and evidence in `developme
 
 ## Source coverage verification
 
-Contributors distinguish search, detail, discovery-backend, recovery-probe and cooldown outcomes. Unsupported options do not count as failed searches. LinkedIn details use a separately paced/cached queue; detail failures must preserve listing search results and their successful watermarks. Google defaults to a bounded daily probe. Remote feed retries respect the six-hour attempt cadence even on failure. Recruiter fallback has a global request budget; ambiguous empty provider responses remain unverified.
+Contributors distinguish search, detail, discovery-backend, recovery-probe and cooldown outcomes. Unsupported options do not count as failed searches. LinkedIn details use a separately paced/cached queue; detail failures must preserve listing search results and their successful watermarks. Google uses SerpApi under durable credit controls; daily probe mode remains optional. Remote feed retries respect the six-hour attempt cadence even on failure. Recruiter fallback has a global request budget; ambiguous empty provider responses remain unverified.
 
 Source changes include offline regressions for partial rows, cache expiry, retries/cooldowns and state reconciliation. Authorized live validation checks per-source coverage and full-description counts without resetting delivery history. Raw responses, reports and credentials remain local/ignored. Source availability and production matching accuracy require separate evidence.
 

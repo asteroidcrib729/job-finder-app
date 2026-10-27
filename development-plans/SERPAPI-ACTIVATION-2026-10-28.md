@@ -21,3 +21,26 @@ Offline regressions cover pre-request durable reservation, timeout accounting, r
 Local and hosted acceptance results are recorded below as verification completes. Secrets and raw account responses remain excluded from evidence.
 
 Local validation passed: 152 offline tests, 54/54 synthetic matching decisions, Ruff, Pyrefly (zero errors, 16 existing suppressions), compilation, dependency consistency (41 packages), Actionlint, package builds and archive checks. The final policy-skip change also passed all 24 targeted API/quota tests. Expected quota/cadence skips appear in quota telemetry and notes rather than being mislabeled as failed provider searches. No dependency/lockfile changes were needed.
+
+### Hosted acceptance
+
+Published code SHA `6aa69a3104ad5752f1e5415bad23b30ec497f08a` passed [Linux quality CI](https://github.com/asteroidcrib729/job-finder-app/actions/runs/40568543664) and [security scans](https://github.com/asteroidcrib729/job-finder-app/actions/runs/40568543095). The exact CodeQL analysis reported zero findings, no analysis errors/warnings, and the dependency audit passed.
+
+| Evidence | Production run | Immediate manual refresh |
+| --- | --- | --- |
+| Successful workflow | [40568583326](https://github.com/asteroidcrib729/job-finder-app/actions/runs/40568583326) | [40568590162](https://github.com/asteroidcrib729/job-finder-app/actions/runs/40568590162) |
+| Mode | Live, normal cadence/delivery | Dry run with refresh and verification sample enabled |
+| SerpApi search attempts | 1 | 0 |
+| Google outcome | Success, two rows converted, no invalid rows | Six-hour minimum interval; intentional skip |
+| Quota journal reservations | 1 | Still 1 |
+| Provider balance before search | 250 | Not requested because local spacing already blocked searching |
+| New Discord deliveries | Five review jobs in one digest: four LinkedIn, one Google | None |
+| Job history persistence | Production discovery/delivery state and quota saved | Quota-only scope; no new commit or job-history changes |
+
+The new Google results both had full descriptions; one was review-tier and one rejected. This establishes live API access and normalization, not measured production matching accuracy. The production run returned 48 unique jobs, two qualified, five review and 41 rejected; the two qualified jobs were already notified. It fetched 24 fresh LinkedIn descriptions and completed three reappearing cards from cache, reducing the saved backlog from 45 to 21 and raising the next detail budget from 24 to 28. The dry-run report's smaller in-memory backlog was deliberately not persisted.
+
+Production state commit `ea79bedecf520eaf081af8cf2b215179b198d791` used the required Faraz Hussain author and GitHub Actions bot committer identities. The quota ledger/backup contain only reservation metadata. Validation confirmed all five new delivery IDs were acknowledged with receipts and none remained queued. [Read-only Discord diagnostic 40569166375](https://github.com/asteroidcrib729/job-finder-app/actions/runs/40569166375) retrieved the digest with webhook/message HTTP 200 from the expected server and channel. This proves message existence, not phone-client notification display.
+
+The refresh report explicitly recorded `search_attempts_this_run: 0`, `attempts_in_window: 1` and `serpapi_minimum_interval`. No Google request was issued. Its next permitted attempt was October 28 at 06:23 Asia/Karachi; the unchanged three-hour workflow schedule may run it later. One reservation counts conservatively as one attempted search; no post-search balance check was used to claim exact provider billing.
+
+Both hosted runs succeeded with visible partial-coverage warnings from other sources. Rozee returned HTTP 403; LinkedIn listing metadata and some recruiter search responses remained partial/unverified. Google Jobs is now live-verified, while full source availability and held-out matching accuracy remain separate acceptance work.
