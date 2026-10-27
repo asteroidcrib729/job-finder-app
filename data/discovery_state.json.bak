@@ -1,11 +1,151 @@
 {
   "adaptive:linkedin_details": {
-    "request_limit": 20,
+    "request_limit": 24,
     "delay_seconds": 2,
-    "updated_at": "2026-10-27T18:53:25.093092+00:00"
+    "updated_at": "2026-10-27T18:54:56.089348+00:00"
   },
   "cache:linkedin": {
     "entries": {
+      "https://www.linkedin.com/jobs/view/4455407005": {
+        "fetched_at": "2026-10-27T18:54:56.089348+00:00",
+        "payload": {
+          "description": "About the Company\nCareem is building the Everything App for the greater Middle East — making it easy to move around, order food and groceries, manage payments, and more. Our purpose is simple: to simplify and improve people’s lives and build an awesome organisation that inspires.\nSince 2012, Careem has enabled earnings for over 2.5 million Captains, simplified the lives of more than 70 million customers, and built a platform where the region’s best talent and entrepreneurs thrive. We operate in 70+ cities across 10 countries, from Morocco to Pakistan.\nWe’re now entering our next chapter — one powered by AI. We’re looking for AI talent: curious problem-solvers who know how to apply AI to build tools, automate workflows, and create real impact. Whether it’s streamlining operations, enhancing customer experience, or reimagining internal systems — we want people who can make Careem work smarter and move faster.\nAbout the team\nAt Careem, the mission for the NextGen program is to help grow our new joint Engineering by learning how to write Clean Code, use SOLID principle techniques, and design reliable systems. The ultimate goal is to train the new Engineers to build Engineering excellence foundations with high standards. Our program covers all the areas of Careem tech be it Cyber Security, Data, Infrastructure, and all the Software Engineering tracks like Backend, Frontend as well as Mobile.\nWe are looking for software engineers to join our team of talented engineers that share a common interest in distributed backend systems, their scalability, and continued development. You will work alongside a top talent for an accelerated learning path. You will have access to some of the most exciting projects and advanced tech for accelerated learning and exposure.\nYou will be responsible for maintaining some of our services that power the Careem Engine, scaling highly distributed systems, and continuously documenting and improving our engineering practices. These large-scale, distributed systems handle everything from user requests to payment processing.\nWhat you'll do:\nResponsibilities\nOur tech stack is Java 8 and Spring Boot, Micro-Service Architecture, SQL and no-SQL DBs, and AWS infrastructure. Key responsibilities include:\nDevelopment of our distributed backend system to meet the challenging functional, scalability, and reliability requirements for our fast-growing business.\nMaintain features and systems, with an emphasis on code quality, maintainability, readability, and testing.\nFacilitate collaboration with other engineers, product owners, and designers to solve interesting and challenging problems across our platform.\nBe a valued member of an autonomous, cross-functional agile team.\nYou care about quality and you know what it means to ship high-quality code.\nWhat you'll need:\nFresh graduates are encouraged to apply!\nThe ideal candidate will have a passionate commitment to improving the lives of people, an insane focus on excellence and customer service, and a strong alignment with our core values: being bold, focused, agile and collaborative.\nMust have:\nBachelor's Degree in Computer Science or other related technical fields.\nUnderstanding of Object-oriented design, data structures, and algorithms.\nAbility to solve complex problems.\nMust be able to write clean and maintainable code (must love coding!).\nAbility to effectively articulate technical challenges and solutions; deal with loosely defined problems and fast-changing requirements & think abstractly.\nPassionate about learning new technologies and working on a product of massive scale and impact.\nAble to communicate effectively.\nAttention to detail.\nNice to have:\nKnowledge of AWS\nKnowledge of clean code principles\nDeep understanding of design patterns\nDemonstrated ability of test-driven development",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4475045317": {
+        "fetched_at": "2026-10-27T18:54:56.089348+00:00",
+        "payload": {
+          "description": "About FullStack\nFullStack is your AI-native engineering partner, built to turn AI capability into certainty. Most companies can demo AI; few can get it to production and prove what it produced. We close that gap with three capabilities, AI built into your products from the start, elite vetted talent who apply it, and transparent execution that shows value every step of the way. With now over 600 customers in North America, FullStack is one integrated partner for all your AI engineering needs. With FullStack, you move forward with confidence.\nWe’re Most Proud Of\nOffering life-changing career opportunities to talented software professionals across the Americas.\nBuilding highly-skilled software development teams for hundreds of the world’s greatest companies.\nHaving delivered hundreds of successful custom software solutions, which have positively impacted the lives and careers of millions of users.\nOur 4.1-star rating on GlassDoor.\nOur client Net Promoter Score of 68, twice the industry average.\nThe Opportunity\nJoin our talent network and connect with U.S. clients for flexible, project-based development work as an Agentic Software Engineer (Google Antigravity).\nYou will integrate directly into our client's team and work alongside their existing designers and engineers on a daily basis.\nWhat We're Looking For\n5+ years of professional software development experience with a deep understanding of full-stack architectures (e.g., Java, Python, C#, React, Node, etc.).\n1-3 years of professional experience using Google Antigravity as a primary development environment to coordinate AI-driven implementation across large, multi-file systems while maintaining architectural oversight.\nExperience delivering production software where AI systems generate the majority of implementation code.\nStrong context engineering skills, including structuring codebases, specifications, and documentation to produce reliable, context-efficient AI output.\nAbility to translate complex product requirements into machine-executable, AI-friendly specifications.\nExperience designing AI-first development workflows from specification through deployment.\nAbility to systematically improve AI-generated output through structured iteration and feedback loops.\nComfort working across multiple stacks, using AI to deliver high-quality, production-ready systems.\nExperience operating across frontend, backend, and infrastructure in AI-accelerated environments.\nDisciplined human-in-the-loop review practices, with risk-adjusted validation for high-impact or safety-critical flows.\nStrong curiosity and initiative in evaluating and adopting emerging AI-native engineering practices.\nAdvanced understanding of Agile methodologies and Lean principles and participation in team ceremonies as well as asynchronous work.\nAdvanced English is required.\nSuccessful completion of a four-year college degree is required.\nA positive mindset and a can-do attitude.\nAbility to identify with the goals of FullStack's clients and dedicate yourself to delivering on commitments.\nAbility to consistently work 40 hours per week.\nWork Authorization Requirements\nApplicants must be currently authorized to work in the country of this job posting on a full-time basis.\nFullStack will not sponsor applicants for work visas now or in the future.\nWhat We Offer\nCompetitive pay.\n100% remote work.\nThe ability to work with leading startups and Fortune 500 companies.\nContinuing education opportunities.\nOpportunity to grow and expand your career.\nOur talent network is committed to fostering a diverse, inclusive, and accessible environment where IT professionals can find opportunities that match their skills. We welcome individuals of all races, religions, genders, sexual orientations, national origins, abilities, and experiences. Our focus is on connecting talent with projects based on qualifications, ensuring a fair and transparent process that values diverse perspectives and global collaboration.\nLearn more about our Applicants Privacy Notice.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4475049119": {
+        "fetched_at": "2026-10-27T18:54:56.089348+00:00",
+        "payload": {
+          "description": "About FullStack\nFullStack is your AI-native engineering partner, built to turn AI capability into certainty. Most companies can demo AI; few can get it to production and prove what it produced. We close that gap with three capabilities, AI built into your products from the start, elite vetted talent who apply it, and transparent execution that shows value every step of the way. With now over 600 customers in North America, FullStack is one integrated partner for all your AI engineering needs. With FullStack, you move forward with confidence.\nWe’re Most Proud Of\nOffering life-changing career opportunities to talented software professionals across the Americas.\nBuilding highly-skilled software development teams for hundreds of the world’s greatest companies.\nHaving delivered hundreds of successful custom software solutions, which have positively impacted the lives and careers of millions of users.\nOur 4.1-star rating on GlassDoor.\nOur client Net Promoter Score of 68, twice the industry average.\nThe Opportunity\nJoin our talent network and connect with U.S. clients for flexible, project-based development work as an Agentic Software Engineer (Google Antigravity).\nYou will integrate directly into our client's team and work alongside their existing designers and engineers on a daily basis.\nWhat We're Looking For\n5+ years of professional software development experience with a deep understanding of full-stack architectures (e.g., Java, Python, C#, React, Node, etc.).\n1-3 years of professional experience using Google Antigravity as a primary development environment to coordinate AI-driven implementation across large, multi-file systems while maintaining architectural oversight.\nExperience delivering production software where AI systems generate the majority of implementation code.\nStrong context engineering skills, including structuring codebases, specifications, and documentation to produce reliable, context-efficient AI output.\nAbility to translate complex product requirements into machine-executable, AI-friendly specifications.\nExperience designing AI-first development workflows from specification through deployment.\nAbility to systematically improve AI-generated output through structured iteration and feedback loops.\nComfort working across multiple stacks, using AI to deliver high-quality, production-ready systems.\nExperience operating across frontend, backend, and infrastructure in AI-accelerated environments.\nDisciplined human-in-the-loop review practices, with risk-adjusted validation for high-impact or safety-critical flows.\nStrong curiosity and initiative in evaluating and adopting emerging AI-native engineering practices.\nAdvanced understanding of Agile methodologies and Lean principles and participation in team ceremonies as well as asynchronous work.\nAdvanced English is required.\nSuccessful completion of a four-year college degree is required.\nA positive mindset and a can-do attitude.\nAbility to identify with the goals of FullStack's clients and dedicate yourself to delivering on commitments.\nAbility to consistently work 40 hours per week.\nWork Authorization Requirements\nApplicants must be currently authorized to work in the country of this job posting on a full-time basis.\nFullStack will not sponsor applicants for work visas now or in the future.\nWhat We Offer\nCompetitive pay.\n100% remote work.\nThe ability to work with leading startups and Fortune 500 companies.\nContinuing education opportunities.\nOpportunity to grow and expand your career.\nOur talent network is committed to fostering a diverse, inclusive, and accessible environment where IT professionals can find opportunities that match their skills. We welcome individuals of all races, religions, genders, sexual orientations, national origins, abilities, and experiences. Our focus is on connecting talent with projects based on qualifications, ensuring a fair and transparent process that values diverse perspectives and global collaboration.\nLearn more about our Applicants Privacy Notice.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4480179591": {
+        "fetched_at": "2026-10-27T18:54:56.089348+00:00",
+        "payload": {
+          "description": "HIRING: Staff Backend Engineer, Node & TypeScript, Stable SportsTech Co, Used by Millions\nRECRUITER OVERVIEW:\nHey, I'm Will — Rumor has it I'm Colorado's #1 Most Connected, Respected & Bald-est 👨 🦲 #DevRecruiter™. As an agency software engineering recruiter, my team and I are actively and continually partnered with an ever-growing rolodex of private & public tech companies, as well as VC backed and self-funded startups, Pre-Seed through Acquisition/IPO...🚀 What these companies have in common is that they ALL are looking to Hire \" Uncommonly Good \" Founding, Mid, Senior, Lead, Staff & Principal Software Devs ... and of course, the Leaders of these Software Development Teams.\nA LITTLE ABOUT THE COMPANY\nMy client is a leading remote-first sports technology company with an enviable, collaborative, remote 1st culture. Their platform supports millions of users and tens of thousands of amateur sports organizations. Their engineering organization builds highly scalable, service-oriented, and event-driven systems using modern cloud technologies, APIs, databases, queues, caching, and observability tooling. I'm working directly with the CTO and 5 members of her team to hire 3 Devs: a Mid, a Senior, and a Staff ... This is a new client of mine, but maybe already my favorite company to work with :)\nWHY WORK WITH THIS COMPANY?\nSuper cool industry: They serve the Amateur Sports / SportsTech space (they are the #1 in their space already, but that's only like ~10% market share)\nDiverse team, innovative culture: They strongly encourage and focus on hiring for diversity across all axes, which has led to an incredibly creative and innovative culture\nLots of growth in sight! T hey are making HUGE pivots to grow and take market share in an industry ripe for product-focused development to drive tons of new customers.\nUnique balance of stability and growth: They've been around for 15+ years yet very small and nimble, with plenty of room for new \"startup-like\" initiatives and passionate innovators\nAn AI philosophy that doesn't suck : They are AI-welcoming, but they want solid development fundamentals 1st (Good code and smart architecture will always rule the room).\nRemote 1st, and rooted in that for almost their entire history ... no RTOs happening here. They do remote RIGHT (with many awards to back them) ... This includes remote workflows, async habits, and remote communication patterns that are well established.\nROLE REQUIREMENTS\nThese roles are heavily backend and product-focused . We are seeking engineers who have worked extensively on the server side using Node.js and TypeScript , backed by a proven track record of scaling microservices, executing complex database migrations, and architecting high-throughput, event-driven systems. Ideal candidates bring deep expertise across systems architecture, advanced SQL tuning, ORM management, and clean API design, paired with a strong product mindset focused on delivering core backend business logic that directly drives customer value. They are also looking for people who have done this type of work at scale (i.e., on products with millions of users)\nStrong, recent, production Backend coding execution with a Node / TypeScript focus\nA highly product-focused engineering mentality\nProven depth in working and scaling with high-volume, high-scale products (ideally products with millions of users, using event-driven workflows, and asynchronous systems under heavy load)\nStrong SQL relational database mastery\nDemonstrated ability to lead and mentor other engineers , and clarify requirements during live coding, even when given ambiguous initiatives, without relying on AI tools as a crutch.\nConnection to sports or passion mission-driven companies strongly preferred**\nNOTE: THEY WILL PASS IF ...\nThey have already said \"pass\" to other folks that they felt were not a fit due to them being too heavy into either Platform work and/or being too Heavy on the Front End, not enough Backend experience with Node/Typescript, or working on too small of products: If you feel like any of the below describes YOU, these would NOT be the right roles for you.\nYou are historically heavy into platform engineering work and historically focused on isolated internal infrastructure, distributed systems, and heavy internal tooling rather than shipping tangible end-user features that drive product velocity.\nYou have historically leaned toward the front end, working with React, UI state management, or client-side development\nYou do not have much recent production (at work) backend experience with Node/Typescript\nYou have historically done a lot of work on products with 10s, 100s, or 1000's of daily active users (i.e., you have not worked much on products with 1,000,000+ daily active users)\nLOCATION\n*This role is FULLY REMOTE, but hired candidates must reside in the USA: We have listed the role in a specific city to help mitigate the many thousands of applicants we get who end up being spammers and scammers. NOTE: While the role is remote, my client CANNOT hire residents of Alabama, Alaska, Delaware, the District of Columbia, Hawaii, Iowa, Louisiana, Mississippi, Nebraska, New Mexico, Rhode Island, South Dakota, West Virginia or Utah.\nCOMPENSATION:\nThe minimum salary for this role is $200K, with a budget of up to $220K base salary. If hired, you would also be eligible for a 5% bonus.\nBENEFITS:\nThis client offers a strong benefits package including the following:\n100% employer-paid medical, dental, and vision insurance premiums for both the employee and their entire family .\nUnlimited PTO and paid parental leave for all parents.\n401(k) retirement plan.\n$1,500 annual learning and development stipend.\nHome office setup allowance plus a monthly health and wellness reimbursement stipend.\n$50 annual swag credit after starting.\nTravel covered for all-company meetings and team offsites.\nNEXT STEPS...\nIf you feel that your background and goals align with this role, please drop your resume here. If there is synergy, we will reach out ASAP.\nCheers,\n-Will\nNOTE: This client is unable to offer sponsorship or visa transfers at this time. If you are interested and qualified after reviewing ALL of the requirements carefully, please submit your resume via LinkedIn and do not send any further personal messages. Rest assured, your application WILL be reviewed for a potential fit along with all other resumes via the applicant reviewing portal, and we WILL move forward with the best-fitting candidates. Due to an overwhelming amount of AI-generated spam messages via email and LinkedIn (and from folks who are clearly just not reading the Job Description), personal messages are now being disregarded. Thanks!\n____________________________________________\nWill Wegert — Colorado's #1 Most Bald-est 👨 🦲 #DevRecruiter™ | AKA Colorado's most Reliable, Respected, and Recognized Software Engineering Recruiter.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4481445030": {
+        "fetched_at": "2026-10-27T18:54:56.089348+00:00",
+        "payload": {
+          "description": "About the role:\nWe’re looking for a software engineer who is also interested in crypto markets and comfortable participating in day trading as part of the role.\nYou’ll work with us to research trading strategies, analyze market data, and build algorithms that can be tested and improved over time. A major part of the work will be studying 10 years or more of historical data where available , identifying patterns, testing hypotheses, and using evidence to evaluate trading ideas.\nThis is one integrated role: you’ll contribute to both the trading work and the software behind it. We’re open to students, recent graduates, and experienced candidates who can show strong technical and analytical skills alongside genuine crypto trading experience.\nWe value practical problem-solving. You should be comfortable finding useful exchanges, APIs, datasets, libraries, open-source projects, and existing tools, then connecting them into a working system. The goal is to build a stable crypto trading algorithm by assembling and improving what already works—not rebuilding every component from scratch.\nWhat you’ll do\nParticipate in crypto market research and day-trading activity.\nAnalyze long-term historical market data, including 10 years or more where reliable data is available.\nCollect, clean, validate, and analyze data from crypto exchanges and other relevant sources.\nUse data analysis and critical thinking to identify patterns, test hypotheses, and assess whether a strategy has evidence behind it.\nStudy price action, market behavior, and trading strategies, and help translate useful ideas into testable rules.\nDevelop Python tools and services for data collection, analysis, and automation.\nWork with exchange APIs, libraries, and other data sources; use scripting or automation where appropriate.\nResearch technical indicators and formulas using reliable references, open-source tools, and AI assistants such as Claude.\nVerify formulas and AI-generated code before using them in analysis or trading systems.\nConnect existing tools and services to fill gaps in the trading workflow.\nBuild and improve backtesting, monitoring, alerting, and execution components.\nTest strategies with historical data and simulated trading, then help evaluate live trading under defined risk limits.\nDocument your methods, assumptions, results, and limitations so the team can make data-informed decisions.\nWhat we’re looking for\nStrong interest in cryptocurrency markets and demonstrable experience buying, selling, or day trading crypto.\nComfort participating in day-trading research and activity as well as software development.\nStrong data analysis and critical analysis skills, with the ability to question assumptions and interpret results carefully.\nWorking knowledge of Python, including writing scripts for data collection, analysis, and automation.\nExperience using APIs, preferably exchange APIs, and handling structured data such as JSON.\nAbility to work with historical and time-series data and to evaluate trading ideas using evidence.\nFamiliarity with appropriate tools for data-driven analysis, such as pandas, NumPy, SQL, notebooks, statistical methods, or visualization tools.\nAbility to research indicators, understand the logic behind them, and translate ideas into code.\nA practical mindset: you look for suitable existing tools and libraries before building a replacement.\nGood communication skills and the ability to explain your reasoning, trading ideas, and technical decisions.\nCuriosity, discipline, and a willingness to learn from experiments that do not produce the expected result.\nHelpful experience\nFamiliarity with crypto exchanges, market-data feeds, order types, and trading dashboards.\nExperience analyzing large datasets, historical price data, or time-series data.\nExposure to backtesting, quantitative analysis, algorithmic trading, or risk management.\nExperience with tools such as Cursor, Claude, or other AI coding assistants.\nContributions to relevant open-source projects or personal trading, data analysis, or software projects.\nWho should apply\nYou do not need a particular degree or a long employment history. Students, recent graduates, self-taught developers, and experienced professionals are all welcome to apply if they can demonstrate relevant skills and trading experience.\nThis role combines hands-on crypto market participation with software engineering and data analysis. If you are interested only in coding and are not comfortable engaging with day-trading activity, this role may not be the right fit.\nHow to apply\nPlease include your résumé or LinkedIn profile.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4481451013": {
+        "fetched_at": "2026-10-27T18:54:56.089348+00:00",
+        "payload": {
+          "description": "Introduction\nA career in IBM Consulting is built on long-term client relationships and close collaboration worldwide. You'll work with leading companies across industries, helping them shape their hybrid cloud and AI journeys. With support from our strategic partners, robust IBM technology, and Red Hat, you'll have the tools to drive meaningful change and accelerate client impact. At IBM Consulting, curiosity fuels success. You'll be encouraged to challenge the norm, explore new ideas, and create innovative solutions that deliver real results. Our culture of growth and empathy focuses on your long-term career development while valuing your unique skills and experiences.\nYour Role And Responsibilities\nAs an Application Developer specializing in SAP ABAP HANA, you will design, develop, and support application solutions with a focus on the HANA version of Advanced Business Application Programming (ABAP). You will work on designing, developing, and re-engineering highly complex application components, integrating software packages, programs, and reusable objects residing on multiple platforms.\nYour Primary Responsibilities Will Include\nDevelop Application Solutions: Design, develop, and support application solutions with a focus on HANA version of ABAP, ensuring seamless integration with existing systems and platforms.\nIntegrate Software Packages: Integrate software packages, programs, and reusable objects residing on multiple platforms, leveraging knowledge of SAP HANA Technical Concept and Architecture.\nRe-engineer Application Components: Re-engineer highly complex application components to optimize performance, scalability, and reliability, utilizing ABAP Development Tools (ADT) and Code Performance Rules and Guidelines for SAP HANA.\nModel Data using HANA Studio: Create data models using HANA Studio, adhering to best practices and ensuring data consistency and integrity.\nConsume HANA Live Models: Consume HANA Live models to deliver real-time insights and analytics, leveraging knowledge of ADBC, Native SQL, and ABAP Core Data Services.\nRequired Technical And Professional Expertise\nExposure to SAP ABAP HANA: Experience working with HANA version of Advanced Business Application Programming (ABAP), including designing, developing, and supporting application solutions.\nKnowledge of SAP HANA Technical Concept and Architecture: Familiarity with SAP HANA Technical Concept and Architecture, including data modeling using HANA Studio and ABAP Development Tools (ADT).\nExperience with Data Modeling: Exposure to data modeling using HANA Studio, adhering to best practices and ensuring data consistency and integrity.\nUnderstanding of Code Performance Rules: Familiarity with Code Performance Rules and Guidelines for SAP HANA, including ADBC, Native SQL, and ABAP Core Data Services.\nIntegration Experience: Experience integrating software packages, programs, and reusable objects residing on multiple platforms.\nPreferred Technical And Professional Experience\nWorking Knowledge of HANA Live: Familiarity with consuming HANA Live models to deliver real-time insights and analytics, leveraging knowledge of ADBC, Native SQL, and ABAP Core Data Services.\nExposure to Database Procedures: Understanding of database procedures, text search, and ALV on HANA, including data base procedures and HANA Live models consumption.\nFamiliarity with ABAP Core Data Services: Knowledge of ABAP Core Data Services, including data modeling and code performance optimization techniques.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4482170870": {
+        "fetched_at": "2026-10-27T18:54:56.089348+00:00",
+        "payload": {
+          "description": "About FullStack\nFullStack is your AI-native engineering partner, built to turn AI capability into certainty. Most companies can demo AI; few can get it to production and prove what it produced. We close that gap with three capabilities, AI built into your products from the start, elite vetted talent who apply it, and transparent execution that shows value every step of the way. With now over 600 customers in North America, FullStack is one integrated partner for all your AI engineering needs. With FullStack, you move forward with confidence.\nWe’re Most Proud Of\nOffering life-changing career opportunities to talented software professionals across the Americas.\nBuilding highly-skilled software development teams for hundreds of the world’s greatest companies.\nHaving delivered hundreds of successful custom software solutions, which have positively impacted the lives and careers of millions of users.\nOur 4.1-star rating on GlassDoor.\nOur client Net Promoter Score of 68, twice the industry average.\nThe Position\nForward Deployed Engineers sit inside the client’s problem, not next to it. You embed with an enterprise team, find the work that actually warrants AI, architect the system, build it, and make it hold up in the real environment.\nThis is a three-way role: consultant, operator, engineer . You should be as comfortable pressure-testing a business case with a COO or VP of Engineering as you are debugging why an agent’s tool-calling loop degraded after a context change. The people who succeed here can hold a discovery conversation on Monday and ship what they scoped on Thursday.\nOn this track, your edge is application engineering: you make agents real inside the client’s actual systems, workflows, and delivery pipelines.\nWe work with regulated industries and Fortune 500 clients who have AI mandates, real constraints, and low tolerance for demos that don’t hold up.\nHow We Approach The Work\nFDEs are trusted to shape the solution, not only deliver it. Every engagement calls for architect-level judgment:\nReframes the request. Treats “we need an agent for X” as a hypothesis, not a spec.\nDecomposes the problem. Outcome → process → decisions → data → systems → actors → constraints — before choosing technology.\nChooses the intervention. Remove, simplify, traditional software, automation, LLM, RAG, agent, or multi-agent — and defends why.\nOwns the architecture decision. Documents trade-offs (ADRs), sets success metrics, pushes back on scope that won’t deliver value.\nConsultative Discovery\nClients rarely arrive with a fully formed problem, and the FDE’s first contribution is helping them see it clearly. You lead discovery with genuine curiosity, moving the conversation from stated requirements to underlying needs, and you build credibility through the depth of your understanding rather than the breadth of your pitch.\nUncovers business drivers. What outcome matters, what it’s worth, why now, and what happens if nothing changes.\nUncovers personal drivers. What each stakeholder is measured on, what they’re worried about, and what a win looks like for them individually.\nSurfaces constraints early. Security, compliance, data access, budget, skills, politics, timelines — the things that kill projects in month two.\nAligns stakeholders. Spots conflicting goals between business, engineering, and risk, and brings them to a shared definition of success.\nAsks strategic questions. Follows the answer with “why,” “how do you know,” and “what happens today when…” — without interrogating. Clients leave the conversation understanding their own problem better.\nEarns authority through depth. Credibility comes from the quality of the questions and the insight in the playback, not from pitching technology.\nWhat You'll Do\nDiscover. Run workshops and process discovery with business and engineering stakeholders. Separate genuine AI problems from workflow problems wearing an AI costume. Come back with a scoped, defensible point of view.\nStructure the process and the spec. For any business or engineering process being automated, map the current state, decision points, and exceptions, then turn it into specifications that both people and AI systems can execute against reliably.\nArchitect & design. Design agentic systems end to end — orchestration, context and retrieval architecture, tool and MCP integration, guardrails, human-in-the-loop checkpoints, and the boundaries between deterministic and non-deterministic components.\nBuild. Ship working systems — agents, multi-step automations, internal tooling, integration layers. You are hands-on. Prototypes that prove value in weeks, not slideware.\nEngineer the delivery system. Own CI/CD for what you build: build, test, release, environments.\nConsult. Present to and defend decisions in front of CTOs, VPs of Engineering, and business leadership. Quantify impact in their terms. Support pre-sales scoping and proposal work when the deal calls for it.\nWhat We're Looking For\n5+ years of professional software development experience with at least one mainstream production stack (TypeScript/Node.js, Python, Java, C#/.NET, or Go).\n1 - 4 years of professional experience building and shipping LLM-powered and agentic AI systems beyond prototypes or demos.\nAdvanced English is required.\nSuccessful completion of a four-year college degree is required.\nHands-on experience with frontier AI developer tools including Cursor, Claude Code, Gemini CLI, or OpenAI Codex.\nProven experience evaluating current-state environments and defining technical roadmaps.\nDemonstrated experience with APIs, service design, event-driven and distributed systems, and data modeling.\nExperience designing and owning CI/CD pipelines, including build, test, release, environments, and deployment processes.\nStrong understanding of context and specification engineering to produce reliable AI output.\nSolid understanding of enterprise integration patterns, including APIs, webhooks, event streams, iPaaS platforms such as n8n or MuleSoft, and MCP.\nTrack record of leading client-facing discovery calls, asking \"why\" before \"how\" to decompose unstructured business problems.\nSkilled at exercising end-to-end delivery ownership and managing project scope without requiring product manager supervision.\nAbility to work through new and difficult issues and contribute to libraries as needed.\nAbility to create and maintain continuous integration and delivery of applications.\nForensic attention to detail.\nA positive mindset and a can-do attitude.\nExperience working on Agile / Scrum teams.\nMeaningful experience working on large, complex systems.\nAbility to take extreme ownership over your work. Every day is a challenge to ensure you are performing to the expectations you and your team have agreed upon.\nAbility to identify with the goals of FullStack's clients, and dedicate yourself to delivering on the commitments you and your team make to them.\nStrong Plus\nProduction AI operations (Day 2): eval harnesses, observability and tracing, cost and token economics, drift, debugging non-deterministic systems.\nPrompt- and eval-level regression testing running in CI and gating releases.\nDelivery in regulated environments (financial services, healthcare, insurance, manufacturing).\nPre-sales support: discovery calls, SOW and estimate shaping, technical proposal defense.\nProcess mining, operations analysis, or transformation consulting background.\nClient enablement and training — building the client team’s capability, not just the system.\nPrior consulting or agency environment; comfort with ambiguity and multiple accounts.\nWork Authorization Requirements\nApplicants must be currently authorized to work in the United States on a full-time basis.\nFullStack will not sponsor applicants for work visas now or in the future.\nWhat We Offer\nCompetitive Salary.\nPaid Time Off (vacation, sick leave, parental leave, holidays).\n100% remote work.\nThe ability to work with leading startups and Fortune 500 companies.\nHealth, dental, and vision insurance.\n401(k) w/ 4% match.\nAmple opportunity for career advancement.\nContinuing education opportunities.\nFullStack is proud to be an equal opportunity workplace. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity, or Veteran status.\nLearn more about our Applicants Privacy Notice.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4482187068": {
+        "fetched_at": "2026-10-27T18:54:56.089348+00:00",
+        "payload": {
+          "description": "About FullStack\nFullStack is your AI-native engineering partner, built to turn AI capability into certainty. Most companies can demo AI; few can get it to production and prove what it produced. We close that gap with three capabilities, AI built into your products from the start, elite vetted talent who apply it, and transparent execution that shows value every step of the way. With now over 600 customers in North America, FullStack is one integrated partner for all your AI engineering needs. With FullStack, you move forward with confidence.\nWe’re Most Proud Of\nOffering life-changing career opportunities to talented software professionals across the Americas.\nBuilding highly-skilled software development teams for hundreds of the world’s greatest companies.\nHaving delivered hundreds of successful custom software solutions, which have positively impacted the lives and careers of millions of users.\nOur 4.1-star rating on GlassDoor.\nOur client Net Promoter Score of 68, twice the industry average.\nThe Position\nForward Deployed Engineers sit inside the client’s problem, not next to it. You embed with an enterprise team, find the work that actually warrants AI, architect the system, build it, and make it hold up in the real environment.\nThis is a three-way role: consultant, operator, engineer . You should be as comfortable pressure-testing a business case with a COO or VP of Engineering as you are debugging why an agent’s tool-calling loop degraded after a context change. The people who succeed here can hold a discovery conversation on Monday and ship what they scoped on Thursday.\nOn this track, your edge is application engineering: you make agents real inside the client’s actual systems, workflows, and delivery pipelines.\nWe work with regulated industries and Fortune 500 clients who have AI mandates, real constraints, and low tolerance for demos that don’t hold up.\nHow We Approach The Work\nFDEs are trusted to shape the solution, not only deliver it. Every engagement calls for architect-level judgment:\nReframes the request. Treats “we need an agent for X” as a hypothesis, not a spec.\nDecomposes the problem. Outcome → process → decisions → data → systems → actors → constraints — before choosing technology.\nChooses the intervention. Remove, simplify, traditional software, automation, LLM, RAG, agent, or multi-agent — and defends why.\nOwns the architecture decision. Documents trade-offs (ADRs), sets success metrics, pushes back on scope that won’t deliver value.\nConsultative Discovery\nClients rarely arrive with a fully formed problem, and the FDE’s first contribution is helping them see it clearly. You lead discovery with genuine curiosity, moving the conversation from stated requirements to underlying needs, and you build credibility through the depth of your understanding rather than the breadth of your pitch.\nUncovers business drivers. What outcome matters, what it’s worth, why now, and what happens if nothing changes.\nUncovers personal drivers. What each stakeholder is measured on, what they’re worried about, and what a win looks like for them individually.\nSurfaces constraints early. Security, compliance, data access, budget, skills, politics, timelines — the things that kill projects in month two.\nAligns stakeholders. Spots conflicting goals between business, engineering, and risk, and brings them to a shared definition of success.\nAsks strategic questions. Follows the answer with “why,” “how do you know,” and “what happens today when…” — without interrogating. Clients leave the conversation understanding their own problem better.\nEarns authority through depth. Credibility comes from the quality of the questions and the insight in the playback, not from pitching technology.\nWhat You'll Do\nDiscover. Run workshops and process discovery with business and engineering stakeholders. Separate genuine AI problems from workflow problems wearing an AI costume. Come back with a scoped, defensible point of view.\nStructure the process and the spec. For any business or engineering process being automated, map the current state, decision points, and exceptions, then turn it into specifications that both people and AI systems can execute against reliably.\nArchitect & design. Design agentic systems end to end — orchestration, context and retrieval architecture, tool and MCP integration, guardrails, human-in-the-loop checkpoints, and the boundaries between deterministic and non-deterministic components.\nBuild. Ship working systems — agents, multi-step automations, internal tooling, integration layers. You are hands-on. Prototypes that prove value in weeks, not slideware.\nEngineer the delivery system. Own CI/CD for what you build: build, test, release, environments.\nConsult. Present to and defend decisions in front of CTOs, VPs of Engineering, and business leadership. Quantify impact in their terms. Support pre-sales scoping and proposal work when the deal calls for it.\nWhat We're Looking For\n5+ years of professional software development experience with at least one mainstream production stack (TypeScript/Node.js, Python, Java, C#/.NET, or Go).\n1 - 4 years of professional experience building and shipping LLM-powered and agentic AI systems beyond prototypes or demos.\nAdvanced English is required.\nSuccessful completion of a four-year college degree is required.\nHands-on experience with frontier AI developer tools including Cursor, Claude Code, Gemini CLI, or OpenAI Codex.\nProven experience evaluating current-state environments and defining technical roadmaps.\nDemonstrated experience with APIs, service design, event-driven and distributed systems, and data modeling.\nExperience designing and owning CI/CD pipelines, including build, test, release, environments, and deployment processes.\nStrong understanding of context and specification engineering to produce reliable AI output.\nSolid understanding of enterprise integration patterns, including APIs, webhooks, event streams, iPaaS platforms such as n8n or MuleSoft, and MCP.\nTrack record of leading client-facing discovery calls, asking \"why\" before \"how\" to decompose unstructured business problems.\nSkilled at exercising end-to-end delivery ownership and managing project scope without requiring product manager supervision.\nAbility to work through new and difficult issues and contribute to libraries as needed.\nAbility to create and maintain continuous integration and delivery of applications.\nForensic attention to detail.\nA positive mindset and a can-do attitude.\nExperience working on Agile / Scrum teams.\nMeaningful experience working on large, complex systems.\nAbility to take extreme ownership over your work. Every day is a challenge to ensure you are performing to the expectations you and your team have agreed upon.\nAbility to identify with the goals of FullStack's clients, and dedicate yourself to delivering on the commitments you and your team make to them.\nStrong Plus\nProduction AI operations (Day 2): eval harnesses, observability and tracing, cost and token economics, drift, debugging non-deterministic systems.\nPrompt- and eval-level regression testing running in CI and gating releases.\nDelivery in regulated environments (financial services, healthcare, insurance, manufacturing).\nPre-sales support: discovery calls, SOW and estimate shaping, technical proposal defense.\nProcess mining, operations analysis, or transformation consulting background.\nClient enablement and training — building the client team’s capability, not just the system.\nPrior consulting or agency environment; comfort with ambiguity and multiple accounts.\nWork Authorization Requirements\nApplicants must be currently authorized to work in the United States on a full-time basis.\nFullStack will not sponsor applicants for work visas now or in the future.\nWhat We Offer\nCompetitive Salary.\nPaid Time Off (vacation, sick leave, parental leave, holidays).\n100% remote work.\nThe ability to work with leading startups and Fortune 500 companies.\nHealth, dental, and vision insurance.\n401(k) w/ 4% match.\nAmple opportunity for career advancement.\nContinuing education opportunities.\nFullStack is proud to be an equal opportunity workplace. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity, or Veteran status.\nLearn more about our Applicants Privacy Notice.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4482694167": {
+        "fetched_at": "2026-10-27T18:54:56.089348+00:00",
+        "payload": {
+          "description": "IMPORTANT: after you apply, please check your email. We send you a link to complete your application — it is not considered until that last step is done. If you do not see it, check your spam folder.\nThis is a fully remote position , open to candidates based in 55 countries, including United States, United Kingdom, Canada, Germany, India, France, Netherlands, Singapore.\nPay: $180,000–$250,000/yr\nJob Title: Software Engineer, New Grad\nJob Type: Full-time\nLocation : Remote\nThe Role\nThis is a fullstack software engineering role designed for recent graduates and early-career engineers looking to accelerate their growth by building production systems. You'll contribute to — and grow into owning — core internal platform capabilities and product features end-to-end.\nYou'll work across internal tools, services, workflows, and AI-powered products that support our engineering, operations, and recruiting platforms. As you grow, you'll take increasing ownership of critical systems while collaborating closely with experienced engineers.\nWhat You'll Own\nContribute to the design and development of end-to-end fullstack systems powering critical internal workflows and platform capabilities.\nBuild clean, maintainable backend services and APIs while learning scalable engineering best practices.\nDevelop high-quality frontend interfaces used by internal teams and end users.\nParticipate in data modeling and database optimization efforts, including schema design and query performance.\nCollaborate with product, operations, and design teams to translate ideas into reliable, production-ready features.\nImprove engineering quality through code reviews, testing, documentation, and continuous improvement.\nHelp troubleshoot production issues while learning how to build resilient, observable systems.\nDevelop sound engineering judgment by making thoughtful tradeoffs between speed, scalability, and maintainability.\nWhat We're Looking For\nBachelor's degree in Computer Science, Computer Engineering, Software Engineering, or a related field (recent graduate or graduating soon).\nInternship, co-op, research, or meaningful personal/project experience building software applications.\nStrong fundamentals in JavaScript and/or TypeScript.\nFamiliarity with frontend development using React or similar frameworks.\nFamiliarity with backend development using Node.js (NestJS is a plus).\nUnderstanding of relational databases such as PostgreSQL and core data modeling principles.\nFamiliarity with RESTful APIs and how distributed applications communicate.\nExposure to Git and modern software development workflows.\nStrong problem-solving skills, curiosity, attention to detail, and a growth mindset.\nExcited to learn quickly and contribute in a fast-moving engineering environment.\nPreferred\nInternship or professional software engineering experience.\nExposure to cloud platforms such as AWS, GCP, or Azure.\nFamiliarity with CI/CD, deployment pipelines, or DevOps fundamentals.\nExposure to modern architectures such as microservices, serverless, or event-driven systems.\nInterest in AI-powered products, workflow automation, or data-intensive applications.\nExperience contributing to team projects, hackathons, open-source software, or startup environments.\nCompensation & Benefits Notice\nThe national pay range for this full-time position is base salary of $110,000 –$150,000 USD. All employees are eligible for equity compensation, and employees may also receive performance-based bonuses, dependent on role and subject to company policies. The company provides a comprehensive benefits package, including up to 100% reimbursement for health-insurance premiums, paid time off, a 401(K) plan with a company match, and additional benefits designed to support a high-performing, remote-first workforce.\nthe company is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex (including pregnancy, sexual orientation, or gender identity), national origin, age, disability, genetic information, veteran status, or any other characteristic protected by applicable local laws, regulations and ordinances. If you need assistance and/or a reasonable accommodation during the application process, reach out to us by replying to our email.\nOur hiring process utilizes artificial intelligence tools to assist in candidate screening and assessment. Our AI tools are designed to complement, not replace, human decision-making.\nDisclaimer\nThe information contained in this job posting, including but not limited to role responsibilities, qualifications, compensation, and benefits, is provided for informational purposes only and does not constitute a binding offer of employment. the company reserves the right to amend, modify, or withdraw any portion of this posting at its sole discretion and without prior notice. All employment decisions are made in accordance with applicable laws and regulations.\nHow To Apply\nApply here with your profile. We will then email you a link to complete your application on the hiring platform — your application is only considered once that final step is done.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4482701648": {
+        "fetched_at": "2026-10-27T18:54:56.089348+00:00",
+        "payload": {
+          "description": "We are Looking for a motivated and detail-oriented Associate Software Engineer to join our development team in Islamabad. This role is ideal for fresh graduates or candidates with 0-2 years of experience who are eager to build scalable applications and grow in a fast-paced environment.\nCore Responsibilities\nAssist in designing, developing, and maintaining software applications\nWrite clean, efficient, and well-documented code\nDebug and troubleshoot software issues\nParticipate in code reviews and team meetings\nCollaborate with cross-functional teams (QA, Product, DevOps)\nLearn and implement best coding practices\nSupport deployment and post-release monitoring\nRequirements\nBachelor's degree in Computer Science, Software Engineering, or related field\nStrong understanding of programming fundamentals (OOP, Data Structures)\nKnowledge of at least one programming language (e.g., Python, Java, JavaScript, C#)\nBasic understanding of databases (SQL / NoSQL)\nFamiliarity with Git/version control\nGood problem-solving and analytical skills\nStrong communication skills\nPreferred (Nice to Have):\nInternship or project experience\nUnderstanding of REST APIs\nExposure to cloud platforms (AWS, Azure, GCP)\nKnowledge of Agile methodologies",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4482707156": {
+        "fetched_at": "2026-10-27T18:54:56.089348+00:00",
+        "payload": {
+          "description": "Devsinc is looking for motivated AI/ML Associates to join our team and contribute to the development of innovative Artificial Intelligence and Machine Learning solutions. This role offers an opportunity to work on real-world projects, enhance technical expertise, and grow in a collaborative, technology-driven environment.\nRequirements\nDevelop, train, test, and optimize machine learning models for real-world applications.\nAssist in designing and implementing AI-powered solutions using machine learning and deep learning techniques.\nCollect, clean, preprocess, and analyze structured and unstructured datasets.\nWork with libraries such as NumPy, Pandas, Scikit-learn, TensorFlow, or PyTorch.\nExplore and implement Generative AI solutions using Large Language Models (LLMs), APIs, and prompt engineering.\nEvaluate model performance using appropriate metrics and improve accuracy and efficiency.\nCollaborate with software engineers and cross-functional teams to integrate AI/ML models into applications.\nMaintain technical documentation and follow best practices for code quality, testing, and version control.\nStay updated with emerging AI/ML technologies, tools, and industry trends.\nQualification:\nBachelor's degree in Computer Science, Artificial Intelligence, Data Science, Software Engineering, or a related field.\n6 months to 1 year of practical experience in AI/ML development through professional work, internships, or relevant projects.\nStrong programming fundamentals and a basic understanding of machine learning concepts.\nA portfolio of relevant projects or practical implementations is a plus.\nRequired Skills:\nProficiency in Python programming.\nWorking knowledge of NumPy, Pandas, and Scikit-learn.\nUnderstanding of supervised and unsupervised learning algorithms.\nBasic knowledge of deep learning concepts and frameworks such as TensorFlow or PyTorch.\nFamiliarity with data preprocessing, feature engineering, and model evaluation techniques.\nBasic understanding of REST APIs, Git, and model deployment.\nFamiliarity with Generative AI, LLMs, and prompt engineering is an advantage.\nStrong analytical, problem-solving, and communication skills.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4482709479": {
+        "fetched_at": "2026-10-27T18:54:56.089348+00:00",
+        "payload": {
+          "description": "About Brkthru:\nBrkthru was founded with a client-centric philosophy in an industry where service is often overlooked. Our mission is to be the preferred partner of local advertisers and agencies, creating and managing successful paid digital media campaigns for local, state, regional and national brands in nearly every B2C and B2B vertical and industry. Our campaigns reach customers on digital devices such as smartphones, tablets, computers and digital TV.\nWe are guided by our core values and we center them in the hiring process and our workday to build teams that exemplify Positive Attitude, Caring, Contribution, Communication, and Trust.\nWhy Brkthru?\nBrkthru is the leading digital media solutions provider to mid-market agencies and brands. Our trading works in 20+ different digital media platforms, but our client-first philosophy sets us apart, consistently earning us a 90% client satisfaction rating, and equally impressive client retention is proof. We are growing quickly, ranking for the fifth year in-a-row to the Inc. 5000 Fastest Growing Private Companies in America.\nThe Opportunity\nThis role is ideal for someone who enjoys building production software from front to back. You'll spend your time developing new features, maintaining existing systems, designing APIs, solving complex engineering problems, and partnering closely with teammates to deliver reliable software.\nIn the near term, you'll help ensure a smooth transition of ownership for BRAVO while learning the platform from our current engineer. Longer term, you'll help modernize the platform and contribute to Brkthru's broader investments in automation, AI, and internal tooling.\nResponsibilities:\nApplication Development\nDesign, build, test, and deploy production features across the BRAVO platform.\nDevelop full-stack applications spanning React, Node.js, APIs, and PostgreSQL.\nWrite clean, maintainable, and well-tested code.\nDebug production issues and improve system reliability.\nPlatform Ownership\nBecome a primary technical owner of BRAVO.\nImprove platform performance, scalability, and maintainability.\nIdentify technical debt and recommend architectural improvements.\nContribute to long-term platform modernization.\nEngineering Collaboration\nPartner with Product, Engineering, and business stakeholders to translate requirements into technical solutions.\nParticipate in code reviews and technical design discussions.\nHelp maintain development standards and engineering best practices.\nCloud & Infrastructure\nBuild and maintain services hosted within AWS.\nWork with Docker, CI/CD pipelines, infrastructure, and deployment automation.\nMonitor application health and production environments.\nExperience\n6+ years of professional software engineering experience.\nStrong experience with Node.js and TypeScript.\nExperience building React applications.\nStrong SQL and PostgreSQL skills.\nExperience designing and consuming REST APIs.\nExperience working in AWS cloud environments.\nFamiliarity with CI/CD pipelines and Git workflows.\nComfortable debugging production applications.\nTech Stack:\nFrontend: React 19, TypeScript, Vite, TanStack Query, Zustand, Tailwind CSS\nBackend: Node.js, Express, Bun, TRPC, Database, PostgreSQL\nInfrastructure: AWS (ECS, RDS, S3, CloudFront), Docker, Terraform, GitHub Actions\nTesting: Jest, Playwright\nProject & Collaboration Skills\nExperience managing technical work within Jira or similar tools\nAbility to manage multiple concurrent projects with minimal oversight\nStrong written and verbal communication skills\nTravel/Onsite Requirements:\nBrkthru operates as a remote-first company with occasional mandatory travel for training and offsites, provided with advance notice. We uphold the expectation that all team members maintain a dedicated and reliable workspace, free from distractions, to ensure optimal productivity.\nThis role requires travel 2-3 times per year for our offsites. Travel instances are typically 3-5 days at a time.\nBenefits\nThis is a full-time, exempt position\nMedical/ Dental/ Vision/ HSA and FSA/ Long Term Disability/ Life and AD&D/ and more…\nCompany paid Short Term Disability\n401k Retirement plan with company match\nPizza Fridays and Hub Hangouts\nReimbursement of Home Office Expenses\nA generous number of Holidays, PTO, and summer Fridays\nBrkthru Hiring and AI Usage\nBrkthru welcomes candidates to use AI tools for proofreading or strengthening their resume, but submitting AI-generated cover letters, resumes, or work samples that do not accurately represent a candidate’s skills will be considered a red flag. The use of AI-powered 'whispering bots' or real-time answer-generation apps during live interviews is strictly prohibited.\nAll candidate applications are reviewed by a human. Brkthru may use artificial intelligence (AI) or automated tools to assist in the evaluation of applications, assessment scoring, and interview analysis or notetaking; however, all hiring decisions are made by people.\nBrkthru EEO Statement\nWe’re proud to be an Equal Opportunity Employer and committed to creating an inclusive environment for all employees. We do not discriminate on the basis of race, color, religion, creed, sex, sexual orientation, gender, gender identity or expression, pregnancy (including childbirth, lactation, and related conditions), national origin or ancestry, ethnicity, age, family status, marital status, veteran or military status, the presence of a medical condition or physical or mental disability, height, weight, misdemeanor arrest record, genetic information, citizenship, hair (including texture or protective hairstyle), or any other characteristic protected by applicable law, and encourage all applicants to apply.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4482718175": {
+        "fetched_at": "2026-10-27T18:54:56.089348+00:00",
+        "payload": {
+          "description": "About Contour\nContour Software has grown from a dozen people to over 2,000 staff across 3 cities, in less than 14 years.\nAs a subsidiary of Constellation Software Inc., we are proud to be part of a global enterprise software conglomerate that has grown to become one of the top 10 software companies in the world, with employees and customers in 100+ countries. With a broad-based and ever-growing portfolio of market-leading, vertical-market enterprise solutions covering more than 100 industry domains in predominantly mature markets, CSI's recipe creates the perfect environment for professionals to build fulfilling, long-term careers.\nWhat started as an R&D & Accounting back-office, has progressed into a full-service Global Centre serving all functions and departments, at the divisional as well as operating group/corporate level. Today Contour employees, located in Karachi, Lahore & Islamabad, are serving CSI divisions located in time zones spanning the globe, from Sydney to Vancouver. With the global growth of Constellation as the wind in our sails, we are only just getting started!\nThe Division\nJonas Premier Construction - a division of Constellation Software Inc. – is the market-leading cloud-based integrated construction management solution, for mid-sized General Contractors, Design Builders and Land Developers. Constellation companies are leading developers of technology solutions for vertical markets in North America, Europe and Australia. Jonas Software is the valued technology partner of over 8000 customers worldwide in 15 countries. Jonas is headquartered in Canada and also operates offices in the United States, the United Kingdom, and the Caribbean.\nThe Position\nWe are looking for Trainee Software Developers to join one of our R&D teams. The selected candidates will be trained for 3 to 3.5 months to become good developers capable of working on enterprise-level applications. After the end of the internship period, there is a good possibility of full-time employment based on satisfactory performance during the internship.\nThe chosen individuals will work out of the Contour Software Lahore resource center office, as an extension of the division-based R&D department.\nRequired Qualifications & Skills\nBS/MS in Computer Science or related field.\nStrong understanding of object-oriented programming principles.\nGood programming concepts and knowledge of .NET programming\nExposure to Generative AI, LLMs, RAG, Prompt Engineering, or AI-powered application development.\nStrong competencies in data structures, algorithms, and software design.\nStrong relational database concepts with SQL queries.\nGood level of knowledge of REST APIs.\nExperience and knowledge of Git.\nA quick learner, with attention to detail, and a commitment to meet deadlines.\nKnowledge of professional software engineering practices\nGood programming concepts and knowledge of frontend programming with JavaScript, AngularJS/Angular.\nGood communication skills in English.\nDisclaimer: At Contour, we attribute our success to the unique contributions of our diverse staff. We’re committed to fostering a culture of respect that thrives on the varied perspectives and experiences of all individuals we recruit, employ, promote, and compensate. Since day one, we’ve adhered to a policy that champions a work environment honoring the worth and dignity of each person while being free from all forms of employment discrimination.\nIn our continuous effort to promote inclusivity, we extend our commitment to individuals with special needs by providing reasonable accommodations. We actively encourage qualified individuals with special needs to apply for the various openings within our company. Should you require assistance in completing the application process or have any inquiries regarding special facilities, please do not hesitate to contact our HR team. Your unique talents and abilities are welcomed and valued here.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4482724038": {
+        "fetched_at": "2026-10-27T18:54:56.089348+00:00",
+        "payload": {
+          "description": "This position is fully remote / work from home.\nSalary: $104,000 - 114,000/year\nWe are seeking a versatile Software Engineer with 3+ years of experience to join our engineering team. In this role, you will design, build, and maintain robust web applications across our full tech stack, contributing to modernizing and scaling our core application infrastructure. Our core tech stack centers on Python (FastAPI) on the backend, Vue.js on the frontend, and PostgreSQL for data management. You will work across the stack to build high-performance REST APIs, responsive user interfaces, and efficient database architectures.\nKey Responsibilities\nBuild, test, and maintain backend APIs using FastAPI and modern, interactive user interfaces using Vue.js.\nDesign, optimize, and maintain relational schemas, complex queries, and migrations in PostgreSQL.\nOptimize application performance, refactor legacy components, and ensure high availability, security, and scalability across the stack.\nDesign secure, well-documented RESTful APIs and handle data pipeline or microservice integrations.\nWrite clean, maintainable, and well-tested code (unit and integration testing). Follow secure coding best practices required for federal/government systems.\nPartner with DevOps engineers, UI/UX designers, and product managers in an Agile development environment.\nRequired Qualifications\n3+ years of professional software engineering experience working with full-stack web applications.\nStrong proficiency in Python with hands-on experience using FastAPI (or comparable modern Python web frameworks like Flask or Django).\nSolid proficiency with Vue.js (Vue 2/3, Options/Composition API) and modern frontend tooling (HTML5, CSS3, JavaScript/TypeScript).\nStrong hands-on experience with PostgreSQL, including schema design, query optimization, and ORMs (e.g., SQLAlchemy).\nSolid understanding of RESTful API design, Git version control, asynchronous programming in Python, and software design patterns.\nMust be eligible to successfully undergo a background investigation to obtain and maintain a Public Trust clearance.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4482932734": {
+        "fetched_at": "2026-10-27T18:54:56.089348+00:00",
+        "payload": {
+          "description": "This position is listed on behalf of a partner company, which manages all applications and next steps. Our partner is looking for an Associate Software Engineer based in the United States.\nWe are seeking a motivated Associate Software Engineer to contribute to the development, testing, and continuous improvement of innovative software solutions in the healthcare technology sector. In this role, you will collaborate with experienced engineers and cross-functional teams to build reliable, scalable, and maintainable applications that support better healthcare outcomes. You will work with modern development practices and AI-assisted engineering tools to streamline workflows, improve code quality, and accelerate software delivery. The position also offers opportunities to explore data platforms, machine learning pipelines, and generative AI technologies while strengthening your technical expertise. You will contribute to architectural discussions, quality assurance, documentation, and reusable engineering practices within a collaborative and supportive environment. This is an excellent opportunity for an early-career engineer eager to grow professionally while making a meaningful impact through technology.\nAccountabilities\nSoftware Development: Collaborate with engineering teams to design, develop, test, and maintain software applications. Write clean, efficient, secure, and maintainable code that follows established development standards and best practices.\nFeature Development and Enhancement: Contribute to the implementation of new features, application improvements, and technical solutions aligned with business and project requirements.\nCode Reviews and Quality Assurance: Participate in peer code reviews, identify potential improvements, and help ensure code quality, consistency, reliability, and compliance with engineering standards.\nTroubleshooting and Debugging: Investigate software defects, diagnose technical issues, implement corrective solutions, and support ongoing application maintenance.\nTesting and Validation: Develop and execute tests to validate application functionality, reliability, and performance, ensuring solutions meet defined quality requirements.\nCross-Functional Collaboration: Work closely with engineers and other stakeholders to understand requirements, clarify technical specifications, and deliver effective software solutions.\nAI-Assisted Engineering: Apply AI-powered development tools throughout the software delivery lifecycle, including requirements analysis, coding, testing, debugging, documentation, and operational monitoring.\nArchitecture and Solution Design: Use AI-assisted workflows to explore design alternatives, evaluate architectural approaches, improve existing systems, and prepare technical design artifacts for review.\nAI Output Validation: Assess AI-generated code and other technical outputs for correctness, security, maintainability, regulatory compliance, and alignment with business needs. Help review AI-assisted work produced by other engineers.\nData Platform Development: Contribute to the design and maintenance of data platforms and governed datasets that support analytics, machine learning, and generative AI applications.\nReusable Engineering Practices: Develop and share reusable prompts, AI agents, engineering playbooks, development workflows, and automation patterns that improve productivity across the engineering organization.\nDocumentation and Continuous Improvement: Maintain clear technical documentation, stay informed about emerging technologies, and recommend improvements to engineering tools, processes, and delivery practices.\nResponsible AI and Compliance: Ensure that AI-assisted development activities follow organizational policies and applicable requirements for intellectual property, information security, privacy, protected health information (PHI), and responsible AI use.\nRequirements\nEducation: Bachelor's degree in Computer Science, Software Engineering, or a related technical discipline.\nProgramming Skills: Proficiency in at least one programming language, such as C# or Python, with the ability to write readable, efficient, and maintainable code.\nSoftware Development Fundamentals: Basic understanding of software engineering principles, application development lifecycles, testing methodologies, debugging techniques, and coding best practices.\nVersion Control: Familiarity with Git or comparable version control systems for managing code changes and collaborating with other developers.\nAgile Methodologies: Understanding of software development methodologies such as Agile and Scrum, including collaborative planning, iterative delivery, and continuous improvement.\nProblem-Solving Skills: Strong analytical thinking, attention to detail, and the ability to investigate technical issues and develop practical solutions.\nCommunication and Collaboration: Good written and verbal communication skills, with the ability to work effectively within a team, receive feedback, and contribute to shared engineering objectives.\nAdaptability and Learning: Willingness to learn new technologies, explore emerging engineering practices, and continuously improve technical capabilities.\nAI-Assisted Development Experience: Familiarity with AI-powered coding tools and a demonstrated ability to use them effectively in software development is preferred. Relevant platforms may include GitHub Copilot, Cursor, Claude Code, or similar solutions.\nPrompt Engineering and AI Delivery: Strong prompt-writing skills and experience applying AI-assisted techniques to coding, testing, debugging, and other stages of software delivery are desirable.\nData and AI Technologies: Exposure to machine learning data pipelines, vector search, document processing, data preparation, or generative AI workloads is an advantage.\nData Governance: Working knowledge of data governance, data lineage, data quality, and observability practices supporting reliable AI-enabled solutions is preferred.\nSecurity and Responsible AI: Understanding of secure software development, privacy protection, intellectual property safeguards, and responsible AI principles, particularly in environments handling sensitive healthcare information.\nRemote Work Readiness: Ability to work remotely with a reliable high-speed internet connection exceeding 10 Mbps and the technical setup required to perform the role effectively.\nBenefits\nComprehensive Benefits Package: Access to a range of employee benefits, including health insurance, for eligible employees.\nRemote Work Environment: Work-from-home flexibility designed to support productivity and work-life balance.\nWork-Life Balance: A workplace culture that values employee wellbeing, flexibility, and autonomy.\nProfessional Development: Opportunities to expand technical skills, learn emerging technologies, and develop expertise in software engineering and AI-assisted development.\nInnovative Technology Exposure: Hands-on experience with AI-powered engineering tools, machine learning data platforms, and generative AI development practices.\nCollaborative Culture: Opportunities to work alongside engineers and cross-functional colleagues in an environment that values inclusion, teamwork, and continuous learning.\nMeaningful Impact: The opportunity to contribute to technology solutions that support healthcare organizations and help improve outcomes for people with complex medical needs.\nInclusive Workplace: A commitment to equal employment opportunities, accessibility, and respect for diverse backgrounds and perspectives.\nCompensation: Salary details were not specified in the available job posting. Compensation is determined according to the position's requirements, the selected candidate's skills, and relevant professional experience.\nHow Jobgether Works\nWe use an AI-powered matching process to ensure your application is reviewed quickly, objectively, and fairly against the role's core requirements. Our system identifies the top-fitting candidates, and this shortlist is then shared directly with the hiring company. The final decision and next steps (interviews, assessments) are managed by their internal team.\nWe appreciate your interest and wish you the best!\nWhy Apply Through Jobgether?\nData Privacy Notice: By submitting your application, you acknowledge that Jobgether will process your personal data to evaluate your candidacy and share relevant information with the hiring employer. This processing is based on legitimate interest and pre-contractual measures under applicable data protection laws (including GDPR). You may exercise your rights (access, rectification, erasure, objection) at any time.\nWe may use artificial intelligence (AI) tools to support parts of the hiring process, such as reviewing applications, analyzing resumes, or assessing responses and identifying potential inconsistencies or verification signals in application materials based on available information. These tools assist our recruitment team but do not replace human judgment. Final hiring decisions are ultimately made by humans. If you would like more information about how your data is processed, please contact us.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4483166364": {
+        "fetched_at": "2026-10-27T18:54:56.089348+00:00",
+        "payload": {
+          "description": "Posting Details\nJob Title Application Programmer Analyst I\nRequisition Number RE56239\nWorking Title\nDepartment Name 7P275:Public Health Analytics and Informatics\nWork Location Lexington, KY\nGrade Level 46\nSalary Range $53,061-87,526/year\nType of Position Staff\nPosition Time Status Full-Time\nRequired Education\nBS\nClick here for more information about equivalencies: https://hr.uky.edu/employment/working-uk/equivalencies\nRequired Related Experience\n1 yr\nRequired License/Registration/Certification\nNone\nPhysical Requirements\nSitting and/or standing for long periods of time; performing repetitive motion tasks; lifting, pushing, and/or pulling objects up to 50lbs\nShift\nMonday – Friday Between the hours of 8:00 a.m. – 5:00 p.m. Additional hours as needed\nJob Summary\nBuild Technology Solutions That Support Public Health Across Kentucky\nThe University of Kentucky is seeking an Application Programmer Analyst I to join theCollege of Public Health’s Public Health Analytics and Informatics team .\nThis position develops and maintains applications supporting state-funded public health projects, including the DBHDID contract with the State of Kentucky. Working with principal investigators, technical team members, and contract stakeholders, this role contributes throughout the Software Development Life Cycle ( SDLC ) to deliver reliable solutions that meet project and stakeholder needs.\nWhat You’ll Do\nDevelop, test, debug, deploy, and maintain web-based applications and databases using established development standards.\nBuild solutions using technologies such as C#, ASP . NET Core, MVC , Web Forms, HTML , CSS , Less, JavaScript, TypeScript, jQuery, T- SQL , Power Platform, Azure App Service, Azure Functions, and SQL Server.\nDevelop and maintain contract-specific applications and databases supporting analytical needs in public health, behavioral health, and intellectual disabilities.\nEvaluate project needs, analyze requirements, prepare workflow documentation, and develop software solutions across multiple projects.\nPerform application testing, identify and resolve systematic and operational issues, and help optimize applications for performance and scalability.\nParticipate in code reviews and contribute to technical documentation.\nCollaborate with principal investigators, contract stakeholders, Application Programmers, Database Analysts, Database Administrators, and Project Managers to address application development, training, and system needs.\nSupport SysOps and DevOps opportunities and complete special projects as requested.\nWhat You’ll Bring\nAdvanced knowledge of Microsoft, open-source, and web-standard technologies.\nUnderstanding of fundamental software design concepts and the Software Development Life Cycle.\nStrong organization and attention to detail.\nEffective written and verbal communication skills.\nAbility to work effectively as part of a multidisciplinary, cross-functional team.\nAdaptability and a collaborative approach to solving technical and stakeholder challenges.\nMinimum Requirements\nBachelor’s degree\n1 year of related experience\nWhat’s In It For You\nOpportunity to develop technology solutions that support state-funded public health initiatives and externally funded projects.\nExperience working across multiple applications and technologies with opportunities to contribute to both SysOps and DevOps activities.\nFully remote eligibility, with approval.\nUK’s Exceptional Benefits\nWhy Now?\nPublic Health Analytics and Informatics supports technology needs connected to state contracts and externally funded projects. This 100% grant-funded position will help the team develop and maintain applications for the DBHDID contract with the State of Kentucky while supporting reliable systems for public health, behavioral health, and intellectual disabilities initiatives.\nBy strengthening application development and maintenance capacity, this role will help investigators and contract stakeholders turn project requirements into dependable, scalable technology solutions.\nSkills / Knowledge / Abilities\nKnowledge of Microsoft, Linux, open-source, and web standard technologies such as ASP . NET Web Forms, ASP . NET MVC , C#, HTML , JavaScript, jQuery, and T- SQL to design and develop technologies.\nDoes this position have supervisory responsibilities? No\nPreferred Education/Experience\nBachelor’s Degree in Computer Science or equivalent experience may substitute and 1 year’s experience in web-based systems object oriented web development using . NET , ASP\nDeadline to Apply 11/06/2026\nOur University Community\nWe value the well-being of each of our employees and are dedicated to creating a healthy place for everyone to work, learn and live. In the interest of maintaining a safe and healthy environment for our students, employees, patients and visitors, the University of Kentucky is a Tobacco & Drug Free campus.\nThe University follows both the federal and state Constitutions as well as all applicable federal and state laws on nondiscrimination. The University provides equal opportunities for qualified persons in all aspects of institutional operations and does not discriminate on the basis of race, color, national origin, ethnic origin, religion, creed, age, physical or mental disability, veteran status, uniformed service, political belief, sex, sexual orientation, gender identity, gender expression, pregnancy, marital status, genetic information or social or economic status.\nAny candidate offered a position may be required to pass pre-employment screenings as mandated by University of Kentucky Human Resources. These screenings may include a national background check and/or drug screen.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4483527878": {
+        "fetched_at": "2026-10-27T18:54:56.089348+00:00",
+        "payload": {
+          "description": "Job Objective\nYour role as Software Engineer is to independently design, develop, test, and maintain full-stack software solutions across backend and frontend layers. You will own assigned features from requirement analysis through implementation, integration, QA handover, and production support, while ensuring solutions are reliable, maintainable, secure, and aligned with established engineering standards.\nMain Tasks\nDesign, develop, and maintain backend services, APIs, business logic, data processing, frontend applications, dashboards, portals, forms, reporting screens, internal tools, and reusable components.\nOwn assigned features from requirement analysis through development, testing support, QA handover, defect resolution, and production support, with limited supervision.\nImplement complete end-to-end features covering frontend user interactions, backend processing, PostgreSQL data persistence, event queue processing, integrations, and final user or system responses.\nDesign and consume REST APIs, including request and response models, validations, authentication, authorization, error handling, and appropriate integration behavior.\nImplement and maintain integration flows with internal services, operators, aggregators, third-party systems, callbacks, and webhooks, ensuring proper error handling and operational visibility.\nDevelop and validate PostgreSQL queries and database interactions, including transaction behavior, indexing, constraints, data persistence, and consistency requirements for assigned features.\nImplement and support RabbitMQ and event-driven workflows, including event publishing, message consumption, payload validation, retries, dead-letter handling awareness, logging, and queue-processing monitoring.\nImplement and support asynchronous workflows such as notifications, billing triggers, delivery reports, background jobs, audit events, and integration callbacks according to system requirements.\nAnalyze business and technical requirements, identify implementation gaps and dependencies, and propose appropriate technical approaches for assigned features before development.\nTroubleshoot and resolve technical issues across backend services, APIs, frontend behavior, PostgreSQL results, event queues, integrations, asynchronous processes, and end-to-end application flows.\nPerform unit testing, support integration and regression testing, resolve identified defects, and validate implemented changes before QA handover and release.\nOptimize standard application performance, including API response times, frontend rendering behavior, PostgreSQL queries, database interactions, and event-processing efficiency.\nCollaborate with QA, Product, DevOps, Support, Security, and other engineering teams to resolve dependencies and ensure smooth end-to-end delivery.\nProvide basic technical guidance to Junior Software Engineers when required and support them in resolving straightforward development and troubleshooting issues.\nEscalate complex architectural, scalability, security, performance, event-driven design, and production-critical concerns to Senior or Lead Software Engineers when required.\nMaintain technical documentation covering APIs, integrations, frontend components, database interactions, event flows, application workflows, configurations, and known technical limitations.\nEnsure development activities comply with Jira traceability, Git and branching practices, pull request and code review requirements, SonarQube validation, secure coding, documentation, and release standards.\nQualifications\nBachelor’s degree in computer science, Software Engineering, Computer Engineering, Information Technology, or a related field.\n2+ years of experience in software development across backend and frontend applications.\nHands-on experience developing and integrating APIs, databases, and full-stack application features.\nExperience with database-driven applications, event-driven or asynchronous processing, and system integrations.\nExposure to messaging, real-time, high-volume, or integration-heavy platforms is considered an advantage.\nProfessional proficiency in Local Language and English is required.\nGood hands-on knowledge of backend development using Java or C#.NET and frontend development using React and Next.js.\nGood understanding of REST APIs, authentication, authorization, integration patterns, callbacks, webhooks, and error handling.\nGood knowledge of PostgreSQL, SQL queries, transactions, indexing fundamentals, constraints, data persistence, and validation.\nGood understanding of RabbitMQ or similar event-queuing technologies, including producers, consumers, message handling, retries, dead-letter concepts, and asynchronous processing.\nAbility to independently develop and troubleshoot complete features across backend, frontend, database, integration, and event-processing layers.\nGood knowledge of Git workflows, branching strategies, pull requests, code reviews, and development traceability.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4483574501": {
+        "fetched_at": "2026-10-27T18:54:56.089348+00:00",
+        "payload": {
+          "description": "Work Week: Sunday - Thursday\nWork Timings: Sunday to Thursday, 9:00 AM – 6:00 PM (KSA time)\nAbout Us\nAt Soum, we're on a mission to build a marketplace that enables users to buy and sell anything online with convenience, trust, and ease, starting in the MENA market. We began with second-hand electronics in KSA, becoming market leaders, and are now expanding to used cars and collectibles. In just two years, we've facilitated hundreds of thousands of transactions across 150+ locations in the Kingdom, maintained 10,000 active listings at any given time, earned the distinction of being the 10th most downloaded e-commerce app in KSA for 2023, and received more than 5 million app downloads.\nJob Summary\nWe are seeking a skilled and motivated Backend Software Engineer to join our dynamic team. As a Backend Software Engineer, you will play a critical role in designing, developing, and maintaining scalable backend systems and microservices that power our products.\nIf you have a strong foundation in backend development, enjoy solving complex problems, and thrive in a collaborative environment, we want to hear from you.\nRole & Responsibilities\nDesign, develop, and maintain backend systems using Node.js, TypeScript, and Nest.js.\nBuild and manage scalable microservices architecture with a focus on performance and reliability.\nDevelop APIs and handle inter-service communication using gRPC.\nWork with MongoDB, PostgreSQL, and ClickHouse for data modeling, storage, and optimization.\nCollaborate with cross-functional teams to understand requirements and deliver high-quality solutions.\nEnsure code quality and maintainability through best practices, code reviews, and testing.\nTroubleshoot, debug, and optimize backend systems to ensure seamless performance.\nRequirements & Qualifications\nRequired Skills\nDesign, develop, and maintain backend systems using Node.js, TypeScript, and Nest.js.\nBuild and manage scalable microservices architecture with a focus on performance and reliability.\nDevelop APIs and handle inter-service communication using gRPC.\nWork with MongoDB, PostgreSQL, and ClickHouse for data modeling, storage, and optimization.\nStrong understanding of CI/CD pipelines and deployment strategies.\nFamiliarity with cloud platforms like AWS, GCP, or Azure.\nKnowledge of distributed systems and event-driven architectures.\nQualifications\nBachelor's degree in Computer Science, Engineering, or a related field, or equivalent practical experience.\n4–5+ years of hands-on experience in backend software development.\nProficient in Node.js and TypeScript.\nExperience working with MongoDB and PostgreSQL in production environments.\nSolid understanding of microservices architecture and communication protocols like gRPC.\nStrong problem-solving skills and attention to detail.\nExcellent communication and collaboration skills.\nNice to Have\nHands-on experience with Kubernetes and Docker.\nExposure to Golang for building performant backend components.\nExperience in scaling and optimizing backend systems for high-traffic applications.\nWe may use artificial intelligence (AI) tools to support parts of the hiring process, such as reviewing applications, analyzing resumes, or assessing responses and identifying potential inconsistencies or verification signals in application materials based on available information. These tools assist our recruitment team but do not replace human judgment. Final hiring decisions are ultimately made by humans. If you would like more information about how your data is processed, please contact us.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4483790918": {
+        "fetched_at": "2026-10-27T18:54:56.089348+00:00",
+        "payload": {
+          "description": "Every breach, every failed audit, every new hire stuck in onboarding purgatory traces back to the same question: who has access to what — and should they?\nIdentity is where modern companies break. Too much access leaks data. Too little grinds the business to a halt. Lumos is the industry's first Autonomous Identity Platform — software that doesn't just surface access risk, but acts on it. We started with a self-service AppStore and grew into the critical infrastructure connecting apps, identities, and data for GitHub, MongoDB, Mars, Pinterest, Anduril, Intercom, Roku, and Netskope. At the center is Albus, our AI agent for identity — mining roles, approving access, and catching the drift humans miss.\nYou'll ship work that thousands of IT and security teams touch every day. You'll own problems without playbooks, because the category is being redefined in real time — by us.\nWhy Lumos?\n🚀 Jump on a rocketship. Since launching out of stealth in April 2022, we've grown from 20 to ~130 Alchemists and raised over $65M from a16z, Scale, Neo, Greg Brockman (President at OpenAI), and Phil Venables (CISO at Google).\n⭐ Customers love us — and so does the industry. Named a Strong Performer in the 2026 Gartner Voice of the Customer for IGA — 4.7/5, with 96% of reviewers saying they'd recommend us. Our customers cut time-to-access by 98%, slash IT tickets by 72%, and eliminate excess privilege at scale.\n🏆 A culture worth joining. Three years running on Forbes' Top 100 Best Startup Employers in America (2024, 2025, 2026) — measured on culture, retention, growth, and job creation. That's our Alchemists, not our marketing. See what we live by here.\nAI agents are on every company laptop. They are on more cloud workloads each week. The numbers are going up and to the right, fast. These agents act with whatever access the person running them has. Security teams can't see which tools their agents call, let alone approve or block them. Lumos is building the governance layer for these agents, and we're rolling it out to customers right now.\nAs a Software Engineer on AI Agent Governance at Lumos, you have massive opportunity to help build a brand new product from the ground up in one of the fastest moving markets in software. You'll join a small team who ships fast.\n✨ Your Responsibilities\nShip backend features end to end, from a rough customer ask to running in production, often in days rather than weeks.\nYou don’t just ship to a spec, rather you ensure value is delivered to customers. You are a valued member of the oncall rotation.\nBuild the testing systems and harnesses that let agents ship changes safely.\nWork directly with customers when issues arise.\nYou utilize agents heavily in your day to day work, but you have a deep understanding of the system architecture and can whiteboard it for a coworker at a moment’s notice.\n🙌 What We’re Looking For\n1+ years of professional software engineering experience, or an equivalent track record of shipping real products\nStrong backend fundamentals. You've built APIs, databases and services that run in production. Our stack is Python, Postgres, OpenSearch and gRPC on AWS.\nYou're AI native. You understand how agents work under the hood: tool calls, MCP servers, hooks and context.\nYou're comfortable with ambiguity. You've worked somewhere small and fast, you start before the spec is finished, and you change direction when customers tell you something new.\nYou take ownership. This is a high-intensity role on a product that's still finding product market fit. We work hard and move fast, and we want people who are excited by that.\nNice to have: experience with endpoint or client software (MDM, software that runs on laptops), a security or identity background.\n⭐️ What We Value\nWe also care about whether you would be a good fit for Lumos based on the values and characteristics that define how we achieve outcomes, not just your resume.\nLumos is an equal opportunity employer committed to building a diverse and inclusive workplace. We do not discriminate on the basis of race, national origin, gender, sexual orientation, gender identity, protected veteran status, disability, age, or other legally protected status. If you require any reasonable accommodations, please let us know at any time.\nThank you for considering Lumos, we hope to hear from you! 🎉\n💰 Pay Range\n$133,500 - $150,000 plus equity + benefits (Note that this range is a good faith estimate of likely pay for this role; upon hire, the pay may differ due to skill and/or level of experience.)\n💸 Benefits and Perks:\n💻 Remote-first culture – Work from anywhere within ±4 hours of Pacific Time.\n🏥 Medical, dental & vision insurance – 100% of premiums covered for employees, 60% for dependents. HSA and FSA available with employer contribution. International benefits align with local standards.\n🧠 Mental health support – Access to mental health resources and support.\n💪 Monthly wellness stipend – A monthly stipend for gym memberships, fitness apps, and whatever helps you recharge.\n🛡️ Life & disability insurance – Life insurance, short-term disability, and long-term disability coverage available.\n🌴 Flexible PTO – Flexible time off with a minimum annual requirement, because rest is part of doing your best work.\n👶 Parental leave – Up to 16 weeks of paid parental leave for expecting parents.\n📚 $1,000 annual learning stipend – An annual budget for courses, books, conferences, and certifications.\n✈️ Company & team offsites – Company and team bonding trips throughout the year, fully covered by Lumos.\n💰 401(k) with matching – Employer 401(k) matching to help you save for the future.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4484096120": {
+        "fetched_at": "2026-10-27T18:54:56.089348+00:00",
+        "payload": {
+          "description": "About The Company\nSynergisticIT works with organizations to address technology and talent needs across areas such as software development, data, and information technology. The company supports candidates as they develop job-ready capabilities and pursue opportunities aligned with their skills and career goals. Project teams may work with different technologies and business domains, so curiosity, adaptability, and a commitment to continuous learning are important.\nAbout The Role\nAs a Software Developer, you will contribute to the design, development, testing, and maintenance of software applications. You will collaborate with technical and business stakeholders to understand requirements, translate them into practical solutions, and deliver work that meets quality and security expectations. Depending on project needs and your background, assignments may involve front-end, back-end, full-stack, database, or cloud-related development. This position may be appropriate for early-career candidates as well as professionals with relevant experience. The specific technology stack and responsibilities will vary by project and client requirements.\nQualifications\nCandidates should have a degree in computer science, information technology, engineering, or a related field, or equivalent practical experience. A foundation in programming and software development principles is required. Familiarity with one or more languages, such as Java, Python, JavaScript, C#, or a comparable language, is beneficial. Applicants should understand basic data structures, algorithms, object-oriented programming, and common software development practices.\nExperience with databases, version control systems such as Git, testing approaches, APIs, or cloud platforms is an advantage. Candidates should be able to communicate technical ideas clearly, work constructively with feedback, and manage tasks responsibly. A portfolio, academic project, internship, or other practical example of software development work can help demonstrate relevant capabilities. A willingness to learn unfamiliar tools and adapt to evolving project requirements is essential.\nResponsibilities\nDevelop, test, debug, and maintain application features in accordance with project requirements. Participate in discussions with team members to clarify business needs, assess technical options, and estimate work. Write readable, maintainable code and follow established development standards. Review code and incorporate feedback to improve reliability, performance, and clarity.\nHelp investigate defects and production issues, document findings, and contribute to effective solutions. Work with databases, APIs, development tools, and deployment processes as appropriate to the assignment. Support quality assurance by preparing or updating tests and verifying that changes function as intended. Keep project documentation current, communicate progress and potential blockers, and collaborate with colleagues across development, testing, product, and operations. Continue building technical knowledge relevant to assigned projects.\nBenefits\nEligible employees may receive compensation and benefits in accordance with company policies and applicable law. Depending on the position and assignment, offerings may include opportunities for professional development, exposure to client projects, and collaboration with experienced technology professionals. Benefits, work location, employment terms, and project placement are determined by the specific opportunity and will be discussed during the hiring process.\nEqual Opportunity\nSynergisticIT is committed to fair and inclusive hiring. Employment decisions are made without discrimination based on any status protected by applicable law. Candidates from diverse backgrounds are encouraged to apply. Reasonable accommodations are available for applicants who need assistance during the application or interview process.",
+          "source_url": ""
+        }
+      },
       "https://www.linkedin.com/jobs/view/4465609789": {
         "fetched_at": "2026-10-27T18:53:25.093092+00:00",
         "payload": {
@@ -191,10 +331,74 @@
         }
       }
     },
-    "updated_at": "2026-10-27T18:53:25.093092+00:00"
+    "updated_at": "2026-10-27T18:54:56.089348+00:00"
   },
   "cache:posts": {
     "entries": {
+      "https://in.linkedin.com/posts/mustakbil_node-js-developer-job-in-espark-consulting-activity-7022141306126663680-5erW": {
+        "fetched_at": "2026-10-27T18:55:57.495722+00:00",
+        "payload": {
+          "status": "active",
+          "text": "Node JS Developer Job!\n\n#developer #developers #nodejs #job \nhttps://lnkd.in/ezi7UepH",
+          "posted_at": "2023-01-20T10:02:32.442Z"
+        }
+      },
+      "https://pe.linkedin.com/posts/khursheed-jahan-ara-8baa93110_koderlabs-is-hiring-for-associate-software-activity-7185587254185082880-4FE0": {
+        "fetched_at": "2026-10-27T18:55:57.495722+00:00",
+        "payload": {
+          "status": "active",
+          "text": "KoderLabs is hiring for Associate Software Engineer - Node JS.\n\nLocation: Karachi (Onsite)\nRequirement: Enrolled in final semester of BSCS or Software Engineering. Prior relevant internship experience is a plus.\n\nApply away at jobs@koderlabs.com and mention \"ASE-NodeJS\" in subject line.",
+          "posted_at": "2024-04-15T10:38:23.128Z"
+        }
+      },
+      "https://www.linkedin.com/posts/asra-ali-475847b0_hiring-fullstackdeveloper-nodejs-activity-7519311212405411840-ZzS_": {
+        "fetched_at": "2026-10-27T18:55:57.495722+00:00",
+        "payload": {
+          "status": "active",
+          "text": "🚀 We’re Hiring: Full Stack Developer\n\nAce On Technology is looking for a Full Stack Developer with 1.5–3 years of professional experience to join our growing team!\n\n📍 Location: Gulistan-e-Johar, Karachi — Onsite\n📅 Working Days: Monday to Saturday\n💼 Employment Type: Full-time\n💻 Experience Required: 1.5–3 Years\n\nRequired Skills: \nStrong hands-on experience with Node.js and Express.js\nProficiency in React.js\nGood understanding of JavaScript and TypeScript\nExperience working with MongoDB\nExperience with Browser/Chrome Extensions will be a strong plus.\n\n⚠️ Please Note: This is an onsite position in Karachi. We encourage applications only from candidates who are currently residing in Karachi or are willing to relocate to Karachi.\n\n📌 Before applying, please read the complete Job Description carefully and ensure your skills and experience align with the requirements.\n\n📩 How to Apply: \n\nInterested candidates can DM me directly or send their CV to hr@aceontechnology.com.\n\nPlease mention the following along with your CV:\n\n💰 Current Salary\n💵 Expected Salary\n📅 Notice Period\n\nIf you know someone who would be a good fit, feel free to tag them or share this post.🚀\n\n#Hiring #FullStackDeveloper #NodeJS #ReactJS #TypeScript #MongoDB #KarachiJobs #TechJobs #PakistanJobs #OnsiteJobs #SoftwareJobs #AceOnTechnology",
+          "posted_at": "2026-10-23T08:18:15.083Z"
+        }
+      },
+      "https://www.linkedin.com/posts/hira-wahid-437ab0267_we-are-hiring-position-nodejs-developer-activity-7464631549171347458-EXue": {
+        "fetched_at": "2026-10-27T18:55:57.495722+00:00",
+        "payload": {
+          "status": "active",
+          "text": "🚀 We are Hiring!!!!\n\nPosition: Node.js Developer\nExperience: Fresh – 1 Year\n\n📍 Location: DHA Phase 2 Ext, Karachi.\n\nResponsibilities:\n\nDevelop and maintain backend applications using Node.js\nBuild and integrate REST APIs\nDebug and troubleshoot application issues\nCollaborate with development teams\nWork with databases and third-party integrations\n\nRequirements:\n\nBachelor’s degree in Computer Science or related field\nGood understanding of JavaScript and Node.js\nFamiliarity with Express.js and REST APIs\nBasic knowledge of MongoDB/MySQL\nUnderstanding of Git/version control is a plus\nGood problem-solving and communication skills\n\n📩 Interested candidates can share their resumes at hira.wahid@cee-solutions.com or hr@resourcelinked.tech with the position mentioned in the subject line",
+          "posted_at": "2026-05-25T11:00:47.451Z"
+        }
+      },
+      "https://www.linkedin.com/posts/moritzbaierlentz_game-studio-funding-is-back-gardens-interactive-share-7513608118791196673-sNWA": {
+        "fetched_at": "2026-10-27T18:55:57.495722+00:00",
+        "payload": {
+          "status": "active",
+          "text": "Game studio funding is back: Gardens Interactive has raised a $35M+ Series B, bringing total funding to over $70M before launching its flagship game.\n\nLed by Lightspeed, the round includes Sequoia Capital, Index Ventures, Accel, Eric Schmidt’s Innovation Endeavors, the Nintendo family (Yamauchi No.10), the ZeniMax Media family (James Altman), and the founders of Slack and OpenAI's Sora.\n\nBy any measure, but certainly in 2026, that's an extraordinary vote of confidence and tier-1 syndicate for a pre-launch studio. What inspires that conviction while it seems all venture dollars chase automation?\n\nA team creating a new genre around a simple and proven design principle: deepen human connections, and let the players be the fun.\n\nGardens calls it a “strandbox”: a social roleplaying world where chance encounters become adventures, players shape each other’s stories, and your actions leave something behind for whoever comes next.\n\nFrom serial game-of-the-year creators behind Journey and Sky, the team blends indie creativity and beautiful art with an ambitious AAA live-ops platform bet on how games can create significant and long-lasting emotional encounters.\n\nThis one is deeply personal. I love Stephen, 🔔Chris, and Lexie like brothers. After serving on Gardens’ board for the past three years, I’m rejoining as a personal investor and advisor, doubling down with my own capital and time. To continue an extraordinary development journey that already brought so many wonderful once-strangers together.\n\nI can’t wait for you all to play what they’re building.\n\nBloomberg exclusive by Cecilia D'Anastasio: https://lnkd.in/dYJ4Xj9C",
+          "posted_at": "2026-10-07T14:36:12.326Z"
+        }
+      },
+      "https://www.linkedin.com/posts/pakistan-it-jobs_hiring-backend-developer-nodejs-karachi-activity-7389224553194881024-m6qX": {
+        "fetched_at": "2026-10-27T18:55:57.495722+00:00",
+        "payload": {
+          "status": "active",
+          "text": "Hiring: Backend Developer (Node.js) – Karachi, Onsite\nWe’re looking for a passionate Backend Developer with strong expertise in Node.js to join our growing tech team in Karachi.\n\nWhat We’re Looking For:\n2+ years of hands-on experience with Node.js & Express.js\nStrong understanding of APIs, RESTful services & database design (MongoDB/MySQL)\nExperience with version control (Git)\nProblem-solving mindset & teamwork attitude\n\nWhat You’ll Do:\nBuild and maintain scalable backend systems\nCollaborate with frontend and mobile teams\nOptimize APIs for performance and security\n\n📍 Location: Karachi (Onsite)\n 🕒 Job Type: Full-time\nsend your cv at : hr@asoratech.com",
+          "posted_at": "2025-10-29T09:00:18.607Z"
+        }
+      },
+      "https://www.linkedin.com/posts/paulcopplestone_today-supabase-is-announcing-150m-in-new-share-7511811435921072128-6ltf": {
+        "fetched_at": "2026-10-27T18:55:57.495722+00:00",
+        "payload": {
+          "status": "active",
+          "text": "Today, Supabase is announcing $150M in new funding, led by GIC, with CapitalG, IronArc Ventures, and Square Peg participating. We’re also welcoming Turso to Supabase.\n\nThe past year has been the fastest period of growth in Supabase’s history. We’re now adding more than 1M users and nearly 5M databases every month, and around 70% of new databases are being created by agents or AI-driven tools.\n\nAI is changing the economics of software creation. More people can build software, developers can build dramatically more of it, and agents are increasingly building alongside them.\n\nOur goal is to make Supabase the foundation for this agentic era. That means making it radically cheaper to start, while giving every application a clear path to scale.\nThat’s a big part of why we’re acquiring Turso.\n\nAs agents create more software, database demand will outpace the world’s current capacity. Turso has built an architecture that can handle vastly more small databases at a fraction of today’s cost. An agent can get an isolated database instantly, without requiring a dedicated machine for every workload.\n\nFor existing users, nothing changes. Supabase will continue building around Postgres, while Turso will continue its work on SQLite. Together, we’re creating something new that will bring the Supabase experience to every agent.\n\nThere’s a lot that brought our teams together: open source, developer experience, and a willingness to tackle hard infrastructure problems. We’re excited to welcome Glauber Costa , Pekka Enberg, and the entire Turso team to Supabase, with Glauber joining as Head of Agentic Services.\n\nThank you to GIC, CapitalG, IronArc, SquarePeg, and everyone who continues to support us. Most importantly, thank you to the Supabase community. You keep building faster than we expect, which means we have to keep doing the same.\n\nSri Muppidi has more on the news for the New York Times and we’ve shared more on the Supabase blog. Links in the comments.",
+          "posted_at": "2026-10-02T15:36:49.683Z"
+        }
+      },
+      "https://www.linkedin.com/posts/quratulain9274_were-hiring-associate-nodejs-developer-activity-7469663205590650881-SoEd": {
+        "fetched_at": "2026-10-27T18:55:57.495722+00:00",
+        "payload": {
+          "status": "active",
+          "text": "We're Hiring | Associate Node.js Developer\n\nExperience: Fresh Graduate – 1 Year\nLocation: DHA Phase 2 Extension, Karachi\n\nResponsibilities:\n• Develop and maintain backend applications using Node.js\n• Design, build, and integrate RESTful APIs\n• Troubleshoot, debug, and optimize application performance\n• Collaborate with cross-functional development teams\n• Work with databases and third-party service integrations\n\nRequirement:\n• Bachelor's degree in Computer Science or a related field\n• Strong understanding of JavaScript and Node.js fundamentals\n• Familiarity with Express.js and REST APIs\n• Basic knowledge of MongoDB and/or MySQL\n• Understanding of Git and version control systems is a plus\n• Strong analytical, problem-solving, and communication skills\n\nIf you're a fresh graduate looking to launch your career to grow, we'd love to hear from you!\n\nShare your resume at hr@resourcelinked.tech\nPlease mention \"Associate Node.js Developer\" in the subject line.",
+          "posted_at": "2026-06-08T08:14:47.826Z"
+        }
+      },
       "https://www.linkedin.com/posts/alhazan-mubarak_fintech-nigeria-cloudcomputing-share-7516453508934422528-06Zm": {
         "fetched_at": "2026-10-27T18:54:13.063638+00:00",
         "payload": {
@@ -260,11 +464,11 @@
         }
       }
     },
-    "updated_at": "2026-10-27T18:54:13.063638+00:00"
+    "updated_at": "2026-10-27T18:55:57.495722+00:00"
   },
   "cache:rozee": {
     "entries": {},
-    "updated_at": "2026-10-27T18:54:12.626336+00:00"
+    "updated_at": "2026-10-27T18:55:57.367540+00:00"
   },
   "feed:remotive": {
     "last_attempt": "2026-10-27T18:05:12.114133+00:00",
@@ -285,7 +489,7 @@
     "full_descriptions": 0
   },
   "health:posts:yahoo": {
-    "last_success": "2026-10-27T18:54:19.396017+00:00"
+    "last_success": "2026-10-27T18:56:01.575195+00:00"
   },
   "jobspy:05a7339ccbca312e": {
     "last_success": "2026-10-27T18:50:08.523566+00:00",
@@ -799,6 +1003,14 @@
     "rejected": 5,
     "full_descriptions": 6
   },
+  "posts:76e014795cd87158812b": {
+    "last_success": "2026-10-27T18:56:04.372480+00:00",
+    "unique": 7,
+    "qualified": 0,
+    "review": 0,
+    "rejected": 7,
+    "full_descriptions": 7
+  },
   "posts:abc8e0cf74850e983d3d": {
     "last_success": "2026-10-27T15:25:01.166361+00:00",
     "unique": 0,
@@ -823,6 +1035,14 @@
     "rejected": 6,
     "full_descriptions": 6
   },
+  "posts:c97d898e572a92200c4e": {
+    "last_success": "2026-10-27T18:56:00.629330+00:00",
+    "unique": 6,
+    "qualified": 0,
+    "review": 0,
+    "rejected": 6,
+    "full_descriptions": 6
+  },
   "probe:google": {
     "last_attempt": "2026-10-27T18:04:35.114896+00:00",
     "unique": 0,
@@ -834,57 +1054,6 @@
   "queue:linkedin_details": {
     "version": 1,
     "entries": {
-      "linkedin:00aafee4b1d5061dc9087f81": {
-        "job": {
-          "title": "Forward Deployed Engineer (TypeScript + AI) - Remote - USA",
-          "company": "FullStack",
-          "location": "Frankfort, KY, USA",
-          "url": "https://www.linkedin.com/jobs/view/4482170870",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-21T00:00:00+00:00",
-          "is_remote": true,
-          "description": "",
-          "job_id": "linkedin:00aafee4b1d5061dc9087f81",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4482170870",
-          "application_url": "",
-          "aliases": [
-            "dd1568e1ada84786"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4482170870"
-          ],
-          "work_mode": "remote",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-21T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:51:56.156944+00:00",
-          "last_seen_at": "2026-10-27T18:51:56.156946+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:8d3c84c3ef0f70f9",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
       "linkedin:046bbd877ca0d2c6897bb0e3": {
         "job": {
           "title": "Full-Stack Engineer (Backend Leaning)",
@@ -928,159 +1097,6 @@
           "salary_source": "unknown",
           "query_id": "jobspy:f600aeee834183b4",
           "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:0ae4da0a0afec3c98a1dc409": {
-        "job": {
-          "title": "Forward Deployed Engineer (TypeScript + AI) - Remote - USA",
-          "company": "FullStack",
-          "location": "Louisville, KY, USA",
-          "url": "https://www.linkedin.com/jobs/view/4482187068",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-21T00:00:00+00:00",
-          "is_remote": true,
-          "description": "",
-          "job_id": "linkedin:0ae4da0a0afec3c98a1dc409",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4482187068",
-          "application_url": "",
-          "aliases": [
-            "e302879cb0a36372"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4482187068"
-          ],
-          "work_mode": "remote",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-21T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:51:56.157029+00:00",
-          "last_seen_at": "2026-10-27T18:51:56.157030+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:8d3c84c3ef0f70f9",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:0c3e22bdcef9f4d0c3f8e6e2": {
-        "job": {
-          "title": "Software Engineer, New Grad – Remote (Worldwide)",
-          "company": "RemoteJobsOne",
-          "location": "Jacksonville, FL, USA",
-          "url": "https://www.linkedin.com/jobs/view/4482694167",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-25T00:00:00+00:00",
-          "is_remote": true,
-          "description": "",
-          "job_id": "linkedin:0c3e22bdcef9f4d0c3f8e6e2",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4482694167",
-          "application_url": "",
-          "aliases": [
-            "761cede08bf3c5d1"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4482694167"
-          ],
-          "work_mode": "remote",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-25T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:34.500200+00:00",
-          "last_seen_at": "2026-10-27T18:50:34.500201+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:f600aeee834183b4",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:0d4893f6d56306ca28a8cd44": {
-        "job": {
-          "title": "Agentic Software Engineer (Google Antigravity) - Remote - India",
-          "company": "FullStack",
-          "location": "Pakistan",
-          "url": "https://www.linkedin.com/jobs/view/4475045317",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-24T00:00:00+00:00",
-          "is_remote": true,
-          "description": "",
-          "job_id": "linkedin:0d4893f6d56306ca28a8cd44",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4475045317",
-          "application_url": "",
-          "aliases": [
-            "a465dc4643c4fcd3"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4475045317"
-          ],
-          "work_mode": "remote",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-24T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:42.033559+00:00",
-          "last_seen_at": "2026-10-27T18:50:42.033560+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:c5d5a60cbbe0b8f3",
-          "search_track": "pakistan_remote",
           "evidence_warnings": [],
           "decision": {}
         },
@@ -1344,108 +1360,6 @@
         "status": "pending",
         "attempts": 0
       },
-      "linkedin:28f5c10276067509717fa71f": {
-        "job": {
-          "title": "Software Engineer",
-          "company": "Monty Mobile",
-          "location": "Islāmābād, Pakistan",
-          "url": "https://www.linkedin.com/jobs/view/4483527878",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-26T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:28f5c10276067509717fa71f",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4483527878",
-          "application_url": "",
-          "aliases": [
-            "1a1c533e6972400a"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4483527878"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-26T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:22.484749+00:00",
-          "last_seen_at": "2026-10-27T18:50:22.484751+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:7d42061eb22bd9e4",
-          "search_track": "pakistan_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:2e06aed0d46186128ad198e1": {
-        "job": {
-          "title": "Staff Backend Engineer, Node & TypeScript, Stable SportsTech Co, Used by Millions",
-          "company": "High Country Search Group",
-          "location": "Denver Metropolitan Area",
-          "url": "https://www.linkedin.com/jobs/view/4480179591",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-23T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:2e06aed0d46186128ad198e1",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4480179591",
-          "application_url": "",
-          "aliases": [
-            "5c14bc7072e65355"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4480179591"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-23T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:51:56.156628+00:00",
-          "last_seen_at": "2026-10-27T18:51:56.156629+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:8d3c84c3ef0f70f9",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
       "linkedin:3209db94f38a5c405a2617ca": {
         "job": {
           "title": "Full Stack Software Engineer",
@@ -1540,57 +1454,6 @@
           "salary_source": "unknown",
           "query_id": "jobspy:9e2c0f814daaa3ea",
           "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:3ecdb21a44acd25035709e30": {
-        "job": {
-          "title": "Software Engineer I - Backend | NextGen Engineering",
-          "company": "Careem",
-          "location": "Lahore, Punjab, Pakistan",
-          "url": "https://www.linkedin.com/jobs/view/4455407005",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-23T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:3ecdb21a44acd25035709e30",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4455407005",
-          "application_url": "",
-          "aliases": [
-            "f18a8c72b237cc39"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4455407005"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-23T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:22.484895+00:00",
-          "last_seen_at": "2026-10-27T18:50:22.484896+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:7d42061eb22bd9e4",
-          "search_track": "pakistan_remote",
           "evidence_warnings": [],
           "decision": {}
         },
@@ -1701,57 +1564,6 @@
         "status": "pending",
         "attempts": 0
       },
-      "linkedin:479bbe7861887bed3a1a53d6": {
-        "job": {
-          "title": "Software Engineer, AI Agent Governance",
-          "company": "Lumos",
-          "location": "USA",
-          "url": "https://www.linkedin.com/jobs/view/4483790918",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-27T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:479bbe7861887bed3a1a53d6",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4483790918",
-          "application_url": "",
-          "aliases": [
-            "8d796c87d0530cb0"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4483790918"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-27T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:34.499975+00:00",
-          "last_seen_at": "2026-10-27T18:50:34.499976+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:f600aeee834183b4",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
       "linkedin:4a70e0d98e6ad0863259ee34": {
         "job": {
           "title": "Software Engineer",
@@ -1846,57 +1658,6 @@
           "salary_source": "unknown",
           "query_id": "jobspy:9ced97a97dc8a112",
           "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:4dfe67d0e37b387e6d60a54f": {
-        "job": {
-          "title": "Agentic Software Engineer (Google Antigravity) - Remote - Pakistan",
-          "company": "FullStack",
-          "location": "Pakistan",
-          "url": "https://www.linkedin.com/jobs/view/4475049119",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-24T00:00:00+00:00",
-          "is_remote": true,
-          "description": "",
-          "job_id": "linkedin:4dfe67d0e37b387e6d60a54f",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4475049119",
-          "application_url": "",
-          "aliases": [
-            "6859288cee7693f7"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4475049119"
-          ],
-          "work_mode": "remote",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-24T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:42.033496+00:00",
-          "last_seen_at": "2026-10-27T18:50:42.033497+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:c5d5a60cbbe0b8f3",
-          "search_track": "pakistan_remote",
           "evidence_warnings": [],
           "decision": {}
         },
@@ -2160,108 +1921,6 @@
         "status": "pending",
         "attempts": 0
       },
-      "linkedin:65b55e2a9ffe5b244b890061": {
-        "job": {
-          "title": "Web Developer",
-          "company": "TaskVerse",
-          "location": "USA",
-          "url": "https://www.linkedin.com/jobs/view/4484096120",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-27T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:65b55e2a9ffe5b244b890061",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4484096120",
-          "application_url": "",
-          "aliases": [
-            "77099e20e9b20869"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4484096120"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-27T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:34.499913+00:00",
-          "last_seen_at": "2026-10-27T18:50:34.499914+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:f600aeee834183b4",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:668a1f5b7d025dc64b0f805e": {
-        "job": {
-          "title": "Application Developer-SAP ABAP HANA",
-          "company": "IBM",
-          "location": "Islamabad, Islāmābād, Pakistan",
-          "url": "https://www.linkedin.com/jobs/view/4481451013",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-26T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:668a1f5b7d025dc64b0f805e",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4481451013",
-          "application_url": "",
-          "aliases": [
-            "e2917ebf84a3f0de"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4481451013"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-26T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:22.484627+00:00",
-          "last_seen_at": "2026-10-27T18:50:22.484628+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:7d42061eb22bd9e4",
-          "search_track": "pakistan_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
       "linkedin:6996d5ce90f97857e5e460f4": {
         "job": {
           "title": "Software Engineer",
@@ -2415,57 +2074,6 @@
         "status": "pending",
         "attempts": 0
       },
-      "linkedin:715ec25fe815b029a90817c9": {
-        "job": {
-          "title": "Crypto Trading Software Engineer (Trader - Developer)",
-          "company": "Mavericks United",
-          "location": "Pakistan",
-          "url": "https://www.linkedin.com/jobs/view/4481445030",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-26T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:715ec25fe815b029a90817c9",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4481445030",
-          "application_url": "",
-          "aliases": [
-            "59a00f293b0fd4c3"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4481445030"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-26T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:22.484706+00:00",
-          "last_seen_at": "2026-10-27T18:50:22.484707+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:7d42061eb22bd9e4",
-          "search_track": "pakistan_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
       "linkedin:80fdbe90eb8f6172bb8bedb7": {
         "job": {
           "title": "Backend Developer - G2i Talent Pool",
@@ -2508,57 +2116,6 @@
           "salary_text": "",
           "salary_source": "unknown",
           "query_id": "jobspy:456ba2f89bffd6b7",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:818ead61f42ad57eb2f09de1": {
-        "job": {
-          "title": "Software Engineer - Python (Fully Remote)",
-          "company": "TECHEAD",
-          "location": "USA",
-          "url": "https://www.linkedin.com/jobs/view/4482724038",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-22T00:00:00+00:00",
-          "is_remote": true,
-          "description": "",
-          "job_id": "linkedin:818ead61f42ad57eb2f09de1",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4482724038",
-          "application_url": "",
-          "aliases": [
-            "082c579e315ae573"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4482724038"
-          ],
-          "work_mode": "remote",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-22T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:52:12.460900+00:00",
-          "last_seen_at": "2026-10-27T18:52:12.460901+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:932247cea50b10a7",
           "search_track": "global_remote",
           "evidence_warnings": [],
           "decision": {}
@@ -2712,57 +2269,6 @@
           "salary_text": "",
           "salary_source": "unknown",
           "query_id": "jobspy:8d3c84c3ef0f70f9",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:9846e24ae7ca276d592d225b": {
-        "job": {
-          "title": "Associate Software Engineer",
-          "company": "Jobgether",
-          "location": "USA",
-          "url": "https://www.linkedin.com/jobs/view/4482932734",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-26T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:9846e24ae7ca276d592d225b",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4482932734",
-          "application_url": "",
-          "aliases": [
-            "ff5fa454d8057293"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4482932734"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-26T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:34.500094+00:00",
-          "last_seen_at": "2026-10-27T18:50:34.500095+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:f600aeee834183b4",
           "search_track": "global_remote",
           "evidence_warnings": [],
           "decision": {}
@@ -3129,57 +2635,6 @@
         "status": "pending",
         "attempts": 0
       },
-      "linkedin:b8b60a234397b0ce26cdb818": {
-        "job": {
-          "title": "Trainee Software Developer",
-          "company": "Contour Software",
-          "location": "Lahore, Punjab, Pakistan",
-          "url": "https://www.linkedin.com/jobs/view/4482718175",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-22T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:b8b60a234397b0ce26cdb818",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4482718175",
-          "application_url": "",
-          "aliases": [
-            "570f6f29a8a34b25"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4482718175"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-22T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:22.485053+00:00",
-          "last_seen_at": "2026-10-27T18:50:22.485054+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:7d42061eb22bd9e4",
-          "search_track": "pakistan_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
       "linkedin:bb666829009556d4ad78e9df": {
         "job": {
           "title": "Frontend Engineer",
@@ -3273,57 +2728,6 @@
           "salary_text": "",
           "salary_source": "unknown",
           "query_id": "jobspy:f600aeee834183b4",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:c95e8e14aaf22e74c2e9e3c3": {
-        "job": {
-          "title": "Full Stack Software Engineer (Node.js)",
-          "company": "Brkthru",
-          "location": "Philadelphia, PA, USA",
-          "url": "https://www.linkedin.com/jobs/view/4482709479",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-22T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:c95e8e14aaf22e74c2e9e3c3",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4482709479",
-          "application_url": "",
-          "aliases": [
-            "c6a172aab22b7a3b"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4482709479"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-22T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:51:56.156778+00:00",
-          "last_seen_at": "2026-10-27T18:51:56.156779+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:8d3c84c3ef0f70f9",
           "search_track": "global_remote",
           "evidence_warnings": [],
           "decision": {}
@@ -3588,57 +2992,6 @@
         "status": "pending",
         "attempts": 0
       },
-      "linkedin:e2662a604c519f2a1ce429c5": {
-        "job": {
-          "title": "Application Programmer Analyst I",
-          "company": "University of Kentucky",
-          "location": "Greater Lexington Area",
-          "url": "https://www.linkedin.com/jobs/view/4483166364",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-23T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:e2662a604c519f2a1ce429c5",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4483166364",
-          "application_url": "",
-          "aliases": [
-            "c294dd072c0ee1b6"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4483166364"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-23T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:34.500305+00:00",
-          "last_seen_at": "2026-10-27T18:50:34.500307+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:f600aeee834183b4",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
       "linkedin:e49a0c058464a197fed2cd6e": {
         "job": {
           "title": "Staff Frontend Engineer",
@@ -3682,57 +3035,6 @@
           "salary_source": "unknown",
           "query_id": "jobspy:1e542372a7182cd4",
           "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:e5a6745627054930e4d5a7b8": {
-        "job": {
-          "title": "Associate Software Engineer - AI/ML",
-          "company": "Devsinc",
-          "location": "Lahore, Punjab, Pakistan",
-          "url": "https://www.linkedin.com/jobs/view/4482707156",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-22T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:e5a6745627054930e4d5a7b8",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4482707156",
-          "application_url": "",
-          "aliases": [
-            "345921d1f5562d7b"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4482707156"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-22T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:22.485013+00:00",
-          "last_seen_at": "2026-10-27T18:50:22.485015+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:7d42061eb22bd9e4",
-          "search_track": "pakistan_remote",
           "evidence_warnings": [],
           "decision": {}
         },
@@ -3886,108 +3188,6 @@
           "salary_source": "unknown",
           "query_id": "jobspy:f600aeee834183b4",
           "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:f25138ad3219581ddf8fbf48": {
-        "job": {
-          "title": "Backend Software Engineer",
-          "company": "Soum",
-          "location": "Pakistan",
-          "url": "https://www.linkedin.com/jobs/view/4483574501",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-26T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:f25138ad3219581ddf8fbf48",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4483574501",
-          "application_url": "",
-          "aliases": [
-            "546bcae348f87703"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4483574501"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-26T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:51:22.805730+00:00",
-          "last_seen_at": "2026-10-27T18:51:22.805731+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:41e87a037c362f54",
-          "search_track": "pakistan_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:f6b284731b79fc17dc52b2f5": {
-        "job": {
-          "title": "Associate Software Engineer- MERN",
-          "company": "Devsinc",
-          "location": "Islamabad, Islāmābād, Pakistan",
-          "url": "https://www.linkedin.com/jobs/view/4482701648",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-22T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:f6b284731b79fc17dc52b2f5",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4482701648",
-          "application_url": "",
-          "aliases": [
-            "1f7aea268079c6c1"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4482701648"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-22T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:22.484963+00:00",
-          "last_seen_at": "2026-10-27T18:50:22.484964+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:7d42061eb22bd9e4",
-          "search_track": "pakistan_remote",
           "evidence_warnings": [],
           "decision": {}
         },
@@ -4150,11 +3350,11 @@
         "attempts": 0
       }
     },
-    "updated_at": "2026-10-27T18:53:25.093092+00:00"
+    "updated_at": "2026-10-27T18:54:56.089348+00:00"
   },
   "rotation:posts": {
-    "offset": 1,
-    "updated_at": "2026-10-27T18:54:20.254832+00:00"
+    "offset": 2,
+    "updated_at": "2026-10-27T18:56:04.828787+00:00"
   },
   "rozee:363d786037541af2cc10": {
     "last_success": "2026-10-27T15:24:59.881842+00:00",
