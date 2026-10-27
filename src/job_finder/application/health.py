@@ -19,7 +19,7 @@ def assess_run(report):
     # LinkedIn/Indeed/Rozee searches are intentionally not due yet.
     queries = [query for source in primary
                for query in (source.get("queries") or [{"status": "unverified"}])
-               if query.get("site") != "google"]
+               if query.get("site") != "google" and query.get("phase", "search") == "search"]
     usable = any(query.get("status") in {"success", "valid_empty"} or query.get("converted", 0) > 0
                  for query in queries)
     if queries and not usable:

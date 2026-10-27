@@ -53,6 +53,12 @@ Contributors preserve the Python adapters, GitHub Actions, JSON state and Discor
 
 The maintainer records meaningful operational changes and evidence in `development-plans` and adds a dated summary to `AGENTS.md`. Completed code changes, hosted execution and real-world matching accuracy are separate claims. The 54-case synthetic benchmark does not establish production precision or recall.
 
+## Source coverage verification
+
+Contributors distinguish search, detail, discovery-backend, recovery-probe and cooldown outcomes. Unsupported options do not count as failed searches. LinkedIn details use a separately paced/cached queue; detail failures must preserve listing search results and their successful watermarks. Google defaults to a bounded daily probe. Remote feed retries respect the six-hour attempt cadence even on failure. Recruiter fallback has a global request budget; ambiguous empty provider responses remain unverified.
+
+Source changes include offline regressions for partial rows, cache expiry, retries/cooldowns and state reconciliation. Authorized live validation checks per-source coverage and full-description counts without resetting delivery history. Raw responses, reports and credentials remain local/ignored. Source availability and production matching accuracy require separate evidence.
+
 ## Commit and publication conventions
 
 Contributors inspect `git diff --check` and the staged diff before committing. Commit messages use descriptive prefixes such as `fix:`, `feat:`, `build:` or `docs:`. Reports, environments, secrets and unrelated live state are excluded from code/documentation commits. Concurrent remote state changes are preserved; publication uses ordinary fast-forward pushes rather than rewritten history.

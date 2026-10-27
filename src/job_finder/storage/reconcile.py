@@ -13,8 +13,9 @@ def validate_discovery_state(raw):
     for key, value in raw.items():
         if not isinstance(key, str) or not isinstance(value, dict):
             raise StateError("Invalid discovery record")
-        if "last_success" in value and not parse_date(value["last_success"]):
-            raise StateError("Invalid discovery timestamp")
+        for field in ("last_success", "last_attempt"):
+            if field in value and not parse_date(value[field]):
+                raise StateError("Invalid discovery timestamp")
         if key.startswith("cache:"):
             if not isinstance(value.get("entries"), dict) or not parse_date(value.get("updated_at")):
                 raise StateError("Invalid detail cache")
@@ -91,7 +92,8 @@ def merge_discovery(base, local, remote):
     base, local, remote = map(validate_discovery_state, (base, local, remote))
 
     def conflict(left, right):
-        return max((left, right), key=lambda record: date_key(record, "last_success"))
+        return max((left, right), key=lambda record: max(
+            date_key(record, "last_success"), date_key(record, "last_attempt")))
 
     merged = changed_records(base, local, remote, conflict)
     for key in set(local) & set(remote):

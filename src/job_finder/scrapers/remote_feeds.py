@@ -1,9 +1,11 @@
 """Optional public remote feeds, sharing the same eligibility and delivery pipeline."""
+import time
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 
-from job_finder.scrapers.base import Job, parse_date
+from job_finder.scrapers.base import Job
+from job_finder.scrapers.cache import attempt_due
 from job_finder.scrapers.common import QueryOutcome, SourceError, SourceResult, get_public, host_allowed
 from job_finder.scrapers.structured import plain_html
 
@@ -72,11 +74,12 @@ def fetch_remote_feeds(config, discovery=None):
             continue
         enabled = True
         key = "feed:" + name
-        previous = parse_date(discovery.get(key, {}).get("last_success"))
         now = datetime.now(timezone.utc)
-        if previous and (now - previous).total_seconds() < options["interval_hours"] * 3600:
+        if not attempt_due(discovery, key, options["interval_hours"], now):
             result.report.notes.append(name + "_not_due")
             continue
+        result.updates[key] = {**discovery.get(key, {}), "last_attempt": now.isoformat()}
+        before = time.monotonic()
         try:
             response = get_public(url, domains)
             if name == "remotive":
@@ -85,12 +88,14 @@ def fetch_remote_feeds(config, discovery=None):
                 jobs, invalid = parse_wwr(response.text, options["max_jobs"])
             result.extend(jobs)
             result.report.queries.append(QueryOutcome(key, "partial" if invalid else "success" if jobs else "valid_empty",
-                len(jobs) + invalid, len(jobs), invalid))
+                len(jobs) + invalid, len(jobs), invalid, round(time.monotonic() - before, 2)))
             if not invalid:
-                result.updates[key] = {"last_success": now.isoformat()}
+                result.updates[key]["last_success"] = now.isoformat()
         except SourceError as exc:
-            result.report.queries.append(QueryOutcome(key, exc.status, reason=exc.reason))
+            result.report.queries.append(QueryOutcome(key, exc.status, reason=exc.reason,
+                duration_seconds=round(time.monotonic() - before, 2)))
         except (ValueError, TypeError, AttributeError):
-            result.report.queries.append(QueryOutcome(key, "parse_failed", reason="invalid_feed_payload"))
+            result.report.queries.append(QueryOutcome(key, "parse_failed", reason="invalid_feed_payload",
+                duration_seconds=round(time.monotonic() - before, 2)))
     result.report.skipped = not enabled or not result.report.queries
     return result

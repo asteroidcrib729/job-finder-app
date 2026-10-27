@@ -1,5 +1,7 @@
 # Job Finder App: project memory and implementation status
 
+**Source resilience (2026-10-27):** Separated LinkedIn listing discovery from paced/cached detail enrichment, corrected warning-based pauses, bounded Google to daily probes, added per-backend recruiter fallback/classification, and enabled live-validated Remotive/WWR feeds. Discovery state now records retry attempts separately from successful searches. See [source coverage record](SOURCE-COVERAGE-2026-10-27.md) for behavior, validation and remaining limits.
+
 **Live verification (2026-10-27):** Live verification passed the production pipeline, Discord receipt lookup and state persistence: 246 rows / 170 unique jobs, 4 qualified, 3 review, 1 new qualified job delivered, zero delivery failures. All 91 regressions, 54 synthetic tiers, static/build checks and fresh security scans passed. Live source coverage remained partial. See [live verification record](LIVE-VERIFICATION-2026-10-27.md) for exact runs, results and limits.
 
 **Configuration and module organization (2026-10-27):** Moved settings to `config/config.yaml` and the profile to `config/profiles/candidate-profile.yaml`. Retained `src/job_finder` as explicitly clarified by the owner, grouping package-root scripts into functional subpackages. Updated entry points, imports, workflows and path resolution; 91 offline tests and 54/54 synthetic decisions pass. See [structure record](PROJECT-STRUCTURE-2026-10-27.md) for validation and scope. Earlier paths below describe historical layouts.

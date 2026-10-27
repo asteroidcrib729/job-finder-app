@@ -66,6 +66,7 @@ class RunHealthTests(OfflineTestCase):
         config = load_config()
         config["search_keywords"] = ["Python"]
         config["search_tracks"] = [dict(config["search_tracks"][0], sites=["google"])]
+        config["jobspy"]["google_mode"] = "enabled"
         empty = fetch_jobspy_jobs(config, runner=lambda *_: {"rows": [], "warnings": handler.codes})
         query = empty.report.queries[0]
         self.assertEqual((query.status, query.site, query.reason),
@@ -89,7 +90,7 @@ class RunHealthTests(OfflineTestCase):
         self.assertEqual(result.report.status, "valid_empty")
         self.assertEqual(result.report.queries[0].invalid, 0)
         self.assertIn("ignored_non_post_results:1", result.report.notes)
-        self.assertEqual(search.text.call_args.kwargs["backend"], "brave,duckduckgo,yahoo")
+        self.assertEqual(search.text.call_args.kwargs["backend"], "brave")
         self.assertTrue(any("last_success" in v for v in result.updates.values()))
         config["linkedin_posts"]["search_backends"] = ["wikipedia"]
         with self.assertRaises(ValueError):
@@ -103,7 +104,7 @@ class RunHealthTests(OfflineTestCase):
         factory.return_value.__enter__.return_value.text.side_effect = DDGSException("upstream unavailable")
         with patch("ddgs.DDGS", factory):
             result = fetch_linkedin_plain_posts(config)
-        self.assertEqual(result.report.queries[0].reason, "search_providers_unavailable")
+        self.assertEqual(result.report.queries[0].reason, "search_provider_error")
         self.assertFalse(any("last_success" in v for v in result.updates.values()))
 
     def test_actions_runner_dry_run_disables_state_persistence_and_warns(self):
@@ -128,4 +129,4 @@ class RunHealthTests(OfflineTestCase):
             summary = (Path(directory) / "summary.md").read_text(encoding="utf-8")
             self.assertIn("Operational outcome: **warning**", summary)
             self.assertIn("upstream_warning", summary)
-            self.assertIn("No candidates met the qualified-only alert policy", summary)
+            self.assertIn("No candidates reached the qualified tier", summary)

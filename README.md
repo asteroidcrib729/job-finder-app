@@ -18,12 +18,12 @@ I search for local Karachi and remote roles independently. Remote does not estab
 
 | Source | Implementation |
 | --- | --- |
-| LinkedIn / Indeed / Google | JobSpy with source-specific parameters and isolated query timeouts. LinkedIn descriptions are requested. Indeed remote queries omit the incompatible date parameter; age is checked locally. |
+| LinkedIn / Indeed / Google | JobSpy with source-specific parameters and isolated query timeouts. LinkedIn listing searches run without inline detail requests. I enrich cards afterward through a paced, cached queue, shared across search tracks. Google runs as one daily recovery probe because its upstream adapter is currently unavailable. Indeed remote queries omit the incompatible date parameter; age is checked locally. |
 | Rozee.pk | Public embedded JSON, with structured-data/card fallbacks. Karachi city ID 1184 was verified on 2026-09-07. Actual location, creation date, description, and experience are extracted. Loading placeholders are not jobs. Bounded pagination follows source offsets. |
-| LinkedIn recruiter posts | Configurable DDGS discovery and accessible post content. Explicit role sections become separate review leads with original-post provenance. Queries have saved cadence and bounded detail caches. |
-| Remotive / We Work Remotely | Optional public-feed adapters, disabled by default for separate evaluation. Remotive cadence is at least six hours. |
+| LinkedIn recruiter posts | Bounded DDGS backend fallback, simpler query fallback, separate provider outcomes and accessible post content. Explicit role sections become separate review leads with original-post provenance. Queries have saved cadence and bounded detail caches. |
+| Remotive / We Work Remotely | Enabled public-feed adapters, validated with live responses. Both have a six-hour minimum between attempts, including failed attempts. |
 
-I track blocked, timed-out, partial, and parse-failed queries separately from valid empty searches because providers can block requests or change formats. Rozee captured-page parsing succeeded during development, but later application dry runs received HTTP 403. Continuous source availability is not guaranteed.
+I track blocked, timed-out, partial, and parse-failed queries separately from valid empty searches because providers can block requests or change formats. Rozee captured-page parsing and later live pagination succeeded; earlier runs also received HTTP 403. Continuous source availability is not guaranteed. I separate listing searches, description requests, recovery probes and backend attempts in reports; unavailable descriptions keep incomplete jobs in review.
 
 Remotive's public feed has a 24-hour delay and recommends at most four fetches daily. I preserve source attribution and original listing links for both remote feeds. [Remotive API](https://github.com/remotive-com/remote-jobs-api), [WWR RSS](https://weworkremotely.com/remote-job-rss-feed).
 
@@ -117,11 +117,14 @@ I define operational defaults in [config/config.yaml](config/config.yaml). I set
 | search_tracks | Karachi, Pakistan-remote, and global-remote locations/countries/source lists. |
 | jobspy.results_wanted / max_pages / max_queries / max_seconds / query_timeout | Retrieval depth, request count, total JobSpy time, and per-query wall-clock budget. |
 | jobspy.hours_old | Discovery lookback; successful-query timestamps permit bounded recovery after gaps. |
-| jobspy.linkedin_fetch_description | Qualification evidence; disabling this moves incomplete results into review. |
+| jobspy.linkedin_fetch_description | Enable the separate LinkedIn description queue; searches always collect cards first. |
+| jobspy.linkedin_max_details / linkedin_detail_timeout / linkedin_detail_delay / linkedin_detail_max_seconds | Detail request cap (12), timeout (8 seconds), pacing (2 seconds), and queue time budget (90 seconds). Tracks share the queue. |
+| jobspy.linkedin_detail_cache_hours / linkedin_detail_retry_hours | Fresh parsed descriptions cache for 6 hours; blocked/repeatedly failing detail service cools down for 3 hours. Listing searches continue. |
+| jobspy.google_mode / google_probe_interval_hours | probe (default), disabled or enabled. Probe mode attempts one query at most every 24 hours after normal searches, within the remaining search budget. |
 | jobspy.interval_hours / low_yield_interval_hours | Minimum query interval; successful queries with no qualified/review candidates use the longer interval. Defaults 3/12 hours. |
 | local_scrapers | Enable flag, keywords, max_queries, max_pages (2), max_details, timeout, interval_hours (3), detail_cache_hours (6). |
-| linkedin_posts | Enable flag, queries, web search_backends (brave/duckduckgo/yahoo), result/check budgets, timeout, interval_hours (6), detail_cache_hours (6). |
-| remote_feeds | Remotive/WWR flags, cadence, result cap. |
+| linkedin_posts | Backend-specific outcomes and fallback (brave/duckduckgo/yahoo), at most 6 backend attempts per run, 3-hour provider-error cooldowns, result/detail budgets, timeout, interval_hours (6), detail_cache_hours (6). Simplified fallback omits the search-engine date filter; listing dates still pass local freshness checks. |
+| remote_feeds | Enabled Remotive/WWR adapters, six-hour attempt cadence and result cap (100 per feed). |
 | matching.max_age_hours / min_score | Publication-age and fit thresholds. Unknown dates go to review. |
 | matching.allow_* | Hybrid, internship, contract, one-year stretch handling. |
 | matching.remote_salary_policy | prefer_usd reviews other/unknown pay; require_usd rejects disclosed non-USD and reviews unknown; any removes the currency gate. |
@@ -130,7 +133,7 @@ I define operational defaults in [config/config.yaml](config/config.yaml). I set
 | notifications.send_review / review_digest | Review delivery is enabled; digest groups up to five candidates with shared acknowledgements. Never overrides a rejection. |
 | state.retention_days / pending_days | Separate acknowledged-history retention and queued-candidate expiry. |
 
-Rozee and recruiter detail caches hold at most 200 normalized entries per source in discovery state. Expired/future-dated entries are discarded; failures never fall back to stale content. Current Rozee listing facts override cached descriptions. Zero detail_cache_hours disables caching; zero interval_hours disables the base interval (JobSpy's low-yield interval is separate). Minimum intervals are checked on scheduled runs, so actual gaps may be longer.
+LinkedIn, Rozee and recruiter detail caches hold at most 200 normalized entries per source in discovery state. Expired/future-dated entries are discarded; failures never fall back to stale content. Current Rozee listing facts override cached descriptions. Zero detail_cache_hours disables caching; zero interval_hours disables the base interval (JobSpy's low-yield interval is separate). Minimum intervals are checked on scheduled runs, so actual gaps may be longer.
 
 I have not yet settled a minimum salary or acceptable time-zone range. New canonical skill names require aliases in the matcher; validation prevents silently ineffective profile entries.
 
@@ -150,7 +153,7 @@ Delivery records individual outcomes and requests Discord message confirmation. 
 
 **data/seen_jobs.json** migrates from the legacy hash/timestamp object on the first live save. Its versioned journal contains seen IDs/legacy aliases, pending payloads, and receipt timestamps/message IDs. Atomic replacement protects prior state from interrupted writes. Corrupt state stops dispatch; a successful message never marks a failed message seen.
 
-Pending jobs are reevaluated later, including runs with no new scraped jobs. Permanent payload/authentication failures remain visible for repair rather than being blindly retried. Successful source timestamps are stored separately in **data/discovery_state.json**. I preserve production history when evaluating matcher changes.
+Pending jobs are reevaluated later, including runs with no new scraped jobs. Permanent payload/authentication failures remain visible for repair rather than being blindly retried. Successful source timestamps, retry/probe attempts and bounded detail caches are stored separately in **data/discovery_state.json**. Failed attempts never masquerade as successful searches. I preserve production history when evaluating matcher changes.
 
 Exactly-once delivery is not guaranteed across an uncertain network outcome or a crash between Discord acceptance and remote state persistence. State pushes reconcile concurrent changes and retry three times. Persistent failure requires reconciling the retained recovery artifact before relying on the next run's history.
 

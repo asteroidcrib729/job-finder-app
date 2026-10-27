@@ -1,5 +1,7 @@
 # Job Finder App: issue register
 
+**Source resilience (2026-10-27):** Addressed premature source pauses from generic warnings, inline LinkedIn detail blocking, repeated Google failures, ambiguous DDGS error classification and disabled remote-feed coverage. External Google/recruiter limitations are explicitly retained rather than reported as resolved. See [source coverage record](SOURCE-COVERAGE-2026-10-27.md) for behavior, validation and remaining limits.
+
 **Live verification (2026-10-27):** The production pipeline and Discord delivery passed live verification. Source coverage remains incomplete: LinkedIn description blocking, Google upstream errors and unavailable recruiter-post search providers were observed. These are operational findings, not evidence that all integrations are fully available. See [live verification record](LIVE-VERIFICATION-2026-10-27.md) for exact runs, results and limits.
 
 **Configuration and module organization (2026-10-27):** Moved settings to `config/config.yaml` and the profile to `config/profiles/candidate-profile.yaml`. Retained `src/job_finder` as explicitly clarified by the owner, grouping package-root scripts into functional subpackages. Updated entry points, imports, workflows and path resolution; 91 offline tests and 54/54 synthetic decisions pass. See [structure record](PROJECT-STRUCTURE-2026-10-27.md) for validation and scope. Earlier paths below describe historical layouts.

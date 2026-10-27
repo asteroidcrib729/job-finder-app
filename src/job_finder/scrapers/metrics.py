@@ -4,6 +4,26 @@ from collections import defaultdict
 from job_finder.filtering.resume_filter import evaluate_job
 
 
+def source_coverage(sources):
+    """Separate discovery throughput, detail evidence and recovery probes."""
+    coverage = []
+    for source in sources:
+        sites = sorted({q.site for q in source.report.queries if q.site}) if source.report.source == "JobSpy" else [""]
+        for site in sites or [""]:
+            queries = [q for q in source.report.queries if not site or q.site == site]
+            jobs = {job.job_id: job for job in source if not site or job.platform.lower() == site}
+            searches = [q for q in queries if q.phase == "search"]
+            coverage.append({"source": source.report.source, "site": site,
+                "search_requests": len(searches),
+                "usable_searches": sum(q.status in {"success", "valid_empty"} or q.converted > 0 for q in searches),
+                "detail_requests": sum(q.phase == "detail" for q in queries),
+                "probe_requests": sum(q.phase == "probe" for q in queries),
+                "backend_attempts": sum(q.phase == "discovery" for q in queries),
+                "unique_jobs": len(jobs),
+                "full_descriptions": sum(job.description_status == "full" for job in jobs.values())})
+    return coverage
+
+
 def query_metrics(sources, config):
     metrics = {}
     for source in sources:
@@ -18,6 +38,7 @@ def query_metrics(sources, config):
             if key.startswith("rozee:") and key.rsplit(":", 1)[-1].isdigit():
                 key = key.rsplit(":", 1)[0]
             item = metrics.setdefault(key, {"source": source.report.source, "requests": 0,
+                "phase": outcome.phase, "backend": outcome.backend,
                 "raw": 0, "duration_seconds": 0, "unique": 0, "qualified": 0, "review": 0, "rejected": 0,
                 "full_descriptions": 0})
             item["requests"] += 1

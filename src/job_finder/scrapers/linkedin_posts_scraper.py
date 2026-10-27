@@ -9,6 +9,7 @@ from job_finder.scrapers.base import Job, canonical_url, clean_text, utc_now
 from job_finder.scrapers.cache import DetailCache, query_due, query_key
 from job_finder.scrapers.common import QueryOutcome, SourceError, SourceResult, get_public, host_allowed
 from job_finder.scrapers.post_roles import split_post_roles
+from job_finder.scrapers.recruiter_search import quiet_search_logs, search_posts
 from job_finder.scrapers.structured import jsonld_objects
 
 EMAIL_REGEX = r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
@@ -74,13 +75,16 @@ def fetch_linkedin_plain_posts(config, discovery=None):
         result.report.queries.append(QueryOutcome("posts", "unsupported", reason="ddgs_missing"))
         return result
     checked, seen, blocked = 0, set(), False
-    with DDGS(timeout=options["timeout"]) as search:
+    budget = {"used": 0}
+    with quiet_search_logs(), DDGS(timeout=options["timeout"]) as search:
         for query in queries:
             before = time.monotonic()
             query_id = query_key("posts", query)
             try:
-                rows = list(search.text(query, timelimit="m", max_results=options["max_results"],
-                                        backend=",".join(options["search_backends"])))
+                rows, verified = search_posts(search, query, options, result, discovery, budget)
+                if not rows and not verified:
+                    result.report.queries.append(QueryOutcome(query_id, "unverified", reason="post_discovery_unverified"))
+                    continue
                 invalid, ignored, count, incomplete = 0, 0, 0, False
                 for row in rows:
                     if not isinstance(row, dict):
@@ -143,15 +147,8 @@ def fetch_linkedin_plain_posts(config, discovery=None):
                 if not invalid and not incomplete:
                     result.updates[query_id] = {"last_success": utc_now(), "unique": count}
             except Exception as exc:
-                # Classify known provider errors without logging raw URLs or challenge tokens.
-                from ddgs.exceptions import DDGSException, RatelimitException, TimeoutException
-                status, reason = "failed", type(exc).__name__
-                if isinstance(exc, RatelimitException):
-                    status, reason = "blocked", "search_rate_limited"
-                elif isinstance(exc, TimeoutException):
-                    status, reason = "timed_out", "search_timeout"
-                elif isinstance(exc, DDGSException):
-                    reason = "search_providers_unavailable"
+                from job_finder.scrapers.recruiter_search import classify_search_error
+                status, reason = classify_search_error(exc)
                 result.report.queries.append(QueryOutcome(query_id, status,
                     duration_seconds=round(time.monotonic() - before, 2), reason=reason))
     result[:] = [role for post in result for role in split_post_roles(post)]

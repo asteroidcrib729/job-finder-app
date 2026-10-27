@@ -1,0 +1,26 @@
+# Source coverage improvements - October 27, 2026
+
+## Problems and implemented changes
+
+The preceding live verification exposed partial LinkedIn descriptions, Google errors and ambiguous recruiter-search failures. The owner authorized the proposed fixes while retaining Python, GitHub Actions, JSON state and Discord.
+
+1. **Search health:** the worker classifies unsupported options, detail failures and Google's missing job data separately. Unsupported options are recorded as notes. Only actual unsuccessful search attempts contribute to pausing a site; usable partial rows survive and ordinary warnings cannot pause productive searches.
+2. **LinkedIn:** JobSpy collects listing cards without inline description calls. The separate queue shares at most 12 requests across tracks, paces requests by two seconds, and has an eight-second request timeout and 90-second queue budget. Successful parsed descriptions cache for six hours. Blocking or repeated transient failures cools down details for three hours, without discarding cards or successful search watermarks. Expired cache evidence is not used as fallback. Closed jobs remain closed without treating them as a detail-service outage. Current card identity/location/dates take precedence over cached data. Explicit remote keywords replace the ignored LinkedIn `is_remote` search option; work mode still requires listing evidence.
+3. **Google:** default `google_mode: probe` removes ordinary Google query rotation and allows one recovery query per 24 hours, after normal searches and within remaining request/time budgets. Both successful and failed probe attempts respect cadence. `disabled` and explicit full `enabled` modes remain available. This does not claim to repair JobSpy's unavailable upstream Google adapter. [Upstream FAQ](https://github.com/speedyapply/JobSpy#frequently-asked-questions).
+4. **Recruiter discovery:** each backend is tried separately with sanitized outcomes, under a shared six-attempt limit. Simpler fallback drops Boolean grouping and the search-engine date filter; extracted listing dates still pass the application's freshness checks. Rate limits, timeouts and provider errors have three-hour cooldowns. DDGS `No results found` exceptions remain unverified because they can also mean no parseable results; they never establish a healthy empty search or advance success timestamps. Provider logs containing raw exception/challenge URLs are suppressed in favor of classified codes.
+5. **Remote feeds:** Remotive and WWR are enabled after live parser checks. Both have a six-hour minimum between attempts, including failed attempts. The existing Pakistan eligibility, currency, age, attribution, matching and deduplication rules apply. Remotive's public feed has a 24-hour delay and recommends no more than four requests daily. [Remotive documentation](https://github.com/remotive-com/remote-jobs-api), [WWR feeds](https://weworkremotely.com/remote-job-rss-feed).
+6. **State and evidence:** discovery records distinguish successful searches from retry/probe attempts. Validation and concurrent reconciliation handle attempt timestamps. Reports distinguish searches, detail requests, backend attempts, probes and full-description coverage. The zero-qualified summary now correctly describes review delivery as a separate configured policy.
+
+## Verification
+
+- Local live feed validation: Remotive returned 10 jobs and WWR returned 25 jobs, all with full descriptions; neither call sent notifications or changed production state.
+- A public LinkedIn detail request returned a full description of 5,553 characters.
+- A local six-attempt DDGS check returned ambiguous empty responses from Brave, DuckDuckGo and Yahoo. It remained unverified; no success timestamp was fabricated. Hosted verification will determine runner behavior.
+- Fifteen additional regressions exercise warning classification, independent detail failures, paced/fair request budgets, expiry/cache boundaries, remote evidence, Google modes/cadence, per-backend fallback, ambiguous empty results, cooldowns, feed retry cadence, coverage counters and concurrent retry state. Existing tests were adjusted for the intentionally changed source parameters/outcomes.
+- All 106 offline tests, Ruff, Pyrefly (zero errors, 17 existing suppressions), interpreter compilation, dependency consistency, Actionlint and fresh builds passed locally. The synthetic benchmark retained 54/54 expected decisions. Hosted results follow publication. Raw reports remain under ignored `.local/output/source-coverage-2026-10-27/`.
+
+## Scope and remaining limits
+
+No dependency upgrade, architecture replacement, delivery-history reset, matcher-threshold relaxation, login automation or credential-dependent provider was introduced. A public provider may still block requests or change its response format. Google restoration requires verified upstream support or a separately evaluated replacement. Recruiter backends can remain unverified after exhausting fallback. Request budgets deliberately leave some descriptions incomplete; those jobs retain conservative matching decisions.
+
+Live parser success, successful hosted checks and measured production precision/recall are separate claims. Several scheduled cycles and held-out manually identified jobs are still needed to assess retrieval and matching quality over time.

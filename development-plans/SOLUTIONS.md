@@ -1,5 +1,7 @@
 # Job Finder App: implemented solutions and acceptance plan
 
+**Source resilience (2026-10-27):** Implemented independent LinkedIn detail budgets/cache/cooldowns, precise search-health handling, daily Google recovery probes, bounded recruiter backend/query fallback and enabled public remote feeds with attempt-based cadence. Added coverage counters and retry-state validation/reconciliation. See [source coverage record](SOURCE-COVERAGE-2026-10-27.md) for behavior, validation and remaining limits.
+
 **Live verification (2026-10-27):** Verified the implemented discovery/matching/delivery/persistence path with a real manual production run and read-only Discord receipt lookup, then replayed all 170 decisions and checked deduplication. This verifies the refactor; it does not resolve the observed upstream source coverage failures. See [live verification record](LIVE-VERIFICATION-2026-10-27.md) for exact runs, results and limits.
 
 **Configuration and module organization (2026-10-27):** Moved settings to `config/config.yaml` and the profile to `config/profiles/candidate-profile.yaml`. Retained `src/job_finder` as explicitly clarified by the owner, grouping package-root scripts into functional subpackages. Updated entry points, imports, workflows and path resolution; 91 offline tests and 54/54 synthetic decisions pass. See [structure record](PROJECT-STRUCTURE-2026-10-27.md) for validation and scope. Earlier paths below describe historical layouts.

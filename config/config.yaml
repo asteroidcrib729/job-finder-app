@@ -36,7 +36,17 @@ jobspy:
   hours_old: 168
   query_timeout: 90
   max_seconds: 900
+  # Listing discovery is separate from paced/cached description retrieval.
   linkedin_fetch_description: true
+  linkedin_max_details: 12
+  linkedin_detail_timeout: 8
+  linkedin_detail_delay: 2
+  linkedin_detail_max_seconds: 90
+  linkedin_detail_cache_hours: 6
+  linkedin_detail_retry_hours: 3
+  # Upstream Google Jobs adapter is unavailable; one daily recovery probe only.
+  google_mode: probe
+  google_probe_interval_hours: 24
   interval_hours: 3
   low_yield_interval_hours: 12
 
@@ -53,6 +63,8 @@ local_scrapers:
 linkedin_posts:
   enabled: true
   search_backends: [brave, duckduckgo, yahoo]
+  max_search_attempts: 6
+  retry_hours: 3
   interval_hours: 6
   detail_cache_hours: 6
   max_results: 6
@@ -62,10 +74,10 @@ linkedin_posts:
     - 'site:linkedin.com/posts "Karachi" hiring ("Next.js" OR "React" OR "Python" OR "Full Stack")'
     - 'site:linkedin.com/posts "Remote" hiring ("Junior" OR "Graduate") ("Python" OR "React" OR "Node")'
 
-# Optional pilots; enable individually after inspecting dry-run results.
+# Public-feed adapters use the same eligibility, freshness and delivery rules.
 remote_feeds:
-  remotive_enabled: false
-  wwr_enabled: false
+  remotive_enabled: true
+  wwr_enabled: true
   interval_hours: 6
   max_jobs: 100
 

@@ -18,6 +18,14 @@ def query_due(discovery, key, interval_hours, now=None):
     return not previous or not 0 <= (now - previous).total_seconds() < interval_hours * 3600
 
 
+def attempt_due(discovery, key, interval_hours, now=None):
+    """Bound retries after failed attempts without claiming a successful search."""
+    now = now or datetime.now(timezone.utc)
+    record = (discovery or {}).get(key, {})
+    previous = parse_date(record.get("last_attempt") or record.get("last_success"))
+    return not previous or not 0 <= (now - previous).total_seconds() < interval_hours * 3600
+
+
 class DetailCache:
     """Only adapters' parsed public evidence is persisted, never raw responses."""
     def __init__(self, discovery, namespace, hours, now=None):

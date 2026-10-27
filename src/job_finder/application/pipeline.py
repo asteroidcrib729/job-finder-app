@@ -20,7 +20,7 @@ from job_finder.scrapers.base import Job, merge_jobs, utc_now
 from job_finder.scrapers.common import QueryOutcome, SourceResult
 from job_finder.scrapers.jobspy_adapter import fetch_jobspy_jobs
 from job_finder.scrapers.linkedin_posts_scraper import fetch_linkedin_plain_posts
-from job_finder.scrapers.metrics import query_metrics
+from job_finder.scrapers.metrics import query_metrics, source_coverage
 from job_finder.scrapers.remote_feeds import fetch_remote_feeds
 from job_finder.scrapers.rozee_scraper import fetch_rozee_jobs
 from job_finder.storage.reconcile import validate_discovery_state
@@ -68,6 +68,14 @@ def write_report(report, directory, step_summary=True):
     lines += ["", "| Source | Outcome | Queries |", "| --- | --- | --- |"]
     for source in report.get("sources", []):
         lines.append(f"| {source['source']} | {source['status']} | {len(source['queries'])} |")
+    if report.get("source_coverage"):
+        lines += ["", "| Source/site | Searches usable/attempted | Detail requests | Probes | Full descriptions/jobs |",
+                  "| --- | --- | --- | --- | --- |"]
+        for item in report["source_coverage"]:
+            label = item["source"] + (" / " + item["site"] if item["site"] else "")
+            lines.append(f"| {label} | {item['usable_searches']}/{item['search_requests']} | "
+                         f"{item['detail_requests']} | {item['probe_requests']} | "
+                         f"{item['full_descriptions']}/{item['unique_jobs']} |")
     # pyrefly: ignore [unsupported-operation]
     lines += ["", "Operational outcome: **" + assess_run(report)["status"] + "**", ""]
     for source in report.get("sources", []):
@@ -76,7 +84,7 @@ def write_report(report, directory, step_summary=True):
         for (site, status, reason), count in problems.items():
             lines.append(f"- {site}: {count} {status} query(s) — {reason}.")
     if report.get("counts", {}).get("qualified") == 0:
-        lines += ["", "No candidates met the qualified-only alert policy. This alone is not a pipeline failure."]
+        lines += ["", "No candidates reached the qualified tier. Labeled review alerts follow the configured delivery policy."]
     if report.get("error"):
         lines += ["", "Error: " + report["error"]]
     summary = "\n".join(lines) + "\n"
@@ -167,12 +175,17 @@ def run_job_finder(dry_run=False, test_notify=False, config_path=None, replay_pa
         report["reason_counts"] = dict(reasons)
         report["jobs"] = [job.to_dict() for job in candidates]
         report["query_metrics"] = query_metrics(sources, config)
+        report["source_coverage"] = source_coverage(sources)
         report["query_budgets"] = {
             "jobspy_search_requests": config["jobspy"]["max_queries"],
             "jobspy_max_seconds": config["jobspy"]["max_seconds"],
+            "linkedin_detail_requests": config["jobspy"]["linkedin_max_details"],
+            "linkedin_detail_max_seconds": config["jobspy"]["linkedin_detail_max_seconds"],
+            "google_mode": config["jobspy"]["google_mode"],
             "rozee_search_requests": config["local_scrapers"]["max_queries"] * config["local_scrapers"]["max_pages"],
             "rozee_detail_requests": config["local_scrapers"]["max_details"],
             "post_search_queries": len(config["linkedin_posts"]["queries"]),
+            "post_search_attempts": config["linkedin_posts"]["max_search_attempts"],
             "post_detail_requests": config["linkedin_posts"]["max_checks"],
         }
         eligible_tiers = {"qualified", "review"} if config["notifications"]["send_review"] else {"qualified"}

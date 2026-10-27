@@ -25,6 +25,8 @@ class QueryOutcome:
     reason: str = ""
     site: str = ""
     search_track: str = ""
+    phase: str = "search"
+    backend: str = ""
 
 
 @dataclass

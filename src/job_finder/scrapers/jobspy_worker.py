@@ -2,6 +2,7 @@
 import io
 import json
 import logging
+import re
 import sys
 from contextlib import redirect_stdout
 
@@ -16,12 +17,17 @@ class HealthHandler(logging.Handler):
 
     def record_message(self, message, error=False):
         text = str(message).lower()
-        if "initial cursor not found" in text:
+        detail = bool(re.match(r"job \S+:", text))
+        if "isn't supported" in text or "not supported, ignoring" in text:
+            self.codes.append("unsupported_option")
+        elif "no job data returned" in text:
+            self.codes.append("google_no_job_data")
+        elif "initial cursor not found" in text:
             self.codes.append("google_jobs_cursor_missing")
         elif any(word in text for word in ("429", "403", "blocked", "captcha")):
-            self.codes.append("blocked")
+            self.codes.append("detail_blocked" if detail else "blocked")
         elif "timeout" in text or "timed out" in text:
-            self.codes.append("timed_out")
+            self.codes.append("detail_timed_out" if detail else "timed_out")
         else:
             self.codes.append("upstream_error" if error else "upstream_warning")
 

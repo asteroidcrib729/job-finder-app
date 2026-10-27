@@ -31,9 +31,9 @@ def _strings(value, path, nonempty=True):
 
 def validate_config(config):
     allowed_sections = {
-        "jobspy": {"enabled", "sites", "results_wanted", "max_pages", "max_queries", "hours_old", "query_timeout", "max_seconds", "linkedin_fetch_description", "interval_hours", "low_yield_interval_hours"},
+        "jobspy": {"enabled", "sites", "results_wanted", "max_pages", "max_queries", "hours_old", "query_timeout", "max_seconds", "linkedin_fetch_description", "interval_hours", "low_yield_interval_hours", "linkedin_max_details", "linkedin_detail_timeout", "linkedin_detail_delay", "linkedin_detail_max_seconds", "linkedin_detail_cache_hours", "linkedin_detail_retry_hours", "google_mode", "google_probe_interval_hours"},
         "local_scrapers": {"rozee_enabled", "max_queries", "max_details", "timeout", "keywords", "max_pages", "interval_hours", "detail_cache_hours"},
-        "linkedin_posts": {"enabled", "max_results", "max_checks", "timeout", "queries", "interval_hours", "detail_cache_hours", "search_backends"},
+        "linkedin_posts": {"enabled", "max_results", "max_checks", "timeout", "queries", "interval_hours", "detail_cache_hours", "search_backends", "max_search_attempts", "retry_hours"},
         "remote_feeds": {"remotive_enabled", "wwr_enabled", "interval_hours", "max_jobs"},
         "matching": {"max_age_hours", "min_score", "allow_hybrid", "allow_internships", "allow_contracts", "allow_one_year_stretch", "remote_salary_policy", "preferred_neighborhoods"},
         "notifications": {"discord_enabled", "send_review", "review_digest", "max_per_run", "max_attempts", "max_retry_wait"},
@@ -63,9 +63,9 @@ def validate_config(config):
             if not isinstance(config[section].get(name), bool):
                 raise ValueError(f"{section}.{name} must be boolean")
     for section, limits in {
-        "jobspy": {"results_wanted": (1, 100), "max_pages": (1, 4), "max_queries": (1, 200), "hours_old": (1, 720), "query_timeout": (5, 300), "max_seconds": (30, 1800), "interval_hours": (0, 168), "low_yield_interval_hours": (0, 168)},
+        "jobspy": {"results_wanted": (1, 100), "max_pages": (1, 4), "max_queries": (1, 200), "hours_old": (1, 720), "query_timeout": (5, 300), "max_seconds": (30, 1800), "interval_hours": (0, 168), "low_yield_interval_hours": (0, 168), "linkedin_max_details": (0, 50), "linkedin_detail_timeout": (1, 30), "linkedin_detail_delay": (1, 30), "linkedin_detail_max_seconds": (5, 300), "linkedin_detail_cache_hours": (0, 24), "linkedin_detail_retry_hours": (1, 24), "google_probe_interval_hours": (6, 168)},
         "local_scrapers": {"max_queries": (1, 20), "max_details": (0, 50), "timeout": (1, 60), "max_pages": (1, 4), "interval_hours": (0, 168), "detail_cache_hours": (0, 24)},
-        "linkedin_posts": {"max_results": (1, 20), "max_checks": (0, 50), "timeout": (1, 60), "interval_hours": (0, 168), "detail_cache_hours": (0, 24)},
+        "linkedin_posts": {"max_results": (1, 20), "max_checks": (0, 50), "timeout": (1, 60), "interval_hours": (0, 168), "detail_cache_hours": (0, 24), "max_search_attempts": (1, 12), "retry_hours": (1, 24)},
         "remote_feeds": {"interval_hours": (6, 168), "max_jobs": (1, 500)},
         "notifications": {"max_per_run": (1, 100), "max_attempts": (1, 5), "max_retry_wait": (1, 60)},
         "matching": {"max_age_hours": (1, 2160), "min_score": (0, 100)},
@@ -77,6 +77,8 @@ def validate_config(config):
                 raise ValueError(f"{section}.{name} must be between {low} and {high}")
             if name != "interval_hours" and not isinstance(value, int):
                 raise ValueError(f"{section}.{name} must be an integer")
+    if config["jobspy"].get("google_mode") not in {"disabled", "probe", "enabled"}:
+        raise ValueError("jobspy.google_mode must be disabled, probe, or enabled")
     tracks = config.get("search_tracks")
     if not isinstance(tracks, list) or not tracks:
         raise ValueError("search_tracks must be a nonempty list")

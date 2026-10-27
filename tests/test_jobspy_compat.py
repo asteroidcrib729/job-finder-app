@@ -44,10 +44,10 @@ class JobSpyCompatibilityTests(OfflineTestCase):
             worker_main()
         return json.loads(output.getvalue()), calls
 
-    def test_installed_api_serializes_job_evidence_and_uses_new_detail_option(self):
+    def test_installed_api_serializes_cards_without_inline_description_requests(self):
         payload, calls = self.invoke("success", "linkedin")
         self.assertNotIn("error", payload)
-        self.assertTrue(calls[0].fetch_description)
+        self.assertFalse(calls[0].fetch_description)
         self.assertEqual(payload["warnings"], [])
         result = row_to_job(payload["rows"][0], "linkedin", load_config()["search_tracks"][0], "fixture")
         self.assertEqual(result.location, "Karachi, Pakistan")

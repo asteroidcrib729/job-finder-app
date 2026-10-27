@@ -32,7 +32,9 @@ class SourceTests(OfflineTestCase):
         self.assertEqual(local["hours_old"], 168)
         linkedin = build_query(config, config["search_tracks"][2], "Python", "linkedin")
         self.assertIsNone(linkedin["location"])
-        self.assertTrue(linkedin["fetch_description"])
+        self.assertFalse(linkedin["fetch_description"])
+        self.assertNotIn("is_remote", linkedin)
+        self.assertIn("remote", linkedin["search_term"])
         self.assertNotIn("linkedin_fetch_description", linkedin)
         google = build_query(config, config["search_tracks"][2], "Python", "google")
         # pyrefly: ignore [bad-argument-type]
@@ -176,6 +178,7 @@ class SourceTests(OfflineTestCase):
     def test_remotive_cadence_skips_recent_fetch(self):
         config = load_config()
         config["remote_feeds"]["remotive_enabled"] = True
+        config["remote_feeds"]["wwr_enabled"] = False
         with patch("job_finder.scrapers.remote_feeds.get_public") as get:
             result = fetch_remote_feeds(config, {"feed:remotive": {"last_success": datetime.now(timezone.utc).isoformat()}})
         self.assertTrue(result.report.skipped)
