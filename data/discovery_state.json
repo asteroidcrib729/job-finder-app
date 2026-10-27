@@ -1,4 +1,81 @@
 {
+  "cache:linkedin": {
+    "entries": {
+      "https://www.linkedin.com/jobs/view/4483277694": {
+        "fetched_at": "2026-10-27T18:04:35.875414+00:00",
+        "payload": {
+          "description": "About Turing:\nBased in San Francisco, California, Turing is the world’s leading research accelerator for frontier AI labs and a trusted partner for global enterprises deploying advanced AI systems. Turing supports customers in two ways: first, by accelerating frontier research with high-quality data, advanced training pipelines, plus top AI researchers who specialize in coding, reasoning, STEM, multilinguality, multimodality, and agents; and second, by applying that expertise to help enterprises transform AI from proof of concept into proprietary intelligence with systems that perform reliably, deliver measurable impact, and drive lasting results on the P&L\nRole Overview:\nWe are looking for experienced Machine Learning Engineers (MLE Bench) to contribute to benchmark-driven evaluation projects focused on real-world machine learning systems. This role involves hands-on work with production-grade ML codebases, model training and evaluation pipelines, and deployment-oriented workflows to help assess and improve the capabilities of advanced AI systems.\nThe ideal candidate is comfortable bridging research and engineering, working deeply with models, data, and infrastructure in realistic ML environments.\nWhat does day-to-day life look like?\nWork with real-world ML codebases to support MLE Bench–style evaluation tasks.\nBuild, run, and modify model training, evaluation, and inference pipelines.\nPrepare datasets, features, and metrics for ML benchmarking and validation.\nDebug, refactor, and improve production-like ML systems for correctness and performance.\nEvaluate model behavior, failure modes, and edge cases relevant to benchmark tasks.\nWrite clean, reproducible, and well-documented Python code for ML workflows.\nParticipate in code reviews to ensure high standards of engineering quality.\nCollaborate with researchers and engineers to design challenging, real-world ML engineering tasks for AI system evaluation.\nRequirements:\nMinimum 3+ years of overall experience as a Machine Learning Engineer or Software Engineer (ML-focused).\nStrong proficiency in Python for machine learning and data workflows.\nHands-on experience with model training, evaluation, and inference pipelines.\nSolid understanding of machine learning fundamentals (supervised/unsupervised learning, evaluation metrics, optimization).\nExperience working with ML frameworks (e.g., PyTorch, TensorFlow, JAX, or similar).\nAbility to understand, navigate, and modify complex, real-world ML codebases.\nExperience writing readable, reusable, and maintainable production-quality code.\nStrong problem-solving and debugging skills.\nExcellent spoken and written English communication skills.\nPerks of Freelancing With Turing:\nWork in a fully remote environment.\nOpportunity to work on cutting-edge AI projects with leading LLM companies.\nOffer Details:\nCommitments Required: At least 4 hours per day and minimum 20 hours per week with overlap of 4 hours with PST.\nEngagement Type: Contractor assignment (no medical/paid leave)\nDuration of Contract: 3 months (adjustable based on engagement)\nEvaluation Process:\nTechnical Interview with live coding challege (60 mins)"
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4481876086": {
+        "fetched_at": "2026-10-27T18:04:35.875414+00:00",
+        "payload": {
+          "description": "This is a Fully Remote Job\nAbout Our Client:\nThe organization operates globally in the healthcare sector, focusing on improving health outcomes through technology. It addresses challenges related to healthcare access and equity by connecting individuals with care, pharmacy benefits, and data. The organization emphasizes diversity, inclusion, and health equity on a large scale.\nAbout the Opportunity:\nThe ASSOCIATE SOFTWARE ENGINEER role involves contributing to the development of healthcare portal features that support claims and insurance processing. The position is responsible for building backend services and enhancing web applications, leveraging modern technologies and AI tools to optimize performance and software delivery. This role plays a key part in advancing the organization's technology solutions that impact health services.\nResponsibilities:\nDevelop healthcare portal features for claims and insurance.\nBuild Java backend services and RESTful APIs using Java, Spring Boot, and PostgreSQL.\nEnhance application performance and responsiveness across platforms.\nParticipate in requirements gathering, design, code reviews, and Agile delivery.\nMonitor and troubleshoot production applications using Splunk.\nDesign and deploy AI-powered solutions and automations.\nUtilize AI tools to streamline development workflows and improve delivery.\nDevelop event-driven components with Apache Kafka and AWS cloud services.\nRequirements:\nBachelor’s degree.\nMinimum 1 year full-stack development experience with Java (17 or higher) and Spring Boot.\nMinimum 1 year experience with React and TypeScript for web applications.\nMinimum 1 year working with relational databases and SQL using PostgreSQL.\nMinimum 1 year experience with logging/monitoring tools (e.g., Splunk) and version control (e.g., Git).\nPay Range and Compensation Package:\nSalary range is $60,200 to $107,400 annually for full-time employment.\nCompensation and benefits are influenced by factors such as location, education, and experience.\nBenefits & Perks:\n401(k) contribution and equity stock purchase options.\nComprehensive benefits package.\nIncentive and recognition programs.\nEqual Opportunity Statement:\nOur client is an equal opportunity employer. They celebrate diversity and are committed to creating an inclusive environment for all employees. All qualified applicants will receive consideration for employment without regard to race, color, religion, gender, gender identity or expression, sexual orientation, or national origin.\nNote:\nTalentHop is a recruitment partner of this role. Please note that all employment decisions, including candidate assessment, interviews, hiring, compensation, and employment terms, are made exclusively by the hiring employer."
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4318354760": {
+        "fetched_at": "2026-10-27T18:04:35.875414+00:00",
+        "payload": {
+          "description": "Are you passionate about creating robust and scalable software solutions?<br><br>Join us as a <strong>Full Stack Developer</strong> and play a key role in building impactful applications. We’re looking for someone with a strong technical background, problem-solving mindset, and collaborative attitude to help shape our innovative projects.<br><br><strong>Responsibilities<br><br></strong><ul><li> Design, develop, and implement scalable software applications using C# and .NET Core.</li><li> Build and optimize Web APIs with a focus on best practices.</li><li> Work with JavaScript, jQuery, and other front-end technologies to deliver seamless user experiences.</li><li> Write clean, efficient, and maintainable code with a focus on performance and scalability.</li><li> Collaborate with developers, product managers, and stakeholders to deliver new features and enhancements.</li><li> Troubleshoot, debug and upgrade the software to ensure optimal functionality.</li><li> Lead by example, providing technical guidance and mentorship to the team.<br><br></li></ul><strong>Qualifications<br><br></strong><ul><li> Education: Bachelor’s Degree in Computer Science or a related field.</li><li> Experience: 2 years of hands-on experience in software development, including front-end and back-end work.</li><li> Technical Skills:</li><li> Strong expertise in C#, .NET Core, MVC, and Microservices architecture.</li><li> Proficiency in JavaScript, jQuery, and other front-end frameworks.</li><li> Knowledge of database management and integration.</li><li> Soft Skills:</li><li> Excellent verbal and written communication skills.</li><li> Strong analytical, problem-solving, and organizational abilities.</li><li> A collaborative team player with a proactive attitude.<br><br></li></ul><strong>Why Join Us?<br><br></strong><ul><li> Competitive salary and comprehensive benefits.</li><li> Performance bonuses based on your contributions and team achievements.</li><li> The opportunity to work on industry-leading projects.<br><br></li></ul><strong>Location:</strong> This is a <strong>full-time, onsite role</strong> based in Karachi."
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4483289409": {
+        "fetched_at": "2026-10-27T18:04:35.875414+00:00",
+        "payload": {
+          "description": "About Turing:\nBased in San Francisco, California, Turing is the world’s leading research accelerator for frontier AI labs and a trusted partner for global enterprises deploying advanced AI systems. Turing supports customers in two ways: first, by accelerating frontier research with high-quality data, advanced training pipelines, plus top AI researchers who specialize in coding, reasoning, STEM, multilinguality, multimodality, and agents; and second, by applying that expertise to help enterprises transform AI from proof of concept into proprietary intelligence with systems that perform reliably, deliver measurable impact, and drive lasting results on the P&L\nRole Overview:\nWe are looking for experienced Software Engineers (SWE Bench – Data Engineer / Data Science) to contribute to benchmark-driven evaluation projects focused on real-world data engineering and data science workflows. This role involves hands-on work with production-like datasets, data pipelines, and data science tasks to help evaluate and improve the performance of advanced AI systems.\nThe ideal candidate has strong foundations in data engineering and data science, with the ability to work across data preparation, analysis, and model-related workflows in real-world codebases.\nWhat does day-to-day life look like?\nWork with structured and unstructured datasets to support SWE Bench-style evaluation tasks.\nDesign, build, and validate data pipelines used in benchmarking and evaluation workflows.\nPerform data processing, analysis, feature preparation, and validation for data science use cases.\nWrite, run, and modify Python code to process data and support experiments locally.\nEvaluate data quality, transformations, and outputs for correctness and reproducibility.\nCreate clean, well-documented, and reusable data workflows suitable for benchmarking.\nParticipate in code reviews to ensure high standards of code quality and maintainability.\nCollaborate with researchers and engineers to design challenging, real-world data engineering and data science tasks for AI systems.\nRequirements:\nMinimum 3+ years of overall experience as a Data Engineer, Data Scientist, or Software Engineer (data-focused).\nStrong proficiency in Python for data engineering and data science workflows.\nDemonstrable experience with data processing, analysis, and model-related workflows.\nSolid understanding of machine learning and data science fundamentals.\nExperience working with structured and unstructured data.\nAbility to understand, navigate, and modify complex, real-world codebases.\nExperience writing readable, reusable, maintainable, and well-documented code.\nStrong problem-solving skills, including experience with algorithmic or data-intensive problems.\nExcellent spoken and written English communication skills.\nPerks of Freelancing With Turing:\nWork in a fully remote environment.\nOpportunity to work on cutting-edge AI projects with leading LLM companies.\nOffer Details:\nCommitments Required: At least 4 hours per day and minimum 20 hours per week with overlap of 4 hours with PST.\nEngagement Type: Contractor assignment (no medical/paid leave)\nDuration of Contract: 3 months (adjustable based on engagement)\nEvaluation Process:\nTechnical Interview with live coding challege (60 mins)"
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4481863008": {
+        "fetched_at": "2026-10-27T18:04:35.875414+00:00",
+        "payload": {
+          "description": "This is a Fully Remote Job\nAbout Our Client:\nThis organization operates in the software engineering sector, focusing on developing internal tools, services, workflows, and AI-powered products that support engineering, operations, and recruiting platforms. It addresses the challenge of creating scalable, reliable software systems that enhance internal processes and productivity. The company is positioned to impact the engineering and operational efficiency through innovative platform capabilities.\nAbout the Opportunity:\nThe SOFTWARE ENGINEER, NEW GRAD role is designed for recent graduates and early-career engineers aiming to accelerate their professional growth by building production software systems. This position involves contributing to and eventually owning core internal platform capabilities and product features. The role is critical in supporting internal workflows and platforms, ensuring the delivery of reliable, maintainable, and scalable software solutions.\nResponsibilities:\nContribute to the design and development of end-to-end fullstack systems supporting critical internal workflows and platforms.\nBuild maintainable backend services and APIs following scalable engineering practices.\nDevelop high-quality frontend interfaces for internal teams and end users.\nParticipate in data modeling and database optimization, including schema design and query performance.\nCollaborate with product, operations, and design teams to translate concepts into production-ready features.\nImprove engineering quality through code reviews, testing, documentation, and continuous improvements.\nAssist in troubleshooting production issues to build resilient and observable systems.\nDevelop engineering judgment to balance speed, scalability, and maintainability.\nRequirements:\nBachelor’s degree in Computer Science, Computer Engineering, Software Engineering, or related field (recent graduate or soon to graduate).\nExperience through internships, co-ops, research, or personal projects in software application development.\nStrong fundamentals in JavaScript and/or TypeScript.\nFamiliarity with frontend development using React or similar frameworks.\nFamiliarity with backend development using Node.js (NestJS is a plus).\nUnderstanding of relational databases such as PostgreSQL and data modeling principles.\nKnowledge of RESTful APIs and distributed application communication.\nExposure to Git and modern software development workflows.\nStrong problem-solving skills, curiosity, attention to detail, and a growth mindset.\nMotivation to learn quickly and contribute in a fast-paced engineering environment.\nPreferred:\nInternship or professional software engineering experience.\nExposure to cloud platforms like AWS, GCP, or Azure.\nFamiliarity with CI/CD, deployment pipelines, or DevOps fundamentals.\nExposure to modern architectures such as microservices, serverless, or event-driven systems.\nInterest in AI-powered products, workflow automation, or data-intensive applications.\nExperience contributing to team projects, hackathons, open-source software, or startup environments.\nPay Range and Compensation Package:\nThe pay range and compensation package for this role will be determined based on the candidate's experience, skills, and other relevant factors.\nEqual Opportunity Statement:\nOur client is an equal opportunity employer. They celebrate diversity and are committed to creating an inclusive environment for all employees. All qualified applicants will receive consideration for employment without regard to race, color, religion, gender, gender identity or expression, sexual orientation, or national origin.\nNote:\nTalentHop is a recruitment partner of this role. Please note that all employment decisions, including candidate assessment, interviews, hiring, compensation, and employment terms, are made exclusively by the hiring employer."
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4484202093": {
+        "fetched_at": "2026-10-27T18:04:35.875414+00:00",
+        "payload": {
+          "description": "<strong>Software Quality Engineer (AI-Augmented Testing &amp; Critical Analysis)Job Description<br><br></strong><ul><li>Analyze business requirements, user stories, and acceptance criteria to identify gaps, ambiguities, contradictions, and potential risks.</li><li>Perform functional, exploratory, regression, integration, end-to-end, API, and edge-case testing.</li><li>Use AI for test scenarios, test data, scripts, log summaries, and root-cause analysis, while catching hallucinations and weak output.</li><li>Investigate defects using browser developer tools, application logs, API responses, database records, and monitoring tools.</li><li>Test REST APIs, validate request/response contracts, verify authorization and error handling, and use SQL to ensure data integrity.</li><li>Perform load and performance testing using JMeter and Locust.</li><li>Develop and maintain automated tests using Selenium, Python, or JavaScript.</li><li>Validate fixes, assess regression risks, and continuously improve testing strategies and quality standards.</li><li>Document defects clearly, communicate technical risks, and take ownership of quality throughout the development lifecycle.<br><br></li></ul><strong>Qualifications:<br><br></strong><ul><li>Bachelor's degree in Computer Science or a relevant field.</li><li>2–4 years of relevant software testing experience.</li><li>Experience with AI-assisted testing and development tools is highly desirable.<br><br></li></ul><strong>Job Specifications:<br><br></strong><ul><li>Strong analytical reasoning, critical thinking, risk-based testing, and boundary value analysis.</li><li>Hands-on familiarity with Postman, SQL, Jira, and browser developer tools.</li><li>Understanding of functional, exploratory, regression, integration, API, and end-to-end testing.</li><li>Knowledge of defect investigation, debugging, root-cause analysis, and test automation fundamentals.</li><li>Excellent written and verbal English, including requirement analysis and professional defect reporting.</li><li>Ability to identify assumptions, detect contradictions, evaluate competing explanations, and make evidence-based decisions.</li><li>Experience with ChatGPT, Microsoft Copilot, Claude, Gemini, Cursor, and GitHub Copilot is highly desirable.</li><li>Familiarity with Selenium, Python, JavaScript, PyCharm, Visual Studio, CI/CD pipelines, cloud environments, and distributed systems is preferred.</li><li>Knowledge of enterprise or SaaS application testing is an advantage.</li><li>Strong ownership, accountability, attention to detail, and independent problem-solving skills.<br><br></li></ul><strong>Perks &amp; Benefits:<br><br></strong><ul><li>Competitive salary package.</li><li>Provident Fund (PF).</li><li>Health and life insurance.</li><li>Paid leaves.</li><li>Professional development and career growth opportunities.</li><li>Supportive and collaborative work environment.</li><li>Paid certifications.<br><br></li></ul><strong>Location:</strong>Karachi, Sindh - Pakistan"
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4484033358": {
+        "fetched_at": "2026-10-27T18:04:35.875414+00:00",
+        "payload": {
+          "description": "<strong><strong>About Kodifly<br><br></strong></strong>Kodifly is an AI-first spatial intelligence company transforming infrastructure monitoring and management. Headquartered in Hong Kong Science Park, with an expanded presence in Pakistan and ongoing expansion into the Kingdom of Saudi Arabia, we are backed by HKAI Lab and the Nvidia Inception program. Our expertise spans 3D point cloud processing, digital twin creation, and LiDAR technology. We develop intelligent infrastructure solutions that enable cities and enterprises to operate with greater efficiency and insight. By integrating AI-powered analytics, digital twins, and real-time spatial intelligence, we help our partners streamline asset inspections, elevate quality assurance, and enhance safety throughout the entire infrastructure lifecycle.<br><br><strong><strong>The Kodifly Graduate Program 2027<br><br></strong></strong>Islamabad (NSTP, NUST)<br><br><ul><li> Full-time<br><br></li></ul>The Kodifly Graduate Program is our full-time entry route for fresh graduates from leading universities in Pakistan. From day one you join a working team, take on live projects for international clients and learn directly from our engineers and leadership.<br><br><strong><strong>Who This Is For<br><br></strong></strong><ul><li>Final-year students graduating in 2027</li><li>2026 graduates with less than 1 year of full-time work experience</li><li>Degree in computer science, engineering, design or a related field (each track below lists what fits)</li><li>Available to work full-time, on-site at our Islamabad office at NSTP, NUST<br><br></li></ul><strong>Why Apply Now<br><br></strong><ul><li>Secure your job early, before you graduate. </li><li>One application, three tracks. Choose the track that fits you in the application form. <br><br></li></ul><strong>Track 1: AI Software Engineer<br><br></strong>You build the AI software behind SpatialSense. You are a software engineer first: you build the backend, APIs, data pipelines and product features our clients use every day, and you bring AI into the product where it adds real value.<br><br><strong><strong>Key Responsibilities<br><br></strong></strong><ul><li>Design, build and maintain backend services, APIs and product features for SpatialSense</li><li>Build data pipelines that process LiDAR point clouds, BIM models, 360° images and video at scale</li><li>Integrate AI and computer vision models into production systems, and make them reliable, fast and scalable</li><li>Write clean, tested, well-documented code, and take part in code reviews</li><li>Deploy and run services on the cloud, and help improve our development and release workflow</li><li>Work with product, design and AI teams to ship features end to end<br><br></li></ul><strong><strong>Qualifications<br><br></strong></strong><ul><li>Degree in Computer Science, Software Engineering, Computer Engineering or a related field</li><li>Strong Python programming</li><li>Solid fundamentals in data structures, algorithms, databases (SQL) and Git</li><li>Understanding of how web services and REST APIs work</li><li>Exposure to ML or computer vision through coursework, a final-year project or side projects</li><li>A GitHub, final-year project or portfolio that shows real code you have written<br><br></li></ul><strong>Nice to have:</strong> Django or another backend framework, OpenCV, cloud platforms (AWS or GCP), Docker, JavaScript/TypeScript or React, working with BIM or 360° imagery, experience deploying ML models or using LLM APIs, hackathon or competitive programming results<br><br><strong><strong>Track 2: Product Designer<br><br></strong></strong>You design SpatialSense so it is easy to use and easy to sell, and you work hand in hand with engineers to ship what you design.<br><br><strong><strong>Key Responsibilities<br><br></strong></strong><ul><li>Run user research to understand workflows and pain points</li><li>Create wireframes, user flows and prototypes in Figma</li><li>Design clean, consistent interfaces using our design system</li><li>Design with a commercial eye: make the product look and position well for sales, and support demos and pitches</li><li>Work with engineers through agile sprints so designs are built as intended<br><br></li></ul><strong><strong>Qualifications<br><br></strong></strong><ul><li>Degree in Design, HCI, Computer Science or a related field</li><li>Strong Figma skills</li><li>A portfolio of university, internship or personal projects (required)</li><li>Understanding of design systems and systems thinking</li><li>Self-motivated, with a go-getter attitude<br><br></li></ul><strong>Nice to have:</strong> Adobe Creative Suite, AI design tools, interest in B2B or SaaS products.<br><br><strong><strong>Track 3: Technical Project Associate<br><br></strong></strong>You help drive our projects from kickoff to delivery, keeping engineering, clients and timelines aligned.<br><br><strong><strong>Key Responsibilities<br><br></strong></strong><ul><li>Support projects from initiation to completion against scope, timeline and budget</li><li>Work with internal teams and clients to define requirements and deliverables</li><li>Track milestones, schedules and risks, and flag issues early</li><li>Prepare technical proposals, implementation plans, test plans, reports and presentations</li><li>Help improve how we run projects<br><br></li></ul><strong><strong>Qualifications<br><br></strong></strong><ul><li>Degree in Engineering, Computer Science, Project Management or a related field</li><li>Strong organization and multitasking</li><li>Excellent communication in English</li><li>Familiarity with Gantt charts, work breakdown structures and workflow diagrams</li><li>Basic knowledge of Agile and Scrum<br><br></li></ul><strong>Nice to have:</strong> knowledge of LiDAR or digital twins, an internship in a tech or software environment.<br><br><strong>We Offer<br><br></strong><ul><li>Opportunity to work with state-of-the-art technology in a rapidly evolving field</li><li>Real ownership from day one, working with an international team across Hong Kong and Pakistan</li><li>A collaborative environment where innovation is encouraged and rewarded</li><li>Competitive salary</li><li>Fast-track internal growth and promotions for top performers<br><br></li></ul><strong><strong>Join Us at Kodifly<br><br></strong></strong>If you are graduating soon and want to start your career building technology that keeps real infrastructure safe, we want to hear from you. Apply on this page, choose your track, and fill out the form. 🚀<br><br>"
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4483649640": {
+        "fetched_at": "2026-10-27T18:04:35.875414+00:00",
+        "payload": {
+          "description": "Project Description\nHiredbuddy is looking for an enthusiastic Java Software Engineer to join our remote team. You'll develop, test, and maintain Java-based applications, collaborate with cross-functional teams, and grow your skills in a supportive environment.\nFull Description\nOverview\nHiredbuddy is seeking an entry-level Java Software Engineer to contribute to the design, development, and maintenance of our core software products. This remote role offers an excellent opportunity to work with modern Java technologies, receive mentorship from senior engineers, and build a strong foundation for your career in software development. You will be part of an agile team that values collaboration, continuous learning, and high-quality code.\nResponsibilities\nDevelop, test, and deploy Java-based applications using industry best practices.\nWrite clean, maintainable, and efficient code while following coding standards.\nParticipate in code reviews to ensure high-quality deliverables and learn from peer feedback.\nCollaborate with cross-functional teams, including product managers, designers, and QA engineers, to understand requirements and implement features.\nDebug and resolve software defects, performing root cause analysis when necessary.\nAssist in the design of RESTful APIs and integrate with front-end components.\nManage database interactions using SQL and ORM frameworks like Hibernate or JPA.\nMaintain and improve existing codebases, refactoring when needed to enhance performance and readability.\nContribute to the creation and maintenance of technical documentation.\nStay updated with emerging trends in Java development and propose improvements to our tech stack.\nQualifications\n0-2 years of professional experience in software development, including internships or personal projects.\nSolid understanding of Java programming language, object-oriented design, and data structures.\nFamiliarity with version control systems, particularly Git.\nBasic knowledge of relational databases and SQL.\nExposure to web development concepts, including REST APIs and HTTP protocols.\nStrong problem-solving skills and attention to detail.\nExcellent communication skills, both verbal and written, for remote collaboration.\nA proactive attitude and eagerness to learn new technologies and tools.\nBachelor's degree in Computer Science, Engineering, or a related field (or equivalent practical experience).\nWhy Join Us\nAt Hiredbuddy, we believe in investing in our team's growth. As an entry-level engineer, you will receive dedicated mentorship, access to learning resources, and the opportunity to work on meaningful projects that impact real users. Our remote-first culture promotes work-life balance, flexibility, and autonomy. We celebrate diversity and foster an inclusive environment where everyone's voice is heard.\nIf you are passionate about Java and eager to kick-start your career in a supportive and dynamic team, we'd love to hear from you. Join us in building innovative solutions that make a difference.\nRequirements\n0-2 years of experience in Java development (including academic projects)\nProficiency in Java, OOP principles, and data structures\nBasic understanding of SQL and relational databases\nFamiliarity with Git and version control workflows\nExposure to Spring Framework or similar is a plus\nStrong analytical and problem-solving skills\nExcellent communication and teamwork abilities\nWillingness to learn and adapt in a fast-paced environment\nBachelor's degree in Computer Science or related field preferred\nBenefits\nPaid time off and holidays\nProfessional development budget for courses and certifications\nCollaborative and inclusive team culture\nAccess to cutting-edge tools and technologies\nRegular team-building activities and virtual events"
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4484040948": {
+        "fetched_at": "2026-10-27T18:04:35.875414+00:00",
+        "payload": {
+          "description": "Job Purpose<br>We are looking for a highly skilled Java Developer with strong experience in Spring Boot and Microservices architecture. The ideal candidate will design, develop, and maintain scalable backend services in a cloud-native environment.<br><br>Key Result Areas<br>• Design and develop RESTful APIs using Java 8/11/17<br>• Build microservices using Spring Boot<br>• Implement service-to-service communication (REST, Kafka, etc.)<br>• Work with relational and NoSQL databases<br>• Write clean, testable, production-grade code<br>• Participate in architecture discussions and technical design<br>• Implement security using JWT/OAuth2<br>• Optimize application performance and scalability<br>• Follow CI/CD and DevOps practices<br>• Troubleshoot production issues and perform root cause analysis<br><br>Knowledge, Skills and Experience<br>• Strong experience in Java &amp; OOP concepts<br>• Hands-on experience with Spring Boot<br>• Experience building Microservices architecture<br>• Experience with REST APIs<br>• Database experience (SQL, PostgreSQL, Oracle, MongoDB)<br>• Understanding of Docker &amp; Kubernetes<br>Experience with Git<br>• Familiarity with CI/CD pipelines"
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4481889336": {
+        "fetched_at": "2026-10-27T18:04:35.875414+00:00",
+        "payload": {
+          "description": "<p><strong>Job Overview:</strong></p><p>You’ll work on our self-hosted LLM observability platform (built on Langfuse) — it’s where all our AI services send their traces, so we can see how every document and model call flows through the system, what it costs, and why things break. It’s a TypeScript/Node codebase running on Kubernetes (AKS). You’ll help build and operate the platform and the instrumentation around it — a great role for someone early-career who’s genuinely curious about how systems behave in production.</p><p><br></p><p><strong>Job Responsibilities:</strong></p><ul><li>Instrumenting our services with traces, metrics, and structured logs, and making that data useful in dashboards and alerts.</li><li>Helping run and maintain the platform (web + worker services, and the queues and datastores behind them).</li><li>Triaging issues by following a request end-to-end through the traces.</li></ul><p><br></p><p><strong>Requirements:</strong></p><ul><li>1–2 years of backend / platform / full-stack engineering or strong internship/project experience.</li><li>Solid programming in TypeScript/JavaScript (Node.js) — or strong fundamentals in another language with genuine willingness to ramp on TypeScript quickly.</li><li>Hands-on experience with at least one cloud provider (Azure, AWS, or GCP) and the basics of </li><li>compute and networking — with a willingness to go deeper fast.</li><li>Comfortable with Docker/containers (or eager to learn) and curious about Kubernetes.</li><li>Genuine interest in observability — you like understanding how requests flow and why things fail, and you’re comfortable reading logs, metrics, and traces.</li><li>Basic working knowledge of LLMs — what tokens, context windows, and quotas mean, and why tracing and cost-tracking matter for AI apps.</li><li>Good debugging instincts; comfortable with Git, REST/HTTP, and JSON.</li><li>Fluency with AI-assisted dev tools (Claude Code, Cursor, or similar), and a fast learner who likes to go deep.</li></ul><p><br></p><p><strong>Nice To Have:</strong></p><ul><li>Kubernetes/Helm, or any container-orchestration exposure.</li><li>OpenTelemetry, Langfuse, or distributed tracing experience.</li><li>Next.js / React, tRPC, Prisma, or BullMQ.</li><li>PostgreSQL, ClickHouse, or Redis.</li><li>Azure specifically (AKS, ACR, Key Vault, Front Door), or IaC (Terraform/Bicep).</li><li>CI/CD with GitHub Actions.</li></ul>"
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4484073570": {
+        "fetched_at": "2026-10-27T18:04:35.875414+00:00",
+        "payload": {
+          "description": "About the Company\nUSAble Life is an insurance company committed to making a meaningful difference in the lives of its customers, employees, and communities. The company promotes diversity, equity, and inclusion, encouraging employees to contribute their perspectives and talents. Recognized as a Best Place to Work in Arkansas, Florida, and Hawaii, USAble Life supports professional development, career advancement, and a collaborative workplace culture.\nAbout the Role\nUSAble Life is seeking Web Developers at the Developer I and Developer II levels to analyze, develop, implement, maintain, and test software applications that support the company's systems and business operations. The role involves translating business requirements into technical solutions, collaborating with Business Analysts and Lead Developers, supporting quality assurance and deployments, and maintaining software quality throughout the development lifecycle.\nThe ideal candidate has a strong foundation in programming, object-oriented concepts, database queries, secure coding, and software testing. Developer II candidates must also meet the additional experience requirements specified for that level. This position may involve projects of varying sizes with system-wide impact and participation in a rotating on-call schedule that includes night support.\nKey Responsibilities\nWork with Business Analysts and Lead Developers to identify and document business requirements related to integration processes.\nAnalyze defined system specifications and translate requirements into workable software solutions.\nDevelop, implement, maintain, and test software applications supporting company systems.\nRecommend practical solutions to processing problems and application issues.\nSupport quality assurance activities, software testing, and deployment processes.\nParticipate in code reviews to provide feedback, learn development best practices, and ensure consistency across applications.\nAssist with application planning, design, development, and deployment.\nCommunicate work progress and project status proactively to the development team and project stakeholders.\nReview code to ensure compliance with development standards, coding conventions, and consistency requirements.\nApply secure coding practices, object-oriented programming principles, and established design patterns.\nPerform other related duties and responsibilities as assigned.\nParticipate in rotating on-call responsibilities, including providing support during nighttime hours.\nRequired Qualifications\nBachelor's degree in Computer Science, Information Systems, or a related field, or a curriculum or experience aligned with the required skills.\nAt least 1 year of IT experience for Developer I.\nAt least 2 years of IT experience for Developer II.\nEquivalent military experience may satisfy the education and experience requirement stated for Developer I.\nExperience with open-source tools such as log4net, NUnit, and NHibernate.\nExperience using version control systems such as Git.\nExperience writing SQL queries on database platforms such as Microsoft SQL Server, MySQL, or Oracle.\nExperience with software development or release tracking tools such as Jira or Targetprocess.\nStrong understanding of programming concepts, object-oriented programming, secure coding practices, and design patterns.\nStrong analytical and problem-solving skills.\nAbility to work effectively in a team environment.\nKeen attention to detail and a commitment to software quality.\nStrong communication and interpersonal skills.\nAbility to manage assigned tasks and deliver work within established timelines.\nUnderstanding of software testing tools, unit testing, integration testing, test scripting, and testing methodologies.\nPreferred Qualifications\nFor Developer I: Curriculum or coursework focused on SQL and Microsoft .NET.\nFor Developer I: At least 2 years of IT experience.\nFor Developer I: IT-related experience in the health insurance industry.\nFor Developer II: Experience with continuous integration and continuous delivery (CI/CD) pipelines.\nFor Developer II: At least 3 years of IT experience.\nSalary and Benefits\nDeveloper I anticipated annual salary range: $63,000–$75,000.\nDeveloper II anticipated annual salary range: $79,000–$95,000.\nAnnual incentive plan eligibility based on company and individual performance.\nMedical, dental, and vision benefits.\nPaid time off provided at the date of hire.\n11 paid holidays.\n401(k) plan with an employer match of up to 6%, fully vested from the first day.\nRemote work opportunities with company-provided equipment.\nTuition reimbursement.\nEmployee Assistance Program (EAP).\nInclusion Council and Employee Resource Groups.\nRecharge Days and Volunteer Time Off.\nOpportunities for professional development and career advancement.\nLocation and Work Arrangement\nUSAble Life offers remote work opportunities and provides company equipment for eligible arrangements. The specific work arrangement for this position should be confirmed with the employer.\nThe role includes rotating on-call duties, which may require nighttime support.\nEqual Employment Opportunity\nUSAble Life is an equal opportunity employer. Applicants are entitled to consideration under applicable federal employment laws and protections. The company values diversity, equity, and inclusion and is committed to providing opportunities for employees to contribute and grow."
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4481855208": {
+        "fetched_at": "2026-10-27T18:04:35.875414+00:00",
+        "payload": {
+          "description": "Job Title: ServiceNow Service Mapping Practitioner (ITOM)*<br>*Location: Remote - West Coast Client (US Hours)*<br>*Experience: 4+ Years (ITOM Preferred)*<br>*Engagement Type: Contract*<br><br>### About The Role<br>We are looking for an experienced ServiceNow Service Mapping Practitioner with a strong focus on ITOM and AIOps. The ideal candidate will be responsible for improving infrastructure visibility and mapping complex application dependencies across enterprise environments.<br><br>### Key Responsibilities<br><br>*ServiceNow ITOM &amp; Discovery:*<br>- Design, implement, and manage Application Service Mapping (Top-down service maps) and Horizontal Discovery.<br>- Manage Discovery Schedules, Credentials, and MID Servers.<br>- Create and modify Discovery Patterns as per business requirements.<br>- Troubleshoot Discovery and Pattern-related issues.<br><br>*CMDB &amp; Platform:*<br>- Ensure CMDB health, data integrity, and governance.<br>- Work on Integration with Event Management and CMDB.<br>- Leverage IntegrationHub &amp; Flow Designer for automation and integrations.<br>- Develop and consume REST/SOAP APIs.<br><br>*Technical Skills:*<br>- Proficient in Scripting: JavaScript, PowerShell, Bash, or Regex.<br>- Strong understanding of Azure, Networking, and Operating System layers (Windows/Linux).<br><br>### Required Qualifications<br>- 4+ years of hands-on experience in ServiceNow ITOM.<br>- Strong expertise in Service Mapping and Discovery.<br>- CIS-Service Mapping and CIS-Discovery certifications are *strongly preferred*.<br><br>### What We Offer<br>- Remote opportunity working with a West Coast enterprise client.<br>- Contract engagement with opportunity to work on large-scale ITOM/AIOps transformation.<br><br>*Interested?*<br>If this opportunity aligns with your experience, please share your updated resume and your availability for a quick discussion."
+        }
+      }
+    },
+    "updated_at": "2026-10-27T18:04:35.875414+00:00"
+  },
   "cache:posts": {
     "entries": {
       "https://www.linkedin.com/posts/ashwin-sree-97543a413_machine-learning-fresher-jobs-find-64-vacancies-activity-7514275282321731584-W23b": {
@@ -18,11 +95,29 @@
         }
       }
     },
-    "updated_at": "2026-10-27T15:25:00.201834+00:00"
+    "updated_at": "2026-10-27T18:05:12.114106+00:00"
   },
   "cache:rozee": {
     "entries": {},
-    "updated_at": "2026-10-27T15:24:52.546276+00:00"
+    "updated_at": "2026-10-27T18:05:12.114050+00:00"
+  },
+  "feed:remotive": {
+    "last_attempt": "2026-10-27T18:05:12.114133+00:00",
+    "last_success": "2026-10-27T18:05:12.114133+00:00",
+    "unique": 0,
+    "qualified": 0,
+    "review": 0,
+    "rejected": 0,
+    "full_descriptions": 0
+  },
+  "feed:wwr": {
+    "last_attempt": "2026-10-27T18:05:12.311226+00:00",
+    "last_success": "2026-10-27T18:05:12.311226+00:00",
+    "unique": 0,
+    "qualified": 0,
+    "review": 0,
+    "rejected": 0,
+    "full_descriptions": 0
   },
   "jobspy:05a7339ccbca312e": {
     "last_success": "2026-10-27T15:24:52.546242+00:00",
@@ -43,13 +138,22 @@
     "full_descriptions": 0
   },
   "jobspy:18569cf04d29f7e6": {
-    "last_success": "2026-10-26T20:37:35.200710+00:00",
+    "last_success": "2026-10-27T18:04:03.507763+00:00",
     "raw": 13,
     "unique": 13,
     "qualified": 1,
     "review": 2,
     "rejected": 10,
-    "full_descriptions": 13
+    "full_descriptions": 4
+  },
+  "jobspy:1e542372a7182cd4": {
+    "last_success": "2026-10-27T18:01:51.124050+00:00",
+    "raw": 25,
+    "unique": 25,
+    "qualified": 0,
+    "review": 1,
+    "rejected": 24,
+    "full_descriptions": 0
   },
   "jobspy:2ba684532f92b59e": {
     "last_success": "2026-10-27T09:05:45.039914+00:00",
@@ -78,6 +182,15 @@
     "rejected": 5,
     "full_descriptions": 7
   },
+  "jobspy:38dac69116d3c76e": {
+    "last_success": "2026-10-27T18:03:45.087780+00:00",
+    "raw": 25,
+    "unique": 25,
+    "qualified": 0,
+    "review": 5,
+    "rejected": 20,
+    "full_descriptions": 4
+  },
   "jobspy:3acd114688309471": {
     "last_success": "2026-10-26T13:16:43.354311+00:00",
     "raw": 25,
@@ -104,6 +217,24 @@
     "review": 2,
     "rejected": 23,
     "full_descriptions": 25
+  },
+  "jobspy:41e87a037c362f54": {
+    "last_success": "2026-10-27T18:02:20.038113+00:00",
+    "raw": 25,
+    "unique": 25,
+    "qualified": 0,
+    "review": 7,
+    "rejected": 18,
+    "full_descriptions": 0
+  },
+  "jobspy:456ba2f89bffd6b7": {
+    "last_success": "2026-10-27T18:03:56.202724+00:00",
+    "raw": 25,
+    "unique": 25,
+    "qualified": 0,
+    "review": 7,
+    "rejected": 18,
+    "full_descriptions": 4
   },
   "jobspy:48eff308264948d5": {
     "last_success": "2026-10-27T09:05:45.709498+00:00",
@@ -133,13 +264,13 @@
     "full_descriptions": 25
   },
   "jobspy:5a4a0958f8e32e84": {
-    "last_success": "2026-10-27T00:29:45.955985+00:00",
-    "raw": 5,
-    "unique": 5,
-    "qualified": 1,
-    "review": 0,
-    "rejected": 4,
-    "full_descriptions": 5
+    "last_success": "2026-10-27T18:04:35.114787+00:00",
+    "raw": 6,
+    "unique": 6,
+    "qualified": 0,
+    "review": 1,
+    "rejected": 5,
+    "full_descriptions": 1
   },
   "jobspy:5aec78d19fa3c488": {
     "last_success": "2026-10-26T20:36:16.273553+00:00",
@@ -159,14 +290,23 @@
     "rejected": 23,
     "full_descriptions": 25
   },
+  "jobspy:697ca8ca3ab7aa30": {
+    "last_success": "2026-10-27T18:01:55.892084+00:00",
+    "raw": 16,
+    "unique": 16,
+    "qualified": 0,
+    "review": 5,
+    "rejected": 11,
+    "full_descriptions": 0
+  },
   "jobspy:6f8f31f9e8e59893": {
-    "last_success": "2026-10-26T20:40:29.002022+00:00",
+    "last_success": "2026-10-27T18:04:34.123221+00:00",
     "raw": 13,
     "unique": 13,
     "qualified": 1,
     "review": 2,
     "rejected": 10,
-    "full_descriptions": 13
+    "full_descriptions": 4
   },
   "jobspy:75a6ec1c92addf72": {
     "last_success": "2026-10-27T15:24:50.846303+00:00",
@@ -186,6 +326,15 @@
     "rejected": 25,
     "full_descriptions": 25
   },
+  "jobspy:7d42061eb22bd9e4": {
+    "last_success": "2026-10-27T18:01:17.415158+00:00",
+    "raw": 25,
+    "unique": 25,
+    "qualified": 0,
+    "review": 5,
+    "rejected": 20,
+    "full_descriptions": 4
+  },
   "jobspy:7ea6953079cf86fb": {
     "last_success": "2026-10-26T20:34:06.463297+00:00",
     "raw": 25,
@@ -194,6 +343,24 @@
     "review": 0,
     "rejected": 25,
     "full_descriptions": 25
+  },
+  "jobspy:821f679a34a685df": {
+    "last_success": "2026-10-27T18:03:04.920414+00:00",
+    "raw": 12,
+    "unique": 12,
+    "qualified": 0,
+    "review": 5,
+    "rejected": 7,
+    "full_descriptions": 1
+  },
+  "jobspy:88573ab0282308c3": {
+    "last_success": "2026-10-27T18:02:45.038339+00:00",
+    "raw": 24,
+    "unique": 24,
+    "qualified": 0,
+    "review": 10,
+    "rejected": 14,
+    "full_descriptions": 1
   },
   "jobspy:8bf5691f934003fc": {
     "last_success": "2026-10-27T09:05:50.177435+00:00",
@@ -204,6 +371,24 @@
     "rejected": 0,
     "full_descriptions": 0
   },
+  "jobspy:8d3c84c3ef0f70f9": {
+    "last_success": "2026-10-27T18:02:59.374478+00:00",
+    "raw": 25,
+    "unique": 25,
+    "qualified": 0,
+    "review": 2,
+    "rejected": 23,
+    "full_descriptions": 0
+  },
+  "jobspy:932247cea50b10a7": {
+    "last_success": "2026-10-27T18:03:17.985993+00:00",
+    "raw": 25,
+    "unique": 25,
+    "qualified": 0,
+    "review": 1,
+    "rejected": 24,
+    "full_descriptions": 0
+  },
   "jobspy:98020ae1dc0e5aa2": {
     "last_success": "2026-10-27T09:05:52.730813+00:00",
     "raw": 0,
@@ -211,6 +396,24 @@
     "qualified": 0,
     "review": 0,
     "rejected": 0,
+    "full_descriptions": 0
+  },
+  "jobspy:9ced97a97dc8a112": {
+    "last_success": "2026-10-27T18:02:33.028088+00:00",
+    "raw": 25,
+    "unique": 25,
+    "qualified": 0,
+    "review": 1,
+    "rejected": 24,
+    "full_descriptions": 0
+  },
+  "jobspy:9e2c0f814daaa3ea": {
+    "last_success": "2026-10-27T18:02:05.425316+00:00",
+    "raw": 25,
+    "unique": 25,
+    "qualified": 0,
+    "review": 1,
+    "rejected": 24,
     "full_descriptions": 0
   },
   "jobspy:a5e85e1d9cdcef50": {
@@ -277,13 +480,13 @@
     "full_descriptions": 25
   },
   "jobspy:c1437b145efe8212": {
-    "last_success": "2026-10-26T20:37:42.271978+00:00",
-    "raw": 3,
-    "unique": 3,
+    "last_success": "2026-10-27T18:04:04.585043+00:00",
+    "raw": 7,
+    "unique": 7,
     "qualified": 1,
-    "review": 0,
-    "rejected": 2,
-    "full_descriptions": 3
+    "review": 2,
+    "rejected": 4,
+    "full_descriptions": 1
   },
   "jobspy:c3aa6e77462b7ed1": {
     "last_success": "2026-10-27T09:05:51.459543+00:00",
@@ -292,6 +495,15 @@
     "qualified": 0,
     "review": 0,
     "rejected": 0,
+    "full_descriptions": 0
+  },
+  "jobspy:c5d5a60cbbe0b8f3": {
+    "last_success": "2026-10-27T18:01:37.502081+00:00",
+    "raw": 16,
+    "unique": 16,
+    "qualified": 0,
+    "review": 5,
+    "rejected": 11,
     "full_descriptions": 0
   },
   "jobspy:c9912c83d071d927": {
@@ -304,13 +516,13 @@
     "full_descriptions": 0
   },
   "jobspy:ca57136b9f3f20eb": {
-    "last_success": "2026-10-26T20:34:22.641156+00:00",
-    "raw": 5,
-    "unique": 5,
+    "last_success": "2026-10-27T18:03:57.156241+00:00",
+    "raw": 7,
+    "unique": 7,
     "qualified": 0,
     "review": 1,
-    "rejected": 4,
-    "full_descriptions": 5
+    "rejected": 6,
+    "full_descriptions": 1
   },
   "jobspy:d521773e3ff80bc0": {
     "last_success": "2026-10-26T20:32:59.466948+00:00",
@@ -331,22 +543,31 @@
     "full_descriptions": 0
   },
   "jobspy:de3fa268e20b281b": {
-    "last_success": "2026-10-26T20:38:02.144162+00:00",
-    "raw": 11,
-    "unique": 11,
+    "last_success": "2026-10-27T18:04:10.367801+00:00",
+    "raw": 15,
+    "unique": 15,
     "qualified": 1,
-    "review": 1,
-    "rejected": 9,
-    "full_descriptions": 11
+    "review": 2,
+    "rejected": 12,
+    "full_descriptions": 1
+  },
+  "jobspy:e658e60cbe1030fc": {
+    "last_success": "2026-10-27T18:03:22.637857+00:00",
+    "raw": 16,
+    "unique": 16,
+    "qualified": 0,
+    "review": 6,
+    "rejected": 10,
+    "full_descriptions": 3
   },
   "jobspy:ec171cf453203d61": {
-    "last_success": "2026-10-26T20:38:26.237262+00:00",
-    "raw": 9,
-    "unique": 9,
+    "last_success": "2026-10-27T18:04:18.632901+00:00",
+    "raw": 13,
+    "unique": 13,
     "qualified": 1,
-    "review": 0,
-    "rejected": 8,
-    "full_descriptions": 9
+    "review": 2,
+    "rejected": 10,
+    "full_descriptions": 2
   },
   "jobspy:f0010df233070912": {
     "last_success": "2026-10-26T20:38:34.867679+00:00",
@@ -375,6 +596,15 @@
     "rejected": 22,
     "full_descriptions": 25
   },
+  "jobspy:f49db42f7609e800": {
+    "last_success": "2026-10-27T18:03:33.104910+00:00",
+    "raw": 25,
+    "unique": 25,
+    "qualified": 0,
+    "review": 1,
+    "rejected": 24,
+    "full_descriptions": 0
+  },
   "jobspy:f5643d7891555dcc": {
     "last_success": "2026-10-26T20:36:44.735932+00:00",
     "raw": 25,
@@ -383,6 +613,15 @@
     "review": 3,
     "rejected": 22,
     "full_descriptions": 25
+  },
+  "jobspy:f600aeee834183b4": {
+    "last_success": "2026-10-27T18:01:29.167796+00:00",
+    "raw": 25,
+    "unique": 25,
+    "qualified": 0,
+    "review": 7,
+    "rejected": 18,
+    "full_descriptions": 4
   },
   "posts:233b30a94114788547e3": {
     "last_success": "2026-10-27T15:25:02.860779+00:00",
@@ -394,6 +633,14 @@
   },
   "posts:abc8e0cf74850e983d3d": {
     "last_success": "2026-10-27T15:25:01.166361+00:00",
+    "unique": 0,
+    "qualified": 0,
+    "review": 0,
+    "rejected": 0,
+    "full_descriptions": 0
+  },
+  "probe:google": {
+    "last_attempt": "2026-10-27T18:04:35.114896+00:00",
     "unique": 0,
     "qualified": 0,
     "review": 0,
