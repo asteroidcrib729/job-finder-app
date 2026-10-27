@@ -1,15 +1,15 @@
-import copy
 import json
 import os
-from pathlib import Path
 import subprocess
 import tempfile
+from pathlib import Path
 from unittest.mock import patch
-from notifiers.discord import DeliveryOutcome
-from storage.reconcile import merge_delivery, merge_discovery, validate_discovery_state
-from storage.recover import export_recovery
-from storage.sync_state import DEFAULT_COMMIT_IDENTITY, Git, commit_identity, persist_state
-from storage.tracker import JobTracker, StateError, atomic_write_json, read_json, save_with_backup
+
+from job_finder.notifiers.discord import DeliveryOutcome
+from job_finder.storage.reconcile import merge_delivery, merge_discovery, validate_discovery_state
+from job_finder.storage.recover import export_recovery
+from job_finder.storage.sync_state import DEFAULT_COMMIT_IDENTITY, Git, commit_identity, persist_state
+from job_finder.storage.tracker import JobTracker, StateError, atomic_write_json, read_json, save_with_backup
 from tests.support import OfflineTestCase, job
 
 
@@ -23,7 +23,7 @@ class StateRecoveryTests(OfflineTestCase):
         with patch.dict(os.environ, {"GIT_AUTHOR_NAME": "Fixture author"}):
             self.assertEqual(commit_identity()["GIT_AUTHOR_NAME"], "Fixture author")
         for bad in ("", "  ", "name\nInjected", "name\x00"):
-            with patch("storage.sync_state.os.environ", {"GIT_AUTHOR_NAME": bad}), self.assertRaises(StateError):
+            with patch("job_finder.storage.sync_state.os.environ", {"GIT_AUTHOR_NAME": bad}), self.assertRaises(StateError):
                 commit_identity()
 
     def state(self, pending=(), seen=None):

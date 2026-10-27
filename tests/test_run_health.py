@@ -1,18 +1,18 @@
-import copy
 import json
 import logging
-from pathlib import Path
 import tempfile
+from pathlib import Path
 from unittest.mock import MagicMock, patch
-from config import load_config, validate_config
-from main import write_report
-from run_health import assess_run, workflow_exit_code
-from scrapers.jobspy_worker import HealthHandler
-from scrapers.jobspy_adapter import fetch_jobspy_jobs
-from scrapers.linkedin_posts_scraper import fetch_linkedin_plain_posts
-from storage.tracker import atomic_write_json
+
+from job_finder import workflow_runner
+from job_finder.config import load_config, validate_config
+from job_finder.main import write_report
+from job_finder.run_health import assess_run, workflow_exit_code
+from job_finder.scrapers.jobspy_adapter import fetch_jobspy_jobs
+from job_finder.scrapers.jobspy_worker import HealthHandler
+from job_finder.scrapers.linkedin_posts_scraper import fetch_linkedin_plain_posts
+from job_finder.storage.tracker import atomic_write_json
 from tests.support import OfflineTestCase
-import workflow_runner
 
 FIXTURES = Path(__file__).parent / "fixtures"
 
@@ -83,7 +83,7 @@ class RunHealthTests(OfflineTestCase):
         factory = MagicMock()
         search = factory.return_value.__enter__.return_value
         search.text.return_value = [{"href": "https://example.test/unrelated", "title": "Irrelevant"}]
-        with patch("ddgs.DDGS", factory), patch("scrapers.linkedin_posts_scraper.inspect_post") as inspect:
+        with patch("ddgs.DDGS", factory), patch("job_finder.scrapers.linkedin_posts_scraper.inspect_post") as inspect:
             result = fetch_linkedin_plain_posts(config)
         inspect.assert_not_called()
         self.assertEqual(result.report.status, "valid_empty")

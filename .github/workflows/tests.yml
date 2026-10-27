@@ -25,5 +25,8 @@ jobs:
       - run: uv python install
       - run: uv sync --locked
       - run: uv pip check
-      - run: uv run --locked python -m unittest discover -s tests -v
+      - run: uv run --locked ruff check src tests
       - run: uv run --locked pyrefly check
+      - run: uv run --locked python -m compileall -q src tests
+      - run: uv run --locked python -m unittest discover -s tests -v
+      - run: uv build

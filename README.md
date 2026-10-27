@@ -35,15 +35,36 @@ Install [Astral uv](https://docs.astral.sh/uv/getting-started/installation/) ver
 uv python install
 uv sync --locked
 uv pip check
+uv run --locked ruff check src tests
+uv run --locked python -m compileall -q src tests
 uv run --locked python -m unittest discover -s tests -v
 uv run --locked pyrefly check
 ~~~
 
-`pyproject.toml` declares runtime dependencies and a separate development group; `uv.lock` records the exact resolution and package hashes. The application runs directly from the checkout (`package = false`), preserving its existing modules and configuration paths. `uv sync --locked --no-dev` installs runtime packages only. CI uses the same Python pin and rejects stale lockfiles. The old requirements files are superseded by these uv files.
+`pyproject.toml` declares runtime dependencies and a separate development group; `uv.lock` records the exact resolution and package hashes. The application is an installed `job_finder` package in `src/job_finder`, built with `uv_build`. `uv sync` installs it in editable mode; configuration, profiles and mutable state stay at the checkout root. `uv sync --locked --no-dev` installs runtime packages only. CI uses the same Python pin and rejects stale lockfiles. The old requirements files are superseded by these uv files.
 
 Manage packages with `uv add PACKAGE`, `uv add --dev PACKAGE`, and `uv remove PACKAGE`. Use `uv lock --upgrade-package PACKAGE` for a targeted update within the declared constraints, then `uv sync --locked` and the checks above. For an exact-pinned dependency, use `uv add PACKAGE==NEW_VERSION`. Commit the manifest and lockfile together. See [CONTRIBUTING.md](CONTRIBUTING.md) for the maintenance and commit workflow. If an external tool needs requirements format, generate it with `uv export --locked --no-dev --format requirements-txt --output-file output/requirements.txt`; do not maintain a second hand-edited lockfile.
 
 The Python 3.14 migration upgrades JobSpy to 1.4.1 and pandas/NumPy to compatible releases. The adapter uses JobSpy's current `fetch_description` option and captures both lowercase loggers and structured DataFrame error metadata. A successful install is not proof that a live job board is available; fixture/API tests and run health remain separate checks.
+
+## Source layout and editor setup
+
+```text
+src/job_finder/      Installed application, adapters, matching, notifications, state tools
+tests/              Offline regression tests and fixtures
+config.yaml         Operational defaults
+candidate-profile.yaml
+data/               Persistent delivery and discovery state
+.github/            CI, security scans and Dependabot configuration
+.vscode/            Shared interpreter, editor, test, task and debugger settings
+development-plans/  Audit findings, decisions and validation records
+```
+
+Open the repository folder in VS Code, run `uv sync --locked`, and install its recommended Python, Pyrefly and Ruff extensions. The workspace points Python at `.venv`, and both analysis tools use that environment. If VS Code previously selected another interpreter, use **Python: Select Interpreter** and choose `.venv/Scripts/python.exe` on Windows or `.venv/bin/python` elsewhere; a saved selection takes precedence over the default. **Tasks: Run Build Task** runs lint, type/syntax analysis, compilation and offline tests. Test Explorer uses unittest. The debug configuration performs a live scrape with `--dry-run`.
+
+All application imports use `job_finder.*`. Run `uv run --locked python -m job_finder` (or `uv run --locked job-finder`) instead of the former root `main.py`. Workers, workflow and recovery tools also use the package namespace. Editable installs resolve configuration and state relative to the checkout even when launched from another directory. `JOB_FINDER_HOME` can select an explicit configuration/data root. A standalone wheel requires that root to contain `config.yaml` and the referenced profile; these personal configuration files and delivery state are deliberately not bundled. CLI file arguments remain relative to the caller's working directory.
+
+Ruff checks import order, unused/undefined names and selected Python errors. Pyrefly checks types and parsing across `src` and `tests`; `compileall` additionally validates syntax with the actual Python 3.14.7 interpreter. Existing targeted Pyrefly suppressions are retained, so a clean result does not imply complete static type coverage.
 
 ## Offline evaluation and live dry runs
 
@@ -51,13 +72,13 @@ These commands send no Discord messages and do not save delivery/discovery state
 
 ~~~powershell
 # Fixed-date synthetic regression benchmark.
-uv run --locked python -m evaluation tests/fixtures/matching.json
+uv run --locked python -m job_finder.evaluation tests/fixtures/matching.json
 
 # Evaluate saved job evidence using the current date/profile.
-uv run --locked python main.py --replay output/latest/run.json --report-dir output/replay
+uv run --locked python -m job_finder --replay output/latest/run.json --report-dir output/replay
 
 # Live source requests and an evaluation report.
-uv run --locked python main.py --dry-run
+uv run --locked python -m job_finder --dry-run
 ~~~
 
 Replay makes no job-board requests. Dry run does make requests, respecting configured budgets. Both can write reports. Use **--state** and **--discovery-state** for isolated evaluation paths; missing state files are not created by dry-run/replay.
@@ -105,10 +126,10 @@ Set **DISCORD_WEBHOOK_URL** in repository Actions secrets. It is the only notifi
 
 ~~~powershell
 # Explicitly sends one message.
-uv run --locked python main.py --test-notify
+uv run --locked python -m job_finder --test-notify
 
 # Normal discovery, delivery, and state persistence.
-uv run --locked python main.py
+uv run --locked python -m job_finder
 ~~~
 
 Delivery records individual outcomes and requests Discord message confirmation. Server/rate-limit retries are bounded; network timeouts are uncertain because Discord may already have accepted a message.
@@ -122,8 +143,8 @@ Exactly-once delivery is not guaranteed across an uncertain network outcome or a
 Each state save keeps its previous valid JSON in a sibling **.bak** file. Corruption stops dispatch and cannot overwrite that backup. Export a separate recovery candidate:
 
 ~~~powershell
-uv run --locked python -m storage.recover --backup data/seen_jobs.json.bak --output output/recovered-delivery.json
-uv run --locked python -m storage.recover --kind discovery --backup data/discovery_state.json.bak --output output/recovered-discovery.json
+uv run --locked python -m job_finder.storage.recover --backup data/seen_jobs.json.bak --output output/recovered-delivery.json
+uv run --locked python -m job_finder.storage.recover --kind discovery --backup data/discovery_state.json.bak --output output/recovered-discovery.json
 ~~~
 
 Compare delivery recovery candidates with later Discord receipts and Git history before replacing live state. A previous snapshot may lack recent successful acknowledgements; automatic fallback could duplicate alerts.
@@ -133,9 +154,9 @@ Compare delivery recovery candidates with later Discord receipts and Git history
 Copy a job ID from a card or saved run report, then label it locally:
 
 ~~~powershell
-uv run --locked python -m feedback label --job-id "ID_FROM_REPORT" --label relevant --note "Junior React role in Karachi"
-uv run --locked python -m feedback export
-uv run --locked python -m evaluation output/user-benchmark.json --output output/user-evaluation.json
+uv run --locked python -m job_finder.feedback label --job-id "ID_FROM_REPORT" --label relevant --note "Junior React role in Karachi"
+uv run --locked python -m job_finder.feedback export
+uv run --locked python -m job_finder.evaluation output/user-benchmark.json --output output/user-evaluation.json
 ~~~
 
 Labels are **relevant**, **not_relevant**, or **uncertain**. Feedback defaults to ignored **output/feedback.json** and never changes delivery history. Exported cases retain capture time, so later evaluation does not turn historical relevance labels into age failures. Keep tuning and held-out feedback in separate files.
@@ -147,6 +168,8 @@ The default-branch production workflow runs at minute 17 every three hours UTC a
 Automated state commits explicitly use **Faraz Hussain** `<132701966+asteroidcrib729@users.noreply.github.com>` as author and **github-actions[bot]** `<41898282+github-actions[bot]@users.noreply.github.com>` as committer. The state-persistence step supplies all four `GIT_AUTHOR_*`/`GIT_COMMITTER_*` values, and the writer honors them. Its defaults match this repository's workflow. Manual and scheduled triggers use the same identities; existing history is unchanged. Test and diagnostic workflows are read-only and do not create commits.
 
 Feature-branch manual dispatch cannot send production alerts. A separate read-only CI workflow tests code pushes/pull requests without a Discord secret.
+
+Quality CI also runs Ruff, Pyrefly, Python syntax compilation and a package build. Dependabot checks the uv manifest/lock and GitHub Actions weekly via `.github/dependabot.yml`; its pull requests receive the same tests and dependency review as other PRs, with high/critical newly introduced vulnerabilities blocked. Updates require review and are not automatically merged. The security workflow runs on code pushes, pull requests, weekly and on manual dispatch: `uv audit --locked` checks runtime/development dependencies against known advisories, and CodeQL scans Python with the extended security query suite. Findings are available in GitHub's **Security → Code scanning** view. These scans do not access the Discord secret or write delivery state. Known-advisory checks are a point-in-time result, not a guarantee of security.
 
 CLI exit codes remain **0** healthy/valid-empty/idle, **1** fatal configuration/state failure, and **2** degraded source or delivery outcome. Actions uses **workflow_runner.py** to distinguish partial coverage from operational failure: successful primary discovery with optional source problems produces a visible warning; total due primary discovery failure, notification failure, corruption, or failed state persistence still fails the run. A Google/recruiter probe cannot fail a cycle whose primary queries are intentionally not due. Zero qualified matches alone is not a failure. State commit/push failures are surfaced. The writer builds a state-only commit on the latest remote tree using a temporary index, preserving concurrent code changes. Acknowledgements override pending jobs; retention pruning and queue retirement are reconciled against the starting state. Normal fast-forward pushes retry branch races. Persistent failures retain state files/backups in a seven-day recovery artifact. There is no force push or working-tree rebase.
 

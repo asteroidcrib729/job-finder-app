@@ -1,6 +1,7 @@
 import unittest
 from unittest.mock import patch
-from scrapers.base import Job
+
+from job_finder.scrapers.base import Job
 
 
 class OfflineTestCase(unittest.TestCase):

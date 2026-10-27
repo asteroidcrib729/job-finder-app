@@ -1,5 +1,7 @@
 # Job Finder App: implemented solutions and acceptance plan
 
+**Source layout and quality update (2026-10-27):** Application code now lives in the installed `src/job_finder` package. Configuration/profile YAML and production state retain their root paths. Ruff, Pyrefly type/syntax checks, interpreter compilation, shared VS Code settings, Dependabot uv/Actions updates, PR dependency review and CodeQL/advisory scanning are configured. Local validation: 83 offline regressions, 54/54 synthetic cases, Ruff, Pyrefly (0 errors, 17 existing suppressions), compilation, package build and dependency consistency passed; audit found no known vulnerabilities in 41 packages. Hosted validation is pending publication. See [layout and quality record](SOURCE-LAYOUT-2026-10-27.md).
+
 **Latest update (2026-10-27):** Migrated to Astral uv with an actual dedicated `.venv`, exact Python **3.14.7**, `pyproject.toml`, `uv.lock`, separate runtime/development dependencies and locked CI environments. JobSpy/pandas/NumPy were upgraded for compatibility; the worker now handles the new API's logging and structured failures. Actions explicitly authors state commits as **Faraz Hussain** and commits them as **github-actions[bot]**, using their respective GitHub noreply addresses. Added project/commit instructions and regression coverage. All 80 local tests, 54 synthetic cases, dependency checks, static analysis and advisory audit pass. See [migration record](UV-MIGRATION-2026-10-27.md) for versions, evidence and limits. Older Python/requirements/committer statements below describe historical baselines.
 
 **Latest update (2026-09-09):** Scheduled review alerts are enabled at the owner's request, with labeled digests of up to five jobs and the existing shared 20-job run cap. All pending Pyrefly configuration/ignore-comment changes are included. All 75 offline tests and dependency checks pass; Pyrefly reports zero errors with suppressions. The latest inspected production run had 1 already-notified qualified job, 25 review candidates and 310 rejected jobs. Discord destination/message retrieval is verified. See [filtering assessment and review-alert rollout](FILTERING-REVIEW-2026-09-09.md) for exact rule strictness, evidence, and remaining accuracy concerns. The September 8 status below is a historical implementation baseline; published Linux CI and real Discord delivery have since been verified.
@@ -78,7 +80,7 @@ Start with junior frontend, junior full-stack, junior backend, Python developer,
 
 ## S-02 — Replace substring qualification with role-aware skill matching
 
-**Implemented:** Role-aware aliases, occupation checks and mandatory skill groups replace substring-only matching. [Code](../filtering/resume_filter.py), [checks](../tests/test_matching.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Role-aware aliases, occupation checks and mandatory skill groups replace substring-only matching. [Code](../src/job_finder/filtering/resume_filter.py), [checks](../tests/test_matching.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-02.** Normalize text with Unicode normalization, whitespace handling, and punctuation-aware aliases. Use explicit technology aliases such as React/React.js/ReactJS, Next.js/NextJS, Node.js/NodeJS, PostgreSQL/Postgres, and front-end/frontend. Handle punctuation in C#, C++, and .NET deliberately instead of relying only on generic word boundaries.
 
@@ -90,7 +92,7 @@ Missing descriptions should trigger evidence collection/review, not automatic ac
 
 ## S-03 — Parse experience requirements with context and alternatives
 
-**Implemented:** Contextual experience parsing handles minima, ranges, months, written numbers and preference clauses. [Code](../filtering/resume_filter.py), [checks](../tests/test_matching.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Contextual experience parsing handles minima, ranges, months, written numbers and preference clauses. [Code](../src/job_finder/filtering/resume_filter.py), [checks](../tests/test_matching.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-03.** Return structured requirements: minimum/maximum months or years, required/preferred status, relevant skill/role, exact evidence span, and uncertainty. Normalize hyphens/en dashes and ranges; preserve zero; support common written numbers and months. Exclude degree duration, company age, and unrelated narrative numbers using sentence context.
 
@@ -102,7 +104,7 @@ Policy should reflect internship-level experience: strong junior/fresh eligibili
 
 ## S-04 — Obtain enough description evidence before qualification
 
-**Implemented:** Description completeness, LinkedIn detail requests and bounded Rozee/post caches preserve qualification evidence. [Code](../scrapers/cache.py), [checks](../tests/test_cache_pagination.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Description completeness, LinkedIn detail requests and bounded Rozee/post caches preserve qualification evidence. [Code](../src/job_finder/scrapers/cache.py), [checks](../tests/test_cache_pagination.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-04.** Enable LinkedIn detail fetching for selected queries or add a supported detail-enrichment step after candidate deduplication. Use bounded detail-fetch budgets and cache by source ID/content version. Preserve descriptions and job-level fields returned by JobSpy. Extract Rozee detail text and recruiter post content only when accessible through the supported source path.
 
@@ -112,7 +114,7 @@ Add `description_status` such as full/snippet/missing/fetch_failed and evidence 
 
 ## S-05 — Separate search targeting from listing work mode
 
-**Implemented:** Independent local/remote query tracks preserve listing-derived work mode. [Code](../scrapers/jobspy_adapter.py), [checks](../tests/test_sources.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Independent local/remote query tracks preserve listing-derived work mode. [Code](../src/job_finder/scrapers/jobspy_adapter.py), [checks](../tests/test_sources.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-05.** Define separate query profiles for Karachi local, Pakistan remote, and globally accessible remote discovery. Select locations and country parameters per source; do not replace every remote location with Karachi or assume one global country setting works everywhere.
 
@@ -122,7 +124,7 @@ Preserve query metadata as `search_track`/`query_id`. Derive `work_mode` from li
 
 ## S-06 — Validate Karachi and remote-country eligibility independently
 
-**Implemented:** Karachi and Pakistan-eligible remote rules distinguish explicit compatibility from unknown restrictions. [Code](../filtering/resume_filter.py), [checks](../tests/test_matching.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Karachi and Pakistan-eligible remote rules distinguish explicit compatibility from unknown restrictions. [Code](../src/job_finder/filtering/resume_filter.py), [checks](../tests/test_matching.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-06.** Normalize city/country/work-mode fields. Require explicit Karachi evidence for local on-site/hybrid delivery; country-only Pakistan goes to enrichment/review. Prefer a city match over a blacklist and use exact/normalized geography aliases, including accented forms. Neighborhood names supplement verified Karachi evidence instead of establishing the city by themselves.
 
@@ -134,7 +136,7 @@ Negated statements such as `no remote work` and `work from home is not permitted
 
 ## S-07 — Preserve compensation and support a distinct USD remote track
 
-**Implemented:** Salary evidence preserves disclosed currency and routes ambiguous/other-currency remote pay to review. [Code](../filtering/resume_filter.py), [checks](../tests/test_matching.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Salary evidence preserves disclosed currency and routes ambiguous/other-currency remote pay to review. [Code](../src/job_finder/filtering/resume_filter.py), [checks](../tests/test_matching.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-07.** Extend `Job` with salary min/max, ISO currency, interval, raw salary text, evidence source, and confidence. Preserve source values and distinguish structured disclosures from description extraction or estimates. Do not infer USD merely from `$`, the source's default currency, employer location, or a conversion from PKR.
 
@@ -144,7 +146,7 @@ Maintain at least three statuses: USD confirmed, other currency confirmed, and u
 
 ## S-08 — Make query construction source-specific
 
-**Implemented:** Source-specific parameters correct Indeed remote/date behavior and explicitly construct Google queries. [Code](../scrapers/jobspy_adapter.py), [checks](../tests/test_sources.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Source-specific parameters correct Indeed remote/date behavior and explicitly construct Google queries. [Code](../src/job_finder/scrapers/jobspy_adapter.py), [checks](../tests/test_sources.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-08.** Introduce a small capability table and per-source parameter builders inside the existing adapter structure. For the inspected Indeed behavior, choose either remote filtering with local publication-date filtering, or date filtering with strict local work-mode verification; optionally run two budgeted query variants and merge. Do not send the incompatible combination and assume both filters applied.
 
@@ -154,7 +156,7 @@ Build explicit Google queries per track, including intended role/location/freshn
 
 ## S-09 — Repair Rozee extraction using verified listing evidence
 
-**Implemented:** Rozee uses verified bootstrap fields and city ID, bounded pagination, caches and blocking/parse diagnostics. [Code](../scrapers/rozee_scraper.py), [checks](../tests/test_cache_pagination.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Rozee uses verified bootstrap fields and city ID, bounded pagination, caches and blocking/parse diagnostics. [Code](../src/job_finder/scrapers/rozee_scraper.py), [checks](../tests/test_cache_pagination.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-09.** First capture a small, current, read-only sample of search and detail pages and confirm the meaning of the city filter. Store sanitized HTML fixtures. Prefer structured job data where present; otherwise use narrow verified card/anchor selectors, URL joining, and proper query encoding. Parse actual location, description, posting/expiry dates, employer, and experience. Use bounded pagination and deduplicate before detail fetches.
 
@@ -164,7 +166,7 @@ Distinguish legitimate zero results from non-200 responses, challenge pages, mis
 
 ## S-10 — Treat recruiter announcements as a separate evidence type
 
-**Implemented:** Recruiter posts use host checks, saved cadence, independent explicit role sections and original-post provenance. [Code](../scrapers/post_roles.py), [checks](../tests/test_review_feedback.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Recruiter posts use host checks, saved cadence, independent explicit role sections and original-post provenance. [Code](../src/job_finder/scrapers/post_roles.py), [checks](../tests/test_review_feedback.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-10.** Add an enable flag, configurable query families, result budget, and cadence. Validate parsed hostnames against LinkedIn hosts and expected post paths before fetching. Preserve full original titles and bodies; truncate only presentation text, after classification and identity assignment.
 
@@ -174,7 +176,7 @@ Model recruiter posts as leads unless a specific role and its requirements can b
 
 ## S-11 — Separate publication date, discovery time, and active status
 
-**Implemented:** Publication, expiry, discovery and active/unknown/closed states remain separate evidence. [Code](../scrapers/base.py), [checks](../tests/test_sources.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Publication, expiry, discovery and active/unknown/closed states remain separate evidence. [Code](../src/job_finder/scrapers/base.py), [checks](../tests/test_sources.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-11.** Use timezone-aware `posted_at`, `first_seen_at`, `last_seen_at`, `expires_at` when supplied, and date provenance/precision. A search time limit is a discovery hint, not a verified publication timestamp. Replace old-year blacklists with date parsing linked to publication metadata; dates mentioned in eligibility text must not determine age.
 
@@ -184,7 +186,7 @@ Track active/closed/unknown independently of freshness. Treat 404/410 or explici
 
 ## S-12 — Improve retrieval coverage with measured query budgets
 
-**Implemented:** Query-specific pagination, successful watermarks, budgets, yield reporting and longer zero-yield intervals improve coverage control. [Code](../scrapers/metrics.py), [checks](../tests/test_query_metrics.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Query-specific pagination, successful watermarks, budgets, yield reporting and longer zero-yield intervals improve coverage control. [Code](../src/job_finder/scrapers/metrics.py), [checks](../tests/test_query_metrics.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-12.** Start with a focused role-family matrix derived from the résumé: Next.js/React/frontend, TypeScript/Node/full-stack, Python/Django/Flask/backend, and graduate/associate software. Include local and remote variants separately. Avoid expanding every synonym across every source at once.
 
@@ -196,7 +198,7 @@ Add per-source timeouts, request budgets, bounded retries with backoff/jitter, a
 
 ## S-13 — Define and enforce the shared job-data contract
 
-**Implemented:** Null-safe normalization, isolated conversion failures and complete job round trips enforce the shared contract. [Code](../scrapers/base.py), [checks](../tests/test_sources.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Null-safe normalization, isolated conversion failures and complete job round trips enforce the shared contract. [Code](../src/job_finder/scrapers/base.py), [checks](../tests/test_sources.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-13.** Normalize pandas missing values with scalar-safe helpers before string/boolean conversion. Require nonempty title and valid HTTP(S) listing URL. Keep unknown company/location/date as unknown rather than `nan` or search-derived facts. Normalize optional description to a stable empty-string or explicit optional contract at the boundary, consistently used downstream.
 
@@ -206,7 +208,7 @@ Catch row conversion failures per row with source/query/field reason codes so va
 
 ## S-14 — Use stable source identity and merge duplicate evidence
 
-**Implemented:** Native IDs, canonical URLs, explicit aliases and exact merging replace unstable title-only identity. [Code](../scrapers/base.py), [checks](../tests/test_sources.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Native IDs, canonical URLs, explicit aliases and exact merging replace unstable title-only identity. [Code](../src/job_finder/scrapers/base.py), [checks](../tests/test_sources.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-14.** Prefer a namespaced native source ID and canonical URL. Strip known tracking parameters while retaining identity-bearing query values such as Indeed's `jk`. Normalize host/path conventions carefully. Preserve links to every contributing source and direct employer URLs.
 
@@ -218,7 +220,7 @@ Version identity/state changes and retain old aliases during migration so all jo
 
 ## S-15 — Acknowledge delivery per job
 
-**Implemented:** Per-job acknowledgements and a persistent deferred queue prevent failed/unsent jobs from being marked delivered. [Code](../storage/tracker.py), [checks](../tests/test_delivery.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Per-job acknowledgements and a persistent deferred queue prevent failed/unsent jobs from being marked delivered. [Code](../src/job_finder/storage/tracker.py), [checks](../tests/test_delivery.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-15.** Make Discord/manager return a structured result containing delivered IDs, failed IDs, and failure/uncertain status per job. `main.py` must mark only confirmed deliveries seen. Capture pending jobs with sufficient normalized payload/evidence to retry independently of whether the source returns them on the next scrape.
 
@@ -228,7 +230,7 @@ Do not replace the boolean with `all_success` and keep batch marking: that would
 
 ## S-16 — Check every webhook attempt and handle uncertainty explicitly
 
-**Implemented:** Checked bounded retries distinguish confirmed, failed, uncertain and permanent delivery outcomes. [Code](../notifiers/discord.py), [checks](../tests/test_delivery.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Checked bounded retries distinguish confirmed, failed, uncertain and permanent delivery outcomes. [Code](../src/job_finder/notifiers/discord.py), [checks](../tests/test_delivery.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-16.** Count success only after a checked successful response. Validate rate-limit delay values, bound attempts and total wait time, and retry appropriate transient failures. Permanent payload/authentication failures should produce actionable errors rather than repeated identical POSTs.
 
@@ -240,7 +242,7 @@ A network timeout after Discord accepted a request is ambiguous; local JSON cann
 
 ## S-17 — Validate and safely render each Discord card
 
-**Implemented:** Bounded payloads, mention suppression and per-job error isolation support cards and review digests. [Code](../notifiers/discord.py), [checks](../tests/test_review_feedback.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Bounded payloads, mention suppression and per-job error isolation support cards and review digests. [Code](../src/job_finder/notifiers/discord.py), [checks](../tests/test_review_feedback.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-17.** Build and validate each embed inside per-job error handling. Bound title, description, individual fields, footer, and aggregate length according to Discord's limits; supply safe placeholders for missing display data and validate listing URLs. Escape untrusted Markdown where needed and suppress unintended mentions in any message content. [Discord embed limits](https://docs.discord.com/developers/resources/message#embed-object-embed-limits).
 
@@ -250,7 +252,7 @@ Preserve useful remote geography such as `Remote — Pakistan eligible` or `Remo
 
 ## S-18 — Make JSON state durable and failures visible
 
-**Implemented:** Validated atomic journals, previous-good backups and recovery-candidate export preserve history on failure. [Code](../storage/recover.py), [checks](../tests/test_state_recovery.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Validated atomic journals, previous-good backups and recovery-candidate export preserve history on failure. [Code](../src/job_finder/storage/recover.py), [checks](../tests/test_state_recovery.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-18.** Write a temporary file in the destination directory, flush/close it, then atomically replace the state file. Validate the schema and timestamps on load, preserve a backup or diagnostic copy on corruption, and surface failures to the orchestrator. Create `storage_file.parent` for custom paths. Quarantine bad entries where possible instead of resetting all valid history.
 
@@ -260,7 +262,7 @@ Store acknowledged/pending/uncertain statuses separately, with timestamps and sc
 
 ## S-19 — Serialize production runs and reconcile state commits
 
-**Implemented:** Serialized default-branch execution and three-way state-only Git commits preserve concurrent code/history changes. [Code](../storage/sync_state.py), [checks](../tests/test_state_recovery.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Serialized default-branch execution and three-way state-only Git commits preserve concurrent code/history changes. [Code](../src/job_finder/storage/sync_state.py), [checks](../tests/test_state_recovery.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-19.** Add one concurrency group for the production state writer, with `cancel-in-progress: false`. Ensure scheduled/manual runs writing the same state use that same group; prevent feature-branch evaluation from sending production alerts or sharing state. Set a realistic explicit job timeout and smaller source budgets. GitHub supports workflow/job concurrency controls. [GitHub concurrency documentation](https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/control-workflow-concurrency).
 
@@ -282,7 +284,7 @@ Record Python and relevant package versions in each run artifact. Align developm
 
 ## S-21 — Report source health and meaningful process outcomes
 
-**Implemented:** Source health, query yield/budgets, reason counts, reports and meaningful exit codes make failures visible. [Code](../main.py), [checks](../tests/test_pipeline.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Source health, query yield/budgets, reason counts, reports and meaningful exit codes make failures visible. [Code](../src/job_finder/main.py), [checks](../tests/test_pipeline.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-21.** Return source outcomes alongside jobs: success, valid_empty, partial, blocked, timed_out, parse_failed, or unsupported. Report query duration/count, rows rejected during conversion, missing-description share, freshness/eligibility uncertainty, filter reason counts, duplicate counts, and confirmed/pending/failed deliveries.
 
@@ -294,7 +296,7 @@ Keep secrets, webhook URLs, authorization headers, and unnecessary contact infor
 
 ## S-22 — Build a benchmark that measures both bad alerts and missed jobs
 
-**Implemented:** Offline tests, a fixed-date 54-case synthetic benchmark and capture-time feedback evaluation support regression checking. [Code](../evaluation.py), [checks](../tests/test_matching.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Offline tests, a fixed-date 54-case synthetic benchmark and capture-time feedback evaluation support regression checking. [Code](../src/job_finder/evaluation.py), [checks](../tests/test_matching.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-22.** Add meaningful offline tests around the reproduced failures, plus adapter HTML/DataFrame fixtures and per-job delivery/state tests. Move the live scratch search behind an explicit entry point or outside automatic test collection. CI tests must not query job boards or send notifications.
 
@@ -317,7 +319,7 @@ Trace each missed manual example through retrieval → normalization → enrichm
 
 ## S-23 — Make configuration truthful, validated, and documented
 
-**Implemented:** Nested validated configuration, active source/policy settings and updated README replace misleading controls. [Code](../config.py), [checks](../tests/test_pipeline.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Nested validated configuration, active source/policy settings and updated README replace misleading controls. [Code](../src/job_finder/config.py), [checks](../tests/test_pipeline.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-23.** Define a schema for profile, query tracks, source options, freshness, matching thresholds, notification routing, and state. Validate types/ranges/source names at startup with field-specific errors. Use a deliberate nested-default strategy or fully explicit validated sections; test partial overrides.
 
@@ -327,7 +329,7 @@ Wire all documented settings into the active path. Consolidate or retire the unu
 
 ## S-24 — Rank qualified candidates and explain each alert
 
-**Implemented:** Constraint-first ranking, explanations, optional review digests and job-ID relevance feedback support usable alerts. [Code](../feedback.py), [checks](../tests/test_review_feedback.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Constraint-first ranking, explanations, optional review digests and job-ID relevance feedback support usable alerts. [Code](../src/job_finder/feedback.py), [checks](../tests/test_review_feedback.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-24.** Apply ranking only after mandatory role/geography/experience constraints. Return a structured decision with tier, score, confidence, matched evidence, gaps, and reason codes. Start with an interpretable weighted approach rather than requiring an external model.
 

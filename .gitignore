@@ -7,7 +7,14 @@ venv/
 ENV/
 .env
 .idea/
-.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.ruff_cache/
+dist/
+*.egg-info/
 *.log
 *.csv
 Resume - Faraz Hussain.pdf

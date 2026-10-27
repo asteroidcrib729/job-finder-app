@@ -1,10 +1,11 @@
 from datetime import datetime, timedelta, timezone
 from unittest.mock import patch
-from config import load_config
-from scrapers.base import utc_now
-from scrapers.common import SourceError
-from scrapers.jobspy_adapter import fetch_jobspy_jobs
-from scrapers.metrics import query_metrics
+
+from job_finder.config import load_config
+from job_finder.scrapers.base import utc_now
+from job_finder.scrapers.common import SourceError
+from job_finder.scrapers.jobspy_adapter import fetch_jobspy_jobs
+from job_finder.scrapers.metrics import query_metrics
 from tests.support import OfflineTestCase
 
 
@@ -29,7 +30,7 @@ class QueryMetricsTests(OfflineTestCase):
         self.assertEqual(first.updates[key]["qualified"], 0)
         self.assertEqual(first.updates[key]["review"], 0)
         first.updates[key]["last_success"] = (datetime.now(timezone.utc) - timedelta(hours=4)).isoformat()
-        with patch("scrapers.jobspy_adapter.run_query") as run:
+        with patch("job_finder.scrapers.jobspy_adapter.run_query") as run:
             skipped = fetch_jobspy_jobs(config, first.updates)
         run.assert_not_called()
         self.assertTrue(skipped.report.skipped)
@@ -46,7 +47,7 @@ class QueryMetricsTests(OfflineTestCase):
         key = next(iter(first.updates))
         old = (datetime.now(timezone.utc) - timedelta(days=2)).isoformat()
         first.updates[key]["last_success"] = old
-        with patch("scrapers.jobspy_adapter.run_query", side_effect=SourceError("blocked", "fixture")):
+        with patch("job_finder.scrapers.jobspy_adapter.run_query", side_effect=SourceError("blocked", "fixture")):
             failed = fetch_jobspy_jobs(config, first.updates)
         metrics = query_metrics([failed], config)
         self.assertFalse(failed.updates)

@@ -1,0 +1,42 @@
+{
+    "version": "2.0.0",
+    "options": {"cwd": "${workspaceFolder}"},
+    "tasks": [
+        {
+            "label": "uv: sync environment",
+            "type": "process", "command": "uv",
+            "args": ["sync", "--locked"], "problemMatcher": []
+        },
+        {
+            "label": "Ruff: lint",
+            "type": "process", "command": "uv",
+            "args": ["run", "--locked", "ruff", "check", "src", "tests"],
+            "problemMatcher": []
+        },
+        {
+            "label": "Pyrefly: types and syntax",
+            "type": "process", "command": "uv",
+            "args": ["run", "--locked", "pyrefly", "check"],
+            "problemMatcher": []
+        },
+        {
+            "label": "Python: compile syntax",
+            "type": "process", "command": "uv",
+            "args": ["run", "--locked", "python", "-m", "compileall", "-q", "src", "tests"],
+            "problemMatcher": []
+        },
+        {
+            "label": "Python: offline tests",
+            "type": "process", "command": "uv",
+            "args": ["run", "--locked", "python", "-m", "unittest", "discover", "-s", "tests", "-v"],
+            "problemMatcher": []
+        },
+        {
+            "label": "Quality: all checks",
+            "dependsOrder": "sequence",
+            "dependsOn": ["Ruff: lint", "Pyrefly: types and syntax", "Python: compile syntax", "Python: offline tests"],
+            "group": {"kind": "build", "isDefault": true},
+            "problemMatcher": []
+        }
+    ]
+}

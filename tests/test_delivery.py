@@ -3,10 +3,12 @@ import tempfile
 from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
+
 import requests
-from notifiers.discord import DiscordNotifier, DeliveryOutcome
-from storage.tracker import JobTracker, StateError, atomic_write_json
-from scrapers.base import legacy_id
+
+from job_finder.notifiers.discord import DiscordNotifier
+from job_finder.scrapers.base import legacy_id
+from job_finder.storage.tracker import JobTracker, StateError, atomic_write_json
 from tests.support import OfflineTestCase, job
 
 
@@ -22,7 +24,7 @@ class DeliveryTests(OfflineTestCase):
             jobs = [job("a"), job("b")]
             tracker.enqueue(jobs)
             notifier = DiscordNotifier("https://example.test/webhook", max_attempts=1, sleep=lambda _: None)
-            with patch("notifiers.discord.requests.post", side_effect=[response(200, {"id": "message-1"}), response(500)]):
+            with patch("job_finder.notifiers.discord.requests.post", side_effect=[response(200, {"id": "message-1"}), response(500)]):
                 result = notifier.send_jobs(jobs, tracker.record_delivery)
             self.assertEqual(result.delivered_ids, [jobs[0].job_id])
             self.assertEqual(result.failed_ids, [jobs[1].job_id])
@@ -34,27 +36,27 @@ class DeliveryTests(OfflineTestCase):
 
     def test_retry_response_is_checked(self):
         notifier = DiscordNotifier("https://example.test/webhook", max_attempts=2, sleep=lambda _: None)
-        with patch("notifiers.discord.requests.post", side_effect=[response(429, {"retry_after": 0}), response(500)]):
+        with patch("job_finder.notifiers.discord.requests.post", side_effect=[response(429, {"retry_after": 0}), response(500)]):
             self.assertFalse(notifier.send_jobs([job()]))
-        with patch("notifiers.discord.requests.post", side_effect=[response(429, {"retry_after": 0}), response(200, {"id": "1"})]) as post:
+        with patch("job_finder.notifiers.discord.requests.post", side_effect=[response(429, {"retry_after": 0}), response(200, {"id": "1"})]) as post:
             result = notifier.send_jobs([job()])
             self.assertTrue(result)
             self.assertEqual(post.call_args.kwargs["params"], {"wait": "true"})
 
     def test_long_rate_limit_defers_instead_of_retrying_early(self):
         notifier = DiscordNotifier("https://example.test/webhook", sleep=lambda _: None)
-        with patch("notifiers.discord.requests.post", return_value=response(429, {"retry_after": 600})) as post:
+        with patch("job_finder.notifiers.discord.requests.post", return_value=response(429, {"retry_after": 600})) as post:
             result = notifier.send_jobs([job()])
         self.assertEqual(post.call_count, 1)
         self.assertEqual(result.outcomes[0].status, "failed")
 
     def test_timeout_is_uncertain_and_permanent_error_is_not_retried(self):
         notifier = DiscordNotifier("https://example.test/webhook", sleep=lambda _: None)
-        with patch("notifiers.discord.requests.post", side_effect=requests.Timeout) as post:
+        with patch("job_finder.notifiers.discord.requests.post", side_effect=requests.Timeout) as post:
             result = notifier.send_jobs([job()])
             self.assertEqual(post.call_count, 1)
             self.assertEqual(result.outcomes[0].status, "uncertain")
-        with patch("notifiers.discord.requests.post", return_value=response(400)) as post:
+        with patch("job_finder.notifiers.discord.requests.post", return_value=response(400)) as post:
             self.assertEqual(notifier.send_jobs([job()]).outcomes[0].status, "permanent_failure")
             self.assertEqual(post.call_count, 1)
 
@@ -71,7 +73,7 @@ class DeliveryTests(OfflineTestCase):
         self.assertLessEqual(size, 6000)
         broken = job("broken")
         broken.url = "javascript:bad"
-        with patch("notifiers.discord.requests.post", return_value=response(204)) as post:
+        with patch("job_finder.notifiers.discord.requests.post", return_value=response(204)) as post:
             result = notifier.send_jobs([broken, big])
         self.assertEqual(post.call_count, 1)
         self.assertEqual(result.outcomes[0].status, "permanent_failure")
@@ -81,7 +83,7 @@ class DeliveryTests(OfflineTestCase):
         notifier = DiscordNotifier("https://example.test/webhook", sleep=lambda _: None)
         def failed_save(job, outcome):
             raise StateError("fixture write failure")
-        with patch("notifiers.discord.requests.post", return_value=response(204)) as post:
+        with patch("job_finder.notifiers.discord.requests.post", return_value=response(204)) as post:
             with self.assertRaises(StateError):
                 notifier.send_jobs([job("a"), job("b")], failed_save)
         self.assertEqual(post.call_count, 1)
@@ -111,7 +113,7 @@ class DeliveryTests(OfflineTestCase):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "state.json"
             atomic_write_json(path, {"old": 1})
-            with patch("storage.tracker.os.replace", side_effect=OSError):
+            with patch("job_finder.storage.tracker.os.replace", side_effect=OSError):
                 with self.assertRaises(StateError):
                     atomic_write_json(path, {"new": 2})
             self.assertEqual(json.loads(path.read_text()), {"old": 1})

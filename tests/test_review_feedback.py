@@ -1,15 +1,16 @@
 import json
-from pathlib import Path
 import tempfile
+from pathlib import Path
 from unittest.mock import patch
-from config import load_config
-from evaluation import evaluate_benchmark
-from feedback import record_feedback, export_benchmark
-from filtering.resume_filter import evaluate_job
-from notifiers.discord import DiscordNotifier
-from scrapers.base import Job, merge_jobs, utc_now
-from scrapers.post_roles import split_post_roles
-from storage.tracker import JobTracker, StateError, atomic_write_json
+
+from job_finder.config import load_config
+from job_finder.evaluation import evaluate_benchmark
+from job_finder.feedback import export_benchmark, record_feedback
+from job_finder.filtering.resume_filter import evaluate_job
+from job_finder.notifiers.discord import DiscordNotifier
+from job_finder.scrapers.base import Job, merge_jobs
+from job_finder.scrapers.post_roles import split_post_roles
+from job_finder.storage.tracker import JobTracker, StateError, atomic_write_json
 from tests.support import OfflineTestCase, job
 from tests.test_delivery import response
 from tests.test_matching import NOW
@@ -61,7 +62,7 @@ class ReviewFeedbackTests(OfflineTestCase):
             tracker = JobTracker(Path(directory) / "state")
             tracker.enqueue(jobs)
             notifier = DiscordNotifier("https://example.test/webhook", sleep=lambda _: None)
-            with patch("notifiers.discord.requests.post", side_effect=[
+            with patch("job_finder.notifiers.discord.requests.post", side_effect=[
                 response(200, {"id": "digest-1"}), response(200, {"id": "digest-2"})]) as post, \
                  patch.object(tracker, "save", wraps=tracker.save) as save:
                 result = notifier.send_jobs(jobs, tracker.record_delivery, review_digest=True,
@@ -84,12 +85,12 @@ class ReviewFeedbackTests(OfflineTestCase):
             tracker = JobTracker(Path(directory) / "state")
             tracker.enqueue(jobs)
             notifier = DiscordNotifier("https://example.test/webhook", max_attempts=1, sleep=lambda _: None)
-            with patch("notifiers.discord.requests.post", return_value=response(500)):
+            with patch("job_finder.notifiers.discord.requests.post", return_value=response(500)):
                 result = notifier.send_jobs(jobs, tracker.record_delivery, True, tracker.record_deliveries)
             self.assertEqual(len(result.failed_ids), 7)
             self.assertFalse(tracker.seen_data)
             self.assertEqual(len(tracker.pending), 7)
-            with patch("notifiers.discord.requests.post", return_value=response(200)) as post:
+            with patch("job_finder.notifiers.discord.requests.post", return_value=response(200)) as post:
                 with self.assertRaises(StateError):
                     notifier.send_jobs(jobs, review_digest=True,
                         on_batch_result=lambda _: (_ for _ in ()).throw(StateError("fixture save failure")))

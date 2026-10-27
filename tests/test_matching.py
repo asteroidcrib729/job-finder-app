@@ -1,9 +1,10 @@
 import json
 from datetime import datetime
 from pathlib import Path
-from config import load_config
-from filtering.resume_filter import evaluate_job, experience_requirements, skills_in, rank_jobs
-from scrapers.base import Job
+
+from job_finder.config import load_config
+from job_finder.filtering.resume_filter import evaluate_job, experience_requirements, rank_jobs, skills_in
+from job_finder.scrapers.base import Job
 from tests.support import OfflineTestCase, job
 
 FIXTURES = Path(__file__).parent / "fixtures"

@@ -1,17 +1,17 @@
-import copy
-import json
 from datetime import datetime, timezone
 from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
+
 import pandas as pd
-from config import load_config
-from scrapers.base import Job, merge_jobs
-from scrapers.jobspy_adapter import build_query, row_to_job, fetch_jobspy_jobs, run_query
-from scrapers.common import SourceError, get_public
-from scrapers.rozee_scraper import parse_rozee, fetch_rozee_jobs
-from scrapers.linkedin_posts_scraper import valid_post_url, is_post_active_and_recent
-from scrapers.remote_feeds import parse_remotive, parse_wwr, fetch_remote_feeds
+
+from job_finder.config import load_config
+from job_finder.scrapers.base import Job, merge_jobs
+from job_finder.scrapers.common import SourceError, get_public
+from job_finder.scrapers.jobspy_adapter import build_query, fetch_jobspy_jobs, row_to_job, run_query
+from job_finder.scrapers.linkedin_posts_scraper import is_post_active_and_recent, valid_post_url
+from job_finder.scrapers.remote_feeds import fetch_remote_feeds, parse_remotive, parse_wwr
+from job_finder.scrapers.rozee_scraper import fetch_rozee_jobs, parse_rozee
 from tests.support import OfflineTestCase, job
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -106,7 +106,7 @@ class SourceTests(OfflineTestCase):
 
     def test_worker_timeout_is_classified(self):
         import subprocess
-        with patch("scrapers.jobspy_adapter.subprocess.run", side_effect=subprocess.TimeoutExpired("worker", 1)):
+        with patch("job_finder.scrapers.jobspy_adapter.subprocess.run", side_effect=subprocess.TimeoutExpired("worker", 1)):
             with self.assertRaises(SourceError) as context:
                 run_query({}, 1)
         self.assertEqual(context.exception.status, "timed_out")
@@ -137,7 +137,7 @@ class SourceTests(OfflineTestCase):
             self.assertIn("Lahore", rows[0].location)
         config = load_config()
         config["local_scrapers"]["max_queries"] = 1
-        with patch("scrapers.rozee_scraper.get_public", return_value=page((FIXTURES / "rozee_loading.html").read_text())):
+        with patch("job_finder.scrapers.rozee_scraper.get_public", return_value=page((FIXTURES / "rozee_loading.html").read_text())):
             result = fetch_rozee_jobs(config)
         self.assertEqual(result.report.status, "failed")
         self.assertEqual(result.report.queries[0].reason, "expected_listing_markup_missing")
@@ -146,7 +146,7 @@ class SourceTests(OfflineTestCase):
         config = load_config()
         config["local_scrapers"]["max_queries"] = 1
         html = '<script>var apResp = {"response":{"jobs":{"basic":[]},"numFound":0}};</script>'
-        with patch("scrapers.rozee_scraper.get_public", return_value=page(html)):
+        with patch("job_finder.scrapers.rozee_scraper.get_public", return_value=page(html)):
             result = fetch_rozee_jobs(config)
         self.assertEqual(result.report.status, "valid_empty")
 
@@ -154,9 +154,9 @@ class SourceTests(OfflineTestCase):
         self.assertTrue(valid_post_url("https://www.linkedin.com/posts/fixture"))
         self.assertFalse(valid_post_url("https://linkedin.com.evil.test/posts/fixture"))
         self.assertFalse(valid_post_url("https://example.test/posts/fixture"))
-        with patch("scrapers.linkedin_posts_scraper.inspect_post", side_effect=SourceError("blocked", "403")):
+        with patch("job_finder.scrapers.linkedin_posts_scraper.inspect_post", side_effect=SourceError("blocked", "403")):
             self.assertFalse(is_post_active_and_recent("https://www.linkedin.com/posts/fixture"))
-        with patch("scrapers.linkedin_posts_scraper.inspect_post", return_value={
+        with patch("job_finder.scrapers.linkedin_posts_scraper.inspect_post", return_value={
             "status": "active", "posted_at": datetime.now(timezone.utc).isoformat(), "text": "2025 graduates welcome"}):
             self.assertTrue(is_post_active_and_recent("https://www.linkedin.com/posts/fixture", "2025 graduates welcome"))
 
@@ -176,7 +176,7 @@ class SourceTests(OfflineTestCase):
     def test_remotive_cadence_skips_recent_fetch(self):
         config = load_config()
         config["remote_feeds"]["remotive_enabled"] = True
-        with patch("scrapers.remote_feeds.get_public") as get:
+        with patch("job_finder.scrapers.remote_feeds.get_public") as get:
             result = fetch_remote_feeds(config, {"feed:remotive": {"last_success": datetime.now(timezone.utc).isoformat()}})
         self.assertTrue(result.report.skipped)
         get.assert_not_called()
@@ -184,11 +184,11 @@ class SourceTests(OfflineTestCase):
     def test_redirect_allowlist_and_block_status(self):
         redirect = page("", 302)
         redirect.headers = {"Location": "https://example.test/private"}
-        with patch("scrapers.common.requests.get", return_value=redirect):
+        with patch("job_finder.scrapers.common.requests.get", return_value=redirect):
             with self.assertRaises(SourceError) as context:
                 get_public("https://www.rozee.pk/search", ("rozee.pk",))
         self.assertEqual(context.exception.reason, "unexpected_redirect_host")
-        with patch("scrapers.common.requests.get", return_value=page("", 403)):
+        with patch("job_finder.scrapers.common.requests.get", return_value=page("", 403)):
             with self.assertRaises(SourceError) as context:
                 get_public("https://www.rozee.pk/search", ("rozee.pk",))
         self.assertEqual(context.exception.status, "blocked")

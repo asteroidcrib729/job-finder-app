@@ -1,4 +1,3 @@
-project-includes = [
-    "**/*.py*",
-    "**/*.ipynb",
-]
+project-includes = ["src/**/*.py", "tests/**/*.py"]
+search-path = ["src", "."]
+python-version = "3.14"

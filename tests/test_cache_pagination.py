@@ -1,14 +1,14 @@
 import copy
 import json
 from datetime import datetime, timedelta, timezone
-from types import SimpleNamespace
 from unittest.mock import MagicMock, patch
-from config import load_config
-from scrapers.base import Job
-from scrapers.cache import DetailCache, query_due, query_key
-from scrapers.common import SourceError, SourceResult
-from scrapers.rozee_scraper import fetch_rozee_jobs, job_from_bootstrap
-from scrapers.linkedin_posts_scraper import fetch_linkedin_plain_posts
+
+from job_finder.config import load_config
+from job_finder.scrapers.base import Job
+from job_finder.scrapers.cache import DetailCache, query_due, query_key
+from job_finder.scrapers.common import SourceError, SourceResult
+from job_finder.scrapers.linkedin_posts_scraper import fetch_linkedin_plain_posts
+from job_finder.scrapers.rozee_scraper import fetch_rozee_jobs
 from tests.support import OfflineTestCase
 from tests.test_sources import page
 
@@ -52,7 +52,7 @@ class CachePaginationTests(OfflineTestCase):
         self.assertEqual(DetailCache(result.updates, "fixture", 0, now=NOW).entries, {})
 
     def test_rozee_second_page_retains_identity_and_html_paragraphs(self):
-        with patch("scrapers.rozee_scraper.get_public", side_effect=[listing(1, 20), listing(2)]) as get:
+        with patch("job_finder.scrapers.rozee_scraper.get_public", side_effect=[listing(1, 20), listing(2)]) as get:
             result = fetch_rozee_jobs(self.config())
         self.assertEqual(len(result), 2)
         self.assertEqual(get.call_count, 2)
@@ -64,7 +64,7 @@ class CachePaginationTests(OfflineTestCase):
     def test_failed_or_repeated_page_never_advances_query_watermark(self):
         for tail in (listing(1, 40), SourceError("blocked", "fixture"), listing(2, 20)):
             with self.subTest(tail=type(tail).__name__):
-                with patch("scrapers.rozee_scraper.get_public", side_effect=[listing(1, 20), tail]) as get:
+                with patch("job_finder.scrapers.rozee_scraper.get_public", side_effect=[listing(1, 20), tail]) as get:
                     result = fetch_rozee_jobs(self.config())
                 self.assertNotIn(query_key("rozee", "Python"), result.updates)
                 self.assertEqual(result.report.status, "partial")
@@ -73,7 +73,7 @@ class CachePaginationTests(OfflineTestCase):
     def test_recent_rozee_query_skips_and_stale_cache_does_not_mask_block(self):
         config = self.config()
         key = query_key("rozee", "Python")
-        with patch("scrapers.rozee_scraper.get_public") as get:
+        with patch("job_finder.scrapers.rozee_scraper.get_public") as get:
             result = fetch_rozee_jobs(config, {key: {"last_success": datetime.now(timezone.utc).isoformat()}})
         get.assert_not_called()
         self.assertTrue(result.report.skipped)
@@ -82,7 +82,7 @@ class CachePaginationTests(OfflineTestCase):
         cached.put(url, {"url": url, "description": "stale"})
         updates = SourceResult("Fixture")
         cached.publish(updates)
-        with patch("scrapers.rozee_scraper.get_public", side_effect=[listing(1, full=False), SourceError("blocked", "fixture")]):
+        with patch("job_finder.scrapers.rozee_scraper.get_public", side_effect=[listing(1, full=False), SourceError("blocked", "fixture")]):
             result = fetch_rozee_jobs(config, updates.updates)
         self.assertEqual(result[0].description_status, "fetch_failed")
         self.assertEqual(result[0].active_status, "unverified")
@@ -99,7 +99,7 @@ class CachePaginationTests(OfflineTestCase):
         updates = SourceResult("Fixture")
         cached.publish(updates)
         original = copy.deepcopy(updates.updates)
-        with patch("scrapers.rozee_scraper.get_public", return_value=listing(1, full=False)) as get:
+        with patch("job_finder.scrapers.rozee_scraper.get_public", return_value=listing(1, full=False)) as get:
             result = fetch_rozee_jobs(config, updates.updates)
         self.assertEqual(get.call_count, 1)
         self.assertEqual(result[0].location, "Karachi")
@@ -114,7 +114,7 @@ class CachePaginationTests(OfflineTestCase):
             {"href": "https://www.linkedin.com/posts/fixture", "title": "Python Developer", "body": "Karachi"}]
         post = {"status": "active", "text": "Karachi. Python Django. Fresh graduates welcome.",
                 "posted_at": "2026-09-07"}
-        with patch("ddgs.DDGS", factory), patch("scrapers.linkedin_posts_scraper.inspect_post", return_value=post) as inspect:
+        with patch("ddgs.DDGS", factory), patch("job_finder.scrapers.linkedin_posts_scraper.inspect_post", return_value=post) as inspect:
             first = fetch_linkedin_plain_posts(config)
             second = fetch_linkedin_plain_posts(config, first.updates)
             config["linkedin_posts"]["interval_hours"] = 0
@@ -132,7 +132,7 @@ class CachePaginationTests(OfflineTestCase):
         factory = MagicMock()
         factory.return_value.__enter__.return_value.text.return_value = [
             {"href": "https://www.linkedin.com/posts/fixture", "title": "Python Developer", "body": "Karachi"}]
-        with patch("ddgs.DDGS", factory), patch("scrapers.linkedin_posts_scraper.inspect_post", side_effect=SourceError("blocked", "fixture")):
+        with patch("ddgs.DDGS", factory), patch("job_finder.scrapers.linkedin_posts_scraper.inspect_post", side_effect=SourceError("blocked", "fixture")):
             result = fetch_linkedin_plain_posts(config)
         self.assertEqual(result.report.status, "partial")
         self.assertNotIn(query_key("posts", "fixture query"), result.updates)

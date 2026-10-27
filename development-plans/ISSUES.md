@@ -1,5 +1,7 @@
 # Job Finder App: issue register
 
+**Source layout and quality update (2026-10-27):** Application code now lives in the installed `src/job_finder` package. Configuration/profile YAML and production state retain their root paths. Ruff, Pyrefly type/syntax checks, interpreter compilation, shared VS Code settings, Dependabot uv/Actions updates, PR dependency review and CodeQL/advisory scanning are configured. Local validation: 83 offline regressions, 54/54 synthetic cases, Ruff, Pyrefly (0 errors, 17 existing suppressions), compilation, package build and dependency consistency passed; audit found no known vulnerabilities in 41 packages. Hosted validation is pending publication. See [layout and quality record](SOURCE-LAYOUT-2026-10-27.md).
+
 **Latest update (2026-10-27):** Migrated to Astral uv with an actual dedicated `.venv`, exact Python **3.14.7**, `pyproject.toml`, `uv.lock`, separate runtime/development dependencies and locked CI environments. JobSpy/pandas/NumPy were upgraded for compatibility; the worker now handles the new API's logging and structured failures. Actions explicitly authors state commits as **Faraz Hussain** and commits them as **github-actions[bot]**, using their respective GitHub noreply addresses. Added project/commit instructions and regression coverage. All 80 local tests, 54 synthetic cases, dependency checks, static analysis and advisory audit pass. See [migration record](UV-MIGRATION-2026-10-27.md) for versions, evidence and limits. Older Python/requirements/committer statements below describe historical baselines.
 
 **Latest update (2026-09-09):** Scheduled review alerts are enabled at the owner's request, with labeled digests of up to five jobs and the existing shared 20-job run cap. All pending Pyrefly configuration/ignore-comment changes are included. All 75 offline tests and dependency checks pass; Pyrefly reports zero errors with suppressions. The latest inspected production run had 1 already-notified qualified job, 25 review candidates and 310 rejected jobs. Discord destination/message retrieval is verified. See [filtering assessment and review-alert rollout](FILTERING-REVIEW-2026-09-09.md) for exact rule strictness, evidence, and remaining accuracy concerns. The September 8 status below is a historical implementation baseline; published Linux CI and real Discord delivery have since been verified.
@@ -32,7 +34,7 @@ The runtime never reads the PDF or a structured candidate profile. `FARAZ_SKILLS
 
 ## I-02 — Substring matching causes false acceptance and false rejection
 
-**Resolution: implemented and regression-covered.** Role-aware aliases, occupation checks and mandatory skill groups replace substring-only matching. [Implementation](../filtering/resume_filter.py), [validation](../tests/test_matching.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Role-aware aliases, occupation checks and mandatory skill groups replace substring-only matching. [Implementation](../src/job_finder/filtering/resume_filter.py), [validation](../tests/test_matching.py). See the current acceptance boundaries above before claiming production closure.
 
 **P1 · Reproduced/Code.** `filtering/resume_filter.py:18`, `:37`, `:47`, `:162`.
 
@@ -42,7 +44,7 @@ One substring from `FARAZ_SKILLS` is enough. `Software Engineer` matches itself 
 
 ## I-03 — Experience parsing confuses durations, ranges, and permissive wording
 
-**Resolution: implemented and regression-covered.** Contextual experience parsing handles minima, ranges, months, written numbers and preference clauses. [Implementation](../filtering/resume_filter.py), [validation](../tests/test_matching.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Contextual experience parsing handles minima, ranges, months, written numbers and preference clauses. [Implementation](../src/job_finder/filtering/resume_filter.py), [validation](../tests/test_matching.py). See the current acceptance boundaries above before claiming production closure.
 
 **P1 · Reproduced/Code.** `filtering/resume_filter.py:53`, `:144`.
 
@@ -52,7 +54,7 @@ The first regex permits a year count without experience context. A four-year deg
 
 ## I-04 — Qualification runs without sufficient job descriptions
 
-**Resolution: implemented and regression-covered.** Description completeness, LinkedIn detail requests and bounded Rozee/post caches preserve qualification evidence. [Implementation](../scrapers/cache.py), [validation](../tests/test_cache_pagination.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Description completeness, LinkedIn detail requests and bounded Rozee/post caches preserve qualification evidence. [Implementation](../src/job_finder/scrapers/cache.py), [validation](../tests/test_cache_pagination.py). See the current acceptance boundaries above before claiming production closure.
 
 **P1 · Code/Reproduced.** `scrapers/jobspy_adapter.py:33`; `scrapers/rozee_scraper.py:69`; `filtering/resume_filter.py:162`.
 
@@ -62,7 +64,7 @@ LinkedIn detail fetching is not enabled. Installed JobSpy 1.1.82 defaults `linke
 
 ## I-05 — Search intent overwrites actual work mode and narrows remote discovery
 
-**Resolution: implemented and regression-covered.** Independent local/remote query tracks preserve listing-derived work mode. [Implementation](../scrapers/jobspy_adapter.py), [validation](../tests/test_sources.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Independent local/remote query tracks preserve listing-derived work mode. [Implementation](../src/job_finder/scrapers/jobspy_adapter.py), [validation](../tests/test_sources.py). See the current acceptance boundaries above before claiming production closure.
 
 **P1 · Reproduced/Code.** `scrapers/jobspy_adapter.py:28`, `:58`; `scrapers/linkedin_posts_scraper.py:105`.
 
@@ -72,7 +74,7 @@ Every remote JobSpy search is anchored to Karachi. Every result from it becomes 
 
 ## I-06 — Karachi locality and Pakistan remote eligibility are not enforced
 
-**Resolution: implemented and regression-covered.** Karachi and Pakistan-eligible remote rules distinguish explicit compatibility from unknown restrictions. [Implementation](../filtering/resume_filter.py), [validation](../tests/test_matching.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Karachi and Pakistan-eligible remote rules distinguish explicit compatibility from unknown restrictions. [Implementation](../src/job_finder/filtering/resume_filter.py), [validation](../tests/test_matching.py). See the current acceptance boundaries above before claiming production closure.
 
 **P1 · Reproduced/Code.** `filtering/resume_filter.py:84`.
 
@@ -82,7 +84,7 @@ Any location containing `Pakistan` or `pk` passes the initial local gate, except
 
 ## I-07 — USD compensation preference cannot be evaluated
 
-**Resolution: implemented and regression-covered.** Salary evidence preserves disclosed currency and routes ambiguous/other-currency remote pay to review. [Implementation](../filtering/resume_filter.py), [validation](../tests/test_matching.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Salary evidence preserves disclosed currency and routes ambiguous/other-currency remote pay to review. [Implementation](../src/job_finder/filtering/resume_filter.py), [validation](../tests/test_matching.py). See the current acceptance boundaries above before claiming production closure.
 
 **P1 · Gap/Code.** `scrapers/base.py:6`; `scrapers/jobspy_adapter.py:47`; `notifiers/discord.py`.
 
@@ -92,7 +94,7 @@ The job model has no salary amount, interval, currency, or salary evidence. Adap
 
 ## I-08 — One JobSpy parameter set is incorrectly reused across sites
 
-**Resolution: implemented and regression-covered.** Source-specific parameters correct Indeed remote/date behavior and explicitly construct Google queries. [Implementation](../scrapers/jobspy_adapter.py), [validation](../tests/test_sources.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Source-specific parameters correct Indeed remote/date behavior and explicitly construct Google queries. [Implementation](../src/job_finder/scrapers/jobspy_adapter.py), [validation](../tests/test_sources.py). See the current acceptance boundaries above before claiming production closure.
 
 **P1 · Code/version-verified.** `scrapers/jobspy_adapter.py:33`; installed JobSpy 1.1.82 `indeed/__init__.py`, `_build_filters`.
 
@@ -104,7 +106,7 @@ Google receives no explicit `google_search_term`. This is a query-quality concer
 
 ## I-09 — Rozee extracts too little and manufactures location/freshness
 
-**Resolution: implemented and regression-covered.** Rozee uses verified bootstrap fields and city ID, bounded pagination, caches and blocking/parse diagnostics. [Implementation](../scrapers/rozee_scraper.py), [validation](../tests/test_cache_pagination.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Rozee uses verified bootstrap fields and city ID, bounded pagination, caches and blocking/parse diagnostics. [Implementation](../src/job_finder/scrapers/rozee_scraper.py), [validation](../tests/test_cache_pagination.py). See the current acceptance boundaries above before claiming production closure.
 
 **P1 · Reproduced/Code; live-selector failure unverified.** `scrapers/rozee_scraper.py:15`, `:38`, `:66`.
 
@@ -116,7 +118,7 @@ A mocked Lahore card with five-year experience and an old date passed qualificat
 
 ## I-10 — LinkedIn recruiter snippets are treated as verified single vacancies
 
-**Resolution: implemented and regression-covered.** Recruiter posts use host checks, saved cadence, independent explicit role sections and original-post provenance. [Implementation](../scrapers/post_roles.py), [validation](../tests/test_review_feedback.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Recruiter posts use host checks, saved cadence, independent explicit role sections and original-post provenance. [Implementation](../src/job_finder/scrapers/post_roles.py), [validation](../tests/test_review_feedback.py). See the current acceptance boundaries above before claiming production closure.
 
 **P1 · Code/Risk.** `scrapers/linkedin_posts_scraper.py:42` and its fixed `queries`, title cleanup, and job construction.
 
@@ -126,7 +128,7 @@ The source ignores configuration and always runs. It uses five fixed searches, t
 
 ## I-11 — Freshness and active-status labels are not trustworthy
 
-**Resolution: implemented and regression-covered.** Publication, expiry, discovery and active/unknown/closed states remain separate evidence. [Implementation](../scrapers/base.py), [validation](../tests/test_sources.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Publication, expiry, discovery and active/unknown/closed states remain separate evidence. [Implementation](../src/job_finder/scrapers/base.py), [validation](../tests/test_sources.py). See the current acceptance boundaries above before claiming production closure.
 
 **P1 · Reproduced/Code.** `scrapers/linkedin_posts_scraper.py:12`, `:19`, `:115`; `scrapers/rozee_scraper.py:69`; `scrapers/base.py:12`.
 
@@ -136,7 +138,7 @@ Hard-coded old years reject current posts mentioning a 2025 graduating class and
 
 ## I-12 — Search coverage is shallow, repetitive, and not measured
 
-**Resolution: implemented and regression-covered.** Query-specific pagination, successful watermarks, budgets, yield reporting and longer zero-yield intervals improve coverage control. [Implementation](../scrapers/metrics.py), [validation](../tests/test_query_metrics.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Query-specific pagination, successful watermarks, budgets, yield reporting and longer zero-yield intervals improve coverage control. [Implementation](../src/job_finder/scrapers/metrics.py), [validation](../tests/test_query_metrics.py). See the current acceptance boundaries above before claiming production closure.
 
 **P1 · Code/Gap; production coverage unmeasured.** `config.yaml:4`, `:30`; adapter loops; Rozee URLs; recruiter queries.
 
@@ -146,7 +148,7 @@ Thirteen overlapping keywords receive only 15 requested JobSpy results each befo
 
 ## I-13 — Inconsistent null handling can discard valid rows or crash filtering
 
-**Resolution: implemented and regression-covered.** Null-safe normalization, isolated conversion failures and complete job round trips enforce the shared contract. [Implementation](../scrapers/base.py), [validation](../tests/test_sources.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Null-safe normalization, isolated conversion failures and complete job round trips enforce the shared contract. [Implementation](../src/job_finder/scrapers/base.py), [validation](../tests/test_sources.py). See the current acceptance boundaries above before claiming production closure.
 
 **P1 · Reproduced/Code.** `scrapers/jobspy_adapter.py:47`, `:73`; `scrapers/base.py:14`; `filtering/resume_filter.py:92`; `notifiers/discord.py:86`.
 
@@ -156,7 +158,7 @@ Thirteen overlapping keywords receive only 15 requested JobSpy results each befo
 
 ## I-14 — Synthetic identity is unstable and deduplication loses richer evidence
 
-**Resolution: implemented and regression-covered.** Native IDs, canonical URLs, explicit aliases and exact merging replace unstable title-only identity. [Implementation](../scrapers/base.py), [validation](../tests/test_sources.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Native IDs, canonical URLs, explicit aliases and exact merging replace unstable title-only identity. [Implementation](../src/job_finder/scrapers/base.py), [validation](../tests/test_sources.py). See the current acceptance boundaries above before claiming production closure.
 
 **P1 · Reproduced/Code.** `scrapers/base.py:20`; `storage/tracker.py:55`; ordering in `main.py`.
 
@@ -166,7 +168,7 @@ Identity hashes platform/title/company/raw URL, discarding JobSpy's source ID. T
 
 ## I-15 — Partial notification success permanently suppresses failed alerts within retention
 
-**Resolution: implemented and regression-covered.** Per-job acknowledgements and a persistent deferred queue prevent failed/unsent jobs from being marked delivered. [Implementation](../storage/tracker.py), [validation](../tests/test_delivery.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Per-job acknowledgements and a persistent deferred queue prevent failed/unsent jobs from being marked delivered. [Implementation](../src/job_finder/storage/tracker.py), [validation](../tests/test_delivery.py). See the current acceptance boundaries above before claiming production closure.
 
 **P0 · Reproduced.** `notifiers/discord.py:56`; `notifiers/manager.py:23`; `main.py:92`.
 
@@ -176,7 +178,7 @@ Notifier returns true if any job succeeds. `main.py` then marks every `new_job` 
 
 ## I-16 — Discord retry success is counted without inspecting the retry response
 
-**Resolution: implemented and regression-covered.** Checked bounded retries distinguish confirmed, failed, uncertain and permanent delivery outcomes. [Implementation](../notifiers/discord.py), [validation](../tests/test_delivery.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Checked bounded retries distinguish confirmed, failed, uncertain and permanent delivery outcomes. [Implementation](../src/job_finder/notifiers/discord.py), [validation](../tests/test_delivery.py). See the current acceptance boundaries above before claiming production closure.
 
 **P0 · Reproduced.** `notifiers/discord.py:41`.
 
@@ -186,7 +188,7 @@ After HTTP 429, the second POST response is discarded and success is incremented
 
 ## I-17 — Discord payload construction is not validated or isolated per job
 
-**Resolution: implemented and regression-covered.** Bounded payloads, mention suppression and per-job error isolation support cards and review digests. [Implementation](../notifiers/discord.py), [validation](../tests/test_review_feedback.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Bounded payloads, mention suppression and per-job error isolation support cards and review digests. [Implementation](../src/job_finder/notifiers/discord.py), [validation](../tests/test_review_feedback.py). See the current acceptance boundaries above before claiming production closure.
 
 **P2 · Code/Risk; None handling reproduced in filter.** `notifiers/discord.py:30`, `_build_embed`.
 
@@ -196,7 +198,7 @@ Embed construction occurs outside the try block. Titles and field values are unb
 
 ## I-18 — State persistence failures are swallowed and writes are not atomic
 
-**Resolution: implemented and regression-covered.** Validated atomic journals, previous-good backups and recovery-candidate export preserve history on failure. [Implementation](../storage/recover.py), [validation](../tests/test_state_recovery.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Validated atomic journals, previous-good backups and recovery-candidate export preserve history on failure. [Implementation](../src/job_finder/storage/recover.py), [validation](../tests/test_state_recovery.py). See the current acceptance boundaries above before claiming production closure.
 
 **P1 · Code/Risk.** `storage/tracker.py:24`, `:43`, `:66`.
 
@@ -206,7 +208,7 @@ State load failure resets all history to empty. `save()` writes directly to the 
 
 ## I-19 — Workflow runs can overlap and race on shared notification state
 
-**Resolution: implemented and regression-covered.** Serialized default-branch execution and three-way state-only Git commits preserve concurrent code/history changes. [Implementation](../storage/sync_state.py), [validation](../tests/test_state_recovery.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Serialized default-branch execution and three-way state-only Git commits preserve concurrent code/history changes. [Implementation](../src/job_finder/storage/sync_state.py), [validation](../tests/test_state_recovery.py). See the current acceptance boundaries above before claiming production closure.
 
 **P1 · Code/Risk.** `.github/workflows/job_finder.yml:3`, `:14`, `:40`.
 
@@ -226,7 +228,7 @@ All dependencies use minimum-only constraints; fresh runner resolution can chang
 
 ## I-21 — Healthy empty searches and failures are difficult to distinguish
 
-**Resolution: implemented and regression-covered.** Source health, query yield/budgets, reason counts, reports and meaningful exit codes make failures visible. [Implementation](../main.py), [validation](../tests/test_pipeline.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Source health, query yield/budgets, reason counts, reports and meaningful exit codes make failures visible. [Implementation](../src/job_finder/main.py), [validation](../tests/test_pipeline.py). See the current acceptance boundaries above before claiming production closure.
 
 **P1 · Code.** Scraper exception handlers; `main.py:29`; `storage/tracker.py:52`; notifier return handling.
 
@@ -236,7 +238,7 @@ Source errors often become empty lists. Rozee non-200s are silent; normal pipeli
 
 ## I-22 — There is no repeatable accuracy benchmark or automated regression suite
 
-**Resolution: implemented and regression-covered.** Offline tests, a fixed-date 54-case synthetic benchmark and capture-time feedback evaluation support regression checking. [Implementation](../evaluation.py), [validation](../tests/test_matching.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Offline tests, a fixed-date 54-case synthetic benchmark and capture-time feedback evaluation support regression checking. [Implementation](../src/job_finder/evaluation.py), [validation](../tests/test_matching.py). See the current acceptance boundaries above before claiming production closure.
 
 **P1 · Code/Gap.** `scratch/test_search.py`; workflow; `data/seen_jobs.json`.
 
@@ -246,7 +248,7 @@ The scratch script makes live searches at import time and prints results; it has
 
 ## I-23 — Configuration and documentation disagree with active behavior
 
-**Resolution: implemented and regression-covered.** Nested validated configuration, active source/policy settings and updated README replace misleading controls. [Implementation](../config.py), [validation](../tests/test_pipeline.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Nested validated configuration, active source/policy settings and updated README replace misleading controls. [Implementation](../src/job_finder/config.py), [validation](../tests/test_pipeline.py). See the current acceptance boundaries above before claiming production closure.
 
 **P2 · Code.** `config.py:7`, `:29`; `filtering/filter.py`; `filtering/resume_filter.py:112`; `README.md`.
 
@@ -256,7 +258,7 @@ Configuration merges shallowly and validates neither schema nor types. The activ
 
 ## I-24 — Alerts provide neither ordering by fit nor reasons for the match
 
-**Resolution: implemented and regression-covered.** Constraint-first ranking, explanations, optional review digests and job-ID relevance feedback support usable alerts. [Implementation](../feedback.py), [validation](../tests/test_review_feedback.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Constraint-first ranking, explanations, optional review digests and job-ID relevance feedback support usable alerts. [Implementation](../src/job_finder/feedback.py), [validation](../tests/test_review_feedback.py). See the current acceptance boundaries above before claiming production closure.
 
 **P1 · Code/Gap.** `filtering/resume_filter.py:112`; `main.py`; `notifiers/discord.py:58`.
 
