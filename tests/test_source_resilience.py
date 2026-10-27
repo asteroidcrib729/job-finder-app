@@ -133,6 +133,8 @@ class SourceResilienceTests(OfflineTestCase):
         structured = '<script type="application/ld+json">' + json.dumps({"@type": "JobPosting",
             "description": "<p>Django.</p><p>Fresh graduates.</p>"}) + '</script>'
         self.assertEqual(parse_detail(structured)["description"], "Django.\nFresh graduates.")
+        inline = '<div class="show-more-less-html__markup"><p>Python.</p><ul><li><b>1-3</b> years required.</li></ul></div>'
+        self.assertEqual(parse_detail(inline)["description"], "Python.\n1-3 years required.")
         with self.assertRaises(SourceError):
             parse_detail('<html>Please sign in</html>')
 

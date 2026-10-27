@@ -13,17 +13,30 @@ from job_finder.scrapers.structured import jsonld_objects
 COOLDOWN_KEY = "attempt:linkedin_details"
 
 
+def description_text(node):
+    """Keep paragraph/list boundaries without splitting inline requirements."""
+    for tag in node.find_all(["script", "style"]):
+        tag.decompose()
+    for tag in node.find_all("br"):
+        tag.replace_with("\n")
+    for tag in node.find_all(["p", "li", "div", "h1", "h2", "h3", "h4"]):
+        tag.insert_before("\n")
+        tag.insert_after("\n")
+    return "\n".join(re.sub(r"[ \t\r\f\v]+", " ", line).strip()
+        for line in node.get_text(" ").splitlines() if line.strip())
+
+
 def parse_detail(html):
     soup = BeautifulSoup(html, "html.parser")
     for data in jsonld_objects(soup):
         if data.get("@type") == "JobPosting" and data.get("description"):
-            description = BeautifulSoup(clean_text(data["description"]), "html.parser").get_text("\n", strip=True)
+            description = description_text(BeautifulSoup(clean_text(data["description"]), "html.parser"))
             return {"description": description}
     node = soup.select_one(".show-more-less-html__markup")
     if node is None or not node.get_text(strip=True):
         raise SourceError("parse_failed", "linkedin_description_missing")
     # Newlines preserve requirement boundaries used by the qualification parser.
-    return {"description": node.get_text("\n", strip=True)}
+    return {"description": description_text(node)}
 
 
 def fetch_detail(url, timeout):
