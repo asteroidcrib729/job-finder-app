@@ -66,7 +66,7 @@ class RunHealthTests(OfflineTestCase):
         config = load_config()
         config["search_keywords"] = ["Python"]
         config["search_tracks"] = [dict(config["search_tracks"][0], sites=["google"])]
-        config["jobspy"]["google_mode"] = "enabled"
+        config["jobspy"].update(google_mode="enabled", google_provider="jobspy")
         empty = fetch_jobspy_jobs(config, runner=lambda *_: {"rows": [], "warnings": handler.codes})
         query = empty.report.queries[0]
         self.assertEqual((query.status, query.site, query.reason),
@@ -107,7 +107,7 @@ class RunHealthTests(OfflineTestCase):
         self.assertEqual(result.report.queries[0].reason, "search_provider_error")
         self.assertFalse(any("last_success" in v for v in result.updates.values()))
 
-    def test_actions_runner_dry_run_disables_state_persistence_and_warns(self):
+    def test_actions_runner_dry_run_persists_only_api_quota_and_warns(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             report = json.loads((FIXTURES / "production_health.json").read_text())[0]
@@ -120,7 +120,7 @@ class RunHealthTests(OfflineTestCase):
                 self.assertEqual(workflow_runner.main(), 0)
                 self.assertTrue(any("::warning::" in str(call) for call in output_log.call_args_list))
             self.assertTrue(run.call_args.kwargs["dry_run"])
-            self.assertEqual(output.read_text().strip(), "persist_state=false")
+            self.assertEqual(output.read_text().strip(), "persist_state=true\nstate_scope=quota")
 
     def test_summary_identifies_sources_and_explains_zero_alerts(self):
         with tempfile.TemporaryDirectory() as directory:

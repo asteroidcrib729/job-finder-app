@@ -69,6 +69,13 @@ def write_report(report, directory, step_summary=True):
     for source in report.get("sources", []):
         lines.append(f"| {source['source']} | {source['status']} | {len(source['queries'])} |")
     for source in report.get("sources", []):
+        quota = source.get("quota", {})
+        if quota:
+            lines += ["", "SerpApi quota: " + str(quota.get("attempts_in_window", "not checked"))
+                + f" / {quota['attempt_limit']} attempts in {quota['rolling_days']} days; "
+                + f"minimum interval {quota['minimum_interval_hours']} hours; reserve {quota['credit_reserve']} credits.",
+                "Quota outcome: " + quota.get("reason", "no search attempted") + "."]
+    for source in report.get("sources", []):
         details = source.get("enrichment", {})
         if details:
             lines += ["", f"Description queue: {details['completed']} completed, {details['pending']} pending, "
@@ -275,7 +282,7 @@ def main():
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
     parser = argparse.ArgumentParser(description="Resume-aligned job discovery and Discord alerts")
     mode = parser.add_mutually_exclusive_group()
-    mode.add_argument("--dry-run", action="store_true", help="Live scraping, no notifications or state writes")
+    mode.add_argument("--dry-run", action="store_true", help="Live scraping, no notifications or job-state writes; API quota accounting persists")
     mode.add_argument("--test-notify", action="store_true", help="Explicitly send one Discord test message")
     mode.add_argument("--replay", dest="replay_path", help="Offline JSON evaluation; never sends or writes state")
     parser.add_argument("--config", dest="config_path", help="YAML overrides merged with repository defaults")

@@ -143,6 +143,7 @@ class SourceResilienceTests(OfflineTestCase):
 
     def test_google_probe_attempts_once_and_failed_attempt_is_not_success(self):
         config = self.config(["indeed", "google"])
+        config["jobspy"].update(google_provider="jobspy", google_mode="probe")
         calls = []
         def runner(kwargs, timeout):
             calls.append(kwargs["site_name"][0])

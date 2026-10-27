@@ -13,6 +13,9 @@ from tests.support import OfflineTestCase
 
 
 class GoogleApiTests(OfflineTestCase):
+    def api(self, args, timeout):
+        return run_google_api(args, timeout, budget=MagicMock())
+
     def args(self):
         return {"search_term": "Python", "google_search_term": "Python jobs near Karachi", "results_wanted": 10}
 
@@ -28,7 +31,7 @@ class GoogleApiTests(OfflineTestCase):
     def test_missing_key_performs_no_request(self):
         with patch.dict("os.environ", {}, clear=True), patch("job_finder.scrapers.google_api.requests.get") as get:
             with self.assertRaises(SourceError) as context:
-                run_google_api(self.args(), 20)
+                self.api(self.args(), 20)
         self.assertEqual(context.exception.reason, "missing_serpapi_key")
         get.assert_not_called()
 
@@ -36,7 +39,7 @@ class GoogleApiTests(OfflineTestCase):
         payload = {"search_metadata": {"status": "Success"}, "jobs_results": [self.row(), {"title": "Missing URL"}]}
         with patch.dict("os.environ", {"SERPAPI_API_KEY": "secret-fixture-key"}), \
              patch("job_finder.scrapers.google_api.requests.get", return_value=self.response(payload)) as get:
-            result = run_google_api(self.args(), 20)
+            result = self.api(self.args(), 20)
         self.assertEqual(len(result["rows"]), 1)
         self.assertEqual(result["warnings"], ["google_api_invalid_rows"])
         self.assertTrue(result["rows"][0]["is_remote"])
@@ -53,7 +56,7 @@ class GoogleApiTests(OfflineTestCase):
             for value, expected in cases:
                 with patch("job_finder.scrapers.google_api.requests.get", side_effect=value if isinstance(value, Exception) else None,
                         return_value=value), self.assertRaises(SourceError) as context:
-                    run_google_api(self.args(), 20)
+                    self.api(self.args(), 20)
                 self.assertEqual(context.exception.reason, expected)
                 self.assertNotIn("secret", str(context.exception))
 
@@ -69,11 +72,22 @@ class GoogleApiTests(OfflineTestCase):
         with self.assertRaises(ValueError):
             result_row(item)
 
+    def test_google_geography_is_explicit_and_has_no_extra_page_requests(self):
+        payload = {"search_metadata": {"status": "Success"}, "jobs_results": [],
+            "serpapi_pagination": {"next_page_token": "another-paid-page"}}
+        with patch.dict("os.environ", {"SERPAPI_API_KEY": "fixture-key"}), \
+             patch("job_finder.scrapers.google_api.requests.get", return_value=self.response(payload)) as get:
+            self.api({**self.args(), "location": "Karachi, Pakistan", "country_indeed": "Pakistan"}, 20)
+        self.assertEqual(get.call_count, 1)
+        self.assertEqual(get.call_args.kwargs["params"]["location"], "Karachi, Pakistan")
+        self.assertEqual(get.call_args.kwargs["params"]["gl"], "pk")
+        self.assertEqual(get.call_args.kwargs["params"]["hl"], "en")
+
     def test_selected_provider_uses_separate_probe_state_and_never_calls_jobspy(self):
         config = load_config()
         config["search_keywords"] = ["Python"]
         config["search_tracks"] = [dict(config["search_tracks"][0], sites=["google"])]
-        config["jobspy"]["google_provider"] = "serpapi"
+        config["jobspy"].update(google_provider="serpapi", google_mode="probe")
         runner = MagicMock()
         with patch("job_finder.scrapers.jobspy_adapter.run_google_api", return_value={"rows": []}) as api:
             first = fetch_jobspy_jobs(config, runner=runner)
@@ -85,7 +99,7 @@ class GoogleApiTests(OfflineTestCase):
     def test_missing_credentials_do_not_delay_a_later_configured_probe(self):
         config = load_config()
         config["search_tracks"] = [dict(config["search_tracks"][0], sites=["google"])]
-        config["jobspy"]["google_provider"] = "serpapi"
+        config["jobspy"].update(google_provider="serpapi", google_mode="probe")
         with patch.dict("os.environ", {}, clear=True):
             result = fetch_jobspy_jobs(config)
         self.assertNotIn("probe:google:serpapi", result.updates)

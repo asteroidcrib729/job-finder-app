@@ -1,6 +1,6 @@
 # Project history and agent memory
 
-Last updated: **2026-10-27**. This file is the repository-local historical archive and handoff record for Job Finder App. It covers the recorded local work and published changes on `main`; Git retains the individual commits, including automated state updates. It does not claim to reconstruct undocumented activity. Detailed audit evidence remains in `development-plans`.
+Last updated: **2026-10-28**. This file is the repository-local historical archive and handoff record for Job Finder App. It covers the recorded local work and published changes on `main`; Git retains the individual commits, including automated state updates. It does not claim to reconstruct undocumented activity. Detailed audit evidence remains in `development-plans`.
 
 ## Reading this archive
 
@@ -19,6 +19,7 @@ At the start of repository work, an agent checks the working tree, current confi
 - **Workflow convention:** workflows orchestrate actions and invoke single tool/script commands. Python/JavaScript/shell programs, heredocs and interpreter `-c` snippets are not embedded in YAML. Custom logic belongs in dedicated `src/job_finder` modules with offline regression coverage.
 - **Source resilience:** LinkedIn cards enter a persistent validated enrichment queue independent of listing cadence: 500 cards/72 hours/four attempts, junior/relevant priority, aging and track rotation. Shared LinkedIn/exact Greenhouse/Lever request budgets adapt from 16 up to 36, back off down to four, and pace at 2-10 seconds within a 180-second time budget. Detail blocking does not stop searches. Google defaults to a daily recovery probe; optional SerpApi requires explicit selection and owner credentials. Recruiter queries share 12 attempts fairly and rotate, with last-success backend preference. Remotive/WWR retain six-hour attempt cadence. Ambiguous empty results remain unverified. Successful-search and failed-attempt timestamps are distinct.
 - **Delivery policy:** scheduled and normal manual runs send qualified jobs first, then labeled review candidates in digests of up to five jobs, under a shared 20-job limit. Deferred jobs remain queued and are reevaluated. Rejections remain excluded. The optional manual verification sample caps delivery at three jobs and uses review candidates only when no qualified candidates exist.
+- **SerpApi activation and quota:** Google Jobs now selects SerpApi in enabled mode, rotating due keyword/track queries. An owner-provided Actions secret supplies the key. Defaults are one attempt/run, six-hour minimum spacing, 120 attempts per rolling 31 days and a 100-credit live account reserve. `data/serpapi_usage.json` records durable pre-request reservations; errors/timeouts are not refunded. Account checks and quota state fail closed. Manual refresh, verification sample and live dry run obey the same controls; dry-run hosted persistence uses quota-only scope and preserves job history. Replay remains fully offline. Never reset quota history for tests or commit raw account responses, account emails or keys. These October 28 settings supersede the earlier daily-probe default.
 - **Evidence and safety:** no reset of production delivery history for experiments, no committed reports/secrets/environments, and no real source requests or Discord sends from offline tests. Live diagnostics require an appropriate task scope; replay and temporary state paths are preferred for reproducible evaluation.
 - **Git attribution:** automated state commits use author `Faraz Hussain <132701966+asteroidcrib729@users.noreply.github.com>` and committer `github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>`. The workflow supplies all four identity variables and writer defaults match. Owner-authorized manual commits use the owner's repository identity. Independent contributors retain their own authorship.
 - **Publication:** staged changes remain scoped to the task. Concurrent remote state updates are preserved; pushes are ordinary fast-forwards. No historical rewrite, force push or empty contribution commits. Test/diagnostic workflows remain read-only for repository contents; production alone writes state. CodeQL's security-events permission is separate.
@@ -43,6 +44,10 @@ At the start of repository work, an agent checks the working tree, current confi
 | [development-plans/ISSUES.md](development-plans/ISSUES.md), [SOLUTIONS.md](development-plans/SOLUTIONS.md) | The 24-issue register, corresponding solutions and later updates. |
 
 ## Recorded chronology
+
+### October 28, 2026 - SerpApi activation and persistent credit limits
+
+After the owner supplied the Actions secret, Google Jobs was switched to SerpApi with rotating due local/remote queries and explicit geography. Added rolling credit reservations, six-hour spacing, a per-run cap, preflight Account API balance/hour checks, a 100-credit reserve, local exclusive locking and concurrent Git reconciliation without refunds. Dry-run persistence now saves quota only; discovery/delivery history remains unchanged. Matching rules, architecture and production job history are retained. Validation and exact hosted evidence are recorded in [SerpApi activation](development-plans/SERPAPI-ACTIVATION-2026-10-28.md).
 
 ### October 27, 2026 - Persistent enrichment and adaptive coverage
 

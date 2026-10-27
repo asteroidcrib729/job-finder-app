@@ -16,7 +16,7 @@ def main():
     dry_run = os.getenv("JOB_FINDER_DRY_RUN", "false").lower() == "true"
     if os.getenv("GITHUB_OUTPUT"):
         with Path(os.environ["GITHUB_OUTPUT"]).open("a", encoding="utf-8") as handle:
-            handle.write(f"persist_state={'false' if dry_run else 'true'}\n")
+            handle.write(f"persist_state=true\nstate_scope={'quota' if dry_run else 'all'}\n")
     directory = OUTPUT_DIR / "latest"
     code = run_job_finder(dry_run=dry_run, report_dir=directory,
         verification_sample=os.getenv("JOB_FINDER_VERIFICATION_SAMPLE", "false").lower() == "true",

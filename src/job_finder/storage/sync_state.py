@@ -7,12 +7,14 @@ import tempfile
 from pathlib import Path
 
 from job_finder.configuration.paths import BASE_DIR
+from job_finder.storage.quota import merge_quota, validate_quota
 from job_finder.storage.reconcile import merge_delivery, merge_discovery, validate_discovery_state
 from job_finder.storage.tracker import StateError, read_json, validate_delivery_state
 
 STATE_FILES = {
     "data/seen_jobs.json": (validate_delivery_state, merge_delivery),
     "data/discovery_state.json": (validate_discovery_state, merge_discovery),
+    "data/serpapi_usage.json": (validate_quota, merge_quota),
 }
 
 DEFAULT_COMMIT_IDENTITY = {
@@ -58,12 +60,16 @@ class Git:
             raise StateError("Remote state JSON is invalid; nothing was pushed") from exc
 
 
-def persist_state(repo, branch, attempts=3):
+def persist_state(repo, branch, attempts=3, scope="all"):
+    if scope not in {"all", "quota"}:
+        raise StateError("Invalid state persistence scope")
     git = Git(repo)
     git.run("check-ref-format", "refs/heads/" + branch)
     base_commit = git.run("rev-parse", "HEAD").stdout.strip()
     local, baseline, backups = {}, {}, {}
     for path, (validate, _) in STATE_FILES.items():
+        if scope == "quota" and path != "data/serpapi_usage.json":
+            continue
         target = git.repo / path
         if not target.is_file():
             continue
@@ -126,9 +132,10 @@ def persist_state(repo, branch, attempts=3):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--branch", required=True)
+    parser.add_argument("--scope", choices=["all", "quota"], default="all")
     args = parser.parse_args()
     try:
-        result = persist_state(BASE_DIR, args.branch)
+        result = persist_state(BASE_DIR, args.branch, scope=args.scope)
     except StateError as exc:
         parser.exit(1, str(exc) + "\n")
     print(json.dumps(result))

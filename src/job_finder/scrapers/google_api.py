@@ -45,13 +45,24 @@ def result_row(item):
         "job_type": clean_text(extensions.get("schedule_type"))}
 
 
-def run_google_api(kwargs, timeout):
+def run_google_api(kwargs, timeout, budget=None):
     key = os.environ.get("SERPAPI_API_KEY", "").strip()
     if not key:
         raise SourceError("unsupported", "missing_serpapi_key")
+    if budget is None:
+        from job_finder.configuration.loader import load_config
+        from job_finder.scrapers.serpapi_budget import SerpApiBudget
+        budget = SerpApiBudget(load_config()["jobspy"])
+    budget.reserve(timeout)
+    params = {"engine": "google_jobs", "q": kwargs.get("google_search_term") or kwargs["search_term"],
+        "api_key": key, "hl": "en"}
+    if kwargs.get("location"):
+        params["location"] = kwargs["location"]
+    country = {"pakistan": "pk", "usa": "us"}.get(clean_text(kwargs.get("country_indeed")).lower())
+    if country:
+        params["gl"] = country
     try:
-        response = requests.get("https://serpapi.com/search.json", params={"engine": "google_jobs",
-            "q": kwargs.get("google_search_term") or kwargs["search_term"], "api_key": key},
+        response = requests.get("https://serpapi.com/search.json", params=params,
             timeout=(5, min(20, timeout)), allow_redirects=False)
     except requests.Timeout as exc:
         raise SourceError("timed_out", "google_api_timeout") from exc

@@ -36,6 +36,7 @@ class SourceReport:
     notes: list[str] = field(default_factory=list)
     skipped: bool = False
     enrichment: dict = field(default_factory=dict)
+    quota: dict = field(default_factory=dict)
 
     @property
     def status(self):

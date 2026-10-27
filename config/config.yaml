@@ -51,11 +51,13 @@ jobspy:
   linkedin_detail_max_seconds: 180
   linkedin_detail_cache_hours: 6
   linkedin_detail_retry_hours: 3
-  # Upstream Google Jobs adapter is unavailable; one daily recovery probe only.
-  google_mode: probe
-  # Opt-in alternative requires SERPAPI_API_KEY; no API calls by default.
-  google_provider: jobspy
-  google_api_max_queries: 2
+  # Rotate Google Jobs queries under a durable, account-checked credit budget.
+  google_mode: enabled
+  google_provider: serpapi
+  google_api_max_queries: 1
+  google_api_monthly_budget: 120
+  google_api_min_interval_hours: 6
+  google_api_credit_reserve: 100
   google_probe_interval_hours: 24
   interval_hours: 3
   low_yield_interval_hours: 12

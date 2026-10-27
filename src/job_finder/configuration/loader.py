@@ -39,6 +39,8 @@ def validate_config(config):
         "notifications": {"discord_enabled", "send_review", "review_digest", "max_per_run", "max_attempts", "max_retry_wait"},
         "state": {"retention_days", "pending_days"},
     }
+    allowed_sections["jobspy"].update({"google_api_monthly_budget", "google_api_min_interval_hours",
+        "google_api_credit_reserve"})
     unknown = set(config) - set(allowed_sections) - {"profile", "profile_path", "search_keywords", "search_tracks", "discord_webhook_url"}
     if unknown:
         raise ValueError("Unknown configuration fields: " + ", ".join(sorted(unknown)))
@@ -82,6 +84,10 @@ def validate_config(config):
     if config["jobspy"].get("google_provider") not in {"jobspy", "serpapi"}:
         raise ValueError("jobspy.google_provider must be jobspy or serpapi")
     options = config["jobspy"]
+    for name, low, high in [("google_api_monthly_budget", 1, 200),
+            ("google_api_min_interval_hours", 1, 168), ("google_api_credit_reserve", 50, 249)]:
+        if type(options.get(name)) is not int or not low <= options[name] <= high:
+            raise ValueError(f"jobspy.{name} must be an integer between {low} and {high}")
     if options["linkedin_detail_min_requests"] > options["linkedin_detail_initial_requests"]:
         raise ValueError("LinkedIn minimum detail requests must not exceed the initial budget")
     if options["linkedin_max_details"] and options["linkedin_detail_initial_requests"] > options["linkedin_max_details"]:

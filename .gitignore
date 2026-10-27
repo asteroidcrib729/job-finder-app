@@ -22,3 +22,4 @@ Resume - Faraz Hussain.pdf
 output/
 .cache/
 data/*.tmp
+data/*.lock
