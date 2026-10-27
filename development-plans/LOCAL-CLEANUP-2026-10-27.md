@@ -15,8 +15,8 @@ The root `.venv` is retained for standard uv and VS Code discovery and to avoid 
 
 ## Verification
 
-- Locked editable environment reinstallation succeeded offline after moving caches. Python remains 3.14.7.
-- All 90 offline regressions passed together, including six diagnostic/workflow tests and the isolated-home replay test. Hosted validation is pending publication.
+- Locked editable environment reinstallation succeeded offline after moving caches. Python remains 3.14.7. The exact standalone diagnostic invocation was also exercised with missing inputs: exit 1 and a sanitized validation message, without requests or dependencies.
+- All 90 offline regressions passed together, including six diagnostic/workflow tests and the isolated-home replay test. Published commit `6c03bb1bbffebddc5de5da7d9749b20df454b02b` passed [Linux quality CI](https://github.com/asteroidcrib729/job-finder-app/actions/runs/40495710302), including all 90 tests, Ruff, consolidated Pyrefly, compilation and fresh builds under `.local/dist`. [Security scans](https://github.com/asteroidcrib729/job-finder-app/actions/runs/40495710190) also passed; CodeQL reported zero findings and no analysis errors/warnings.
 - The extracted diagnostic is tested for matching/mismatched server IDs, missing receipts, invalid inputs, safe summaries, GET-only transport, redirect refusal, malformed JSON shapes and sanitized errors. No live Discord call was made.
 - Replay subprocess test verifies that default reports land under `.local/output/latest` without creating delivery state or a root `output` directory.
 - Ruff, Pyrefly (0 errors, 17 existing suppressions), interpreter compilation, dependency consistency and Actionlint passed.
