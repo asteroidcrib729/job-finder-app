@@ -4,7 +4,7 @@
 def main():
     from ddgs import DDGS
 
-    from job_finder.config import load_config
+    from job_finder.configuration.loader import load_config
     config = load_config()
     with DDGS(timeout=8) as search:
         for query in config["linkedin_posts"]["queries"]:

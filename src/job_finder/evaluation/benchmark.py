@@ -4,9 +4,9 @@ import json
 from collections import Counter
 from pathlib import Path
 
-from job_finder.config import load_config
+from job_finder.configuration.loader import load_config
+from job_finder.configuration.paths import OUTPUT_DIR
 from job_finder.filtering.resume_filter import evaluate_job, rank_jobs
-from job_finder.paths import OUTPUT_DIR
 from job_finder.scrapers.base import Job, parse_date
 from job_finder.storage.tracker import atomic_write_json
 

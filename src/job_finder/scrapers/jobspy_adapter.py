@@ -7,7 +7,7 @@ import sys
 import time
 from datetime import datetime, timezone
 
-from job_finder.paths import BASE_DIR
+from job_finder.configuration.paths import BASE_DIR
 from job_finder.scrapers.base import (
     Job,
     canonical_url,

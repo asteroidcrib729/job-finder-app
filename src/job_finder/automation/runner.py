@@ -3,9 +3,9 @@ import logging
 import os
 from pathlib import Path
 
-from job_finder.main import run_job_finder
-from job_finder.paths import OUTPUT_DIR
-from job_finder.run_health import assess_run, workflow_exit_code
+from job_finder.application.health import assess_run, workflow_exit_code
+from job_finder.application.pipeline import run_job_finder
+from job_finder.configuration.paths import OUTPUT_DIR
 from job_finder.storage.tracker import StateError, read_json
 
 

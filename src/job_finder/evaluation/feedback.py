@@ -1,8 +1,8 @@
 """Record relevance labels from a saved run; export an offline benchmark."""
 import argparse
 
-from job_finder.main import sanitize
-from job_finder.paths import OUTPUT_DIR
+from job_finder.application.pipeline import sanitize
+from job_finder.configuration.paths import OUTPUT_DIR
 from job_finder.scrapers.base import Job, utc_now
 from job_finder.storage.tracker import StateError, atomic_write_json, read_json
 

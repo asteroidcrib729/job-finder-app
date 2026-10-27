@@ -13,8 +13,8 @@ from unittest.mock import MagicMock, patch
 
 import yaml
 
-from job_finder import discord_diagnostic
-from job_finder.fail_workflow import main as fail_workflow
+from job_finder.automation.failure import main as fail_workflow
+from job_finder.diagnostics import discord as discord_diagnostic
 
 ROOT = Path(__file__).resolve().parents[1]
 

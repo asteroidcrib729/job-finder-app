@@ -2,7 +2,7 @@
 import os
 from pathlib import Path
 
-_checkout = Path(__file__).resolve().parents[2]
+_checkout = Path(__file__).resolve().parents[3]
 # Editable installs resolve the checkout even when invoked from another directory.
 # A wheel install uses the working directory, or an explicitly configured data root.
 BASE_DIR = Path(os.environ.get("JOB_FINDER_HOME") or (
@@ -10,3 +10,4 @@ BASE_DIR = Path(os.environ.get("JOB_FINDER_HOME") or (
 )).resolve()
 
 OUTPUT_DIR = BASE_DIR / ".local" / "output"
+CONFIG_DIR = BASE_DIR / "config"

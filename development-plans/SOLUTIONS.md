@@ -1,5 +1,7 @@
 # Job Finder App: implemented solutions and acceptance plan
 
+**Configuration and module organization (2026-10-27):** Moved settings to `config/config.yaml` and the profile to `config/profiles/candidate-profile.yaml`. Retained `src/job_finder` as explicitly clarified by the owner, grouping package-root scripts into functional subpackages. Updated entry points, imports, workflows and path resolution; 91 offline tests and 54/54 synthetic decisions pass. See [structure record](PROJECT-STRUCTURE-2026-10-27.md) for validation and scope. Earlier paths below describe historical layouts.
+
 **Configuration/workflow cleanup (2026-10-27):** Consolidated Pyrefly under `[tool.pyrefly]` in `pyproject.toml`; extracted Discord diagnostics and workflow failure handling into dedicated Python scripts. All workflow run steps are tool/script invocations, enforced by regression coverage. Moved the ignored resume, caches, reports, distributions and obsolete root bytecode into `.local`, verified the resume hash, and updated report/artifact paths. `.venv` remains at the root for standard uv/IDE discovery. See [cleanup record](LOCAL-CLEANUP-2026-10-27.md) for verification and retained data boundaries.
 
 **Source layout and quality update (2026-10-27):** Application code now lives in the installed `src/job_finder` package. Configuration/profile YAML and production state retain their root paths. Ruff, Pyrefly type/syntax checks, interpreter compilation, shared VS Code settings, Dependabot uv/Actions updates, PR dependency review and CodeQL/advisory scanning are configured. Local validation: 83 offline regressions, 54/54 synthetic cases, Ruff, Pyrefly (0 errors, 17 existing suppressions), compilation, package build and dependency consistency passed; audit found no known vulnerabilities in 41 packages. Published commit `125a1e8` passed Linux quality CI and security scanning: CodeQL reported zero findings across 50 rules, and the hosted dependency audit passed. Enabled the previously disabled repository dependency graph/alerts; the first Dependabot PR now passes dependency review and all quality/security checks. See [layout and quality record](SOURCE-LAYOUT-2026-10-27.md).
@@ -70,7 +72,7 @@ Keep changes small enough to compare with the baseline. Capture a limited baseli
 
 ## S-01 — Create a structured, evidence-based candidate profile
 
-**Implemented:** Structured candidate profile separates internship evidence, listed skills and professional tenure. [Code](../candidate-profile.yaml), [checks](../tests/test_matching.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Structured candidate profile separates internship evidence, listed skills and professional tenure. [Code](../config/profiles/candidate-profile.yaml), [checks](../tests/test_matching.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-01.** Add a reviewed YAML profile, loaded through `config.py`, containing education, internship periods, demonstrated technologies, listed technologies, role families, and geography/compensation preferences. Keep the PDF local and ignored; do not add contact details to matching configuration.
 
@@ -286,7 +288,7 @@ Record Python and relevant package versions in each run artifact. Align developm
 
 ## S-21 — Report source health and meaningful process outcomes
 
-**Implemented:** Source health, query yield/budgets, reason counts, reports and meaningful exit codes make failures visible. [Code](../src/job_finder/main.py), [checks](../tests/test_pipeline.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Source health, query yield/budgets, reason counts, reports and meaningful exit codes make failures visible. [Code](../src/job_finder/application/pipeline.py), [checks](../tests/test_pipeline.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-21.** Return source outcomes alongside jobs: success, valid_empty, partial, blocked, timed_out, parse_failed, or unsupported. Report query duration/count, rows rejected during conversion, missing-description share, freshness/eligibility uncertainty, filter reason counts, duplicate counts, and confirmed/pending/failed deliveries.
 
@@ -298,7 +300,7 @@ Keep secrets, webhook URLs, authorization headers, and unnecessary contact infor
 
 ## S-22 — Build a benchmark that measures both bad alerts and missed jobs
 
-**Implemented:** Offline tests, a fixed-date 54-case synthetic benchmark and capture-time feedback evaluation support regression checking. [Code](../src/job_finder/evaluation.py), [checks](../tests/test_matching.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Offline tests, a fixed-date 54-case synthetic benchmark and capture-time feedback evaluation support regression checking. [Code](../src/job_finder/evaluation/benchmark.py), [checks](../tests/test_matching.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-22.** Add meaningful offline tests around the reproduced failures, plus adapter HTML/DataFrame fixtures and per-job delivery/state tests. Move the live scratch search behind an explicit entry point or outside automatic test collection. CI tests must not query job boards or send notifications.
 
@@ -321,7 +323,7 @@ Trace each missed manual example through retrieval → normalization → enrichm
 
 ## S-23 — Make configuration truthful, validated, and documented
 
-**Implemented:** Nested validated configuration, active source/policy settings and updated README replace misleading controls. [Code](../src/job_finder/config.py), [checks](../tests/test_pipeline.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Nested validated configuration, active source/policy settings and updated README replace misleading controls. [Code](../src/job_finder/configuration/loader.py), [checks](../tests/test_pipeline.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-23.** Define a schema for profile, query tracks, source options, freshness, matching thresholds, notification routing, and state. Validate types/ranges/source names at startup with field-specific errors. Use a deliberate nested-default strategy or fully explicit validated sections; test partial overrides.
 
@@ -331,7 +333,7 @@ Wire all documented settings into the active path. Consolidate or retire the unu
 
 ## S-24 — Rank qualified candidates and explain each alert
 
-**Implemented:** Constraint-first ranking, explanations, optional review digests and job-ID relevance feedback support usable alerts. [Code](../src/job_finder/feedback.py), [checks](../tests/test_review_feedback.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
+**Implemented:** Constraint-first ranking, explanations, optional review digests and job-ID relevance feedback support usable alerts. [Code](../src/job_finder/evaluation/feedback.py), [checks](../tests/test_review_feedback.py). The original design and acceptance criteria below remain as reference; production gates are tracked separately.
 
 **Resolves I-24.** Apply ranking only after mandatory role/geography/experience constraints. Return a structured decision with tier, score, confidence, matched evidence, gaps, and reason codes. Start with an interpretable weighted approach rather than requiring an external model.
 

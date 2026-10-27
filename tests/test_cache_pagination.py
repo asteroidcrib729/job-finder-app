@@ -3,7 +3,7 @@ import json
 from datetime import datetime, timedelta, timezone
 from unittest.mock import MagicMock, patch
 
-from job_finder.config import load_config
+from job_finder.configuration.loader import load_config
 from job_finder.scrapers.base import Job
 from job_finder.scrapers.cache import DetailCache, query_due, query_key
 from job_finder.scrapers.common import SourceError, SourceResult

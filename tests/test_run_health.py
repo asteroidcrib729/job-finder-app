@@ -4,10 +4,10 @@ import tempfile
 from pathlib import Path
 from unittest.mock import MagicMock, patch
 
-from job_finder import workflow_runner
-from job_finder.config import load_config, validate_config
-from job_finder.main import write_report
-from job_finder.run_health import assess_run, workflow_exit_code
+from job_finder.application.health import assess_run, workflow_exit_code
+from job_finder.application.pipeline import write_report
+from job_finder.automation import runner as workflow_runner
+from job_finder.configuration.loader import load_config, validate_config
 from job_finder.scrapers.jobspy_adapter import fetch_jobspy_jobs
 from job_finder.scrapers.jobspy_worker import HealthHandler
 from job_finder.scrapers.linkedin_posts_scraper import fetch_linkedin_plain_posts

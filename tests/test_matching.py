@@ -2,7 +2,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 
-from job_finder.config import load_config
+from job_finder.configuration.loader import load_config
 from job_finder.filtering.resume_filter import evaluate_job, experience_requirements, rank_jobs, skills_in
 from job_finder.scrapers.base import Job
 from tests.support import OfflineTestCase, job

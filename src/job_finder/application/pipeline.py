@@ -11,11 +11,11 @@ from dataclasses import asdict
 from importlib.metadata import PackageNotFoundError, version
 from pathlib import Path
 
-from job_finder.config import BASE_DIR, load_config
+from job_finder.application.health import assess_run
+from job_finder.configuration.loader import load_config
+from job_finder.configuration.paths import BASE_DIR, OUTPUT_DIR
 from job_finder.filtering.resume_filter import MATCHER_VERSION, evaluate_job, rank_jobs
 from job_finder.notifiers.manager import NotificationManager
-from job_finder.paths import OUTPUT_DIR
-from job_finder.run_health import assess_run
 from job_finder.scrapers.base import Job, merge_jobs, utc_now
 from job_finder.scrapers.common import QueryOutcome, SourceResult
 from job_finder.scrapers.jobspy_adapter import fetch_jobspy_jobs

@@ -61,7 +61,7 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           JOB_FINDER_DRY_RUN: ${{ inputs.dry_run || false }}
           JOB_FINDER_VERIFICATION_SAMPLE: ${{ inputs.verification_sample || false }}
-        run: uv run --locked --no-dev python -m job_finder.workflow_runner
+        run: uv run --locked --no-dev python -m job_finder.automation.runner
 
       # A degraded scrape or partial delivery must not discard valid acknowledgements.
       - name: Persist delivery and discovery state
@@ -100,4 +100,4 @@ jobs:
 
       - name: Surface pipeline or state persistence failure
         if: always() && (steps.pipeline.outcome == 'failure' || steps.state.outcome == 'failure')
-        run: uv run --locked --no-dev python -m job_finder.fail_workflow
+        run: uv run --locked --no-dev python -m job_finder.automation.failure

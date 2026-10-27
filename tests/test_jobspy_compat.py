@@ -8,7 +8,7 @@ from unittest.mock import patch
 import jobspy
 from jobspy.model import Country, JobPost, Location, Scraper, Site
 
-from job_finder.config import load_config
+from job_finder.configuration.loader import load_config
 from job_finder.scrapers.common import SourceError
 from job_finder.scrapers.jobspy_adapter import build_query, row_to_job, run_query
 from job_finder.scrapers.jobspy_worker import main as worker_main

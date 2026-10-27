@@ -18,10 +18,10 @@ dependencies = [
 Repository = "https://github.com/asteroidcrib729/job-finder-app"
 
 [project.scripts]
-job-finder = "job_finder.main:main"
-job-finder-workflow = "job_finder.workflow_runner:main"
-job-finder-evaluate = "job_finder.evaluation:main"
-job-finder-feedback = "job_finder.feedback:main"
+job-finder = "job_finder.application.pipeline:main"
+job-finder-workflow = "job_finder.automation.runner:main"
+job-finder-evaluate = "job_finder.evaluation.benchmark:main"
+job-finder-feedback = "job_finder.evaluation.feedback:main"
 
 [build-system]
 requires = ["uv_build==0.12.9"]
@@ -29,6 +29,7 @@ build-backend = "uv_build"
 
 [tool.uv.build-backend]
 module-name = "job_finder"
+module-root = "src"
 source-exclude = [".local/**"]
 
 [tool.uv]

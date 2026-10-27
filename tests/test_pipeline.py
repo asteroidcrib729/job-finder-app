@@ -3,8 +3,8 @@ import tempfile
 from pathlib import Path
 from unittest.mock import patch
 
-from job_finder.config import load_config
-from job_finder.main import run_job_finder
+from job_finder.application.pipeline import run_job_finder
+from job_finder.configuration.loader import load_config
 from job_finder.scrapers.base import utc_now
 from job_finder.scrapers.common import QueryOutcome, SourceResult
 from job_finder.storage.tracker import JobTracker
@@ -29,10 +29,10 @@ class PipelineTests(OfflineTestCase):
                 if qualified:
                     rows.append(job("qualified", posted_at=utc_now()))
                 with patch.dict("os.environ", {"DISCORD_WEBHOOK_URL": "https://example.test/webhook"}), \
-                     patch("job_finder.main.fetch_jobspy_jobs", return_value=source(rows)) as scrape, \
-                     patch("job_finder.main.fetch_rozee_jobs", return_value=source()), \
-                     patch("job_finder.main.fetch_linkedin_plain_posts", return_value=source()), \
-                     patch("job_finder.main.fetch_remote_feeds", return_value=source()), \
+                     patch("job_finder.application.pipeline.fetch_jobspy_jobs", return_value=source(rows)) as scrape, \
+                     patch("job_finder.application.pipeline.fetch_rozee_jobs", return_value=source()), \
+                     patch("job_finder.application.pipeline.fetch_linkedin_plain_posts", return_value=source()), \
+                     patch("job_finder.application.pipeline.fetch_remote_feeds", return_value=source()), \
                      patch("job_finder.notifiers.discord.requests.post", return_value=response(200, {"id": "verification-message"})) as post:
                     code = run_job_finder(verification_sample=True, state_path=root / "state",
                         discovery_path=root / "discovery", report_dir=root / "report")
@@ -54,10 +54,10 @@ class PipelineTests(OfflineTestCase):
             reviews = [job(str(i), kind="lead", posted_at=utc_now()) for i in range(2)]
             rejected = job("senior", title="Senior Python Developer", posted_at=utc_now())
             with patch.dict("os.environ", {"DISCORD_WEBHOOK_URL": "https://example.test/webhook"}), \
-                 patch("job_finder.main.fetch_jobspy_jobs", side_effect=[source(reviews + [rejected]), source(reviews + [rejected])]), \
-                 patch("job_finder.main.fetch_rozee_jobs", return_value=source()), \
-                 patch("job_finder.main.fetch_linkedin_plain_posts", return_value=source()), \
-                 patch("job_finder.main.fetch_remote_feeds", return_value=source()), \
+                 patch("job_finder.application.pipeline.fetch_jobspy_jobs", side_effect=[source(reviews + [rejected]), source(reviews + [rejected])]), \
+                 patch("job_finder.application.pipeline.fetch_rozee_jobs", return_value=source()), \
+                 patch("job_finder.application.pipeline.fetch_linkedin_plain_posts", return_value=source()), \
+                 patch("job_finder.application.pipeline.fetch_remote_feeds", return_value=source()), \
                  patch("job_finder.notifiers.discord.requests.post", return_value=response(200, {"id": "review-digest"})) as post:
                 for delivered in (2, 0):
                     self.assertEqual(run_job_finder(state_path=root / "state",
@@ -79,7 +79,7 @@ class PipelineTests(OfflineTestCase):
             replay = root / "jobs.json"
             replay.write_text(json.dumps([job(posted_at=utc_now()).to_dict()]))
             state, discovery = root / "state.json", root / "discovery.json"
-            with patch("job_finder.main.fetch_jobspy_jobs") as scrape, patch("job_finder.notifiers.discord.requests.post") as post:
+            with patch("job_finder.application.pipeline.fetch_jobspy_jobs") as scrape, patch("job_finder.notifiers.discord.requests.post") as post:
                 code = run_job_finder(replay_path=replay, state_path=state, discovery_path=discovery, report_dir=root / "report")
             self.assertEqual(code, 0)
             scrape.assert_not_called()
@@ -97,10 +97,10 @@ class PipelineTests(OfflineTestCase):
             state, discovery = root / "state.json", root / "discovery.json"
             jobs = [job("a", posted_at=utc_now()), job("b", posted_at=utc_now())]
             with patch.dict("os.environ", {"DISCORD_WEBHOOK_URL": "https://example.test/webhook"}), \
-                 patch("job_finder.main.fetch_jobspy_jobs", side_effect=[source(jobs), source()]), \
-                 patch("job_finder.main.fetch_rozee_jobs", return_value=source()), \
-                 patch("job_finder.main.fetch_linkedin_plain_posts", return_value=source()), \
-                 patch("job_finder.main.fetch_remote_feeds", return_value=source()), \
+                 patch("job_finder.application.pipeline.fetch_jobspy_jobs", side_effect=[source(jobs), source()]), \
+                 patch("job_finder.application.pipeline.fetch_rozee_jobs", return_value=source()), \
+                 patch("job_finder.application.pipeline.fetch_linkedin_plain_posts", return_value=source()), \
+                 patch("job_finder.application.pipeline.fetch_remote_feeds", return_value=source()), \
                  patch("job_finder.notifiers.discord.requests.post", return_value=response(200, {"id": "fixture-message"})) as post:
                 for count in (1, 0):
                     code = run_job_finder(config_path=override, state_path=state, discovery_path=discovery, report_dir=root / "report")
@@ -111,12 +111,12 @@ class PipelineTests(OfflineTestCase):
     def test_missing_webhook_and_corrupt_state_fail_before_scraping(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            with patch.dict("os.environ", {"DISCORD_WEBHOOK_URL": ""}), patch("job_finder.main.fetch_jobspy_jobs") as scrape:
+            with patch.dict("os.environ", {"DISCORD_WEBHOOK_URL": ""}), patch("job_finder.application.pipeline.fetch_jobspy_jobs") as scrape:
                 self.assertEqual(run_job_finder(state_path=root / "state", report_dir=root / "report"), 1)
                 scrape.assert_not_called()
             state = root / "state"
             state.write_text("{")
-            with patch("job_finder.main.fetch_jobspy_jobs") as scrape:
+            with patch("job_finder.application.pipeline.fetch_jobspy_jobs") as scrape:
                 self.assertEqual(run_job_finder(dry_run=True, state_path=state, report_dir=root / "report"), 1)
                 scrape.assert_not_called()
 
@@ -125,10 +125,10 @@ class PipelineTests(OfflineTestCase):
             root = Path(directory)
             failed = SourceResult("Fixture")
             failed.report.queries.append(QueryOutcome("q", "blocked", reason="403"))
-            with patch("job_finder.main.fetch_jobspy_jobs", return_value=failed), \
-                 patch("job_finder.main.fetch_rozee_jobs", return_value=source()), \
-                 patch("job_finder.main.fetch_linkedin_plain_posts", return_value=source()), \
-                 patch("job_finder.main.fetch_remote_feeds", return_value=source()):
+            with patch("job_finder.application.pipeline.fetch_jobspy_jobs", return_value=failed), \
+                 patch("job_finder.application.pipeline.fetch_rozee_jobs", return_value=source()), \
+                 patch("job_finder.application.pipeline.fetch_linkedin_plain_posts", return_value=source()), \
+                 patch("job_finder.application.pipeline.fetch_remote_feeds", return_value=source()):
                 code = run_job_finder(dry_run=True, state_path=root / "state", discovery_path=root / "discovery", report_dir=root / "report")
             self.assertEqual(code, 2)
             self.assertEqual(json.loads((root / "report" / "run.json").read_text())["health"], "degraded")
@@ -152,10 +152,10 @@ class PipelineTests(OfflineTestCase):
             override.write_text("notifications:\n  discord_enabled: false\n")
             feed = source()
             feed.updates = {"feed:remotive": {"last_success": utc_now()}}
-            with patch("job_finder.main.fetch_jobspy_jobs", return_value=source()), \
-                 patch("job_finder.main.fetch_rozee_jobs", return_value=source()), \
-                 patch("job_finder.main.fetch_linkedin_plain_posts", return_value=source()), \
-                 patch("job_finder.main.fetch_remote_feeds", return_value=feed), \
+            with patch("job_finder.application.pipeline.fetch_jobspy_jobs", return_value=source()), \
+                 patch("job_finder.application.pipeline.fetch_rozee_jobs", return_value=source()), \
+                 patch("job_finder.application.pipeline.fetch_linkedin_plain_posts", return_value=source()), \
+                 patch("job_finder.application.pipeline.fetch_remote_feeds", return_value=feed), \
                  patch("job_finder.notifiers.discord.requests.post") as post:
                 code = run_job_finder(config_path=override, state_path=root / "state", discovery_path=root / "discovery", report_dir=root / "report")
             self.assertEqual(code, 0)

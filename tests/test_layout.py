@@ -31,9 +31,10 @@ class PackageLayoutTests(unittest.TestCase):
 
     def test_editable_install_resolves_configuration_and_state_at_checkout_root(self):
         script = (
-            "import json; from job_finder.config import BASE_DIR, load_config; "
+            "import json; from job_finder.configuration.loader import load_config; "
+            "from job_finder.configuration.paths import BASE_DIR; "
             "from job_finder.storage.tracker import DATA_DIR; "
-            "from job_finder.main import DISCOVERY_FILE; "
+            "from job_finder.application.pipeline import DISCOVERY_FILE; "
             "load_config(); print(json.dumps([str(BASE_DIR), str(DATA_DIR), str(DISCOVERY_FILE)]))"
         )
         with tempfile.TemporaryDirectory() as directory:
@@ -42,7 +43,7 @@ class PackageLayoutTests(unittest.TestCase):
 
     def test_explicit_home_keeps_mutable_data_outside_package(self):
         script = (
-            "import json; from job_finder.paths import BASE_DIR; "
+            "import json; from job_finder.configuration.paths import BASE_DIR; "
             "from job_finder.storage.tracker import DATA_DIR; "
             "print(json.dumps([str(BASE_DIR), str(DATA_DIR)]))"
         )
@@ -56,8 +57,7 @@ class PackageLayoutTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             home = Path(directory).resolve() / "instance"
             home.mkdir()
-            for name in ("config.yaml", "candidate-profile.yaml"):
-                shutil.copyfile(ROOT / name, home / name)
+            shutil.copytree(ROOT / "config", home / "config")
             self.run_python(["-m", "job_finder", "--replay", str(ROOT / "tests/fixtures/matching.json")],
                             directory, home=home)
             report = json.loads((home / ".local/output/latest/run.json").read_text(encoding="utf-8"))
@@ -65,3 +65,20 @@ class PackageLayoutTests(unittest.TestCase):
             self.assertEqual(report["deliveries"], [])
             self.assertFalse((home / "output").exists())
             self.assertFalse((home / "data").exists())
+
+    def test_profile_override_resolves_against_configuration_directory(self):
+        with tempfile.TemporaryDirectory() as directory:
+            home = Path(directory).resolve() / "instance"
+            shutil.copytree(ROOT / "config", home / "config")
+            profile = home / "config/profiles/alternate.yaml"
+            original = home / "config/profiles/candidate-profile.yaml"
+            profile.write_text(original.read_text(encoding="utf-8").replace(
+                'location: "Karachi, Pakistan"', 'location: "Profile fixture"'), encoding="utf-8")
+            override = Path(directory) / "override.yaml"
+            override.write_text("profile_path: profiles/alternate.yaml\n", encoding="utf-8")
+            script = (
+                "import sys; from job_finder.configuration.loader import load_config; "
+                "print(load_config(sys.argv[1])['profile']['location'])"
+            )
+            result = self.run_python(["-c", script, str(override)], directory, home=home)
+            self.assertEqual(result.strip(), "Profile fixture")

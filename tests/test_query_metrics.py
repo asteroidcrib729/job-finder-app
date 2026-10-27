@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta, timezone
 from unittest.mock import patch
 
-from job_finder.config import load_config
+from job_finder.configuration.loader import load_config
 from job_finder.scrapers.base import utc_now
 from job_finder.scrapers.common import SourceError
 from job_finder.scrapers.jobspy_adapter import fetch_jobspy_jobs

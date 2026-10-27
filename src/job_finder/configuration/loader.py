@@ -5,7 +5,7 @@ from pathlib import Path
 
 import yaml
 
-from job_finder.paths import BASE_DIR
+from job_finder.configuration.paths import CONFIG_DIR
 
 
 def deep_merge(base, overrides):
@@ -120,18 +120,18 @@ def validate_config(config):
 
 
 def load_config(config_path=None):
-    default_path = BASE_DIR / "config.yaml"
+    default_path = CONFIG_DIR / "config.yaml"
     with default_path.open(encoding="utf-8") as handle:
         config = _mapping(yaml.safe_load(handle), "config")
     if config_path is not None and Path(config_path).resolve() != default_path:
         with Path(config_path).open(encoding="utf-8") as handle:
             config = deep_merge(config, _mapping(yaml.safe_load(handle), "config override"))
-    configured_profile = config.get("profile_path", "candidate-profile.yaml")
+    configured_profile = config.get("profile_path", "profiles/candidate-profile.yaml")
     if not isinstance(configured_profile, str) or not configured_profile.strip():
         raise ValueError("profile_path must be a nonempty path string")
     profile_path = Path(configured_profile)
     if not profile_path.is_absolute():
-        profile_path = BASE_DIR / profile_path
+        profile_path = CONFIG_DIR / profile_path
     with profile_path.open(encoding="utf-8") as handle:
         config["profile"] = deep_merge(_mapping(yaml.safe_load(handle), "profile"), config.get("profile", {}))
     config["discord_webhook_url"] = os.getenv("DISCORD_WEBHOOK_URL", "").strip()

@@ -13,7 +13,7 @@ At the start of repository work, an agent checks the working tree, current confi
 - **Owner and purpose:** Faraz Hussain; graduate/junior software opportunities aligned with his qualifications and internships. Local searches target Karachi; remote searches consider Pakistan eligibility and prefer USD compensation. The structured profile separates demonstrated internship evidence from listed skills.
 - **Architecture:** Python JobSpy/custom adapters, GitHub Actions, persistent repository JSON and Discord. The owner explicitly chose to preserve this architecture while improving retrieval, matching and delivery reliability.
 - **Runtime:** exact Python **3.14.7**, uv **0.12.9**, root `.venv`. `.python-version`, `pyproject.toml` and `uv.lock` are authoritative. Project packages never use global pip. Runtime and development dependencies remain separate; uv manages manifest/lock changes together.
-- **Source:** installed package `src/job_finder`, imports under `job_finder.*`, tests in `tests`. Commands use `uv run --locked python -m job_finder` or installed console scripts; root script wrappers are not restored. Configuration/profile YAML and tracked delivery/discovery state stay at the root and `data/`, respectively.
+- **Source:** installed package `src/job_finder`, imports under `job_finder.*`, tests in `tests`. Commands use `uv run --locked python -m job_finder` or installed console scripts; root script wrappers are not restored. Runtime settings live in `config/config.yaml`, the profile in `config/profiles/candidate-profile.yaml`, and tracked delivery/discovery state in `data/`. The underscore in `job_finder` preserves normal Python import syntax.
 - **Tool configuration:** uv, Ruff and `[tool.pyrefly]` live in `pyproject.toml`. No separate `pyrefly.toml` is maintained. The current tool pins are Ruff 0.17.2 and Pyrefly 1.4.0; the manifest/lock take precedence if later changes supersede this snapshot.
 - **Local material:** `.local/` holds personal files, reports, caches and builds. The resume is `.local/Resume - Faraz Hussain.pdf`. `.venv` stays at the root for standard uv/IDE discovery; source/test bytecode remains beside its modules. The whole `.local` tree is Git-ignored and excluded from source distributions. Only the explicitly selected redacted `.local/output/latest/` directory may be uploaded, never the entire `.local` tree.
 - **Workflow convention:** workflows orchestrate actions and invoke single tool/script commands. Python/JavaScript/shell programs, heredocs and interpreter `-c` snippets are not embedded in YAML. Custom logic belongs in dedicated `src/job_finder` modules with offline regression coverage.
@@ -27,14 +27,14 @@ At the start of repository work, an agent checks the working tree, current confi
 
 | Location | Responsibility |
 | --- | --- |
-| `src/job_finder/config.py`, `config.yaml`, `candidate-profile.yaml` | Validated settings and structured candidate evidence. |
+| `src/job_finder/configuration/loader.py`, `config/config.yaml`, `config/profiles/candidate-profile.yaml` | Validated settings and structured candidate evidence. |
 | `src/job_finder/filtering/` | Role, skill, experience, geography, freshness, compensation and ranking decisions. |
 | `src/job_finder/scrapers/` | Isolated JobSpy workers, Rozee parsing, recruiter-post discovery, optional remote feeds, cadence and query health. |
 | `src/job_finder/notifiers/` | Bounded Discord cards/digests, checked retries and individual delivery outcomes. |
 | `src/job_finder/storage/`, `data/` | Durable journals, pending queue, backups, recovery and concurrent Git reconciliation. |
-| `src/job_finder/main.py`, `workflow_runner.py`, `run_health.py` | Application orchestration, replay, reports and operational outcome policy. All listed modules are inside `src/job_finder`. |
-| `src/job_finder/discord_diagnostic.py`, `fail_workflow.py` | Read-only destination/message checks and explicit final workflow failure signaling. |
-| `src/job_finder/evaluation.py`, `feedback.py` | Synthetic/user-labeled benchmark evaluation and local relevance feedback. |
+| `src/job_finder/application/pipeline.py`, `automation/runner.py`, `application/health.py` | Application orchestration, replay, reports and operational outcome policy. All listed modules are inside `src/job_finder`. |
+| `src/job_finder/diagnostics/discord.py`, `automation/failure.py` | Read-only destination/message checks and explicit final workflow failure signaling. |
+| `src/job_finder/evaluation/benchmark.py`, `evaluation/feedback.py` | Synthetic/user-labeled benchmark evaluation and local relevance feedback. |
 | `.github/workflows/`, `.github/dependabot.yml` | Production, read-only diagnostic, quality CI, dependency review, security scans and weekly update configuration. |
 | `.vscode/` | Shared interpreter, recommended extensions, unittest discovery, tasks and dry-run debugging. |
 | `.local/` | Ignored resume, cached historical evidence, runtime reports, distributions and archived root bytecode. |
@@ -124,9 +124,15 @@ The resume, caches, reports, distributions and obsolete root bytecode moved into
 
 At the owner's request, README was rewritten in his first-person voice, CONTRIBUTING was rewritten in third person, and this file was expanded from a short instruction list into the project archive. Current rules, dated evidence and unresolved work are separated to prevent old instructions from being reused accidentally. The update changes documentation only; the runtime validation below belongs to the preceding code revision, not a new test execution for these prose changes.
 
+### October 27, 2026 - Configuration and functional module organization
+
+Following documentation commit `228a912`, the owner requested a dedicated configuration directory and grouped source modules, then clarified that the Python package must remain at `src/job_finder`. Settings moved to `config/config.yaml` and the unchanged profile to `config/profiles/candidate-profile.yaml`. Application, configuration, automation, diagnostics and evaluation subpackages now contain the former package-root scripts. Only package entry files remain at that root. Shared paths account for the additional module nesting; relative profile references resolve within `config/`. Imports, workflows, console targets, regression patches and documentation links follow the new paths. The lockfile, dependencies and production state were retained.
+
+Local checks passed: 91 offline tests, 54/54 synthetic cases, Ruff, Pyrefly (zero errors, 17 suppressions), compilation, dependency consistency, Actionlint and fresh builds. An independently installed wheel loaded configuration and ran CLI help outside the checkout. Hosted checks remain pending publication. Details: [structure record](development-plans/PROJECT-STRUCTURE-2026-10-27.md).
+
 ## Last recorded validation and remaining work
 
-Latest validated implementation: **`6c03bb1`**, recorded by **`f3426e8`** on October 27, 2026. The working tree and remote may advance after this record; Git status/history and the relevant hosted run are the verification sources.
+Latest local validation covers the configuration/module refactor described above (91 tests). The preceding hosted-validated implementation was **`6c03bb1`**, recorded by **`f3426e8`** on October 27, 2026. The working tree and remote may advance after this record; Git status/history and the relevant hosted run are the verification sources.
 
 - 90 offline regressions passed locally and on Linux; the matching benchmark contains 54 synthetic cases with previously recorded 54/54 agreement.
 - Ruff, Pyrefly, interpreter compilation, dependency consistency, fresh package builds and workflow validation passed. Pyrefly retained 17 targeted suppressions; zero diagnostics is not complete type coverage.
@@ -149,7 +155,7 @@ uv run --locked ruff check src tests
 uv run --locked pyrefly check
 uv run --locked python -m compileall -q src tests
 uv run --locked python -m unittest discover -s tests -v
-uv run --locked python -m job_finder.evaluation tests/fixtures/matching.json
+uv run --locked python -m job_finder.evaluation.benchmark tests/fixtures/matching.json
 ```
 
 Package/layout changes also require `uv build --no-cache --out-dir .local/dist` and archive inspection. Dependency/runtime changes also require `uv audit --locked` and applicable hosted checks. Documentation-only changes require wording, command/link and staged-diff review. Reports and benchmark outputs stay in `.local/output`; experiments do not overwrite production state.

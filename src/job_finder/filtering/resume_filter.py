@@ -200,7 +200,7 @@ def mandatory_skill_groups(description):
 
 def evaluate_job(job: Job, config: dict, now=None) -> MatchDecision:
     if "profile" not in config:
-        from job_finder.config import deep_merge, load_config
+        from job_finder.configuration.loader import deep_merge, load_config
         config = deep_merge(load_config(), config)
     profile, policy = config["profile"], config["matching"]
     now = now or datetime.now(timezone.utc)

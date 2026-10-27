@@ -4,7 +4,9 @@ This document describes the conventions followed by contributors and the reposit
 
 ## Project structure and local files
 
-Application code belongs in `src/job_finder/`, with `job_finder.*` imports and package modules or console entry points. Tests belong in `tests/`; configuration and candidate-profile YAML remain at the root; production delivery and discovery state remain in `data/`. Configuration secrets and generated state do not belong inside the installed package.
+Application code belongs in `src/job_finder/`, with `job_finder.*` imports and package modules or console entry points. Tests belong in `tests/`; runtime settings live in `config/config.yaml` and the candidate profile in `config/profiles/candidate-profile.yaml`; production delivery and discovery state remain in `data/`. Configuration secrets and generated state do not belong inside the installed package.
+
+Modules are grouped by responsibility: `application`, `configuration`, `automation`, `diagnostics`, `evaluation`, `filtering`, `scrapers`, `notifiers` and `storage`. Only package entry files remain at the package root. The `job_finder` underscore is retained for valid Python imports. Relative `profile_path` values resolve against the configuration directory, including values supplied by external override files. After pulling a layout change, contributors run `uv sync --locked` to refresh the editable installation and console entry points.
 
 Contributors keep personal documents, caches, reports and build output in Git-ignored `.local/`. The owner's resume is `.local/Resume - Faraz Hussain.pdf`. uv and Ruff cache paths are configured there. The root `.venv` remains the standard environment for uv and IDE discovery; relocating an existing environment requires recreating its launchers. Neither Git commits nor artifact uploads include the entire `.local` directory. Legacy root ignore patterns remain as protection against accidentally generated files.
 
@@ -24,7 +26,7 @@ uv run --locked ruff check src tests
 uv run --locked pyrefly check
 uv run --locked python -m compileall -q src tests
 uv run --locked python -m unittest discover -s tests -v
-uv run --locked python -m job_finder.evaluation tests/fixtures/matching.json
+uv run --locked python -m job_finder.evaluation.benchmark tests/fixtures/matching.json
 uv build --no-cache --out-dir .local/dist
 uv audit --locked
 ```

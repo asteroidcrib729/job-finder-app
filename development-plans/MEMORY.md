@@ -1,5 +1,7 @@
 # Job Finder App: project memory and implementation status
 
+**Configuration and module organization (2026-10-27):** Moved settings to `config/config.yaml` and the profile to `config/profiles/candidate-profile.yaml`. Retained `src/job_finder` as explicitly clarified by the owner, grouping package-root scripts into functional subpackages. Updated entry points, imports, workflows and path resolution; 91 offline tests and 54/54 synthetic decisions pass. See [structure record](PROJECT-STRUCTURE-2026-10-27.md) for validation and scope. Earlier paths below describe historical layouts.
+
 **Configuration/workflow cleanup (2026-10-27):** Consolidated Pyrefly under `[tool.pyrefly]` in `pyproject.toml`; extracted Discord diagnostics and workflow failure handling into dedicated Python scripts. All workflow run steps are tool/script invocations, enforced by regression coverage. Moved the ignored resume, caches, reports, distributions and obsolete root bytecode into `.local`, verified the resume hash, and updated report/artifact paths. `.venv` remains at the root for standard uv/IDE discovery. See [cleanup record](LOCAL-CLEANUP-2026-10-27.md) for verification and retained data boundaries.
 
 **Source layout and quality update (2026-10-27):** Application code now lives in the installed `src/job_finder` package. Configuration/profile YAML and production state retain their root paths. Ruff, Pyrefly type/syntax checks, interpreter compilation, shared VS Code settings, Dependabot uv/Actions updates, PR dependency review and CodeQL/advisory scanning are configured. Local validation: 83 offline regressions, 54/54 synthetic cases, Ruff, Pyrefly (0 errors, 17 existing suppressions), compilation, package build and dependency consistency passed; audit found no known vulnerabilities in 41 packages. Published commit `125a1e8` passed Linux quality CI and security scanning: CodeQL reported zero findings across 50 rules, and the hosted dependency audit passed. Enabled the previously disabled repository dependency graph/alerts; the first Dependabot PR now passes dependency review and all quality/security checks. See [layout and quality record](SOURCE-LAYOUT-2026-10-27.md).
@@ -38,7 +40,7 @@ The implementation addresses all 24 audit issues at the code level. The original
 - [Implemented solutions and acceptance boundaries](SOLUTIONS.md)
 - [Detailed implementation and validation record](IMPLEMENTATION.md)
 - [Run commands, configuration and recovery](../README.md)
-- [Candidate profile](../candidate-profile.yaml)
+- [Candidate profile](../config/profiles/candidate-profile.yaml)
 
 Default delivery remains qualified-only. Optional remote feeds remain disabled for individual pilots. No production workflow was manually dispatched and no Discord test message was sent during implementation. Existing remote job-history updates are preserved when publishing these changes.
 

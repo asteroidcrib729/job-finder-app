@@ -1,4 +1,4 @@
-profile_path: candidate-profile.yaml
+profile_path: profiles/candidate-profile.yaml
 
 search_keywords:
   - "Junior Software Engineer"

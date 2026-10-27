@@ -1,5 +1,7 @@
 # Job Finder App: issue register
 
+**Configuration and module organization (2026-10-27):** Moved settings to `config/config.yaml` and the profile to `config/profiles/candidate-profile.yaml`. Retained `src/job_finder` as explicitly clarified by the owner, grouping package-root scripts into functional subpackages. Updated entry points, imports, workflows and path resolution; 91 offline tests and 54/54 synthetic decisions pass. See [structure record](PROJECT-STRUCTURE-2026-10-27.md) for validation and scope. Earlier paths below describe historical layouts.
+
 **Configuration/workflow cleanup (2026-10-27):** Consolidated Pyrefly under `[tool.pyrefly]` in `pyproject.toml`; extracted Discord diagnostics and workflow failure handling into dedicated Python scripts. All workflow run steps are tool/script invocations, enforced by regression coverage. Moved the ignored resume, caches, reports, distributions and obsolete root bytecode into `.local`, verified the resume hash, and updated report/artifact paths. `.venv` remains at the root for standard uv/IDE discovery. See [cleanup record](LOCAL-CLEANUP-2026-10-27.md) for verification and retained data boundaries.
 
 **Source layout and quality update (2026-10-27):** Application code now lives in the installed `src/job_finder` package. Configuration/profile YAML and production state retain their root paths. Ruff, Pyrefly type/syntax checks, interpreter compilation, shared VS Code settings, Dependabot uv/Actions updates, PR dependency review and CodeQL/advisory scanning are configured. Local validation: 83 offline regressions, 54/54 synthetic cases, Ruff, Pyrefly (0 errors, 17 existing suppressions), compilation, package build and dependency consistency passed; audit found no known vulnerabilities in 41 packages. Published commit `125a1e8` passed Linux quality CI and security scanning: CodeQL reported zero findings across 50 rules, and the hosted dependency audit passed. Enabled the previously disabled repository dependency graph/alerts; the first Dependabot PR now passes dependency review and all quality/security checks. See [layout and quality record](SOURCE-LAYOUT-2026-10-27.md).
@@ -26,7 +28,7 @@ Evidence labels below apply to the original audit. **Reproduced** means executed
 
 ## I-01 — The candidate profile is incomplete and does not represent experience evidence
 
-**Resolution: implemented and regression-covered.** Structured candidate profile separates internship evidence, listed skills and professional tenure. [Implementation](../candidate-profile.yaml), [validation](../tests/test_matching.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Structured candidate profile separates internship evidence, listed skills and professional tenure. [Implementation](../config/profiles/candidate-profile.yaml), [validation](../tests/test_matching.py). See the current acceptance boundaries above before claiming production closure.
 
 **P1 · Code/Gap.** `filtering/resume_filter.py:9`, `filter_jobs_for_faraz`; `config.yaml`.
 
@@ -230,7 +232,7 @@ All dependencies use minimum-only constraints; fresh runner resolution can chang
 
 ## I-21 — Healthy empty searches and failures are difficult to distinguish
 
-**Resolution: implemented and regression-covered.** Source health, query yield/budgets, reason counts, reports and meaningful exit codes make failures visible. [Implementation](../src/job_finder/main.py), [validation](../tests/test_pipeline.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Source health, query yield/budgets, reason counts, reports and meaningful exit codes make failures visible. [Implementation](../src/job_finder/application/pipeline.py), [validation](../tests/test_pipeline.py). See the current acceptance boundaries above before claiming production closure.
 
 **P1 · Code.** Scraper exception handlers; `main.py:29`; `storage/tracker.py:52`; notifier return handling.
 
@@ -240,7 +242,7 @@ Source errors often become empty lists. Rozee non-200s are silent; normal pipeli
 
 ## I-22 — There is no repeatable accuracy benchmark or automated regression suite
 
-**Resolution: implemented and regression-covered.** Offline tests, a fixed-date 54-case synthetic benchmark and capture-time feedback evaluation support regression checking. [Implementation](../src/job_finder/evaluation.py), [validation](../tests/test_matching.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Offline tests, a fixed-date 54-case synthetic benchmark and capture-time feedback evaluation support regression checking. [Implementation](../src/job_finder/evaluation/benchmark.py), [validation](../tests/test_matching.py). See the current acceptance boundaries above before claiming production closure.
 
 **P1 · Code/Gap.** `scratch/test_search.py`; workflow; `data/seen_jobs.json`.
 
@@ -250,7 +252,7 @@ The scratch script makes live searches at import time and prints results; it has
 
 ## I-23 — Configuration and documentation disagree with active behavior
 
-**Resolution: implemented and regression-covered.** Nested validated configuration, active source/policy settings and updated README replace misleading controls. [Implementation](../src/job_finder/config.py), [validation](../tests/test_pipeline.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Nested validated configuration, active source/policy settings and updated README replace misleading controls. [Implementation](../src/job_finder/configuration/loader.py), [validation](../tests/test_pipeline.py). See the current acceptance boundaries above before claiming production closure.
 
 **P2 · Code.** `config.py:7`, `:29`; `filtering/filter.py`; `filtering/resume_filter.py:112`; `README.md`.
 
@@ -260,7 +262,7 @@ Configuration merges shallowly and validates neither schema nor types. The activ
 
 ## I-24 — Alerts provide neither ordering by fit nor reasons for the match
 
-**Resolution: implemented and regression-covered.** Constraint-first ranking, explanations, optional review digests and job-ID relevance feedback support usable alerts. [Implementation](../src/job_finder/feedback.py), [validation](../tests/test_review_feedback.py). See the current acceptance boundaries above before claiming production closure.
+**Resolution: implemented and regression-covered.** Constraint-first ranking, explanations, optional review digests and job-ID relevance feedback support usable alerts. [Implementation](../src/job_finder/evaluation/feedback.py), [validation](../tests/test_review_feedback.py). See the current acceptance boundaries above before claiming production closure.
 
 **P1 · Code/Gap.** `filtering/resume_filter.py:112`; `main.py`; `notifiers/discord.py:58`.
 

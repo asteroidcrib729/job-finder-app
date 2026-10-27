@@ -7,7 +7,7 @@ import tempfile
 import time
 from pathlib import Path
 
-from job_finder.paths import BASE_DIR
+from job_finder.configuration.paths import BASE_DIR
 from job_finder.scrapers.base import Job
 
 DATA_DIR = BASE_DIR / "data"

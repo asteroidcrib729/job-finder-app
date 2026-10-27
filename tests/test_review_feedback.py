@@ -3,9 +3,9 @@ import tempfile
 from pathlib import Path
 from unittest.mock import patch
 
-from job_finder.config import load_config
-from job_finder.evaluation import evaluate_benchmark
-from job_finder.feedback import export_benchmark, record_feedback
+from job_finder.configuration.loader import load_config
+from job_finder.evaluation.benchmark import evaluate_benchmark
+from job_finder.evaluation.feedback import export_benchmark, record_feedback
 from job_finder.filtering.resume_filter import evaluate_job
 from job_finder.notifiers.discord import DiscordNotifier
 from job_finder.scrapers.base import Job, merge_jobs

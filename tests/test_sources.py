@@ -5,7 +5,7 @@ from unittest.mock import patch
 
 import pandas as pd
 
-from job_finder.config import load_config
+from job_finder.configuration.loader import load_config
 from job_finder.scrapers.base import Job, merge_jobs
 from job_finder.scrapers.common import SourceError, get_public
 from job_finder.scrapers.jobspy_adapter import build_query, fetch_jobspy_jobs, row_to_job, run_query

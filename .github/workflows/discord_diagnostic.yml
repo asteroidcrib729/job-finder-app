@@ -31,4 +31,4 @@ jobs:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           EXPECTED_SERVER_ID: ${{ inputs.expected_server_id }}
           MESSAGE_ID: ${{ inputs.message_id }}
-        run: uv run --no-project python src/job_finder/discord_diagnostic.py
+        run: uv run --no-project python src/job_finder/diagnostics/discord.py

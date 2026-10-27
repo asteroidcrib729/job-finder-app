@@ -6,7 +6,7 @@ import subprocess
 import tempfile
 from pathlib import Path
 
-from job_finder.paths import BASE_DIR
+from job_finder.configuration.paths import BASE_DIR
 from job_finder.storage.reconcile import merge_delivery, merge_discovery, validate_discovery_state
 from job_finder.storage.tracker import StateError, read_json, validate_delivery_state
 
