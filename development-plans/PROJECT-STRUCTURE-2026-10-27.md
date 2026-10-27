@@ -17,6 +17,6 @@ The owner requested configuration outside the project root and modules grouped b
 - Ruff passed; Pyrefly reported zero errors with 17 existing suppressions; interpreter compilation passed.
 - Synthetic benchmark: 54/54 expected decisions.
 - Fresh wheel/source builds passed. An independently installed wheel loaded external configuration and executed CLI help from a temporary directory. Archives exclude local personal material.
-- Actionlint and whitespace checks passed. Hosted validation is pending publication.
+- Actionlint and whitespace checks passed. Published implementation `37fbe15` passed [Linux quality CI](https://github.com/asteroidcrib729/job-finder-app/actions/runs/40502319378) and [security scans](https://github.com/asteroidcrib729/job-finder-app/actions/runs/40502319421). Linux passed all 91 regressions and the static/build gates; the dependency audit passed and CodeQL reported zero findings for that exact commit.
 
 Production state, dependency versions, filtering policy and delivery behavior were preserved. No live scrape or Discord send was performed as part of this refactor; offline success does not establish live source availability or production matching accuracy.
