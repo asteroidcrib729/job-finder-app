@@ -50,6 +50,8 @@ The owner requested implementation of feasible remaining source-coverage improve
 
 Local checks passed: 136 offline tests, 54/54 synthetic decisions, Ruff, Pyrefly (zero errors, 16 suppressions), compilation, dependency consistency, Actionlint, wheel/sdist builds and archive inspection. No matcher threshold or dependency changes were made. Hosted acceptance is recorded separately in [persistent enrichment evidence](development-plans/PERSISTENT-ENRICHMENT-2026-10-27.md); optional provider implementation is not evidence of live access.
 
+Published implementation `603b4ea` passed hosted quality CI and security scanning, with zero CodeQL findings. Production runs `40563530692` and `40564183004` succeeded: 16 then 20 fresh LinkedIn descriptions, adaptive budgets 16 -> 20 -> 24, pending cards 65 -> 45, and 20 jobs restored from saved work in the follow-up. Four distinct new review jobs were delivered in two digests, without delivery errors or resends. State commits `0962de1` and `3469f07` retained the required owner-author/bot-committer identities. Rozee HTTP 403 and unverified search-provider results remain external limits; Google/feeds were not due, and optional employer/SerpApi paths were not exercised live. Exact runs, receipt verification and caveats are in the linked evidence record.
+
 ### July 23, 2026 ? Initial application and stable baseline
 
 Commits `45c7470`, `ac4d156` and `321fa4a` introduced the Job Finder App and clarified workflow permissions and desktop/mobile Discord webhook setup. The local `v1.0-stable` tag and `backup-v1.0` branch preserve the original baseline at `321fa4a`; they are historical recovery references, not deployment targets for current changes.
