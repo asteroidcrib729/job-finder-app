@@ -205,6 +205,10 @@ Quality CI also runs Ruff, Pyrefly, Python syntax compilation and a package buil
 
 CLI exit codes remain **0** healthy/valid-empty/idle, **1** fatal configuration/state failure, and **2** degraded source or delivery outcome. I use **job_finder.automation.runner** to distinguish partial coverage from operational failure: successful primary discovery with optional source problems produces a visible warning; total due primary discovery failure, notification failure, corruption, or failed state persistence still fails the run. A Google/recruiter probe cannot fail a cycle whose primary queries are intentionally not due. Zero qualified matches alone is not a failure. State commit/push failures are surfaced. The writer builds a state-only commit on the latest remote tree using a temporary index, preserving concurrent code changes. Acknowledgements override pending jobs; retention pruning and queue retirement are reconciled against the starting state. Normal fast-forward pushes retry branch races. Persistent failures retain state files/backups in a seven-day recovery artifact. There is no force push or working-tree rebase.
 
+## License
+
+I license my original source code and documentation under the [Apache License 2.0](LICENSE). My [NOTICE](NOTICE) identifies **Faraz Hussain** as the original author and links to this project's source repository. Redistributors must include the license, preserve applicable copyright and attribution notices, carry the NOTICE attribution as required by Section 4, and mark modified files. The license does not require a visible credit banner in every application. Third-party dependencies and externally sourced job content retain their own licenses and terms.
+
 ## My development records
 
 I keep the project history, verified results and remaining questions in these records:

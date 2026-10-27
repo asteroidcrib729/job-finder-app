@@ -24,6 +24,7 @@ At the start of repository work, an agent checks the working tree, current confi
 - **Git attribution:** automated state commits use author `Faraz Hussain <132701966+asteroidcrib729@users.noreply.github.com>` and committer `github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>`. The workflow supplies all four identity variables and writer defaults match. Owner-authorized manual commits use the owner's repository identity. Independent contributors retain their own authorship.
 - **Publication:** staged changes remain scoped to the task. Concurrent remote state updates are preserved; pushes are ordinary fast-forwards. No historical rewrite, force push or empty contribution commits. Test/diagnostic workflows remain read-only for repository contents; production alone writes state. CodeQL's security-events permission is separate.
 - **Documentation voice:** README uses Faraz Hussain's first-person perspective. CONTRIBUTING uses third-person language about contributors and the maintainer. This archive uses factual historical narration and distinguishes current rules from superseded decisions.
+- **License:** Apache-2.0 covers the owner's original project source and documentation. The unchanged standard text is in `LICENSE`; `NOTICE` records Faraz Hussain and the original repository. Package metadata declares the SPDX expression and both license files. Preserve applicable notices and third-party terms; no custom mandatory advertising/UI-credit clause is added.
 
 ## Repository and evidence map
 
@@ -44,6 +45,12 @@ At the start of repository work, an agent checks the working tree, current confi
 | [development-plans/ISSUES.md](development-plans/ISSUES.md), [SOLUTIONS.md](development-plans/SOLUTIONS.md) | The 24-issue register, corresponding solutions and later updates. |
 
 ## Recorded chronology
+
+### October 28, 2026 - Open-source license and original-author attribution
+
+At the owner's request, added the official unchanged Apache License 2.0 text and a NOTICE identifying Faraz Hussain and the original project/source repository. README explains redistribution attribution and modified-file notices without claiming that every application must display a credit banner. `pyproject.toml` declares `Apache-2.0` and includes LICENSE/NOTICE in distributions. Third-party dependencies and scraped content retain their own terms. Build/metadata verification and publication accompany this change; application behavior, quota controls and production state are unchanged.
+
+Validation: the locked dependency resolution remained valid with no lockfile changes; wheel and source distribution builds passed. Archive inspection confirmed exact LICENSE/NOTICE contents in both distributions and wheel metadata `License-Expression: Apache-2.0` with both `License-File` entries. No new runtime tests or live source/Discord calls were needed for this metadata/documentation change.
 
 ### October 28, 2026 - SerpApi activation and persistent credit limits
 
