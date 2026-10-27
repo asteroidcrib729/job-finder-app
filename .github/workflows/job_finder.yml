@@ -77,7 +77,7 @@ jobs:
 
       - name: Retain recovery state after persistence failure
         if: always() && steps.state.outcome == 'failure'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: job-state-recovery-${{ github.run_id }}
           path: |
@@ -90,7 +90,7 @@ jobs:
 
       - name: Upload run evidence
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: job-discovery-${{ github.run_id }}
           path: .local/output/latest/
