@@ -18,7 +18,9 @@ from job_finder.scrapers.base import (
 )
 from job_finder.scrapers.cache import attempt_due, query_due
 from job_finder.scrapers.common import QueryOutcome, SourceError, SourceResult
+from job_finder.scrapers.google_api import run_google_api
 from job_finder.scrapers.linkedin_details import enrich_linkedin_jobs
+from job_finder.storage.enrichment import QUEUE_KEY
 
 logger = logging.getLogger(__name__)
 
@@ -106,6 +108,7 @@ def fetch_jobspy_jobs(config, discovery=None, runner=None, detail_fetcher=None, 
     start = time.monotonic()
     failed_by_site = {}
     attempted = 0
+    api_attempts = 0
     # Rotate tracks/sites inside each keyword so a budget does not starve remote/local.
     plans = [(keyword, track, site) for keyword in config["search_keywords"]
              for track in config["search_tracks"] for site in track["sites"]
@@ -115,11 +118,13 @@ def fetch_jobspy_jobs(config, discovery=None, runner=None, detail_fetcher=None, 
         keyword, track, site = plan
         if site == "linkedin" and track["remote"]:
             keyword += " remote"
-        return "jobspy:" + hashlib.sha256(f"{site}|{track}|{keyword}".encode()).hexdigest()[:16]
+        prefix = "serpapi:" if site == "google" and options["google_provider"] == "serpapi" else "jobspy:"
+        return prefix + hashlib.sha256(f"{site}|{track}|{keyword}".encode()).hexdigest()[:16]
     plans.sort(key=lambda plan: discovery.get(identity(plan), {}).get("last_success", ""))
     google_track = next((track for track in config["search_tracks"] if "google" in track["sites"]), None)
+    probe_key = "probe:google" if options["google_provider"] == "jobspy" else "probe:google:serpapi"
     if options["google_mode"] == "probe" and google_track:
-        if attempt_due(discovery, "probe:google", options["google_probe_interval_hours"]):
+        if attempt_due(discovery, probe_key, options["google_probe_interval_hours"]):
             # One probe after normal searches; it cannot consume their budget.
             plans.append((config["search_keywords"][0], google_track, "google"))
         else:
@@ -133,7 +138,11 @@ def fetch_jobspy_jobs(config, discovery=None, runner=None, detail_fetcher=None, 
         keyword, track, site = plan
         probe = site == "google" and options["google_mode"] == "probe"
         phase = "probe" if probe else "search"
-        query_id = "probe:google" if probe else identity(plan)
+        query_id = probe_key if probe else identity(plan)
+        use_api = site == "google" and options["google_provider"] == "serpapi"
+        if use_api and api_attempts >= options["google_api_max_queries"]:
+            result.report.notes.append("google_api_budget_exhausted")
+            continue
         previous_result = discovery.get(query_id, {})
         low_yield = previous_result.get("qualified") == 0 and previous_result.get("review") == 0
         interval = max(options["interval_hours"], options["low_yield_interval_hours"]) if low_yield else options["interval_hours"]
@@ -166,7 +175,9 @@ def fetch_jobspy_jobs(config, discovery=None, runner=None, detail_fetcher=None, 
                 kwargs["results_wanted"] = min(5, options["results_wanted"])
             logger.info("JobSpy %s %s: %s (page %d)", site, track["id"], keyword, page + 1)
             try:
-                payload = runner(kwargs, min(options["query_timeout"], remaining))
+                if use_api:
+                    api_attempts += 1
+                payload = (run_google_api if use_api else runner)(kwargs, min(options["query_timeout"], remaining))
                 rows = payload["rows"]
                 if not isinstance(rows, list):
                     raise SourceError("parse_failed", "rows_not_list")
@@ -193,7 +204,8 @@ def fetch_jobspy_jobs(config, discovery=None, runner=None, detail_fetcher=None, 
                 if not rows and warnings == ["google_jobs_cursor_missing"]:
                     status = "unverified"
                 result.report.queries.append(QueryOutcome(query_id, status, len(rows), len(converted), invalid,
-                    round(time.monotonic() - before, 2), ",".join(warnings), site, track["id"], phase))
+                    round(time.monotonic() - before, 2), ",".join(warnings), site, track["id"], phase,
+                    backend="serpapi" if use_api else "jobspy"))
                 if warnings:
                     logger.warning("JobSpy %s %s: %s", site, track["id"], ",".join(warnings))
                 if not converted and set(warnings) & {"blocked", "timed_out", "upstream_error", "google_no_job_data"}:
@@ -205,20 +217,22 @@ def fetch_jobspy_jobs(config, discovery=None, runner=None, detail_fetcher=None, 
                         "raw": len(rows), "unique": len(distinct)}
                 else:
                     query_complete = False
-                if probe or not distinct or len(rows) < options["results_wanted"]:
+                if probe or use_api or not distinct or len(rows) < options["results_wanted"]:
                     break
             except SourceError as exc:
+                if probe and exc.reason == "missing_serpapi_key":
+                    result.updates.pop(query_id, None)
                 query_complete = False
                 result.report.queries.append(QueryOutcome(query_id, exc.status,
                     duration_seconds=round(time.monotonic() - before, 2), reason=exc.reason,
-                    site=site, search_track=track["id"], phase=phase))
+                    site=site, search_track=track["id"], phase=phase, backend="serpapi" if use_api else "jobspy"))
                 failed_by_site[site] = failed_by_site.get(site, 0) + 1
                 break
         if query_complete and successful_update:
             result.updates.setdefault(query_id, {}).update(successful_update)
     if failed_by_site and any(count >= 3 for count in failed_by_site.values()):
         result.report.notes.append("source_paused_after_repeated_failures")
-    if options["linkedin_fetch_description"] and any(job.platform == "Linkedin" for job in result):
+    if options["linkedin_fetch_description"] and (any(job.platform == "Linkedin" for job in result) or QUEUE_KEY in discovery):
         enrich_linkedin_jobs(result, config, discovery, fetcher=detail_fetcher, sleep=sleep)
     result.report.skipped = not result.report.queries
     return result

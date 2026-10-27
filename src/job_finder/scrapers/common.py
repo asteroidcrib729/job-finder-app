@@ -35,6 +35,7 @@ class SourceReport:
     queries: list[QueryOutcome] = field(default_factory=list)
     notes: list[str] = field(default_factory=list)
     skipped: bool = False
+    enrichment: dict = field(default_factory=dict)
 
     @property
     def status(self):

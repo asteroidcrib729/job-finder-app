@@ -13,6 +13,10 @@ on:
         description: "Refresh searches and send at most 3 jobs; use labeled review candidates only if no qualified jobs exist"
         type: boolean
         default: false
+      refresh_searches:
+        description: "Refresh listing searches within configured budgets; feed/probe cooldowns still apply"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -59,8 +63,10 @@ jobs:
         continue-on-error: true
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          SERPAPI_API_KEY: ${{ secrets.SERPAPI_API_KEY }}
           JOB_FINDER_DRY_RUN: ${{ inputs.dry_run || false }}
           JOB_FINDER_VERIFICATION_SAMPLE: ${{ inputs.verification_sample || false }}
+          JOB_FINDER_REFRESH_SEARCHES: ${{ inputs.refresh_searches || false }}
         run: uv run --locked --no-dev python -m job_finder.automation.runner
 
       # A degraded scrape or partial delivery must not discard valid acknowledgements.

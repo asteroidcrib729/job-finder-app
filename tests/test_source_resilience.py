@@ -31,7 +31,7 @@ class SourceResilienceTests(OfflineTestCase):
     def row(self, number=1, **changes):
         row = {"id": f"li-{number}", "title": "Junior Python Developer", "company": "Fixture",
                "job_url": f"https://www.linkedin.com/jobs/view/{number}", "location": "Karachi",
-               "is_remote": False, "date_posted": "2026-10-27"}
+               "is_remote": False, "date_posted": datetime.now(timezone.utc).date().isoformat()}
         return {**row, **changes}
 
     def test_warning_classification_does_not_pause_productive_searches(self):
@@ -94,7 +94,7 @@ class SourceResilienceTests(OfflineTestCase):
         result = fetch_jobspy_jobs(config, state, runner=lambda *_: {"rows": [row]}, detail_fetcher=fetcher)
         fetcher.assert_not_called()
         self.assertEqual(result[0].location, "Pakistan")
-        self.assertTrue(result[0].posted_at.startswith("2026-10-27"))
+        self.assertTrue(result[0].posted_at.startswith(row["date_posted"]))
         self.assertEqual(result[0].work_mode, "remote")
         self.assertEqual(result[0].description_status, "full")
         self.assertIn("cached_description", result[0].evidence_warnings)
@@ -181,6 +181,7 @@ class SourceResilienceTests(OfflineTestCase):
     def test_search_fallback_recovers_after_rate_limit_and_keeps_backend_evidence(self):
         config = load_config()
         config["linkedin_posts"]["queries"] = ['site:linkedin.com/posts "Karachi" ("React" OR "Python") hiring']
+        config["linkedin_posts"]["search_backends"] = ["brave", "duckduckgo", "yahoo"]
         factory = MagicMock()
         search = factory.return_value.__enter__.return_value
         search.text.side_effect = [RatelimitException("429 https://private.test/token"),
@@ -197,6 +198,7 @@ class SourceResilienceTests(OfflineTestCase):
     def test_ambiguous_no_results_triggers_simplified_queries_without_false_success(self):
         config = load_config()
         config["linkedin_posts"]["queries"] = ['site:linkedin.com/posts "Karachi" ("React" OR "Python") hiring']
+        config["linkedin_posts"]["search_backends"] = ["brave", "duckduckgo", "yahoo"]
         factory = MagicMock()
         search = factory.return_value.__enter__.return_value
         search.text.side_effect = DDGSException("No results found.")

@@ -63,6 +63,13 @@ def fetch_linkedin_plain_posts(config, discovery=None):
     discovery = discovery or {}
     queries = [query for query in options["queries"] if query_due(
         discovery, query_key("posts", query), options["interval_hours"])]
+    queries.sort(key=lambda query: discovery.get(query_key("posts", query), {}).get("last_success", ""))
+    offset = discovery.get("rotation:posts", {}).get("offset", 0)
+    if type(offset) is not int or offset < 0:
+        offset = 0
+    if queries:
+        shift = offset % len(queries)
+        queries = queries[shift:] + queries[:shift]
     cache = DetailCache(discovery, "posts", options["detail_cache_hours"])
     if not queries:
         result.report.skipped = True
@@ -77,11 +84,13 @@ def fetch_linkedin_plain_posts(config, discovery=None):
     checked, seen, blocked = 0, set(), False
     budget = {"used": 0}
     with quiet_search_logs(), DDGS(timeout=options["timeout"]) as search:
-        for query in queries:
+        for index, query in enumerate(queries):
             before = time.monotonic()
             query_id = query_key("posts", query)
             try:
-                rows, verified = search_posts(search, query, options, result, discovery, budget)
+                share = max(1, (options["max_search_attempts"] - budget["used"]) // (len(queries) - index))
+                rows, verified = search_posts(search, query, options, result, discovery, budget,
+                    attempt_limit=share, backend_offset=offset + index)
                 if not rows and not verified:
                     result.report.queries.append(QueryOutcome(query_id, "unverified", reason="post_discovery_unverified"))
                     continue
@@ -152,5 +161,8 @@ def fetch_linkedin_plain_posts(config, discovery=None):
                 result.report.queries.append(QueryOutcome(query_id, status,
                     duration_seconds=round(time.monotonic() - before, 2), reason=reason))
     result[:] = [role for post in result for role in split_post_roles(post)]
+    if budget["used"]:
+        result.updates["rotation:posts"] = {"offset": (offset + 1) % max(len(options["queries"]), 1),
+            "updated_at": utc_now()}
     cache.publish(result)
     return result

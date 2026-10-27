@@ -38,14 +38,24 @@ jobspy:
   max_seconds: 900
   # Listing discovery is separate from paced/cached description retrieval.
   linkedin_fetch_description: true
-  linkedin_max_details: 12
+  linkedin_max_details: 36
+  linkedin_detail_initial_requests: 16
+  linkedin_detail_min_requests: 4
+  linkedin_detail_max_delay: 10
+  linkedin_queue_limit: 500
+  linkedin_queue_retention_hours: 72
+  linkedin_queue_max_attempts: 4
+  employer_fallback_enabled: true
   linkedin_detail_timeout: 8
   linkedin_detail_delay: 2
-  linkedin_detail_max_seconds: 90
+  linkedin_detail_max_seconds: 180
   linkedin_detail_cache_hours: 6
   linkedin_detail_retry_hours: 3
   # Upstream Google Jobs adapter is unavailable; one daily recovery probe only.
   google_mode: probe
+  # Opt-in alternative requires SERPAPI_API_KEY; no API calls by default.
+  google_provider: jobspy
+  google_api_max_queries: 2
   google_probe_interval_hours: 24
   interval_hours: 3
   low_yield_interval_hours: 12
@@ -62,8 +72,8 @@ local_scrapers:
 
 linkedin_posts:
   enabled: true
-  search_backends: [brave, duckduckgo, yahoo]
-  max_search_attempts: 6
+  search_backends: [yahoo, brave, duckduckgo]
+  max_search_attempts: 12
   retry_hours: 3
   interval_hours: 6
   detail_cache_hours: 6
@@ -71,8 +81,12 @@ linkedin_posts:
   max_checks: 8
   timeout: 8
   queries:
-    - 'site:linkedin.com/posts "Karachi" hiring ("Next.js" OR "React" OR "Python" OR "Full Stack")'
-    - 'site:linkedin.com/posts "Remote" hiring ("Junior" OR "Graduate") ("Python" OR "React" OR "Node")'
+    - 'site:linkedin.com/posts Karachi "React" hiring'
+    - 'site:linkedin.com/posts Karachi "Python" hiring'
+    - 'site:linkedin.com/posts Karachi "Next.js" hiring'
+    - 'site:linkedin.com/posts Remote "junior" "Python" hiring'
+    - 'site:linkedin.com/posts Remote "graduate" "React" hiring'
+    - 'site:linkedin.com/posts Karachi "Node.js" "junior" hiring'
 
 # Public-feed adapters use the same eligibility, freshness and delivery rules.
 remote_feeds:

@@ -59,6 +59,10 @@ Contributors distinguish search, detail, discovery-backend, recovery-probe and c
 
 Source changes include offline regressions for partial rows, cache expiry, retries/cooldowns and state reconciliation. Authorized live validation checks per-source coverage and full-description counts without resetting delivery history. Raw responses, reports and credentials remain local/ignored. Source availability and production matching accuracy require separate evidence.
 
+The LinkedIn enrichment queue is persistent discovery state, independent of search cadence. Contributors preserve its validated schema, bounded size/age/attempts, track fairness and adaptive request limits. Three-way reconciliation preserves concurrent additions, completions and deletions. Tests cover restarting with no due searches, blocking/backoff, exhaustion, exact employer identity, delivery refresh and dry-run immutability. Current evidence must refresh existing delivery payloads before reevaluation.
+
+The manual `refresh_searches` option bypasses listing-query intervals while retaining request caps, provider/detail cooldowns, feed cadence and delivery suppression. Contributors use isolated state or dry run for experiments. The optional SerpApi adapter requires an owner-provided secret and explicit provider selection; it is not an automatic paid fallback. Offline contract tests do not establish live account access or quota availability. Employer fallbacks use only exact supported application URLs and fixed public API hosts, with identity and title checks.
+
 ## Commit and publication conventions
 
 Contributors inspect `git diff --check` and the staged diff before committing. Commit messages use descriptive prefixes such as `fix:`, `feat:`, `build:` or `docs:`. Reports, environments, secrets and unrelated live state are excluded from code/documentation commits. Concurrent remote state changes are preserved; publication uses ordinary fast-forward pushes rather than rewritten history.

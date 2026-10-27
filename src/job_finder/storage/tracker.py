@@ -155,6 +155,18 @@ class JobTracker:
                     "queued_at": self.clock(), "attempts": 0, "next_retry_at": 0}
         self.save()
 
+    def refresh_pending(self, jobs):
+        """Refresh existing queued evidence, including newly rejected/closed jobs.
+
+        No new job is queued here; the caller persists before dispatch.
+        """
+        for job in jobs:
+            key = next((identity for identity in [job.job_id, *job.aliases] if identity in self.pending), None)
+            if key is not None:
+                record = self.pending.pop(key)
+                record["job"] = job.to_dict()
+                self.pending[job.job_id] = record
+
     def pending_jobs(self):
         return [Job.from_dict(record["job"]) for record in self.pending.values()
                 if record["status"] != "permanent_failure" and record.get("next_retry_at", 0) <= self.clock()]

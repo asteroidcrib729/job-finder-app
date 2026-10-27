@@ -44,13 +44,17 @@ def simplified_query(query):
     return " ".join(filter(None, [site[0] if site else "site:linkedin.com/posts", place, skill, "hiring"]))
 
 
-def search_posts(search, query, options, result, discovery, budget):
+def search_posts(search, query, options, result, discovery, budget, attempt_limit=None, backend_offset=0):
     """Return rows plus whether provider discovery was actually verified."""
     variants = list(dict.fromkeys([query, simplified_query(query)]))
-    # Try each backend with the original query before relaxing the query.
+    backends = list(options["search_backends"])
+    backends.sort(key=lambda backend: discovery.get("health:posts:" + backend, {}).get("last_success", ""), reverse=True)
+    offset = backend_offset % len(backends)
+    backends = backends[offset:] + backends[:offset]
+    used_here = 0
     confirmed_empty = False
-    for variant_index, variant in enumerate(variants):
-        for backend in options["search_backends"]:
+    for backend in backends:
+        for variant_index, variant in enumerate(variants):
             key = "attempt:posts:" + backend
             state = {**discovery, **result.updates}
             if not attempt_due(state, key, options["retry_hours"]):
@@ -59,7 +63,11 @@ def search_posts(search, query, options, result, discovery, budget):
             if budget["used"] >= options["max_search_attempts"]:
                 result.report.notes.append("post_search_budget_exhausted")
                 return [], confirmed_empty
+            if attempt_limit is not None and used_here >= attempt_limit:
+                result.report.notes.append("post_query_budget_exhausted")
+                return [], confirmed_empty
             budget["used"] += 1
+            used_here += 1
             before = time.monotonic()
             try:
                 # Date filtering differs between search engines. A relaxed
@@ -79,6 +87,7 @@ def search_posts(search, query, options, result, discovery, budget):
             if variant_index:
                 result.report.notes.append(backend + ":simplified_query")
             if rows:
+                result.updates["health:posts:" + backend] = {"last_success": utc_now()}
                 return rows, True
             confirmed_empty = confirmed_empty or status == "valid_empty"
     return [], confirmed_empty

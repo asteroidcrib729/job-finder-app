@@ -4,6 +4,13 @@ from datetime import datetime, timezone
 
 from job_finder.scrapers.base import Job, parse_date
 from job_finder.scrapers.cache import CACHE_LIMIT
+from job_finder.storage.enrichment import (
+    ADAPTIVE_KEY,
+    QUEUE_KEY,
+    QUEUE_LIMIT,
+    validate_adaptive,
+    validate_queue,
+)
 from job_finder.storage.tracker import StateError, validate_delivery_state
 
 
@@ -16,6 +23,10 @@ def validate_discovery_state(raw):
         for field in ("last_success", "last_attempt"):
             if field in value and not parse_date(value[field]):
                 raise StateError("Invalid discovery timestamp")
+        if key == QUEUE_KEY:
+            validate_queue(value)
+        if key == ADAPTIVE_KEY:
+            validate_adaptive(value)
         if key.startswith("cache:"):
             if not isinstance(value.get("entries"), dict) or not parse_date(value.get("updated_at")):
                 raise StateError("Invalid detail cache")
@@ -93,9 +104,20 @@ def merge_discovery(base, local, remote):
 
     def conflict(left, right):
         return max((left, right), key=lambda record: max(
-            date_key(record, "last_success"), date_key(record, "last_attempt")))
+            date_key(record, "last_success"), date_key(record, "last_attempt"), date_key(record, "updated_at")))
 
     merged = changed_records(base, local, remote, conflict)
+    if QUEUE_KEY in local and QUEUE_KEY in remote:
+        def queue_conflict(left, right):
+            value = copy.deepcopy(max((left, right), key=lambda entry: date_key(entry, "updated_at")))
+            value["queued_at"] = min(left["queued_at"], right["queued_at"])
+            value["attempts"] = max(left["attempts"], right["attempts"])
+            return value
+        entries = changed_records(base.get(QUEUE_KEY, {}).get("entries", {}),
+            local[QUEUE_KEY]["entries"], remote[QUEUE_KEY]["entries"], queue_conflict)
+        entries = dict(sorted(entries.items(), key=lambda item: date_key(item[1], "queued_at"))[:QUEUE_LIMIT])
+        newest = max((local[QUEUE_KEY], remote[QUEUE_KEY]), key=lambda value: date_key(value, "updated_at"))
+        merged[QUEUE_KEY] = {"version": 1, "entries": entries, "updated_at": newest["updated_at"]}
     for key in set(local) & set(remote):
         if not key.startswith("cache:"):
             continue

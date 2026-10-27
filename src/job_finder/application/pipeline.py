@@ -68,6 +68,13 @@ def write_report(report, directory, step_summary=True):
     lines += ["", "| Source | Outcome | Queries |", "| --- | --- | --- |"]
     for source in report.get("sources", []):
         lines.append(f"| {source['source']} | {source['status']} | {len(source['queries'])} |")
+    for source in report.get("sources", []):
+        details = source.get("enrichment", {})
+        if details:
+            lines += ["", f"Description queue: {details['completed']} completed, {details['pending']} pending, "
+                f"{details['exhausted']} exhausted, {details['excluded']} clearly ineligible cards excluded.",
+                f"Request budget: {details['effective_request_limit']} now, {details['next_request_limit']} next; "
+                f"pacing: {details['delay_seconds']} seconds now, {details['next_delay_seconds']} next.", ""]
     if report.get("source_coverage"):
         lines += ["", "| Source/site | Searches usable/attempted | Detail requests | Probes | Full descriptions/jobs |",
                   "| --- | --- | --- | --- | --- |"]
@@ -115,25 +122,28 @@ def read_replay(path):
 
 def run_job_finder(dry_run=False, test_notify=False, config_path=None, replay_path=None,
                    state_path=SEEN_JOBS_FILE, discovery_path=DISCOVERY_FILE, report_dir=None,
-                   verification_sample=False):
+                   verification_sample=False, refresh_searches=False):
     report_dir = report_dir or OUTPUT_DIR / "latest"
     dry_run = dry_run or replay_path is not None
-    report = {"started_at": utc_now(), "health": "failed", "environment": environment_versions(),
+    report: dict = {"started_at": utc_now(), "health": "failed", "environment": environment_versions(),
               "sources": [], "counts": {}, "jobs": [], "deliveries": []}
     try:
         config = load_config(config_path)
+        if verification_sample or refresh_searches:
+            config["jobspy"]["interval_hours"] = 0
+            config["jobspy"]["low_yield_interval_hours"] = 0
+            config["local_scrapers"]["interval_hours"] = 0
+            config["linkedin_posts"]["interval_hours"] = 0
         if verification_sample:
             # Manual verification only: refresh within existing request budgets,
             # cap delivery at three jobs and leave repository defaults untouched.
             config["notifications"]["max_per_run"] = 3
-            config["jobspy"]["interval_hours"] = 0
-            config["jobspy"]["low_yield_interval_hours"] = 0
             config["jobspy"]["max_queries"] = min(12, config["jobspy"]["max_queries"])
             config["jobspy"]["max_seconds"] = min(300, config["jobspy"]["max_seconds"])
-            config["local_scrapers"]["interval_hours"] = 0
-            config["linkedin_posts"]["interval_hours"] = 0
-        # pyrefly: ignore [bad-assignment]
+            config["jobspy"]["linkedin_max_details"] = min(12, config["jobspy"]["linkedin_max_details"])
+            config["jobspy"]["linkedin_detail_max_seconds"] = min(90, config["jobspy"]["linkedin_detail_max_seconds"])
         report["verification_sample"] = verification_sample
+        report["refresh_searches"] = refresh_searches
         report["profile_version"] = config["profile"]["version"]
         report["matcher_version"] = MATCHER_VERSION
         report["mode"] = "replay" if replay_path else "dry_run" if dry_run else "live"
@@ -172,6 +182,8 @@ def run_job_finder(dry_run=False, test_notify=False, config_path=None, replay_pa
         report["counts"] = {"raw": len(raw), "unique": len(candidates),
             "qualified": tiers["qualified"], "review": tiers["review"], "rejected": tiers["rejected"],
             "missing_descriptions": sum(job.description_status != "full" for job in candidates)}
+        report["counts"]["enrichment_pending"] = sum(source.report.enrichment.get("pending", 0) for source in sources)
+        report["counts"]["enrichment_completed"] = sum(source.report.enrichment.get("completed", 0) for source in sources)
         report["reason_counts"] = dict(reasons)
         report["jobs"] = [job.to_dict() for job in candidates]
         report["query_metrics"] = query_metrics(sources, config)
@@ -182,6 +194,8 @@ def run_job_finder(dry_run=False, test_notify=False, config_path=None, replay_pa
             "linkedin_detail_requests": config["jobspy"]["linkedin_max_details"],
             "linkedin_detail_max_seconds": config["jobspy"]["linkedin_detail_max_seconds"],
             "google_mode": config["jobspy"]["google_mode"],
+            "google_provider": config["jobspy"]["google_provider"],
+            "google_api_max_queries": config["jobspy"]["google_api_max_queries"],
             "rozee_search_requests": config["local_scrapers"]["max_queries"] * config["local_scrapers"]["max_pages"],
             "rozee_detail_requests": config["local_scrapers"]["max_details"],
             "post_search_queries": len(config["linkedin_posts"]["queries"]),
@@ -214,6 +228,7 @@ def run_job_finder(dry_run=False, test_notify=False, config_path=None, replay_pa
                 save_with_backup(discovery_path, discovery, validate_discovery_state)
             return 2 if degraded else 0
 
+        tracker.refresh_pending(candidates)
         tracker.enqueue(new)  # Payloads persist before delivery, including deferred candidates.
         due = []
         retired = Counter()
@@ -267,6 +282,7 @@ def main():
     parser.add_argument("--state", dest="state_path", type=Path, default=SEEN_JOBS_FILE)
     parser.add_argument("--discovery-state", dest="discovery_path", type=Path, default=DISCOVERY_FILE)
     parser.add_argument("--report-dir", type=Path)
+    parser.add_argument("--refresh-searches", action="store_true", help="Refresh listing searches within configured budgets")
     return run_job_finder(**vars(parser.parse_args()))
 
 

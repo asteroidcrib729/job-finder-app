@@ -90,7 +90,7 @@ class RunHealthTests(OfflineTestCase):
         self.assertEqual(result.report.status, "valid_empty")
         self.assertEqual(result.report.queries[0].invalid, 0)
         self.assertIn("ignored_non_post_results:1", result.report.notes)
-        self.assertEqual(search.text.call_args.kwargs["backend"], "brave")
+        self.assertEqual(search.text.call_args.kwargs["backend"], "yahoo")
         self.assertTrue(any("last_success" in v for v in result.updates.values()))
         config["linkedin_posts"]["search_backends"] = ["wikipedia"]
         with self.assertRaises(ValueError):

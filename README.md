@@ -118,12 +118,16 @@ I define operational defaults in [config/config.yaml](config/config.yaml). I set
 | jobspy.results_wanted / max_pages / max_queries / max_seconds / query_timeout | Retrieval depth, request count, total JobSpy time, and per-query wall-clock budget. |
 | jobspy.hours_old | Discovery lookback; successful-query timestamps permit bounded recovery after gaps. |
 | jobspy.linkedin_fetch_description | Enable the separate LinkedIn description queue; searches always collect cards first. |
-| jobspy.linkedin_max_details / linkedin_detail_timeout / linkedin_detail_delay / linkedin_detail_max_seconds | Detail request cap (12), timeout (8 seconds), pacing (2 seconds), and queue time budget (90 seconds). Tracks share the queue. |
+| jobspy.linkedin_max_details / linkedin_detail_timeout / linkedin_detail_delay / linkedin_detail_max_seconds | Shared LinkedIn/employer detail request ceiling (36), timeout (8 seconds), base pacing (2 seconds), and queue time budget (180 seconds). |
+| jobspy.linkedin_detail_initial_requests / linkedin_detail_min_requests / linkedin_detail_max_delay | I start with 16 requests, grow by four after a fully successful budget-sized cycle with backlog, and halve the next budget on blocking/timeouts/repeated failures, down to four. Pacing backs off up to 10 seconds. |
+| jobspy.linkedin_queue_limit / linkedin_queue_retention_hours / linkedin_queue_max_attempts | I retain up to 500 unfinished cards for 72 hours, with at most four attempts per job. Saved work continues even when listing searches are not due. Junior/relevant roles take priority, with aging and track rotation. |
+| jobspy.employer_fallback_enabled | I try the public Greenhouse or Lever API only when the listing supplies an exact supported application URL and the returned posting identity/title agree. It shares the detail budget. |
 | jobspy.linkedin_detail_cache_hours / linkedin_detail_retry_hours | Fresh parsed descriptions cache for 6 hours; blocked/repeatedly failing detail service cools down for 3 hours. Listing searches continue. |
 | jobspy.google_mode / google_probe_interval_hours | probe (default), disabled or enabled. Probe mode attempts one query at most every 24 hours after normal searches, within the remaining search budget. |
+| jobspy.google_provider / google_api_max_queries | I retain jobspy as the default. The optional serpapi provider uses SERPAPI_API_KEY and at most two API queries per run; probe mode further limits it to one daily query. |
 | jobspy.interval_hours / low_yield_interval_hours | Minimum query interval; successful queries with no qualified/review candidates use the longer interval. Defaults 3/12 hours. |
 | local_scrapers | Enable flag, keywords, max_queries, max_pages (2), max_details, timeout, interval_hours (3), detail_cache_hours (6). |
-| linkedin_posts | Backend-specific outcomes and fallback (brave/duckduckgo/yahoo), at most 6 backend attempts per run, 3-hour provider-error cooldowns, result/detail budgets, timeout, interval_hours (6), detail_cache_hours (6). Simplified fallback omits the search-engine date filter; listing dates still pass local freshness checks. |
+| linkedin_posts | Six focused queries, Yahoo/Brave/DuckDuckGo fallback, at most 12 backend attempts per run, fair budget sharing, saved query rotation and last-success backend preference. Three-hour provider-error cooldowns, result/detail budgets, timeout, six-hour query interval/cache remain. Simplified fallback omits the search-engine date filter; listing dates still pass local freshness checks. |
 | remote_feeds | Enabled Remotive/WWR adapters, six-hour attempt cadence and result cap (100 per feed). |
 | matching.max_age_hours / min_score | Publication-age and fit thresholds. Unknown dates go to review. |
 | matching.allow_* | Hybrid, internship, contract, one-year stretch handling. |
@@ -134,6 +138,12 @@ I define operational defaults in [config/config.yaml](config/config.yaml). I set
 | state.retention_days / pending_days | Separate acknowledged-history retention and queued-candidate expiry. |
 
 LinkedIn, Rozee and recruiter detail caches hold at most 200 normalized entries per source in discovery state. Expired/future-dated entries are discarded; failures never fall back to stale content. Current Rozee listing facts override cached descriptions. Zero detail_cache_hours disables caching; zero interval_hours disables the base interval (JobSpy's low-yield interval is separate). Minimum intervals are checked on scheduled runs, so actual gaps may be longer.
+
+I keep unfinished LinkedIn cards separately from the description cache in `data/discovery_state.json`. Reports show completed, pending, exhausted and clearly ineligible counts, plus the current/next request budgets and pacing. Clear seniority, occupation or freshness failures skip description requests; incomplete evidence alone does not remove a plausible card. New evidence also refreshes jobs waiting for delivery, so a newly closed or rejected listing cannot be sent using its old queued description.
+
+For a deliberate listing refresh, I use `--refresh-searches`, or select `refresh_searches` in the manual workflow. It retains request caps, detail/provider cooldowns, feed cadence, delivery history and the normal 20-job delivery limit. The separate verification sample remains capped at three deliveries and 12 detail requests/90 seconds.
+
+To use the optional Google Jobs API, I obtain a SerpApi account/key, add `SERPAPI_API_KEY` as an Actions secret (or a local process environment variable), and set `jobspy.google_provider: serpapi` in my configuration. I keep `google_mode: probe` for one daily query, or choose `enabled` for due queries under `google_api_max_queries`. I control any provider subscription/quota myself; the adapter never creates an account or buys credits. Missing credentials make no API requests and do not delay a later configured probe. Keys and raw provider errors are excluded from reports/state. The adapter has offline contract tests; live SerpApi access is not yet verified.
 
 I have not yet settled a minimum salary or acceptable time-zone range. New canonical skill names require aliases in the matcher; validation prevents silently ineffective profile entries.
 

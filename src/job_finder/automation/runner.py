@@ -19,7 +19,8 @@ def main():
             handle.write(f"persist_state={'false' if dry_run else 'true'}\n")
     directory = OUTPUT_DIR / "latest"
     code = run_job_finder(dry_run=dry_run, report_dir=directory,
-        verification_sample=os.getenv("JOB_FINDER_VERIFICATION_SAMPLE", "false").lower() == "true")
+        verification_sample=os.getenv("JOB_FINDER_VERIFICATION_SAMPLE", "false").lower() == "true",
+        refresh_searches=os.getenv("JOB_FINDER_REFRESH_SEARCHES", "false").lower() == "true")
     try:
         report = read_json(directory / "run.json", {})
         if not report.get("finished_at"):
