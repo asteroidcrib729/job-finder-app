@@ -2,6 +2,7 @@
 import re
 import time
 from collections import defaultdict, deque
+from html import unescape
 
 from bs4 import BeautifulSoup
 
@@ -30,7 +31,14 @@ def parse_detail(html):
     soup = BeautifulSoup(html, "html.parser")
     for data in jsonld_objects(soup):
         if data.get("@type") == "JobPosting" and data.get("description"):
-            description = description_text(BeautifulSoup(clean_text(data["description"]), "html.parser"))
+            markup = clean_text(data["description"])
+            # Some public JobPosting payloads escape their HTML a second time.
+            # Decode bounded layers before parsing, preserving real paragraphs.
+            for _ in range(2):
+                if not re.search(r"&(?:amp;)?lt;/?(?:br|p|div|li|ul|ol|strong|b|h[1-6])(?:\s|/|&)", markup, re.I):
+                    break
+                markup = unescape(markup)
+            description = description_text(BeautifulSoup(markup, "html.parser"))
             return {"description": description}
     node = soup.select_one(".show-more-less-html__markup")
     if node is None or not node.get_text(strip=True):
