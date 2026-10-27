@@ -2,13 +2,14 @@
 import argparse
 
 from job_finder.main import sanitize
+from job_finder.paths import OUTPUT_DIR
 from job_finder.scrapers.base import Job, utc_now
 from job_finder.storage.tracker import StateError, atomic_write_json, read_json
 
 LABELS = {"relevant": "qualified", "not_relevant": "rejected", "uncertain": "review"}
 
 
-def record_feedback(report_path, job_id, label, note="", output="output/feedback.json"):
+def record_feedback(report_path, job_id, label, note="", output=OUTPUT_DIR / "feedback.json"):
     if label not in LABELS:
         raise ValueError("Unknown relevance label")
     report = read_json(report_path, {})
@@ -45,14 +46,14 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
     label = commands.add_parser("label")
-    label.add_argument("--report", default="output/latest/run.json")
+    label.add_argument("--report", default=OUTPUT_DIR / "latest/run.json")
     label.add_argument("--job-id", required=True)
     label.add_argument("--label", choices=LABELS, required=True)
     label.add_argument("--note", default="")
-    label.add_argument("--output", default="output/feedback.json")
+    label.add_argument("--output", default=OUTPUT_DIR / "feedback.json")
     export = commands.add_parser("export")
-    export.add_argument("--feedback", default="output/feedback.json")
-    export.add_argument("--output", default="output/user-benchmark.json")
+    export.add_argument("--feedback", default=OUTPUT_DIR / "feedback.json")
+    export.add_argument("--output", default=OUTPUT_DIR / "user-benchmark.json")
     args = parser.parse_args()
     try:
         if args.command == "label":

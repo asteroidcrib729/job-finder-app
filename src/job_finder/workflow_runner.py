@@ -3,7 +3,8 @@ import logging
 import os
 from pathlib import Path
 
-from job_finder.main import BASE_DIR, run_job_finder
+from job_finder.main import run_job_finder
+from job_finder.paths import OUTPUT_DIR
 from job_finder.run_health import assess_run, workflow_exit_code
 from job_finder.storage.tracker import StateError, read_json
 
@@ -16,7 +17,7 @@ def main():
     if os.getenv("GITHUB_OUTPUT"):
         with Path(os.environ["GITHUB_OUTPUT"]).open("a", encoding="utf-8") as handle:
             handle.write(f"persist_state={'false' if dry_run else 'true'}\n")
-    directory = BASE_DIR / "output" / "latest"
+    directory = OUTPUT_DIR / "latest"
     code = run_job_finder(dry_run=dry_run, report_dir=directory,
         verification_sample=os.getenv("JOB_FINDER_VERIFICATION_SAMPLE", "false").lower() == "true")
     try:

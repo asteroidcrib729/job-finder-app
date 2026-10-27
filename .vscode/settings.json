@@ -15,5 +15,5 @@
         }
     },
     "files.exclude": {"**/__pycache__": true},
-    "search.exclude": {".venv": true, ".cache": true, "dist": true}
+    "search.exclude": {".venv": true, ".local": true}
 }

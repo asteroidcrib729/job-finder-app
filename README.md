@@ -43,11 +43,13 @@ uv run --locked pyrefly check
 
 `pyproject.toml` declares runtime dependencies and a separate development group; `uv.lock` records the exact resolution and package hashes. The application is an installed `job_finder` package in `src/job_finder`, built with `uv_build`. `uv sync` installs it in editable mode; configuration, profiles and mutable state stay at the checkout root. `uv sync --locked --no-dev` installs runtime packages only. CI uses the same Python pin and rejects stale lockfiles. The old requirements files are superseded by these uv files.
 
-Manage packages with `uv add PACKAGE`, `uv add --dev PACKAGE`, and `uv remove PACKAGE`. Use `uv lock --upgrade-package PACKAGE` for a targeted update within the declared constraints, then `uv sync --locked` and the checks above. For an exact-pinned dependency, use `uv add PACKAGE==NEW_VERSION`. Commit the manifest and lockfile together. See [CONTRIBUTING.md](CONTRIBUTING.md) for the maintenance and commit workflow. If an external tool needs requirements format, generate it with `uv export --locked --no-dev --format requirements-txt --output-file output/requirements.txt`; do not maintain a second hand-edited lockfile.
+Manage packages with `uv add PACKAGE`, `uv add --dev PACKAGE`, and `uv remove PACKAGE`. Use `uv lock --upgrade-package PACKAGE` for a targeted update within the declared constraints, then `uv sync --locked` and the checks above. For an exact-pinned dependency, use `uv add PACKAGE==NEW_VERSION`. Commit the manifest and lockfile together. See [CONTRIBUTING.md](CONTRIBUTING.md) for the maintenance and commit workflow. If an external tool needs requirements format, generate it with `uv export --locked --no-dev --format requirements-txt --output-file .local/output/requirements.txt`; do not maintain a second hand-edited lockfile.
 
 The Python 3.14 migration upgrades JobSpy to 1.4.1 and pandas/NumPy to compatible releases. The adapter uses JobSpy's current `fetch_description` option and captures both lowercase loggers and structured DataFrame error metadata. A successful install is not proof that a live job board is available; fixture/API tests and run health remain separate checks.
 
 ## Source layout and editor setup
+
+Tool configuration is consolidated in `pyproject.toml`: uv, Ruff and `[tool.pyrefly]`. A separate `pyrefly.toml` is unnecessary. Local personal material lives in Git-ignored `.local/`, including `Resume - Faraz Hussain.pdf`, `cache/`, `ruff-cache/`, `output/` and `dist/`. Build with `uv build --no-cache --out-dir .local/dist`. The root `.venv` remains the standard uv/IDE environment, and Python's ignored bytecode stays next to source/test modules. The obsolete root bytecode was archived in `.local/legacy-root-pycache`; the empty `scratch` directory was removed.
 
 ```text
 src/job_finder/      Installed application, adapters, matching, notifications, state tools
@@ -57,6 +59,7 @@ candidate-profile.yaml
 data/               Persistent delivery and discovery state
 .github/            CI, security scans and Dependabot configuration
 .vscode/            Shared interpreter, editor, test, task and debugger settings
+.local/             Ignored personal files, reports, caches and build artifacts
 development-plans/  Audit findings, decisions and validation records
 ```
 
@@ -75,7 +78,7 @@ These commands send no Discord messages and do not save delivery/discovery state
 uv run --locked python -m job_finder.evaluation tests/fixtures/matching.json
 
 # Evaluate saved job evidence using the current date/profile.
-uv run --locked python -m job_finder --replay output/latest/run.json --report-dir output/replay
+uv run --locked python -m job_finder --replay .local/output/latest/run.json --report-dir .local/output/replay
 
 # Live source requests and an evaluation report.
 uv run --locked python -m job_finder --dry-run
@@ -85,9 +88,9 @@ Replay makes no job-board requests. Dry run does make requests, respecting confi
 
 Outputs:
 
-- **output/latest/run.json:** normalized job evidence, decisions, source health, versions, counts, query yield/budgets, and delivery outcomes.
-- **output/latest/summary.md:** concise run summary.
-- **output/benchmark.json:** benchmark decisions and metrics.
+- **.local/output/latest/run.json:** normalized job evidence, decisions, source health, versions, counts, query yield/budgets, and delivery outcomes.
+- **.local/output/latest/summary.md:** concise run summary.
+- **.local/output/benchmark.json:** benchmark decisions and metrics.
 
 Reports redact emails and webhook-shaped URLs, retain job descriptions/listing URLs, and are ignored by Git. Actions uploads run reports for 14 days. Inspect them before sharing externally.
 
@@ -143,8 +146,8 @@ Exactly-once delivery is not guaranteed across an uncertain network outcome or a
 Each state save keeps its previous valid JSON in a sibling **.bak** file. Corruption stops dispatch and cannot overwrite that backup. Export a separate recovery candidate:
 
 ~~~powershell
-uv run --locked python -m job_finder.storage.recover --backup data/seen_jobs.json.bak --output output/recovered-delivery.json
-uv run --locked python -m job_finder.storage.recover --kind discovery --backup data/discovery_state.json.bak --output output/recovered-discovery.json
+uv run --locked python -m job_finder.storage.recover --backup data/seen_jobs.json.bak --output .local/output/recovered-delivery.json
+uv run --locked python -m job_finder.storage.recover --kind discovery --backup data/discovery_state.json.bak --output .local/output/recovered-discovery.json
 ~~~
 
 Compare delivery recovery candidates with later Discord receipts and Git history before replacing live state. A previous snapshot may lack recent successful acknowledgements; automatic fallback could duplicate alerts.
@@ -156,12 +159,14 @@ Copy a job ID from a card or saved run report, then label it locally:
 ~~~powershell
 uv run --locked python -m job_finder.feedback label --job-id "ID_FROM_REPORT" --label relevant --note "Junior React role in Karachi"
 uv run --locked python -m job_finder.feedback export
-uv run --locked python -m job_finder.evaluation output/user-benchmark.json --output output/user-evaluation.json
+uv run --locked python -m job_finder.evaluation .local/output/user-benchmark.json --output .local/output/user-evaluation.json
 ~~~
 
-Labels are **relevant**, **not_relevant**, or **uncertain**. Feedback defaults to ignored **output/feedback.json** and never changes delivery history. Exported cases retain capture time, so later evaluation does not turn historical relevance labels into age failures. Keep tuning and held-out feedback in separate files.
+Labels are **relevant**, **not_relevant**, or **uncertain**. Feedback defaults to ignored **.local/output/feedback.json** and never changes delivery history. Exported cases retain capture time, so later evaluation does not turn historical relevance labels into age failures. Keep tuning and held-out feedback in separate files.
 
 ## GitHub Actions
+
+Every workflow `run` step invokes a command-line tool or dedicated script. Custom Python and shell logic must not be embedded in YAML. The read-only Discord check is `src/job_finder/discord_diagnostic.py`; production failure signaling is `job_finder.fail_workflow`. Offline regressions cover the diagnostic's safe output, GET-only requests and failure cases, and enforce the workflow rule. Artifact uploads target only `.local/output/latest`, with hidden-path inclusion explicitly enabled; they never upload the résumé or cache directories.
 
 The default-branch production workflow runs at minute 17 every three hours UTC and supports manual dispatch. It checks out current production state after acquiring a shared concurrency group, installs pinned packages, runs offline tests, executes discovery, commits valid state even after degraded execution, and uploads reports.
 

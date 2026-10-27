@@ -111,9 +111,9 @@ class RunHealthTests(OfflineTestCase):
             root = Path(directory)
             report = json.loads((FIXTURES / "production_health.json").read_text())[0]
             report["finished_at"] = "2026-09-08T12:00:00Z"
-            atomic_write_json(root / "output/latest/run.json", report)
+            atomic_write_json(root / ".local/output/latest/run.json", report)
             output = root / "step-output"
-            with patch.object(workflow_runner, "BASE_DIR", root), \
+            with patch.object(workflow_runner, "OUTPUT_DIR", root / ".local/output"), \
                  patch.dict("os.environ", {"JOB_FINDER_DRY_RUN": "true", "GITHUB_OUTPUT": str(output)}), \
                  patch.object(workflow_runner, "run_job_finder", return_value=2) as run, patch("builtins.print") as output_log:
                 self.assertEqual(workflow_runner.main(), 0)

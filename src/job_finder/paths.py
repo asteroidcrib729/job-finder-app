@@ -8,3 +8,5 @@ _checkout = Path(__file__).resolve().parents[2]
 BASE_DIR = Path(os.environ.get("JOB_FINDER_HOME") or (
     _checkout if (_checkout / "pyproject.toml").is_file() else Path.cwd()
 )).resolve()
+
+OUTPUT_DIR = BASE_DIR / ".local" / "output"

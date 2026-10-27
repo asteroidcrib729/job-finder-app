@@ -1,6 +1,10 @@
 # Development workflow
 
-Application code belongs in `src/job_finder/`; use `job_finder.*` imports and package modules/console entry points. Keep tests in `tests/`, configuration/profile YAML at the root, and mutable state in `data/`. Never put configuration secrets or generated state inside the installed package. `uv build` produces a wheel and source archive in ignored `dist/`.
+Keep Pyrefly settings under `[tool.pyrefly]` in `pyproject.toml`, alongside uv and Ruff. Keep workflow YAML declarative: action configuration and single tool/script invocations only. Put executable logic in dedicated `src/job_finder` modules, including diagnostics, and cover changed behavior with offline tests.
+
+Use `.local/` for personal documents, caches, reports and build output. The resume is `.local/Resume - Faraz Hussain.pdf`; uv and Ruff caches are configured there. `.venv` stays at the root for standard discovery; do not move an existing virtual environment without recreating its launchers. Never upload `.local/` as a whole or add its files to Git. Existing root ignore patterns remain as protection for accidentally generated legacy paths.
+
+Application code belongs in `src/job_finder/`; use `job_finder.*` imports and package modules/console entry points. Keep tests in `tests/`, configuration/profile YAML at the root, and mutable state in `data/`. Never put configuration secrets or generated state inside the installed package. `uv build --no-cache --out-dir .local/dist` produces a wheel and source archive in ignored `.local/dist/`.
 
 Open this folder in VS Code and accept the recommended extensions. Shared `.vscode` settings select `.venv` and enable Pyrefly, Ruff, unittest discovery and safe dry-run debugging. If the editor remembers another interpreter, explicitly select the project's `.venv`. The default build task runs the same offline quality checks as CI.
 
@@ -15,11 +19,11 @@ uv run --locked python -m compileall -q src tests
 uv run --locked python -m unittest discover -s tests -v
 uv run --locked pyrefly check
 uv run --locked python -m job_finder.evaluation tests/fixtures/matching.json
-uv build
+uv build --no-cache --out-dir .local/dist
 uv audit --locked
 ```
 
-`uv sync` creates `.venv`. Select `.venv/Scripts/python.exe` in a Windows editor, or `.venv/bin/python` on Linux/macOS. Invoke tools through `uv run --locked` so the environment stays consistent. `.venv`, `.cache`, runtime reports and secrets are ignored. In a restricted workspace, `uv --cache-dir .cache/uv sync --locked` keeps package cache writes inside the repository.
+`uv sync` creates `.venv`. Select `.venv/Scripts/python.exe` in a Windows editor, or `.venv/bin/python` on Linux/macOS. Invoke tools through `uv run --locked` so the environment stays consistent. `.venv`, `.local`, runtime reports and secrets are ignored. In a restricted workspace, `uv --cache-dir .local/cache/uv sync --locked` keeps package cache writes inside the repository.
 
 Runtime dependencies belong in `[project.dependencies]`; development tools belong in `[dependency-groups].dev`. Add/remove through `uv add`, `uv add --dev`, and `uv remove`. Upgrade deliberately, inspect `uv.lock`, run the checks, and commit both the manifest and lockfile. When changing Python, update `.python-version` and `requires-python` together, resolve compatible packages, and verify Linux CI. Exact dependency pins require `uv add NAME==VERSION` to move them; `uv lock --upgrade-package NAME` respects existing constraints.
 

@@ -42,16 +42,17 @@ jobs:
           enable-cache: true
           cache-dependency-glob: uv.lock
 
-      - name: Install the pinned Python and locked runtime environment
-        run: |
-          uv python install
-          uv sync --locked --no-dev
+      - name: Install the pinned Python
+        run: uv python install
+      - name: Install the locked runtime environment
+        run: uv sync --locked --no-dev
 
-      - name: Validate environment and offline regression suite
-        run: |
-          uv pip check
-          uv run --locked --no-dev python -m compileall -q src tests
-          uv run --locked --no-dev python -m unittest discover -s tests -v
+      - name: Validate environment
+        run: uv pip check
+      - name: Validate Python syntax
+        run: uv run --locked --no-dev python -m compileall -q src tests
+      - name: Run offline regression suite
+        run: uv run --locked --no-dev python -m unittest discover -s tests -v
 
       - name: Discover, qualify, and notify
         id: pipeline
@@ -92,10 +93,11 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: job-discovery-${{ github.run_id }}
-          path: output/latest/
+          path: .local/output/latest/
+          include-hidden-files: true
           if-no-files-found: ignore
           retention-days: 14
 
       - name: Surface pipeline or state persistence failure
         if: always() && (steps.pipeline.outcome == 'failure' || steps.state.outcome == 'failure')
-        run: exit 1
+        run: uv run --locked --no-dev python -m job_finder.fail_workflow

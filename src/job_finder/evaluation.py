@@ -6,6 +6,7 @@ from pathlib import Path
 
 from job_finder.config import load_config
 from job_finder.filtering.resume_filter import evaluate_job, rank_jobs
+from job_finder.paths import OUTPUT_DIR
 from job_finder.scrapers.base import Job, parse_date
 from job_finder.storage.tracker import atomic_write_json
 
@@ -50,7 +51,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("benchmark")
     parser.add_argument("--config")
-    parser.add_argument("--output", default="output/benchmark.json")
+    parser.add_argument("--output", default=OUTPUT_DIR / "benchmark.json")
     args = parser.parse_args()
     report = evaluate_benchmark(args.benchmark, load_config(args.config))
     atomic_write_json(args.output, report)

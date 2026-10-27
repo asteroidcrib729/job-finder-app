@@ -14,6 +14,7 @@ from pathlib import Path
 from job_finder.config import BASE_DIR, load_config
 from job_finder.filtering.resume_filter import MATCHER_VERSION, evaluate_job, rank_jobs
 from job_finder.notifiers.manager import NotificationManager
+from job_finder.paths import OUTPUT_DIR
 from job_finder.run_health import assess_run
 from job_finder.scrapers.base import Job, merge_jobs, utc_now
 from job_finder.scrapers.common import QueryOutcome, SourceResult
@@ -107,7 +108,7 @@ def read_replay(path):
 def run_job_finder(dry_run=False, test_notify=False, config_path=None, replay_path=None,
                    state_path=SEEN_JOBS_FILE, discovery_path=DISCOVERY_FILE, report_dir=None,
                    verification_sample=False):
-    report_dir = report_dir or BASE_DIR / "output" / "latest"
+    report_dir = report_dir or OUTPUT_DIR / "latest"
     dry_run = dry_run or replay_path is not None
     report = {"started_at": utc_now(), "health": "failed", "environment": environment_versions(),
               "sources": [], "counts": {}, "jobs": [], "deliveries": []}

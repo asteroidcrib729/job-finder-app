@@ -1,6 +1,7 @@
 """Exercise the installed src package independently of the working directory."""
 import json
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -50,3 +51,17 @@ class PackageLayoutTests(unittest.TestCase):
             actual = json.loads(self.run_python(["-c", script], directory, home=home))
             self.assertEqual(actual, [str(home), str(home / "data")])
             self.assertFalse(home.exists(), "Importing must not create or write state")
+
+    def test_replay_defaults_to_local_reports_without_creating_delivery_state(self):
+        with tempfile.TemporaryDirectory() as directory:
+            home = Path(directory).resolve() / "instance"
+            home.mkdir()
+            for name in ("config.yaml", "candidate-profile.yaml"):
+                shutil.copyfile(ROOT / name, home / name)
+            self.run_python(["-m", "job_finder", "--replay", str(ROOT / "tests/fixtures/matching.json")],
+                            directory, home=home)
+            report = json.loads((home / ".local/output/latest/run.json").read_text(encoding="utf-8"))
+            self.assertEqual(report["mode"], "replay")
+            self.assertEqual(report["deliveries"], [])
+            self.assertFalse((home / "output").exists())
+            self.assertFalse((home / "data").exists())
