@@ -1,11 +1,162 @@
 {
   "adaptive:linkedin_details": {
-    "request_limit": 28,
-    "delay_seconds": 2,
-    "updated_at": "2026-10-27T19:23:20.968077+00:00"
+    "request_limit": 14,
+    "delay_seconds": 4,
+    "updated_at": "2026-10-27T22:21:40.028010+00:00"
+  },
+  "attempt:linkedin_details": {
+    "last_attempt": "2026-10-27T22:21:40.028010+00:00",
+    "reason": "blocked"
   },
   "cache:linkedin": {
     "entries": {
+      "https://www.linkedin.com/jobs/view/4423955711": {
+        "fetched_at": "2026-10-27T22:21:40.028010+00:00",
+        "payload": {
+          "description": "We are Lenovo. We do what we say. We own what we do. We WOW our customers.\nLenovo is a US$83 billion revenue global technology powerhouse, ranked #153 in the Fortune Global 500, and serving millions of customers every day in 180 markets. Focused on a bold vision to deliver Smarter Technology for All, Lenovo has built on its success as the world’s largest PC company with a full-stack portfolio of AI-enabled, AI-ready, and AI-optimized devices (PCs, workstations, smartphones, tablets), infrastructure (server, storage, edge, high performance computing and software defined infrastructure), software, solutions, and services. Lenovo’s continued investment in world-changing innovation is building a more equitable, trustworthy, and smarter future for everyone, everywhere. Lenovo is listed on the Hong Kong stock exchange under Lenovo Group Limited (HKSE: 992) (ADR: LNVGY).\nThis transformation together with Lenovo’s world-changing innovation is building a more inclusive, trustworthy, and smarter future for everyone, everywhere. To find out more visit www.lenovo.com, and read about the latest news via our StoryHub.\nWe are seeking a talented Web Front-End Developer / UX Designer to design and develop dynamic, interactive, and intuitive user interfaces for Agentic AI applications. In this role, you will collaborate with AI engineers and backend developers to create seamless front-end experiences that enhance the functionality of AI-driven agents. Your work will directly impact how users interact with autonomous AI systems, ensuring usability, efficiency, and scalability.\nThis role sits within Lenovo’s Solutions Services Group (SSG), the global organization that brings together our end‑to‑end AI solutions and services to turn customer vision into value. You’ll be joining a new, distributed engineering team building the xIQ Agent Platform, an AI‑native delivery platform that powers Lenovo’s Agentic AI strategy across hybrid cloud, on‑prem, and edge.\nKey Responsibilities\nDesign and develop responsive, high-performance front-end interfaces for AI-driven applications.\nImplement and optimize UI/UX components that enhance user interaction with Agentic AI systems.\nCollaborate with AI and backend teams to integrate APIs, real-time data, and AI-generated outputs.\nEnsure applications are scalable, secure, and performant across different devices and browsers.\nStay up to date with emerging front-end technologies, AI advancements, and best practices.\nConduct testing, debugging, and performance tuning for optimal user experience.\nWork closely with product managers and designers to translate requirements into functional applications.\nBasic Qualifications\nProven experience in front-end development using React or similar modern front-end frameworks.\nStrong proficiency in HTML, CSS, JavaScript, and TypeScript.\nPreferred Qualifications\nExperience building and maintaining reusable UI components using tools such as Storybook or similar component libraries/design systems.\nExperience integrating with RESTful APIs and real-time data sources.\nFamiliarity with Python and backend frameworks such as FastAPI, specifically in the context of consuming and integrating APIs for front-end applications.\nFamiliarity with state management libraries (e.g., Zustand, Redux).\nSolid understanding of UI/UX best practices, including designing for AI-powered and data-driven interfaces.\nExperience implementing responsive, accessible, and high-performance web applications (WCAG standards preferred).\nExperience designing and implementing user input flows and forms, including validation and error handling.\nExposure to Docker, Kubernetes, and CI/CD pipelines, with the ability to deploy and manage front-end changes in containerized environments.\nExposure to Nginx, Next.js, and other modern middleware frameworks\nCommitment to building and maintaining high-quality code and adhering to team coding standards and best practices\nNice-to-Have Skills\nFamiliarity with LLMs, AI agents, and conversational UI frameworks.\nExperience working with Figma, including interpreting designs, collaborating with designers, and translating UI/UX specifications into implementation.\nExperience with interactive data visualization or advanced UI animations.\nKnowledge of prompt engineering and AI-driven UX patterns.\nWhy Join Us?\nWork at the forefront of AI-driven applications and autonomous agents.\nCollaborate with a team of AI researchers, engineers, and designers.\nContribute to building the next generation of intelligent web applications.\nCompetitive salary, flexible work environment, and opportunities for professional growth.\nHybrid Schedule on campus in Morrisville, NC. 3 days in office, 2 days work from home.\nAlso open to any location in the Eastern Time Zone as a remote role\nhttps://www.linkedin.com/company/lenovo/life/ssgxiq\nIf you're passionate about web development and excited about the intersection of AI and front-end experiences , we'd love to hear from you!\nWe are an Equal Opportunity Employer and do not discriminate against any employee or applicant for employment because of race, color, sex, age, religion, sexual orientation, gender identity, national origin, status as a veteran, and basis of disability or any federal, state, or local protected class.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4445772682": {
+        "fetched_at": "2026-10-27T22:21:40.028010+00:00",
+        "payload": {
+          "description": "be part of a team that values safety, inclusion, and excellence\nwe are one of the largest U.S. railroads transporting the nation’s freight across 28 western states and 3 Canadian provinces. as a member of our team, you will play a role in supporting the movement of essential products and materials that help feed, clothe, supply, and power communities throughout America and the world.\nbnsf | tech: innovating and transforming the future of freight rail\nbnsf | tech is the technology division making BNSF the preeminent freight and mobility company in north america.\nare you ready to drive change?\nif you are passionate about making a difference and eager to advance your career in a dynamic and supportive environment, we want you on our team! join us in reshaping the future of freight rail and discover a fulfilling career where your contributions matter.\nwe are committed to a culture where all employees are included, belong, and have equal opportunity to achieve their full potential. Come make a difference with us!\nLearn More About BNSF And Our Benefits\nJob Location: REMOTE\nAnticipated Start Date: 08/03/2026\nThe US base salary range for this full-time position is provided below:\nSalary Range: $93,750-$175,000\nL3: $93,750 - $125,000\nL4: $123,750 - $175,000\nThe range represents the amount bnsf | tech reasonably expects to pay for the position based on the level, scope, and responsibilities of the role.  Individual compensation and level of position offered is determined by the hiring location and additional factors including but not limited to job-related skills, experience, and relevant education or training. In addition to base pay and bonus eligibility, BNSF offers a comprehensive benefits package.\nThis is a full-time remote position. Employees may work from anywhere within the contiguous 48 states of the United States\nTravel is up to 20%. Employees will be required to occasionally travel to our corporate headquarters in Fort Worth, TX for in person meetings. Travel expenses for business needs will be covered by BNSF.\nThis position is open to candidates who are currently authorized to work in the United States. We are also open to sponsoring H-1B transfers, TN nonimmigrant status, and STEM OPT candidates with at least 2 years of remaining eligibility.\nApply early as this job may be removed or filled prior to the closing date, which is approximately seven (7) days after the posting date.\nproduct engineering: bridge the gap between vision and reality by transforming complex rail logistics and workflows into high-performing products that meet user needs, enhance efficiency and accelerate our business.\nplatform engineering: develop software platforms that enable our product and business teams to be able to develop applications that serve our customers through use of reusable and scalable software services operating with high efficiency . Our platform engineers build software and deliver innovative services that can scale and make other engineering organizations to leverage platforms to enable speed to market.\nenterprise engineering: empower the workforce with cutting-edge collaboration tools and services. Our enterprise engineers boost productivity, enhance mobility and ensure reliable systems for finance, human resources legal operations and more.\nKey Responsibilities May Include\nAs a junior engineer in our teams, you will have the opportunity to learn, develop and deliver high quality software that is highly visible, delivery innovative projects that directly impact our railroad logistics to effectively serve our customers to move freight on time. You will be involved in developing and deploying software for our core freight movement operations that spans across platform, product and enterprise engineering.\nThis is a full-stack engineering role, focused on building and operating large scale distributed systems such as messaging systems, micro-services, data platforms, serverless runtimes, customer experiences and applying AI/ML to develop scalable and highly reliable solutions.\nWrite production-quality code for well-defined tasks.\nFollow team coding standards and processes.\nParticipate in design reviews to learn best practices.\nWrite and maintain unit/integration tests.\nDebug and fix straightforward issues.\nSeek feedback proactively and apply it to improve.\nDevelop APIs, automation, and tools to improve platform integration.\nBuild and maintain monitoring and alerting systems for services.\nCollaborate with application teams to enhance reliability and performance.\nDesign and operate scalable systems across data centers, edge devices, and the cloud.\nWork with BNSF teams to create products that improve rail network operations.\nInnovate in distributed computing and drive industry transformation.\nBuild s olutions for high-speed, large-scale predictions on distributed systems.\nSolve broad challenges by coding effective solutions in an agile environment.\nDemonstrate operational excellence by monitoring, troubleshooting, and resolving production issues, including participating in a 24/7 on-call rotation.\nThe duties and responsibilities in this posting are representative categories to be used in deciding whether to apply for this position. This is not an exhaustive list of the position’s duties.\nAt BNSF Railway, we encourage individuals from all backgrounds to apply, showcasing their skills, experiences and development. We provide resources and tools to help you reach your full potential, fostering a supportive and inclusive environment.\nBasic Qualifications\nAuthorized to work in the US\nBachelor's degree or higher in computer science or a related field OR 2 years of software development relevant experience without a Bachelor's degree\nExperience programming in at least one modern language (e.g., Java, JavaScript, TypeScript, etc.)\nExperience with developing, testing and deploying high quality software in production systems\nFamiliarity with observability stacks (e.g., Prometheus, Grafana, OpenTelemetry)\nExperience with secure coding practices\nAbility to work in cross-functional teams and communicate with stakeholders\nExperience participating in design reviews, incident retrospectives, or RFC processes\nDemonstrated ability to learn new technical concepts and to adapt to new technologies quickly\nStrong communication and collaboration skills\nPreferred Qualifications\nBachelor’s degree or higher in computer science, or related field\nAble to work now and in the future without BNSF’s assistance (whether monetary, through sponsorship, or otherwise) in obtaining, maintaining, or extending employment authorization (including H-1B, STEM OPT/CPT, or TN nonimmigrant status).\nEngineering experience with a public PaaS or cloud provider (AWS, Azure or GCP)\nInterest in sustainable infrastructure and cost/resource awareness\nExperience with single-pane-of-glass management platforms or control planes for distributed systems\nFamiliarity with frameworks like React, Angular, Node.js, Spring Boot\nPrior experience developing and delivering highly reliable distributed systems in production environment.\nAt BNSF, you will have access to a comprehensive and competitive benefits package including:\nAn industry-leading 401(k) and renowned Railroad Retirement program.\nA range of robust health care options for you and your dependents (including domestic partners), including medical, dental, vision, telemedicine, mental health, cancer support, and high-quality care network options.\nHealth care spending accounts (HSA) with employer contributions, as well as life and disability insurance, provided at no cost.\nFamily benefits including parental, pediatric and family building support, adoption and surrogacy reimbursement, and dependent care spending account (with employer match).\nAccess to discounts on travel, gym memberships, counseling services and wellness support.\nAnnual bonus (Incentive Compensation Program)\nGenerous leave / time off policies.\nFor more information, visit Benefits.\nFederal authority requires BNSF employees, whose work requires unescorted access to secure areas of port facilities, to obtain a TWIC. More information is available at https://www.tsa.gov/for-industry/twic\nBNSF Railway is an Equal Opportunity Employer, all qualified applicants receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability or protected veteran status.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4461992511": {
+        "fetched_at": "2026-10-27T22:21:40.028010+00:00",
+        "payload": {
+          "description": "Come join our Engineering team!\nHigh velocity, high intensity, high trust, high bar, high impact, and a will to win.\nIf those words resonate deeply with you, this could be your next career move. We're seeking someone who leads with humility, pursues audacious goals, and is motivated by meaningful impact on people and the world.\nAt FutureFit AI, our core mission is to help more people get to better jobs faster and cheaper, with a specific focus on those facing barriers to opportunity. Our work helps resolve the growing issue of economic inequality, ensuring that no one is left behind in the future of work. Our AI-powered platform brings efficiency and insight to workforce development, replacing outdated systems and unlocking human potential at scale.\nReady to make an impact? Apply today.\nImportant note: Data shows that men typically apply when meeting 3/10 requirements, while women often wait until it's 10/10. We encourage you to apply if you see a strong (not necessarily perfect) fit.\nThe Opportunity\nWe're seeking a Software Engineer to join our Engineering team, working across the mid to senior range. You'll build the product that helps people get to better jobs faster and cheaper, with a focus on those facing the biggest barriers to opportunity, and you'll own features end to end across our full stack.\nYour Role\nYou'll join one consolidated engineering team, reporting to an Engineering Manager, and own features end to end rather than working within narrowly segmented frontend or backend roles. We work with high velocity and a high bar, and we trust engineers to make calls and move independently, especially through ambiguity, in unfamiliar parts of the codebase, when requirements are incomplete.\nWe're hiring across the mid to senior range. If you're mid-level, you'll grow quickly with meaningful ownership from day one. If you're senior, you'll set technical direction, raise the bar on quality, and lift the engineers around you.\nWhat You'll Own\nEnd-to-end delivery: Design, build, test, and ship full-stack features across the frontend and backend, owning your work all the way to production.\nProduct partnership: Work closely with Product, Design, and Data to turn customer needs into well-built, reliable software.\nCode quality: Write clean, maintainable, well-tested code, and help hold the team to a high bar through reviews and shared standards.\nTechnical judgment: Make sound technical decisions in your work and weigh tradeoffs as you build. At the senior end, this scales up to system design for larger initiatives, architectural calls, and mentoring other engineers.\nYour 30/60/90 Day Plan\nThis role is hands-on and high-impact from week one. You won't sit on the sidelines learning for a quarter. You'll be shipping early and owning more as you go. Here's roughly what that looks like:\nBy 30 days: Get oriented and ship\nGet your environment set up and ship your first change to production in the first week, a real fix or small improvement, not a throwaway task\nBuild relationships across Engineering, Product, Design, and Data, and learn how work moves from idea to production here\nGet to know the codebase and our stack (React/TypeScript, Node.js, PostgreSQL/MongoDB, AWS), and where the rough edges are\nUnderstand who our users are, the barriers they face, and the problems we're solving for them\nBy 60 days: Own your work end to end\nTake a feature from design through to production on your own, owning quality the whole way\nBecome a dependable code reviewer and start holding the team to a high bar through shared standards\nDevelop real judgment about our patterns and tradeoffs, and bring that into planning and technical discussions\nPartner closely with Product and Design to turn customer needs into reliable, well-built software\nBy 90 days: Drive impact\nDeliver a meaningful piece of product that customers actually feel\nSpot something that slows us down, like tooling, testing, observability, or process, and improve it without being asked\nHave a clear point of view on where we can move faster or raise the bar on quality\n(At the senior end) take on system design for a larger initiative, make sound architectural calls, and lift the engineers around you\nRequired Experience\nStrong full-stack experience building and shipping production web applications, roughly 5+ years for senior-level candidates; strong mid-level candidates are also welcome\nStrong, hands-on experience with React and TypeScript\nProfessional backend development experience; candidates who are stronger on the backend than the frontend are a particularly good fit here\nExperience with PostgreSQL, MongoDB, or another comparable database technology\nProven ability to take an ambiguous problem and execute with limited direction, owning a feature end to end from design through production\nComfortable working in unfamiliar domains and independently finding solutions, without constant direction\nLocated in Canada or the United States, with Eastern time zone strongly preferred; candidates outside Eastern time should be able to maintain 5 to 6 hours of daily working overlap with the team\nBonus Points\nNode.js experience\nBackend-leaning full-stack expertise\nExperience at an early-stage or fast-scaling startup where you wore several hats\nExposure to data-intensive products, recommendation/matching systems, or AI/ML-backed features\nInterest in workforce development, economic mobility, or other mission-driven work\nOur Tech Stack for Engineering\nFrontend: React, TypeScript\nBackend: Node.js, TypeScript\nData storage: PostgreSQL, MongoDB\nInfrastructure: AWS ecosystem\nCollaboration: Slack, Jira, Figma\nYour Education\nYour alma mater isn't our focus. Your grit, hunger, and drive are. If you learn continuously, tackle challenges head-on, and know your strengths and gaps intimately, you're our person.\nLocation\nRemote across the US and Canada. We are open to candidates living anywhere in either country, with at least 5 to 6 hours of daily overlap with our EST-based team required. For candidates living in Toronto, our office is conveniently located at 325 Front St West (a short walk from Union Station), and you are welcome to drop by, though it is entirely optional and not a hybrid requirement.\nTravel Expectations\nApproximately 2-3 trips per year to Toronto for team-building, our August all-hands, and an end-of-year event.\nCompensation\nPay Range: USD $150,000-$185,000 (United States) / CAD $130,000-$175,000 (Canada).\nAs a remote-first company, we benchmark compensation to the national market for comparable roles at institutionally-funded startups, targeting the middle of the market. Bands are designed for the lifecycle of the role, where you enter the band reflects your applied experience and other criteria established by the hiring committee, with room to grow through the band as you grow in the role.\nIf you want real ownership over a product that moves people into better jobs, let's talk.\nHiring Journey\nAt FutureFit AI, our hiring process is designed to help you assess whether this role and our culture are the right fit based on your unique skills, mindset, and experiences. We move fast and work with intensity, so we want you to get a real sense of that from the start.\nEach journey includes a mix of interviews and a performance challenge. For this role, that might look like:\nOnline Application\nInitial Screen with Talent Acquisition\nInterview with Hiring Manager\nCoding Challenge\nDesign Challenge\nFinal 1:1 Interviews\nFinal Decision\nGenerally, this entire process takes around 6 weeks, although the timing can vary due to specific candidate circumstances.\nReady to shape the future of work?\nAt FutureFit AI, we're not just building a company—we're transforming how talent and opportunity connect. Join our driven team united by a commitment to job seekers and the workforce ecosystems we serve.\nCompany Snapshot:\nTeam: 30-50 across US and Canada (hubs in NYC and Toronto)\nCustomers: Workforce development agencies and intermediaries, government agencies, employers\nIndustry: SaaS/AI technology\nFunding: Bootstrapped 0-1, then raised funding led by JP Morgan\nStructure: Growth, Customer Success, Product, Engineering, Data, People & Culture, Finance & Operations\nOur Core Principles\nBe Curious\nDrive to Outcomes\nRaise the Bar\nSpeed Matters\nOwn It\nWe Over Me\nUse of AI in Hiring\nAt FutureFit, we use artificial intelligence (AI) tools to make our hiring process more efficient, consistent, and equitable—never to replace human judgment. We use AI in the following ways:\nScreening support: AI may help us compare applications against the skills and experience required for a specific role. These skills are defined by the hiring team for each position. A human reviews each application, with the AI assessment as just one input.\nInterview support: In some interviews, we may use an AI notetaker to summarize the discussion so interviewers can focus on being present in the conversation.\nInsights, not decisions: AI provides data points to support our team’s evaluation but does not make or recommend final hiring decisions. Every hiring decision is made by people.\nWe will ensure that individuals with disabilities are provided reasonable accommodation to participate in the job application or interview process, perform essential job functions, and receive other benefits and privileges of employment. Please contact us to request an accommodation.\n© FutureFit AI All rights reserved, we are proud to be an equal opportunity workplace. We celebrate diversity and are committed to creating an inclusive environment for all employees. We do not discriminate on the basis of race, religion, color, gender identity, sexual orientation, age, disability, veteran status, or other applicable legally protected characteristics. We encourage people of different backgrounds, experiences, abilities, and perspectives to apply.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4464129206": {
+        "fetched_at": "2026-10-27T22:21:40.028010+00:00",
+        "payload": {
+          "description": "About NewtonX\nNewtonX is a B2B insights company trusted by the world's most innovative companies to make high-stakes decisions with confidence. We combine a verified network of business professionals with AI-powered research tools to deliver research intelligence faster, more precise, and more defensible than traditional methods.\nOur clients include Google, Microsoft, TikTok, DoorDash, Stripe, and Coinbase. Our research has been cited by Fortune, Forbes, TechCrunch, Adweek, and the Wall Street Journal.\nNewtonX has raised $47M from investors including Two Sigma Ventures, Third Prime, XFund, and Citi Ventures.\nAbout The Role\nWe are looking for a Staff Frontend Engineer with deep expertise in React and TypeScript . You’ll own the frontend architecture behind the data-dense applications our clients and research teams use every day, where performance, accessibility, and interaction quality are the product. This is a hands-on role: you’ll write production code, but your leverage comes from the systems and standards you leave behind.\nWhat We’re Looking For\n6+ years engineering experience, mostly frontend, including 3+ at a senior level owning projects end-to-end\nDeep React expertise — hooks, composition patterns, and the ability to reason about rendering behavior rather than guess at it\nStrong TypeScript — typing that catches real bugs instead of decorating the code\nExpert JavaScript (ES6+), HTML, and CSS/SCSS, including the modern layout model\nProven ownership of frontend architecture at scale: module boundaries, shared component libraries, and state management strategy\nWeb performance as a discipline — Core Web Vitals, bundle analysis, code splitting, virtualization, and profiling with real tooling\nAccessibility fluency — WCAG 2.1 AA, semantic HTML, keyboard and focus management, screen reader testing\nDesign system experience: reusable, themeable, documented components built in partnership with Design\nTesting depth — Jest and React Testing Library, plus end-to-end coverage (Playwright or Cypress) people actually trust\nFluency consuming APIs: REST and/or GraphQL, data-fetching and caching patterns (React Query, SWR, Apollo), and error states that hold up in production\nWorking knowledge of Python/Django — enough to read backend code, shape endpoints with backend engineers, and ship a small change yourself\nAbility to mentor, review code with judgment, and raise the bar without becoming a bottleneck\nBonus Skills (Nice-to-Haves)\nServer-side rendering (Next.js, Remix) and hydration tradeoffs\nFrontend observability and performance budgets enforced in CI (Sentry, Datadog RUM)\nData visualization at scale (D3, Recharts, Visx, canvas/WebGL)\nReal-time UI: WebSockets, polling strategies, streaming or collaborative interfaces\nStyling systems (Material-UI, Tailwind) and state management (Redux, Zustand)\nBuild and monorepo tooling ownership (Vite, Webpack, CI pipelines)\nCloud and infra exposure: GCP, Kubernetes, Docker, Terraform\nInternationalization, or SOLID design principles applied with judgment\nWhat You’ll Do\nOwn the architecture of our React/TypeScript applications and the patterns the team builds on\nLead development of performant, accessible UIs for complex research and analytics workflows\nSet and defend frontend standards — performance budgets, accessibility, testing, and quality gates in CI\nBuild and evolve our shared component library and design system with Design\nDrive measurable performance work: profile, fix the real bottleneck, instrument it so it stays fixed\nPartner with backend engineers on API contracts that make the frontend simpler, not harder\nPay down frontend technical debt deliberately, and contribute to Python/Django services where it speeds delivery\nMentor engineers and own department-wide technical initiatives from proposal through adoption\nWhat We Offer\nCompetitive compensation with a total compensation range of $180k-$240k and equity. (Please note that salary and compensation may vary based on skills, experience, performance, and location.)\nExcellent medical, dental, and vision insurance.\n401k match with immediate vesting.\nGenerous Paid time off: vacation, holidays, sick, and parental leave.\nA diverse, collaborative, and positive culture where we invest in and celebrate each other’s success.\nNewtonX is proud to be an equal opportunity workplace. We do not discriminate based upon race, religion, color, national origin, sex, sexual orientation, gender identity/expression, age, status as a protected veteran, status as an individual with a disability, or any other applicable legally protected characteristics.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4466319321": {
+        "fetched_at": "2026-10-27T22:21:40.028010+00:00",
+        "payload": {
+          "description": "Reddit is a community of communities. It's built on shared interests, passion, and trust, and is home to the most open and authentic conversations on the internet. Every day, Reddit users submit, vote, and comment on the topics they care most about. With 100,000+ active communities and approximately 130 million daily active unique visitors, Reddit is one of the internet's largest sources of information. For more information, visit www.redditinc.com.\nTeam Description\nThe Brand Ad Formats team drives the development of ad formats that help advertisers maximize reach and brand impact. They focus on high-visibility, awareness-driven solutions that create memorable experiences for Reddit users. By delivering guaranteed placements and engaging ad interactions, they support major brand initiatives and help advertisers achieve measurable outcomes. The team is building fully customizable interactive formats and AI-driven ads that incorporate User-Generated Content (UGC). Moving forward, we will be doubling down on Video Ads, with the goal of turning Reddit into an industry leader and a 'must buy' for advertisers to promote video content.\nRole Description\nThe Brand Ad Formats team is seeking a skilled Frontend engineer with a product-focused mindset to join the team.\nResponsibilities:\nBuild Ad experiences and create patterns for Reddit's web app that enhance our ads' performance and functionality.\nCollaborate across product, design, and engineering teams to innovate and implement sophisticated solutions for complex challenges.\nEngage in the full development cycle: design, develop, QA, experiment, analyze, and deploy.\nRequired Qualifications:\n3+ years of experience in Web Engineering\nProficient in Typescript and Javascript\nA willingness to tackle the challenges of creating data-intensive, highly responsive, and fault-tolerant apps\nExperience with automated testing best practices, code quality / design patterns, observability, etc.\nSkilled at performing insightful code reviews, and receiving feedback themself\nExperience leveraging GenAI tools to increase software engineering productivity\nExcellent communication skills: able to collaborate with teams in a fully remote environment, and discuss complex topics with technical and non-technical audiences\nPreferred Qualifications:\nExperience working on ad tech\nExperience working on consumer facing sites (high production value at scale)\nTechnologies used on the team include:\nLanguages: Typescript, HTML, CSS, Go\nFrameworks: React, Thrift, gRPC\nTools: Kubernetes, Docker, Codex, Cursor\nPay Transparency:\nThis job posting may span more than one career level.\nIn addition to base salary, this job is eligible to receive equity in the form of restricted stock units, and depending on the position offered, it may also be eligible to receive a commission. Additionally, Reddit offers a wide range of benefits to U.S.-based employees, including medical, dental, and vision insurance, 401(k) program with employer match, generous time off for vacation, and parental leave. To learn more, please visit https://www.redditinc.com/careers/.\nTo provide greater transparency to candidates, we share base salary ranges for all US-based job postings regardless of state. We set standard base pay ranges for all roles based on function, level, and country location, benchmarked against similar stage growth companies. Final offer amounts are determined by multiple factors including, skills, depth of work experience and relevant licenses/credentials, and may vary from the amounts listed below.\nThe base salary range for this position is:\n$164,200—$229,900 USD\nIn select roles and locations, the interviews will be recorded, transcribed and summarized by artificial intelligence (AI). You will have the opportunity to opt out of recording, transcription and summarization prior to any scheduled interviews.\nDuring the interview, we will collect the following categories of personal information: Identifiers, Professional and Employment-Related Information, Sensory Information (audio/video recording), and any other categories of personal information you choose to share with us. We will use this information to evaluate your application for employment or an independent contractor role, as applicable. We will not sell your personal information or disclose it to any third party for their marketing purposes. We will delete any recording of your interview promptly after making a hiring decision. For more information about how we will handle your personal information, including our retention of it, please refer to our Candidate Privacy Policy for Potential Employees and Contractors.\nReddit is proud to be an equal opportunity employer, and is committed to building a workforce representative of the diverse communities we serve. Reddit is committed to providing reasonable accommodations for qualified individuals with disabilities and disabled veterans in our job application procedures. If, due to a disability, you need an accommodation during the interview process, please let your recruiter know.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4473955471": {
+        "fetched_at": "2026-10-27T22:21:40.028010+00:00",
+        "payload": {
+          "description": "About M3: A Japanese global leader in the provision of ground-breaking and innovative technological and research solutions to the healthcare industry. The M3 Group operates in the US, Asia, and Europe with over 5.8 million physician members globally via its physician websites which include mdlinx.com, m3.com, research.m3.com, Doctors.net.uk, medigate.net, and medlive.cn. M3 Inc. is a publicly traded company on the Tokyo Stock Exchange (jp:2413, NIKKEI 225) with subsidiaries in major markets including the US, UK, Japan, South Korea, and China, and in 2020 was ranked in Forbes’ Global 2000 list. The M3 Group provides services to healthcare and the life science industry. In addition to market research, these services include medical education, ethical drug promotion, clinical development, job recruitment, and clinic appointment services. M3 has offices in Japan, UK, France, Germany, Brazil, Sweden, China, USA, and South Korea, as well as India.\nDue to our continued growth, we are hiring for an AI Software Engineer to join MDLinx , an M3 company.\nAbout the Business Unit:\nMDLinx Mission: Transform Omnichannel from Message Delivery to Belief Engineering\nMDLinx is on the path to transform its business and product line-up from endemic to omnichannel engagement model, aiming at fulfilling the promise of true omnichannel approach to pharmaceutical brand promotion – “right message to the right physician at the right time on the right channel”. Our goal is to provide pharmaceutical brands with best-in-class personalized HCP engagement programs across the wider media ecosystem, designed to accelerate disease state and brand knowledge penetration, lead generation, and customer conversion. Our ambition is to leverage an omnichannel approach to establish a new philosophy for physician engagement, shifting from delivery to belief engineering.\nJob Description\nImplement features that improve MDLinx and drive impact for its users, with the scope of independent ownership growing over time.\nContribute to the design of software systems, and participate in the review of other engineers' code.\nApply software engineering best practices, including automated testing, clean code, peer review, and documentation, to build maintainable and adaptable applications.\nContribute to the performance, security, and compliance of MDLinx.\nContribute to the repository context, conventions, automated tests, quality gates, and executable plans that make agentic coding reliable.\nRead AI-generated plans and code critically and raise what looks wrong. Developing this judgment is a primary objective of the first year in the role.\nFind repetitive or time-intensive engineering work that can move to AI-assisted or automated workflows, keeping human review where it protects quality, accuracy, and compliance.\nTroubleshoot bugs in pre-production and production, with support from senior engineers on the team.\nWork with people inside and outside engineering to meet team and company objectives.\nContribute to projects that benefit M3 USA as a whole, collaborating across business units beyond your own team when the company needs it.\nQualifications\nAssociate or bachelor's degree in computer science or a relevant field, or equivalent experience in software engineering.\nParticipation in M3's AI training and upskilling. All engineers are expected to attend relevant sessions and engage with these initiatives, and consistent participation is a performance expectation.\n1 to 3 years of software development experience. Internships, co-ops, academic project work, open-source contributions, and substantial personal projects count toward this.\nTypeScript and React, and Python. Working knowledge is sufficient; depth is expected to develop in the role.\nSQL and relational databases, and version control with Git.\nFamiliarity with at least one major cloud platform. MDLinx runs on AWS, GCP, and Vercel, and you will not be expected to know all three coming in.\nHands-on use of AI coding assistants, with the ability to describe where they helped and where their output needed correction.\nInterest in the media, content production, and pharmaceutical domain, with a commitment to learning it.\nQuick to learn whatever technologies MDLinx uses; with AI assistance, learning speed matters more than prior familiarity with any one stack.\nClear communication with both technical and non-technical people, and willingness to ask questions early.\nAdditional Information\nBenefits:\nA career opportunity with M3USA offers competitive wages, and benefits such as:\nHealth and Dental\nLife, Accident and Disability Insurance\nPrescription Plan\nFlexible Spending Account\n401k Plan and Match\nPaid Holidays and Vacation\nSick Days and Personal Day\n*M3 reserves the right to change this job description to meet the business needs of the organization",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4474341024": {
+        "fetched_at": "2026-10-27T22:21:40.028010+00:00",
+        "payload": {
+          "description": "Please review the job details below.\nLanteris Space LLC, a wholly owned subsidiary of Intuitive Machines, is currently seeking an entry-level Software Development Engineer to join our team in San Jose, CA, or a US remote location. In this role, you will be responsible for designing and implementing software for spacecraft simulators that are used by internal and external customers. This is an excellent opportunity for a recent graduate to begin their career in the space industry working on cutting-edge simulation technology.\nIntuitive Machines is a leading space infrastructure company that builds spacecraft, connects networks, and operates infrastructure-as-a-service for commercial, civil, and national security customers. With a proven track record across the space domain, the Company, through organic growth and portfolio expansion, has built over 300 spacecraft, delivered over 260 kilograms of payload to the lunar surface, and provided precision navigation expertise that has guided spacecraft across our solar system.\nResponsibilities\nDesign and implement models of spacecraft components and/or subsystems for all-software spacecraft simulators\nLearn and apply spacecraft hardware specifications, Interface Control Documents (ICDs), and technical documentation to develop accurate software models\nAdhere to current satellite and software industry best practices\nDeploy code through existing Continuous Integration/Continuous Deployment (CI/CD) pipelines\nCollaborate with team members to find solutions to design and evaluate technical trade-offs\nCommunicate cross-functionally with software and systems engineers to ensure a coherent system design\nWrite and perform unit, integration, and system-level tests on software applications\nParticipate in customer-facing design reviews and other technical discussions\nMinimum Requirements\nMust be a U.S. citizen or permanent resident\nBS in Computer Engineering, Computer Science, Mathematics, Physics, or Aerospace Engineering, or related disciplines, or degree received within 3 months of hire date\nProficiency with Linux or demonstrated ability to learn quickly\nFamiliarity with software compilers and other software development tools\nExperience (academic or professional) in the following:\nDeveloping software in C++ or Python\nDebugging and troubleshooting software systems\nSoftware development best practices\nVersion control systems (Git)\nPreferred Qualifications\nStrong applied mathematics skills, including numerical methods, linear algebra, differential equations, and/or computational physics\nExperience implementing mathematical algorithms in software (coursework projects, research, or professional work)\nAcademic projects involving simulation, modeling, or real-time systems\nRelevant internship or co-op experience in software development, aerospace, or simulation\nCoursework or project experience with object-oriented programming and software design patterns\nBasic understanding of TCP/IP networking concepts\nExposure to Agile methodologies or modern software development practices\nFamiliarity with automated testing frameworks\nStrong problem-solving skills and attention to detail\nAbility to learn quickly and multi-task in a dynamic and fast-paced work environment\nPassion to work on space applications\nInterest in spacecraft systems, operations, design, or testing\nStrong communication skills and ability to work collaboratively in a team environment\nWhat We Offer\nMentorship from experienced engineers in spacecraft simulation and systems engineering\nHands-on experience with real spacecraft hardware and flight software\nOpportunity to work on projects that directly support space missions\nProfessional development and growth opportunities in the aerospace industry\nIn support of pay transparency at Lanteris Space Systems, we disclose salary ranges on all U.S. job postings. The successful candidate’s starting pay will fall within the salary range provided below and is determined based on job-related factors, including, but not limited to, the experience, qualifications, knowledge, skills, geographic work location, and market conditions. Candidates with the minimum necessary experience, qualifications, knowledge, and skillsets for the position should not expect to receive the upper end of the pay range.\nThe base pay for this position within Colorado is: $66,000.00 - $111,000.00 annually.\nThe base pay for this position within New Jersey is: $66,000.00 - $111,000.00 annually.\nThe base pay for this position within Delaware is: $66,000.00 - $111,000.00 annually.\nThe base pay for this position within California is: $77,000.00 - $128,000.00 annually.\nFor all other states, we use geographic cost of labor as an input to develop market-driven ranges for our roles, and as such, each location where we hire may have a different range.\nWe offer a comprehensive package of benefits including paid time off, health and welfare insurance, and 401(k) to eligible employees. More information on our benefits will be shared with candidates as they move forward in the recruitment process.\nThe application window is three days from the date the job is posted and will remain posted until a qualified candidate has been identified for hire. If the job is reposted regardless of reason, it will remain posted three days from the date the job is reposted and will remain reposted until a qualified candidate has been identified for hire.\nThe date of posting can be found on the Lanteris Space Systems Career page at the top of each job posting.\nTo apply, submit your application via the Lanteris Space Systems Career page.\nLanteris Space Systems values diversity in the workplace and is an equal opportunity/affirmative action employer. All qualified applicants will receive consideration for employment without regard to sex, gender identity, sexual orientation, race, color, religion, national origin, disability, protected veteran status, age, or any other characteristic protected by law.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4474558058": {
+        "fetched_at": "2026-10-27T22:21:40.028010+00:00",
+        "payload": {
+          "description": "About Us\nConsertus is an AI-native global capital program management and advisory firm that combines deep industry expertise with advanced digital capabilities to deliver smarter, faster, and more sustainable outcomes. Headquartered in Miami, Florida, and supported by a team of more than 1,500 professionals , we help clients plan, deliver, and optimize complex capital programs across the full project lifecycle.\nOur integrated capabilities span advisory, digital solutions, engineering and design, and program delivery, enabling organizations to navigate complexity, mitigate risk, and achieve strategic objectives. We serve a diverse range of industries, including aviation, transportation, transit, water, healthcare, energy, education, government, commercial real estate, life sciences, and technology.\nAt Consertus, we believe our people are our greatest strength. We foster a collaborative, flexible, and inclusive environment where individuals can grow, develop their skills, and make a meaningful impact. Together, we're transforming the way the world is planned, built, and delivered.\nLearn more about how Consertus is creating lasting value for clients, communities, and our people at www.consertus.com.\nAbout This Role\nWe are seeking a talented, proactive, and security-conscious Application Developer to join our IT organization. In this role, you will architect, build, optimize, and maintain high-performance Python applications deployed entirely across Google Cloud Platform (GCP).\nYou will leverage Claude Code as your primary AI-assisted development environment to accelerate delivery cycles, enhance code quality, generate comprehensive test suites, and perform rigorous post-build security validations.\nThe ideal candidate blends solid software engineering fundamentals with modern AI-native development workflows, event-driven cloud architecture, and a strong security-first mindset.\nKey Responsibilities\nApplication Development & Architecture\nDesign, develop, test, deploy, and maintain resilient Python applications utilizing Cloud Run, GKE, Cloud Functions, and Compute Engine.\nBuild scalable microservices and event-driven solutions using Cloud Pub/Sub, Cloud Tasks, and Eventarc.\nDevelop and maintain RESTful APIs using FastAPI and gRPC services with robust authentication, versioning, and performance optimization.\nWrite clean, maintainable, modular Python code following PEP 8 standards, static typing practices, and software engineering best practices.\nParticipate in technical design sessions, sprint planning, code reviews, and architecture discussions.\nCloud Infrastructure & DevOps\nDevelop and maintain Infrastructure as Code (IaC) solutions using Terraform.\nConfigure and support CI/CD pipelines utilizing Cloud Build, Artifact Registry, Cloud Deploy, and GitHub Actions.\nImplement monitoring, logging, tracing, and alerting strategies using Google Cloud Monitoring, Cloud Logging, and Cloud Trace.\nSupport enterprise data platforms including BigQuery, Cloud SQL, Firestore, Cloud Spanner, and Cloud Storage.\nAssist in implementing secure cloud architecture practices through IAM, workload identity federation, and least-privilege access controls.\nAI-Assisted Development\nUtilize Claude Code and modern AI coding assistants to accelerate development, refactoring, testing, and documentation efforts.\nDesign effective prompts and workflows that produce reliable, scalable, and production-ready code.\nReview, validate, and enhance AI-generated output to ensure quality, maintainability, and security.\nGenerate automated testing frameworks, OpenAPI documentation, and developer resources using AI-assisted tools.\nSupport adoption of AI-enabled software development life cycle (SDLC) best practices across the technology organization.\nSecurity & Compliance\nConduct application security assessments using tools such as Bandit, Semgrep, Snyk, and SonarQube.\nImplement OWASP-aligned secure coding standards, input validation, and secure API development practices.\nManage secrets and credentials through Google Secret Manager and Cloud KMS.\nEnsure solutions comply with applicable enterprise security standards and regulatory requirements including SOC 2, ISO 27001, and HIPAA when required.\nQualifications/Requirements\nRequired: Fully bilingual in English and Spanish, with professional fluency in speaking, reading, and writing both languages.\nBachelor's degree in Computer Science, Information Technology, Software Engineering, or a related technical field, or equivalent professional experience.\n3 - 5 years of professional software development experience building enterprise applications.\nStrong proficiency with Python 3.10+ and modern application development frameworks including FastAPI.\nExperience with asynchronous programming, object-oriented design principles, and API development.\nExperience designing and deploying containerized applications in Google Cloud Platform environments.\nHands-on experience with Cloud Run, GKE, Cloud Functions, BigQuery, Pub/Sub, Firestore, Cloud SQL, and Cloud Storage.\nExperience developing Infrastructure as Code solutions using Terraform.\nExperience implementing automated testing frameworks with pytest, unittest, or similar tools.\nFamiliarity with CI/CD pipelines and DevOps methodologies.\nExperience working with AI-assisted development tools such as Claude Code, GitHub Copilot, or Cursor.\nPreferred Qualifications\nGoogle Cloud Associate Cloud Engineer or Professional Cloud Developer certification.\nGoogle Cloud Professional Cloud Security Engineer or Professional Cloud DevOps Engineer certification.\nExperience integrating enterprise platforms such as Workday, Salesforce, Deltek Vantagepoint, or Ironclad.\nFamiliarity with Vertex AI, Document AI, Gemini APIs, LangChain, LlamaIndex, or other AI/ML development frameworks.\nExperience with container security, Binary Authorization, Kubernetes security controls, and runtime monitoring solutions.\nContributions to open-source projects, Python packages, or cloud-native development tools.\nStrong understanding of secure software development practices and application security principles.\nWorking Hours\nFull Time; Hybrid or Remote, depending on proximity to a local office.\nHow To Apply\nIf you’re passionate about building secure, scalable cloud applications we’d love to hear from you. Apply today!\nEqual Employment Opportunity Statement\nConsertus is proud to be an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees. We welcome applicants from all backgrounds and identities, and we do not discriminate on the basis of race, color, religion, sex, sexual orientation, gender identity or expression, national origin, disability, age, veteran status, or any other protected status.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4479036631": {
+        "fetched_at": "2026-10-27T22:21:40.028010+00:00",
+        "payload": {
+          "description": "Backend Engineer - Node.js / TypeScript\nLocation: Remote| Full-Time\nOur hiring partner is pioneering a platform backed by $14M from top-tier investors, enabling enterprises to deploy authenticated AI agents for mission-critical workflows.\nTheir technology solves a fundamental challenge: securely accessing and transforming data trapped behind complex authentication barriers. We’ve automated weeks-long manual processes into minutes for industry leaders. Join our growing team to build the infrastructure that makes every business system AI-accessible.\nYour Mission\nArchitect core systems that allow AI agents to securely navigate authenticated environments—from dynamic web interfaces to legacy systems—transforming unstructured data into actionable intelligence at scale.\nKey Responsibilities\nBuild Resilient AI Agents : Develop systems that automate complex logins (including MFA), extract unstructured data, and handle dynamic web interfaces without APIs.\nEngineer Secure Foundations : Create authentication workflows for diverse platforms and scalable APIs for enterprise-grade solutions.\nDesign Data Infrastructure : Implement GCP-based data pipelines, optimize PostgreSQL performance, and ensure integrity for millions of records.\nShip End-to-End Systems : Develop third-party integrations, testing suites, and observability tools with a focus on reliability.\nCollaborate Strategically : Work with senior engineers on system architecture and product teams to solve real customer challenges.\nTech Stack Deep Dive\nCore : TypeScript, Node.js, PostgreSQL, Python\nInfra : GCP, Docker, GitHub Actions (CI/CD)\nAutomation : Custom web agents, Puppeteer/Playwright (experience a plus)\nWho You Are\n3+ years backend engineering experience shipping production systems.\nTechnical Mastery :\nProficient in modern backends (Node.js/TypeScript preferred)\nExperience with REST APIs, cloud platforms (GCP/AWS/Azure), and databases\nFamiliarity with containerization (Docker) and CI/CD pipelines\nCultural Fit :\nAutonomy : Own outcomes end-to-end in ambiguous environments\nCraftsmanship : Balance best practices with pragmatic delivery\nCuriosity : Continuously explore authentication, security, and AI/automation\nCommunication : Document decisions and align cross-functional teams\nNice-to-Haves\nData engineering/ETL pipeline experience\nKnowledge of OAuth, SAML, or security protocols\nStartup experience or open-source contributions\nMonitoring tools (Prometheus, Grafana, etc.)\nWhy Join\nImpact Critical Infrastructure : Your code enables AI to access 90% of enterprise data currently locked behind logins.\nFounder-Level Equity : Significant ownership in a well-funded startup.\nStrong Team : Learn from former founders and early engineers who scaled 0→1 products.\nFor Builders of the AI-Authenticated Future\nIf you’re driven to solve foundational challenges at the intersection of security, AI, and enterprise systems—apply now. Let’s make every business system AI-accessible.\nMust be authorized to work in the U.S. No visa sponsorship.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4481114793": {
+        "fetched_at": "2026-10-27T22:21:40.028010+00:00",
+        "payload": {
+          "description": "About Fincons US\nFincons US is a leading technology and digital transformation company delivering innovative solutions across Media & Entertainment, Financial Services, and other strategic industries. With offices in Los Angeles and New York, Fincons brings deep industry expertise and technology capabilities to major organizations across the U.S. market. The company has a strong focus on Media & Entertainment, supporting clients with digital transformation, data, content, and business intelligence solutions. Fincons US combines deep industry knowledge with advanced technology capabilities to help organizations modernize their systems and technology environments.\nAbout The Role\nFincons US is seeking an experienced Full Stack Developer to support enterprise application and digital transformation initiatives. This is a remote position supporting teams and stakeholders in the Los Angeles market. The Full Stack Developer will be responsible for designing, developing, testing, deploying, and maintaining modern web applications using Python, React, and AWS while collaborating closely with technical and business stakeholders.\nKey Responsibilities\nDesign, develop, test, and maintain scalable full stack applications using Python and React.\nDevelop robust backend services, APIs, and application logic using Python.\nBuild responsive, user-friendly front-end applications using React and modern JavaScript/TypeScript.\nDesign, deploy, and maintain cloud-based applications and services using AWS.\nCollaborate with product managers, architects, designers, and other engineering teams to translate business requirements into technical solutions.\nTroubleshoot application issues, perform root-cause analysis, and support production environments.\nParticipate in code reviews, testing, deployments, technical documentation, and continuous improvement initiatives.\nRequired Qualifications\n5–7+ years of professional software development experience.\nBachelor’s degree in Computer Science, Information Systems, Engineering, or a related field is required.\nStrong hands-on experience with Python for backend development.\nStrong experience developing modern web applications using React.\nExperience designing and developing RESTful APIs and backend services.\nHands-on experience with AWS cloud services and cloud-based application development.\nStrong understanding of software development lifecycle, testing, deployment, and version control.\nExperience with databases, SQL, and data integration.\nExcellent communication, analytical, troubleshooting, and problem-solving skills.\nMedia & Entertainment industry experience is a plus.\nExperience working in large enterprise environments is preferred.\nWork Arrangement\nThis is a remote position supporting the Los Angeles, CA market.\nPowered by JazzHR",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4481173944": {
+        "fetched_at": "2026-10-27T22:21:40.028010+00:00",
+        "payload": {
+          "description": "This position is listed on behalf of a partner company, who manages all applications and next steps. Our partner is looking for a Backend Engineer, Solving based in United States.\nAs a Backend Engineer, Solving, you will develop and maintain the core systems that power fast, reliable, and cost-efficient cross-chain transactions. You will build the software responsible for generating quotes, optimizing trade routes, and executing user requests across on-chain and off-chain liquidity venues. Your work will directly influence transaction success rates, execution speed, pricing accuracy, and business profitability. Working primarily with TypeScript and Node.js, you will tackle complex backend challenges across decentralized finance (DeFi), blockchain infrastructure, and payment systems. You will collaborate closely with protocol engineers to integrate new settlement mechanisms and advance decentralized liquidity solutions. This is a high-impact, hands-on role offering significant ownership, technical autonomy, and the opportunity to shape infrastructure that makes blockchain transactions more accessible.\nAccountabilities\nDesign, build, and continuously improve the core quote-generation and pricing engine, incorporating on-chain price feeds, swap routing integrations, and dynamic fee calculations to deliver competitive and reliable transaction execution.\nDevelop and maintain integrations with decentralized exchanges (DEXs) and aggregators, including 1inch, LiFi, and Uniswap, implementing contract-level transaction calldata, multi-hop routing, slippage management, and gas estimation.\nOwn end-to-end transaction pipelines, from deposit detection and quote generation through trade execution and settlement, ensuring reliable processing across complex, multi-stage workflows.\nImprove system reliability and operational visibility by implementing structured error propagation, monitoring, alerting, and incident-triage workflows using tools such as Datadog.\nIdentify, investigate, and resolve execution failures and performance bottlenecks, accounting for transaction reverts, retry mechanisms, liquidity constraints, gas-price spikes, and other edge cases.\nCollaborate with protocol engineering teams to integrate new settlement primitives and support the transition toward decentralized, protocol-backed liquidity.\nDevelop specialized transaction and pricing features for payment use cases, including one-to-one stablecoin transactions and fixed pricing for major assets.\nTake ownership of projects from initial design through implementation, testing, deployment, and ongoing optimization, ensuring that solutions meet performance, reliability, and business requirements.\nContribute to the continuous improvement of backend architecture, engineering practices, and operational tooling to support a scalable and dependable cross-chain transaction infrastructure.\nRequirements\nStrong backend engineering experience with TypeScript and Node.js, including the ability to develop, maintain, and optimize production-grade backend services.\nHands-on experience building systems that interact with on-chain protocols, including querying DEX quotes, constructing swap calldata, handling transaction reverts, and implementing retries or recovery mechanisms.\nSolid understanding of decentralized finance fundamentals, including automated market makers (AMMs), liquidity pools, token routing, slippage, price impact, and maximum extractable value (MEV).\nDemonstrated ability to design and own complex, multi-stage processing pipelines, connecting transaction detection, pricing, execution, and settlement into reliable end-to-end systems.\nStrong focus on reliability and resilience, with the ability to anticipate edge cases, implement robust error handling, establish meaningful observability, and troubleshoot production issues systematically.\nExcellent problem-solving and analytical skills, with the ability to navigate technical complexity, make sound engineering decisions, and balance execution performance, pricing, and reliability.\nA high degree of ownership and autonomy, including the ability to drive projects independently from concept to production, manage technical trade-offs, and take responsibility for outcomes.\nEffective communication and collaboration skills, with the ability to work across engineering teams, share technical context, and contribute to a collaborative, remote-first environment.\nNice To Have\nExperience with cross-chain bridging protocols, blockchain interoperability, or intent-based architectures.\nPrevious experience developing solver infrastructure, market-making systems, or other execution systems within decentralized finance.\nFamiliarity with Solana and Jupiter routing, or with Bitcoin UTXO-based transaction models.\nExperience with BullMQ, Redis-backed job queues, or comparable asynchronous processing infrastructure.\nA proven track record of integrating with major DEX aggregators, such as 1inch, LiFi, or 0x.\nExperience designing systems that optimize transaction pricing, liquidity utilization, execution efficiency, and overall reliability.\nBenefits\nCompetitive base salary.\nEquity package, offering an opportunity to participate in the company's long-term growth.\nComprehensive health benefits.\nUnlimited paid time off, with an encouraged minimum to support regular rest and work-life balance.\nRemote-first working environment that emphasizes flexibility, collaboration, and clear communication.\nOpportunity to work on high-impact blockchain infrastructure serving millions of users across multiple blockchain networks.\nSignificant technical ownership and the opportunity to solve complex engineering challenges in cross-chain payments and decentralized finance.\nHow Jobgether Works\nWe use an AI-powered matching process to ensure your application is reviewed quickly, objectively, and fairly against the role's core requirements. Our system identifies the top-fitting candidates, and this shortlist is then shared directly with the hiring company. The final decision and next steps (interviews, assessments) are managed by their internal team.\nWe appreciate your interest and wish you the best!\nWhy Apply Through Jobgether?\nData Privacy Notice: By submitting your application, you acknowledge that Jobgether will process your personal data to evaluate your candidacy and share relevant information with the hiring employer. This processing is based on legitimate interest and pre-contractual measures under applicable data protection laws (including GDPR). You may exercise your rights (access, rectification, erasure, objection) at any time.\nWe may use artificial intelligence (AI) tools to support parts of the hiring process, such as reviewing applications, analyzing resumes, or assessing responses and identifying potential inconsistencies or verification signals in application materials based on available information. These tools assist our recruitment team but do not replace human judgment. Final hiring decisions are ultimately made by humans. If you would like more information about how your data is processed, please contact us.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4481852097": {
+        "fetched_at": "2026-10-27T22:21:40.028010+00:00",
+        "payload": {
+          "description": "Join the G2i Talent Pool\nWe’re always meeting great people in tech. Join the G2i Talent Pool and let us get to know you.\nG2i works with top AI labs and fast-growing companies. Our community of engineers works on real projects, from evals and RL environments to training data for frontier models.\nWho We’re Looking For\nSoftware, data, AI/ML, infrastructure, security, design, QA and product. Experienced or just starting out, fresh graduates are welcome. If you work in tech or are building your career in it, we’d love to meet you.\nHow It Works\nApply in a few minutes with your real details and links.\nWe review your profile and send you a short technical assessment.\nOnce you pass, you join our pool and hear from us when a project fits your skills.\nJoining the pool doesn’t mean immediate work, since matching depends on what our clients need and on each profile. But we’re always working to match everyone in our pool with the right project.\nPlease note that eligibility may vary depending on your location, as some regions may not be supported by the client.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4481857639": {
+        "fetched_at": "2026-10-27T22:21:40.028010+00:00",
+        "payload": {
+          "description": "This is a Fully Remote Job\nAbout Our Client:\nThis team operates within the Workflow pillar, focusing on communication technologies including calling, messaging, voicemail, transcription, and their supporting workflows. The organization develops interfaces utilized by thousands of businesses daily, aiming to enhance communication tools through scalable and reliable solutions.\nAbout the Opportunity:\nThe FRONTEND ENGINEER will contribute to building and improving critical communication interfaces. This role involves re-architecting calling systems, developing dashboards and tools for performance observability, and shipping new features that enhance user experience. The engineer will own projects end to end, collaborate with cross-functional teams, and support ongoing improvements in calling, messaging, voicemail, and transcription.\nResponsibilities:\nRe-architect calling infrastructure and standardize integration with calling providers\nDevelop dashboards and tools to monitor calling performance\nImplement new features such as URL unfurling, custom transcript summaries, group messaging, direct messages, and calling enhancements\nManage projects from initiation to delivery with senior engineer support\nImprove existing features, fix bugs, and update documentation\nWrite tests and ensure safe deployment through delivery pipelines\nRequirements:\nExperience with React and TypeScript\nUnderstanding of data flow from backend to frontend, including GraphQL and schema design\nAbility to write integration and unit tests, preferably using Playwright\nProblem-solving skills and collaborative approach to building user experiences\nKnowledge of web performance, observability, and accessibility concepts\nStrong ownership and communication skills\nTeam player mindset with willingness to contribute through bug fixes and documentation\nProactive and self-driven in a remote work environment\nMethodical approach to testing and quality assurance\nEmpathy and thoughtfulness in evaluating tradeoffs\nCuriosity and a drive for continuous learning\nClean, readable, testable, and maintainable code practices\nOpenness to integrating AI tools into engineering work\nNice to have:\nExperience with real-time messaging technologies such as WebSockets and WebRTC\nFamiliarity with CI/CD pipelines and mature delivery processes\nExperience with agentic AI workflows for feature generation and testing\nPay Range and Compensation Package:\nSF Bay Area, Los Angeles, Seattle, Portland, Boston, New York, and Washington, DC Metro: $170,000 - $200,000 USD annually\nAll other US Locations: $153,000 - $180,000 USD annually\nCanada: $156,000 - $183,000 CAD annually\nCompensation includes equity, extensive medical coverage, a monthly lifestyle stipend, and a flexible PTO policy\nEqual Opportunity Statement: Our client is an equal opportunity employer. They celebrate diversity and are committed to creating an inclusive environment for all employees. All qualified applicants will receive consideration for employment without regard to race, color, religion, gender, gender identity or expression, sexual orientation, or national origin.\nNote:\nTalentHop is a recruitment partner of this role. Please note that all employment decisions, including candidate assessment, interviews, hiring, compensation, and employment terms, are made exclusively by the hiring employer.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4482015738": {
+        "fetched_at": "2026-10-27T22:21:40.028010+00:00",
+        "payload": {
+          "description": "About Astra\nAstra is building mission-critical infrastructure for moving money at scale. Our platform processes billions in annual transaction volume with 99.9%+ uptime, powering real-time transfers, bank debits, card disbursements, and complex financial compliance systems. We provide APIs and automation tools that enable businesses to move money programmatically while maintaining strict regulatory requirements.\nThe Role\nWe're looking for a Backend Engineer to build and ship features across the financial systems that move real money every day. You'll join a small team of experienced engineers working on our distributed microservices architecture, taking on features across payments, fraud detection, compliance, and user management from design through production.\nThis role is for an engineer who already delivers independently and is ready to take on broader scope. You'll work on larger, cross-domain problems, get real exposure to architecture decisions, and grow quickly in a domain where correctness and reliability matter.\nWhat You’ll Do\nOwn features end to end: Design, build, test, and deploy backend features and services across payments, fraud, compliance, and user management, then run and monitor what you ship\nIntegrate with financial partners and APIs: Build and maintain integrations with banks, card networks, and other third-party services, handling the edge cases that money movement demands\nContribute to design: Write and review technical designs for your own work, participate in architecture discussions, and learn how our domain-driven, event-driven approach fits together\nImprove performance and reliability: Find and fix bottlenecks and failure modes across our microservices, and help raise the quality of our tests and observability\nCollaborate across teams: Work closely with product and compliance to turn business and regulatory requirements into working software\nRequired Experience\nWhat We’re Looking For\n3+ years of professional software engineering experience building production backend systems\nTrack record of delivering features independently, from ambiguous requirements to production, with sound judgment on when to ask for help\nSolid foundation in algorithms, data structures, and computer science fundamentals\nWorking experience with distributed systems, event-driven architectures, or microservices\nAbility and willingness to travel up to ~15% annually\nEducation\nBachelor's degree in Computer Science, Engineering, or a related field, or equivalent practical experience. We care more about demonstrated ability than credentials.\nTechnical Skills\nBackend development: Python 3 and web frameworks and APIs (we use Flask)\nDatabases: Experience with SQL and NoSQL databases\nCloud infrastructure: Google Cloud Platform, or similar cloud platforms\nArchitecture patterns: Familiarity with domain-driven design, clean architecture, and CQRS is a plus\nPreferred Experience\nFinancial systems: Payment processing, fraud detection, or compliance systems\nFinancial regulations: Familiarity with AML, KYC, PCI DSS, or similar regulations\nBanking integrations: Experience with financial APIs and money movement systems (ACH, card networks)\nThird-party integrations: Experience building and maintaining integrations with external services\nScale and reliability: Experience with systems processing high transaction volumes\nWhy This Role Matters\nDirect impact: You'll be a big part of a small engineering team building systems that power a growing fintech platform\nComplex problems: Work on sophisticated challenges that few engineers get to solve\nRoom to grow: A path to broader scope and, over time, technical leadership as the team scales\nFinancial innovation: Build systems that enable new financial products and services\nWhat We Offer\nCompetitive compensation with equity in a growing fintech company.\nRemote-first culture with flexible working arrangements\nSmall team, big impact — your work directly supports Astra’s ability to scale responsibly\nMission-driven — build infrastructure that powers financial innovation while meeting the highest regulatory standards\nRemote Work and Culture\nAstra is a remote-first company hiring only within the U.S. We value thoughtful collaboration, clarity, and initiative. We’re proud to be an equal opportunity employer and are committed to building a diverse and inclusive team.\nHow To Apply\nWe're looking for engineers who are excited by complex systems problems and have the educational background and experience to handle sophisticated challenges.\nIf you're passionate about building mission-critical financial infrastructure and want to have a direct impact on our technical direction, we'd love to hear from you.\nCompensation Range: $125K - $160K",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4482023455": {
+        "fetched_at": "2026-10-27T22:21:40.028010+00:00",
+        "payload": {
+          "description": "[ Quora is a privately held, \"remote-first\" company . This position can be performed remotely from anywhere in the US or Canada. Please visit careers.quora.com/eligible-countries for details regarding employment eligibility by country.]\nAbout Quora\nQuora’s mission is to grow the world's collective intelligence. To do so, we have two platforms:\nQuora: a global knowledge sharing platform with millions of monthly unique visitors, bringing people together to share insights on various topics and providing a unique platform to learn and connect with others.\nPoe: a cloud workspace where millions of users run multiple AI agents on shared context and tools. One subscription, every frontier model, and the collaboration layer that makes them work together.\nBehind these products are passionate, collaborative, and high-performing global teams. We have a culture rooted in transparency, idea-sharing, and experimentation that allows us to celebrate success and grow together through meaningful work. Join us on this journey to create a positive impact and make a significant change in the world.\nThis role will be working on our Quora product.\nAbout The Team And Role\nEvery day, millions of people seek answers and share their knowledge through Quora. To foster this marketplace of knowledge, we need to build systems that make sharing knowledge rewarding and discovering it easy; that show you answers to questions you didn't know you had, on topics you didn't know you liked, and that scale to support the participation of the entire planet.\nThe Quora Core Product team is the creative powerhouse behind the most critical features of the Quora product. This team is responsible for the continuous evolution of the Quora user experience. Our engineers work at the intersection of software development, design, and data science to build intuitive features that foster knowledge sharing and community engagement.\nAs a Software Engineer on the Quora Core Product team, you will:\nHave a significant impact on a wide array of features that are essential to the Quora community, working on projects that improve user engagement, drive user growth, generate informative and engaging content using AI, ensure high-quality content through effective moderation, and enhance the overall creator experience\nLeverage data and experimentation to create solutions that will reach millions of users\nEngage with a fast-paced development environment, delivering engaging features that meet our high standards of quality and performance\nResponsibilities\nDevelop full stack applications with Python and React\nContribute to projects that shape our core product experience — driving growth, ensuring healthy moderation, and empowering creators\nDesign and launch product features at massive scale, using data and experimentation to guide each iteration\nDrive projects from ideation to production using the full technology stack\nCollaborate with designers, product managers, fellow engineers, and data scientists to prototype and implement functionality and analyze impact\nParticipate in the team’s on-call rotation to ensure Quora provides a reliable and high quality product\nMinimum Requirements\nAvailability for meetings and impromptu communication during Quora's “coordination hours\" (Mon-Fri: 9am-3pm Pacific Time)\nA 2025 or 2026 graduate with or pursuing a B.S., M.S., or Ph.D. in Computer Science, Engineering, or a related technical field\nFoundational understanding of data structures, algorithms, and software design through coursework or practical experience\nExperience with Python or similar programming language, or the ability to learn them quickly\nA passion for learning and always improving yourself and the team around you\nPreferred Requirements\nPrevious software engineering experience via an internship, work experience, and/or coding competition\nFamiliarity with Python, React, TypeScript and/or SQL\nPassion for Quora's mission and goals\nCuriosity about AI and hands-on experience exploring AI tools or building AI-powered projects through coursework, personal projects, or previous work-experience\nAt Quora, we value diversity and inclusivity and welcome individuals from all backgrounds, including marginalized or underrepresented groups in tech, to apply for our job openings. We encourage all candidates who share a passion for growing the world’s knowledge, even those who may not strictly meet all the preferred requirements, to apply, as we know that a diverse range of perspectives can have a significant impact on our products and our culture.\nAdditional Information\nWe are accepting applications on an ongoing basis. This role is a backfill for an existing vacancy.\nQuora offers a wide range of benefits including medical/dental/vision coverage, equity refreshers, remote work reimbursement, paid time off, employee assistance programs, and more. Benefits are country-specific and may vary.\nThere are many factors that will determine the starting compensation, including but not limited to experience, location, education, and business needs.\nUS candidates only: For US based applicants, the salary range is $97,600 - $139,000 USD + equity + benefits.\nCanada candidates only: For Toronto and Vancouver based applicants, the salary range is $125,320 - $142,783 CAD + equity + benefits. For all other locations in Canada, the salary range is $116,965 - $133,264 CAD + equity + benefits.\nIn equity-eligible countries, we currently also offer a flexible equity program where a portion of equity compensation may be taken as cash.\nWe are an equal opportunity employer and value diversity at our company. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability status.\nAI technology may assist in sorting applications and recording interview notes, but all decisions are made by a member of our team.\nTo ensure a secure hiring process, all final candidates will undergo identity verification and a comprehensive background check prior to onboarding.\nJob Applicant Privacy Notice: https://careers.quora.com/quora-global-job-applicant-privacy-notice",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4482203207": {
+        "fetched_at": "2026-10-27T22:21:40.028010+00:00",
+        "payload": {
+          "description": "At Goldschmitt and Associates LLC (G&A), we’re not just another company—we’re a catalyst for innovation and impact, and we’re inviting passionate, forward-thinking individuals to join us on this journey. Recognized multiple times on the Inc 5000 list of the fastest-growing companies, G&A is a leader in tech transformation and system modernization for some of the nation’s most important federal agencies.\nOur culture is built on creativity and collaboration. We offer flexible schedules, telework options, and an environment where your ideas truly matter. At G&A, you won’t just clock in—you’ll be solving real-world challenges and working on projects that make a difference in the lives of millions.\nJoining our team means becoming part of a vibrant, connected community where innovation thrives, your voice is heard, and your impact is felt. Whether you’re a tech enthusiast, a strategic thinker, or a problem-solver, at G&A, you’ll have the opportunity to level up your career while making a real-world impact.\nIf you’re ready to be part of a company that values purpose as much as progress, G&A is the place for you!\nSummary:\nGoldschmitt is seeking a Frontend Developer.\nThis position is remote with preference given to candidates who live within a commutable distance to the DMV area.\nThe anticipated salary for this position is $85,000.00- $115,000.00, dependent upon experience.\nThe anticipated travel for this position is 5%.\nJob Duties and Responsibilities:\nDesign, develop, and maintain responsive, user-friendly web application interfaces, dashboards, and reports\nTranslate software requirements and business processes into functional user interfaces\nDevelop and execute functional UI tests and automated tests\nTroubleshoot, debug, and optimize frontend functionality and performance\nCollaborate with backend developers, testers, and other team members to deliver high-quality software\nParticipate in code reviews and maintain established development standards\nNecessary Skills and Knowledge:\nExperience developing and maintaining enterprise web applications\nMinimum Qualifications:\nPossess at least 3 years of professional frontend software development experience\nPossess a Bachelor's degree\nPossess the ability to pass and maintain eligibility for a Public Trust investigation, including United States citizenship\nPossess experience with the following:\nJavaScript (ES6+), HTML5, CSS3/SCSS, React (hooks, function components) and Redux / Redux Toolkit, Node.js\nDevelopment of data-heavy pages with pagination, tables, custom sorting/filtering, complex forms with validation, and modals\nDevelopment of CRUD operations against RESTful APIs, including async state management\nClient-side routing (React Router) and role-based routes\nPreferred Qualifications:\nPossess experience developing scheduling, workforce management, or government applications\nPossess experience with the following:\nVitest or Jest with React Testing Library; API mocking with MSW\nExperience developing interactive dashboards, data visualizations, and reporting interfaces within web applications.\nPrint-optimized layouts and PDF report generation\nBootstrap 5 / React-Bootstrap\nAWS services: Cognito, CloudWatch, AWS GovCloud\nTypeScript",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4482221973": {
+        "fetched_at": "2026-10-27T22:21:40.028010+00:00",
+        "payload": {
+          "description": "🚀 We’re Hiring: Backend Engineer – Java &Spring Boot\n📍 Work Location: Karachi-Remote / Hybrid\n💼 Employment Type: Full-time\n🎯 Experience: 5+ Years\nAbout the Opportunity\nWe’re building a next-generation Supply Chain ERP platform designed to power complex enterprise business operations through a modular, scalable, and maintainable architecture. We’re looking for an experienced Backend Engineer (Java & Spring Boot) who is passionate about clean code, thoughtful architecture, secure application development, and solving real-world enterprise challenges. You’ll play a key role in building our ERP platform from the ground up, contributing to architectural decisions, core business capabilities, and AI-powered business workflows.\n🔧 Key Responsibilities\nDesign, develop, and maintain robust backend services using Java and Spring Boot.\nBuild a modular-monolith architecture with clear module boundaries and well-defined interfaces.\nDevelop secure, scalable RESTful APIs and enterprise business workflows.\nImplement authentication, authorization, role-based access control (RBAC), and multi-tenant isolation.\nDesign and optimize relational database schemas, SQL queries, indexes, and transactions.\nWrite unit, integration, and automated tests to ensure software quality.\nCollaborate with frontend engineers, architects, QA engineers, and AI engineers.\nIntegrate AI-powered capabilities into enterprise workflows through well-defined APIs. Participate in code reviews, technical design discussions, debugging, and performance optimization. Contribute to Docker-based development and deployment workflows.\n💻 Required Technical Skills\nJava: Strong proficiency in modern Java, OOP, collections, generics, exception handling, and concurrency fundamentals.\nSpring Boot: Hands-on experience building production-grade backend applications.\nSpring Ecosystem: Practical experience with Spring Data JPA, Hibernate, Spring Security, and transaction management.\nREST APIs: Strong understanding of API design, validation, versioning, error handling, and documentation.\nDatabases: Solid SQL skills and experience with PostgreSQL, MySQL, or similar relational databases.\nSoftware Architecture: Knowledge of layered architecture, modular design, SOLID principles, clean code, and design patterns.\nSecurity: Understanding of JWT, OAuth 2.0/OIDC, access control, and secure API development.\nDocker: Experience working with containerized applications.\n📩 How to Apply: Interested candidates are invited to share their CV along with a brief overview of their relevant Java, Spring Boot, and enterprise application development experience.\n📧 Apply at: afshan.iqbal@conurets.com\nEmail Subject: Application – Backend Engineer (Java/Spring Boot)\nKnow someone who would be a great fit? Tag them or share this opportunity with your network!\n#Hiring #BackendEngineer #JavaDeveloper #SpringBoot #JavaJobs #SoftwareEngineering #ERP #SupplyChain #EnterpriseSoftware #TechCareers #AIIntegration",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4482225684": {
+        "fetched_at": "2026-10-27T22:21:40.028010+00:00",
+        "payload": {
+          "description": "We are Hiring: Senior Backend Developer (AWS & Distributed Systems)\nJob Type: Paid, Full-Time.\nLocation: 128/B, PECHS, Karachi\nShift Timings: Night Shift (7:00 PM to 4:00 AM)\nExperience Level: 4+ Years\nAbout the Role:\nWe are seeking an experienced Senior Backend Developer with 4+ years of hands-on experience and strong AWS cloud architecture skills to drive the core server infrastructure, APIs, and transactional engines for high-throughput digital streaming, social platforms, and e-commerce ecosystems.\nKey Responsibilities:\nMicroservices & API Architecture: Design, build, and maintain high-concurrency microservices (Node.js/TypeScript, Python, or Go) across media ingestion, ticketing, social feeds, and payment processing.\nCloud Infrastructure & AWS Management: Design and maintain scalable cloud infrastructure leveraging AWS services, including Amazon ECS/EKS, AWS Lambda, DynamoDB, RDS (PostgreSQL/Aurora), ElastiCache (Redis), S3, CloudFront, and AWS Media Services (MediaConvert, Rekognition).\nHigh-Concurrency Streaming & Media: Implement low-latency streaming infrastructure, SPEKE v2 Multi-DRM content protection (FairPlay, Widevine, PlayReady), LL-HLS video delivery, and WebRTC signaling gateways.\nFinancial & Transactional Engines: Architect high-integrity transactional subsystems, including row-level venue seat locking, dynamic TOTP QR ticketing generation, PCI-compliant payment integrations (Stripe, Apple/Google Pay), and BIGINT double-entry ledger accounting engines.\nAI & Real-Time Voice Processing: Integrate real-time Speech-to-Text (STT) and Text-to-Speech (TTS) pipelines (Deepgram, OpenAI, ElevenLabs), WebRTC media streams, and multi-tier AI execution engines.\nPerformance, Security & CI/CD: Optimize database schemas, query performance, and Redis caching layers; maintain strict PCI-DSS and security practices; write automated tests; and manage CI/CD deployment pipelines on AWS.\nRequirements & Qualifications:\nExperience: Minimum 4+ years of professional software engineering experience designing, building, and deploying production-grade backend systems.\nAWS Cloud Expertise: Hands-on experience with AWS services:\nCompute & Containerization: AWS ECS/EKS, Fargate, Lambda, Docker.\nDatabase & Ledger Systems: Deep expertise in relational database design (PostgreSQL DDL/DML, complex indexing, ACID transactions), connection pooling, and ledger/financial accounting integrity.\nReal-time & Streaming: Hands-on knowledge of WebSockets, gRPC, Redis Pub/Sub, HLS/LL-HLS delivery, and WebRTC protocols.\nHow to Apply:\nReady to come to our office for an interview? Send your resume and sample work/portfolio to hr@designtric.co or WhatsApp us at +92 332 7786854 to book your interview slot.\nActivate to view larger image,",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4482697252": {
+        "fetched_at": "2026-10-27T22:21:40.028010+00:00",
+        "payload": {
+          "description": "About The Role\nThe role is for a full-stack engineer who owns features end-to-end — from React frontends users interact with daily to the TypeScript/Node and Python services behind them, backed by PostgreSQL, Redis, and event-driven pipelines running on AWS.\nThe team ships weekly. Engineers here own their work from design docs and API contracts through deployment, monitoring, and iteration based on real user feedback — no handoffs, no ticket factory.\nKey Responsibilities\nDesign, build, and ship full-stack features across React/TypeScript frontends and Node.js or Python backend services, owning delivery from spec to production\nArchitect and implement REST and GraphQL APIs with clear contracts, strong typing, comprehensive test coverage, and sub-100ms p95 latency targets on hot paths\nModel and evolve PostgreSQL schemas, write performant queries, and design caching strategies with Redis to support products serving millions of requests per day\nBuild and maintain CI/CD pipelines on GitHub Actions with automated testing, feature flags, and safe rollouts via Docker/Kubernetes infrastructure\nInstrument services with observability tooling (Datadog, OpenTelemetry) and own on-call rotation participation, including incident triage and postmortems\nCollaborate directly with product managers and designers to scope features, challenge requirements, and make pragmatic build-vs-buy decisions\nContribute to engineering standards through code reviews, technical design docs, and mentoring of mid-level engineers\nWhat We Are Looking For\n4–8 years of professional software engineering experience building and operating production web applications at scale\nDeep proficiency in TypeScript/JavaScript and at least one backend language (Node.js, Python, or Go), with strong API design fundamentals\nHands-on experience with React (or a comparable modern frontend framework) including state management, performance optimization, and accessibility\nSolid relational database skills: schema design, query optimization, indexing, and migrations with zero-downtime deploys\nPractical experience with AWS (ECS/EKS, Lambda, RDS, S3), containerization, and infrastructure-as-code (Terraform preferred)\nTrack record of shipping user-facing features independently and driving technical decisions across a full stack\nBonus: Experience with event streaming (Kafka, Kinesis), WebSockets/real-time systems, or React Native mobile development",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4483110281": {
+        "fetched_at": "2026-10-27T22:21:40.028010+00:00",
+        "payload": {
+          "description": "About Contour\nContour Software has grown from a dozen people to over 2,000 staff across 3 cities, in less than 14 years.\nAs a subsidiary of Constellation Software Inc., we are proud to be part of a global enterprise software conglomerate that has grown to become one of the top 10 software companies in the world, with employees and customers in 100+ countries. With a broad-based and ever-growing portfolio of market-leading, vertical-market enterprise solutions covering more than 100 industry domains in predominantly mature markets, CSI's recipe creates the perfect environment for professionals to build fulfilling, long-term careers.\nWhat started as an R&D & Accounting back-office, has progressed into a full-service Global Centre serving all functions and departments, at the divisional as well as operating group/corporate level. Today Contour employees, located in Karachi, Lahore & Islamabad, are serving CSI divisions located in time zones spanning the globe, from Sydney to Vancouver. With the global growth of Constellation as the wind in our sails, we are only just getting started!\nAbout Perseus Payments Inc.\nPerseus Payments Inc., part of Constellation Software, builds PerseusPay. PerseusPay is a cloud-native payments platform for marine, outdoor power equipment and RV dealers in the US and Canada. The platform is PCI DSS compliant, and the team is building toward an AI-native way of developing software.\nWhy This Role\nThis is a chance to build features on a live payments platform used by hundreds of dealer locations. You will own work from an incomplete brief through to production, across backend, UI and payment processor integrations. The platform is secure, PCI-compliant and built to scale.\nRole Overview\nWe are hiring a software developer for the team that builds new PerseusPay features, as distinct from our support and platform work. You will own features from an incomplete brief through to production: shaping the design, building the backend APIs and UI, working through payment-processor rules, and shipping behind feature flags. Requirements on a payments product change often, because processor behaviour, compliance rules, DMS partner needs and dealer feedback all move. We want someone who finds that interesting and keeps delivering without waiting to be told what to do next.\nKey Responsibilities\nTake a feature from PRD or user story to production: clarify the scope, design the solution, build, test, and release behind a feature flag.\nBuild and maintain REST APIs, background processing and database changes in C# / .NET.\nBuild and maintain React UI for the dealer portal, the embedded payment page and the checkout plugin.\nIntegrate with payment processor APIs and webhooks, and read processor documentation to find the edge cases that matter.\nSpot gaps, contradictions and missing edge cases in requirements, and bring them to the Product Owner and Director of R&D with a recommended option.\nRe-plan quickly when scope changes, and say clearly what that does to the delivery date.\nWrite unit and integration tests, take part in code reviews, and meet our SonarQube and secure coding standards.\nKeep production safe with structured logging, error handling, idempotency, retries and concurrency safety on money-moving flows.\nSupport QA with test data and fixes, and support release validation.\nKeep technical notes, decision records and Azure DevOps items current so work is traceable.\nWork with the team’s AI-assisted and agentic development tools, including Claude Code, within our security rules.\nOur Tech Stack\nBackend: C# on .NET 8 (moving toward .NET 10), ASP.NET Core Web API, Entity Framework Core, Azure Functions.\nFrontend: React / JavaScript SPA.\nData: Azure SQL (SQL Server), Redis, Azure Service Bus.\nAzure: App Service, API Management, Front Door with WAF, Functions, SignalR, Key Vault, App Configuration, Application Insights.\nSecurity and identity: OAuth2 / JWT, Duende IdentityServer, PCI DSS v4.0.1 controls, SonarQube SAST.\nDelivery and observability: Azure DevOps (boards, repos, YAML pipelines), Datadog, feature flags, Postman.\nAI-assisted and agentic development: Claude Code, Claude-based code review and test generation, and project context files and skills shared across the team.\nRequired Skills & Experience\n5+ years of professional software development, with strong C#/ .NET and ASP.NET Core REST API experience.\nStrong SQL Server skills: schema design, query tuning, transactions, and an understanding of locking and deadlocks.\nHands-on Azure experience: App Services, Functions, Service Bus, Application Insights.\nReact / JavaScript working knowledge, enough to ship UI features independently.\nA proven record of delivering features with incomplete or changing requirements. Be ready to give examples in the interview.\nAbility to work independently across time zones. You make sound decisions, record them, and escalate with a recommendation rather than a question.\nStrong written English. Most of our collaboration is written, in Azure DevOps, pull requests and Teams.\nSolid engineering habits: unit tests, code reviews, Git branching, CI/CD.\nFamiliarity with Agile/Scrum and Azure DevOps.\nBachelor’s degree in Computer Science, Engineering or a related field, or equivalent experience.\nPreferred Skills (Nice-to-Have)\nHands-on experience with Claude Code or a comparable agentic coding tool, and knowledge of agentic engineering practices: spec-driven development, context engineering, task decomposition, test-driven feedback loops, and critical review of agent output.\nYou should be able to describe a feature you shipped this way, including where the agent went wrong.\nExperience with MCP servers, custom skills or sub-agents, multi-agent workflows, and evals for AI-generated code.\nPayment processor integration experience.\nRedis caching and Service Bus patterns.\nDatadog, Azure DevOps pipelines, Terraform awareness.\nAbout You\nYou are self-directed. You do not wait for a perfect spec or a daily check-in.\nYou are comfortable with unknowns and expect requirements to change. You ask the sharp question early, usually about an edge case or a rule nobody has written down yet.\nYou take ownership of outcomes, not just tickets. You think about what happens in production and for the dealer.\nYou communicate proactively through short, clear written updates, flagged risks and visible progress.\nYou hold the quality bar when money is involved. You treat security, idempotency and auditability as part of the feature.\nYou are curious, learn fast, and are open to AI-assisted development. You use it to raise your output without lowering your standards.\nExciting Benefits We Offer\nMarket-leading Salary\nMedical Coverage – Self & Dependents\nParents Medical Coverage\nProvident Fund\nEmployee Performance-based bonuses\nHome Internet Subsidy\nConveyance Allowance\nProfit Sharing Plan [Tenured Employees Only]\nLife Benefit\nChild Care Facility\nCompany Provided Lunch/Dinner\nProfessional Development Budget\nRecreational area for in-house games\nSporadic On-shore training opportunities\nFriendly work environment\nLeave Encashment\nDisclaimer: At Contour, we attribute our success to the unique contributions of our diverse staff. We’re committed to fostering a culture of respect that thrives on the varied perspectives and experiences of all individuals we recruit, employ, promote, and compensate. Since day one, we’ve adhered to a policy that champions a work environment honoring the worth and dignity of each person while being free from all forms of employment discrimination.\nIn our continuous effort to promote inclusivity, we extend our commitment to individuals with special needs by providing reasonable accommodations. We actively encourage qualified individuals with special needs to apply for the various openings within our company. Should you require assistance in completing the application process or have any inquiries regarding special facilities, please do not hesitate to contact our HR team. Your unique talents and abilities are welcomed and valued here.",
+          "source_url": ""
+        }
+      },
+      "https://www.linkedin.com/jobs/view/4484026797": {
+        "fetched_at": "2026-10-27T22:21:40.028010+00:00",
+        "payload": {
+          "description": "Overview\nGovCIO is hiring a Frontend Developer to build and modernize federal applications on a serverless AWS GovCloud stack. The developer starts with a focus on frontend work and is expected to grow into a full-stack role.\nThis position is remote within the Continental United States (CONUS).\nJob Description\nA GovCIO Frontend Developer works inside a cross-functional product team with designers, backend developers, DevOps engineers, and test engineers. The developer builds and maintains modern web applications using JavaScript, React, and Redux, integrating them with REST APIs on a serverless AWS backend. Strong skills in JavaScript patterns and practices, frontend frameworks, and CSS/SASS are essential. The role is hands-on and deadline-driven. Work starts and finishes inside the sprint. The developer works from user stories and designer wireframes, builds accessible and secure user interfaces, and understands how the frontend and serverless backend fit together. This Frontend Developer position is expected to grow into a full-stack developer role, building backend services with Python and AWS serverless technologies such as API Gateway, Lambda, and Step Functions. Skills in AWS, Python, and AI coding assistants is essential for this growth.\nResponsibilities\nBuild and maintain React and Redux applications in JavaScript.\nIntegrate frontends with REST APIs on AWS API Gateway and Lambda.\nBuild backend services in Python on AWS serverless technologies as you grow into full-stack work.\nIntegrate AI features built on large language models and vision models into applications, including prompt and context engineering.\nBuild applications that handle non-deterministic AI output, where the same input can produce different valid results.\nBuild pages from designer wireframes using CSS and SASS.\nMeet Section 508 and WCAG 2.1 AA accessibility standards.\nApply frontend security practices, including OWASP guidelines, authentication, JWT handling, and PHI/PII protection.\nMaintain the frontend build chain and keep dependencies current.\nWrite unit and component tests. Build and maintain Cypress end-to-end tests in the CI/CD pipeline.\nSubmit and review GitHub pull requests.\nTake part in sprint planning, backlog refinement, and estimation. Write user stories and tasks in Jira.\nPost daily status updates in Jira.\nSupport UAT, Authority to Operate (ATO), and security compliance activities.\nQualifications\nRequired Skills and Experience\nEducation: Bachelor's degree (required) in computer science, information systems, engineering, mathematics, or a related STEM field, with 5 to 10 years of professional frontend or full-stack development experience. A bachelor's degree in a non-STEM field is acceptable when combined with equivalent professional software engineering experience, technical certifications, or completed technical coursework (such as an accredited bootcamp or graduate certificate).\n5+ years of JavaScript development.\n2+ years of React, including Redux or similar state management.\n2+ years of CSS and SASS.\nExperience integrating frontends with REST APIs on a serverless backend (AWS API Gateway, Lambda).\nPython for backend development.\nFamiliarity with machine learning and AI, especially large language models and vision models.\nAutomated testing experience, including Cypress and Jest or similar.\nGit and GitHub pull request reviews.\nAgile/Scrum experience.\nStrong written and verbal communication skills.\nWilling to earn an AWS Associate certification within the first 9 months.\nClearance : Public Trust.\nPreferred Skills And Experience\nAWS Associate Certification: Architect, Developer, or CloudOps\nML basics: training versus inference, overfitting, and class imbalance.\nGenerative AI fundamentals: tokenization, context windows, hallucination, and temperature.\nNET Core and C# for legacy application maintenance.\nFrontend security: OAuth/OIDC, JWT, Amazon Cognito.\nAWS services such as S3, CloudFront, and CloudWatch.\nBuild tools such as npm, Webpack, or Vite.\nAI coding assistants, especially Claude Code.\nHuman-centered design.\nVA or federal program experience.\nPosted Salary Range: USD $90,000.00 - USD $110,000.00 /Yr.",
+          "source_url": ""
+        }
+      },
       "https://www.linkedin.com/jobs/view/4445033492": {
         "fetched_at": "2026-10-27T19:23:20.968077+00:00",
         "payload": {
@@ -499,7 +650,7 @@
         }
       }
     },
-    "updated_at": "2026-10-27T19:23:20.968077+00:00"
+    "updated_at": "2026-10-27T22:21:40.028010+00:00"
   },
   "cache:posts": {
     "entries": {
@@ -662,29 +813,13 @@
           "text": "Clarification: On Thursday, Oct. 15, thousands of Aggie students took part in TWO major marches to downtown Greensboro:\n\n- The first was a March to the Polls, as previously described, which went from campus to the Union Square polling location downtown on the first day of early voting in North Carolina. Students marched back to campus after voting in protest of the Guilford County Elections Board's removal of their campus early voting polling location earlier this year.\n\n- The second was a March for Justice for Nolan Wells, the 18-year-old young man who tragically died July 4 under murky circumstances in the waters off Mississippi’s Horn Island after celebrating the Independence Day holiday. The march was organized by the A&T chapter of the NAACP, and a coalition of groups worked tirelessly to bring students together in solidarity for Nolan from across campus and the entire state. The march began at A&T’s February One monument, went downtown to the International Civil Rights Museum and returned to campus.\n\nIncredibly, thousands of Aggies took part in *both* marches, but in the video posted here, were returning from the second march, which concluded later. In both instances, outstanding civic leadership and participation were on full display from A&T students in the best tradition of Aggies, who have been leading in important community events since the university’s establishment in 1891. \n\nA&T continues to be America's largest HBCU, as well as its top-rated public HBCU in Forbes and US News & World Report.",
           "posted_at": ""
         }
-      },
-      "https://www.linkedin.com/posts/ashwin-sree-97543a413_machine-learning-fresher-jobs-find-64-vacancies-activity-7514275282321731584-W23b": {
-        "fetched_at": "2026-10-27T15:25:00.201834+00:00",
-        "payload": {
-          "status": "active",
-          "text": "🚨 AI JOBS UPDATE – Oct 9, 2026\n\nLooking for your next opportunity in AI? Here are some current AI/ML openings you can explore today 👇\n\n🔹 1. Junior Software Engineer – Fresher AI/ML\n🏢 Company: iCloudEMS\n📍 Location: Remote\n💼 Experience: 0–1 Year (Freshers)\n🌐 Work Mode: Remote\n🛠️ Skills: Python, AI/ML, Generative AI, LLMs, AI Agents\n🔗 Apply: https://lnkd.in/eFPHqV8a\n\n🔹 2. Artificial Intelligence (AI) Associate\n🏢 Company: Advance Agility\n📍 Location: Remote\n💼 Experience: Freshers\n🌐 Work Mode: Remote\n🛠️ Skills: ChatGPT, Claude, Prompt Engineering, Automation, Generative AI\n🔗 Apply: https://lnkd.in/efEgnpnn\n\n🔹 3. GenAI Developer\n🏢 Company: RecruitBots AI\n📍 Location: Remote\n💼 Experience: 0–2 Years\n🌐 Work Mode: Remote\n🛠️ Skills: Machine Learning, AI, Generative AI Tools\n💰 Salary: ₹3,00,000 - ₹8,00,000/year\n🔗 Apply: https://lnkd.in/eV29mn_6\n\n🔹 4. AI/ML Intern\n🏢 Company: WeIntern Pvt Ltd\n📍 Location: Remote\n💼 Experience: Freshers\n🌐 Work Mode: Remote\n🛠️ Skills: Python, ML Algorithms, Data Preprocessing, NumPy, Pandas\n💰 Stipend: ₹10,000 - ₹20,000/month\n🔗 Apply: https://lnkd.in/e3XztRbZ\n\n🔹 5. Computer Vision Trainee\n🏢 Company: Miracle Eye Pvt Ltd\n📍 Location: Remote\n💼 Experience: Freshers\n🌐 Work Mode: Remote\n🛠️ Skills: OpenCV, Python, Machine Learning, Computer Vision\n💰 Salary: ₹2,00,000/year\n🔗 Apply: https://lnkd.in/e5VHhK78\n\n🔹 6. AI Engineer (Entry-Level)\n🏢 Company: Krutrim Insights\n📍 Location: Delhi\n💼 Experience: Freshers\n🌐 Work Mode: On-site\n🛠️ Skills: Python, Python Libraries, AI/ML Fundamentals\n💰 Salary: ₹3,00,000 - ₹5,40,000/year\n🔗 Apply: https://lnkd.in/ej-pbmTZ\n\n🔹 7. AI/ML Trainee | Generative AI\n🏢 Company: WINIT\n📍 Location: Hyderabad\n💼 Experience: Freshers\n🌐 Work Mode: On-site\n🛠️ Skills: Python, SQL, AWS, Generative AI\n💰 Salary: ₹2,00,000 - ₹3,00,000/year\n🔗 Apply: https://lnkd.in/eTfu9-3p\n\n🔹 8. AI/ML Engineer\n🏢 Company: ISHIR\n📍 Location: Remote\n💼 Experience: Entry-Level\n🌐 Work Mode: Remote\n🛠️ Skills: Python, Machine Learning, Generative AI, Model Development\n🔗 Apply: https://lnkd.in/e3XztRbZ\n\n💡 Career Tip: Apply early, tailor your resume to the job description, and keep your LinkedIn profile updated. Highlight your AI/ML projects and practical experience!\n\n🔔 Follow for daily AI job updates, career opportunities, and AI industry news.\n\n#AIJobs #ArtificialIntelligence #MachineLearning #DataScience #AIJobsIndia #TechJobs #FreshersJobs #Jobs #Career #Hiring",
-          "posted_at": "2026-10-09T10:47:15.788Z"
-        }
-      },
-      "https://www.linkedin.com/posts/career-pals_jobsearch-remotejobs-activity-7520107030716645377-kMP8": {
-        "fetched_at": "2026-10-27T15:25:00.201834+00:00",
-        "payload": {
-          "status": "active",
-          "text": "Job digest 10/25/2026 by LiftmyCV: Top companies hiring remote ai jobs\n• neurohire ai – AI/ML Engineer\n• Melotech – AI/ML Engineer\n• Lingaro – AI/ML Engineer\n• EUROPEAN DYNAMICS – Junior AI/ML Engineer - Python Developer\n• Lingaro – ML/AI Engineer\n\nCheck the comments to learn how to apply 👇\n\n#jobsearch #remotejobs",
-          "posted_at": "2026-10-25T13:00:32.954Z"
-        }
       }
     },
-    "updated_at": "2026-10-27T19:24:36.444237+00:00"
+    "updated_at": "2026-10-27T22:22:46.083864+00:00"
   },
   "cache:rozee": {
     "entries": {},
-    "updated_at": "2026-10-27T19:24:36.123793+00:00"
+    "updated_at": "2026-10-27T22:22:45.986853+00:00"
   },
   "feed:remotive": {
     "last_attempt": "2026-10-27T18:05:12.114133+00:00",
@@ -708,7 +843,7 @@
     "last_success": "2026-10-27T19:24:39.031102+00:00"
   },
   "jobspy:05a7339ccbca312e": {
-    "last_success": "2026-10-27T18:50:08.523566+00:00",
+    "last_success": "2026-10-27T22:18:34.990201+00:00",
     "raw": 5,
     "unique": 5,
     "qualified": 1,
@@ -726,7 +861,7 @@
     "full_descriptions": 0
   },
   "jobspy:18569cf04d29f7e6": {
-    "last_success": "2026-10-27T18:53:09.574122+00:00",
+    "last_success": "2026-10-27T22:21:20.190631+00:00",
     "raw": 13,
     "unique": 13,
     "qualified": 3,
@@ -735,13 +870,13 @@
     "full_descriptions": 4
   },
   "jobspy:1e542372a7182cd4": {
-    "last_success": "2026-10-27T18:50:53.256056+00:00",
+    "last_success": "2026-10-27T22:19:18.165907+00:00",
     "raw": 25,
-    "unique": 25,
+    "unique": 26,
     "qualified": 0,
-    "review": 1,
-    "rejected": 24,
-    "full_descriptions": 0
+    "review": 3,
+    "rejected": 23,
+    "full_descriptions": 8
   },
   "jobspy:2ba684532f92b59e": {
     "last_success": "2026-10-27T18:49:57.446021+00:00",
@@ -762,7 +897,7 @@
     "full_descriptions": 25
   },
   "jobspy:300960d0b464f72c": {
-    "last_success": "2026-10-27T18:50:07.797505+00:00",
+    "last_success": "2026-10-27T22:18:34.152286+00:00",
     "raw": 7,
     "unique": 7,
     "qualified": 2,
@@ -807,22 +942,22 @@
     "full_descriptions": 25
   },
   "jobspy:41e87a037c362f54": {
-    "last_success": "2026-10-27T18:51:22.806580+00:00",
+    "last_success": "2026-10-27T22:19:46.877261+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
-    "review": 3,
-    "rejected": 22,
-    "full_descriptions": 5
+    "review": 1,
+    "rejected": 24,
+    "full_descriptions": 10
   },
   "jobspy:456ba2f89bffd6b7": {
-    "last_success": "2026-10-27T18:53:00.732499+00:00",
+    "last_success": "2026-10-27T22:21:11.013194+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
-    "review": 8,
-    "rejected": 17,
-    "full_descriptions": 9
+    "review": 10,
+    "rejected": 15,
+    "full_descriptions": 18
   },
   "jobspy:48eff308264948d5": {
     "last_success": "2026-10-27T18:49:58.210065+00:00",
@@ -852,7 +987,7 @@
     "full_descriptions": 25
   },
   "jobspy:5a4a0958f8e32e84": {
-    "last_success": "2026-10-27T18:53:25.093071+00:00",
+    "last_success": "2026-10-27T22:21:40.027976+00:00",
     "raw": 6,
     "unique": 6,
     "qualified": 1,
@@ -879,16 +1014,16 @@
     "full_descriptions": 25
   },
   "jobspy:697ca8ca3ab7aa30": {
-    "last_success": "2026-10-27T18:51:00.550032+00:00",
-    "raw": 16,
-    "unique": 16,
+    "last_success": "2026-10-27T22:19:24.983397+00:00",
+    "raw": 15,
+    "unique": 15,
     "qualified": 0,
-    "review": 3,
-    "rejected": 13,
-    "full_descriptions": 3
+    "review": 1,
+    "rejected": 14,
+    "full_descriptions": 5
   },
   "jobspy:6f8f31f9e8e59893": {
-    "last_success": "2026-10-27T18:53:24.328886+00:00",
+    "last_success": "2026-10-27T22:21:39.094121+00:00",
     "raw": 13,
     "unique": 13,
     "qualified": 3,
@@ -897,13 +1032,13 @@
     "full_descriptions": 4
   },
   "jobspy:75a6ec1c92addf72": {
-    "last_success": "2026-10-27T18:50:07.046025+00:00",
-    "raw": 4,
-    "unique": 4,
+    "last_success": "2026-10-27T22:18:33.312504+00:00",
+    "raw": 3,
+    "unique": 3,
     "qualified": 1,
     "review": 0,
-    "rejected": 3,
-    "full_descriptions": 4
+    "rejected": 2,
+    "full_descriptions": 3
   },
   "jobspy:7c683ac77a7891df": {
     "last_success": "2026-10-26T13:11:44.380239+00:00",
@@ -915,13 +1050,13 @@
     "full_descriptions": 25
   },
   "jobspy:7d42061eb22bd9e4": {
-    "last_success": "2026-10-27T18:50:22.485249+00:00",
+    "last_success": "2026-10-27T22:18:46.033407+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 1,
     "review": 3,
     "rejected": 21,
-    "full_descriptions": 4
+    "full_descriptions": 13
   },
   "jobspy:7ea6953079cf86fb": {
     "last_success": "2026-10-26T20:34:06.463297+00:00",
@@ -933,22 +1068,22 @@
     "full_descriptions": 25
   },
   "jobspy:821f679a34a685df": {
-    "last_success": "2026-10-27T18:52:00.612216+00:00",
-    "raw": 12,
-    "unique": 12,
+    "last_success": "2026-10-27T22:20:29.786143+00:00",
+    "raw": 14,
+    "unique": 14,
     "qualified": 0,
-    "review": 3,
-    "rejected": 9,
-    "full_descriptions": 3
+    "review": 1,
+    "rejected": 13,
+    "full_descriptions": 7
   },
   "jobspy:88573ab0282308c3": {
-    "last_success": "2026-10-27T18:51:44.330466+00:00",
-    "raw": 24,
-    "unique": 24,
+    "last_success": "2026-10-27T22:20:14.280039+00:00",
+    "raw": 25,
+    "unique": 25,
     "qualified": 1,
-    "review": 4,
-    "rejected": 19,
-    "full_descriptions": 7
+    "review": 1,
+    "rejected": 23,
+    "full_descriptions": 11
   },
   "jobspy:8bf5691f934003fc": {
     "last_success": "2026-10-27T18:50:03.361693+00:00",
@@ -960,22 +1095,22 @@
     "full_descriptions": 0
   },
   "jobspy:8d3c84c3ef0f70f9": {
-    "last_success": "2026-10-27T18:51:56.157088+00:00",
+    "last_success": "2026-10-27T22:20:24.045470+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
-    "review": 2,
-    "rejected": 23,
-    "full_descriptions": 0
+    "review": 0,
+    "rejected": 25,
+    "full_descriptions": 8
   },
   "jobspy:932247cea50b10a7": {
-    "last_success": "2026-10-27T18:52:12.461152+00:00",
+    "last_success": "2026-10-27T22:20:40.804238+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
-    "review": 1,
-    "rejected": 24,
-    "full_descriptions": 0
+    "review": 0,
+    "rejected": 25,
+    "full_descriptions": 4
   },
   "jobspy:98020ae1dc0e5aa2": {
     "last_success": "2026-10-27T18:50:06.328691+00:00",
@@ -987,22 +1122,22 @@
     "full_descriptions": 1
   },
   "jobspy:9ced97a97dc8a112": {
-    "last_success": "2026-10-27T18:51:35.220063+00:00",
+    "last_success": "2026-10-27T22:19:59.535440+00:00",
     "raw": 25,
-    "unique": 25,
+    "unique": 26,
     "qualified": 0,
     "review": 1,
-    "rejected": 24,
-    "full_descriptions": 0
+    "rejected": 25,
+    "full_descriptions": 8
   },
   "jobspy:9e2c0f814daaa3ea": {
-    "last_success": "2026-10-27T18:51:11.348183+00:00",
+    "last_success": "2026-10-27T22:19:36.434749+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
     "review": 3,
     "rejected": 22,
-    "full_descriptions": 2
+    "full_descriptions": 12
   },
   "jobspy:a5e85e1d9cdcef50": {
     "last_success": "2026-10-26T20:41:05.706314+00:00",
@@ -1068,16 +1203,16 @@
     "full_descriptions": 25
   },
   "jobspy:c1437b145efe8212": {
-    "last_success": "2026-10-27T18:53:10.332711+00:00",
-    "raw": 7,
-    "unique": 7,
+    "last_success": "2026-10-27T22:21:21.180477+00:00",
+    "raw": 9,
+    "unique": 9,
     "qualified": 3,
     "review": 0,
-    "rejected": 4,
-    "full_descriptions": 3
+    "rejected": 6,
+    "full_descriptions": 5
   },
   "jobspy:c3aa6e77462b7ed1": {
-    "last_success": "2026-10-27T18:50:04.767273+00:00",
+    "last_success": "2026-10-27T22:18:32.506664+00:00",
     "raw": 3,
     "unique": 3,
     "qualified": 1,
@@ -1086,13 +1221,13 @@
     "full_descriptions": 3
   },
   "jobspy:c5d5a60cbbe0b8f3": {
-    "last_success": "2026-10-27T18:50:42.034226+00:00",
-    "raw": 16,
-    "unique": 16,
+    "last_success": "2026-10-27T22:19:04.716878+00:00",
+    "raw": 15,
+    "unique": 15,
     "qualified": 0,
-    "review": 3,
-    "rejected": 13,
-    "full_descriptions": 3
+    "review": 1,
+    "rejected": 14,
+    "full_descriptions": 5
   },
   "jobspy:c9912c83d071d927": {
     "last_success": "2026-10-27T18:50:00.497695+00:00",
@@ -1104,13 +1239,13 @@
     "full_descriptions": 0
   },
   "jobspy:ca57136b9f3f20eb": {
-    "last_success": "2026-10-27T18:53:01.569725+00:00",
-    "raw": 7,
-    "unique": 7,
+    "last_success": "2026-10-27T22:21:11.998153+00:00",
+    "raw": 8,
+    "unique": 8,
     "qualified": 1,
     "review": 0,
-    "rejected": 6,
-    "full_descriptions": 2
+    "rejected": 7,
+    "full_descriptions": 3
   },
   "jobspy:d521773e3ff80bc0": {
     "last_success": "2026-10-26T20:32:59.466948+00:00",
@@ -1131,40 +1266,40 @@
     "full_descriptions": 0
   },
   "jobspy:de3fa268e20b281b": {
-    "last_success": "2026-10-27T18:53:15.142568+00:00",
+    "last_success": "2026-10-27T22:21:28.258691+00:00",
+    "raw": 17,
+    "unique": 17,
+    "qualified": 3,
+    "review": 0,
+    "rejected": 14,
+    "full_descriptions": 5
+  },
+  "jobspy:e658e60cbe1030fc": {
+    "last_success": "2026-10-27T22:20:48.894938+00:00",
+    "raw": 16,
+    "unique": 16,
+    "qualified": 0,
+    "review": 1,
+    "rejected": 15,
+    "full_descriptions": 7
+  },
+  "jobspy:ec171cf453203d61": {
+    "last_success": "2026-10-27T22:21:34.093794+00:00",
     "raw": 15,
     "unique": 15,
     "qualified": 3,
     "review": 0,
     "rejected": 12,
-    "full_descriptions": 3
-  },
-  "jobspy:e658e60cbe1030fc": {
-    "last_success": "2026-10-27T18:52:20.237864+00:00",
-    "raw": 16,
-    "unique": 16,
-    "qualified": 0,
-    "review": 3,
-    "rejected": 13,
-    "full_descriptions": 4
-  },
-  "jobspy:ec171cf453203d61": {
-    "last_success": "2026-10-27T18:53:19.706289+00:00",
-    "raw": 13,
-    "unique": 13,
-    "qualified": 3,
-    "review": 0,
-    "rejected": 10,
-    "full_descriptions": 4
+    "full_descriptions": 6
   },
   "jobspy:f0010df233070912": {
-    "last_success": "2026-10-26T20:38:34.867679+00:00",
-    "raw": 7,
-    "unique": 7,
-    "qualified": 1,
-    "review": 1,
-    "rejected": 5,
-    "full_descriptions": 7
+    "last_success": "2026-10-27T22:18:31.677506+00:00",
+    "raw": 11,
+    "unique": 11,
+    "qualified": 2,
+    "review": 0,
+    "rejected": 9,
+    "full_descriptions": 4
   },
   "jobspy:f0d527d9cdc6a307": {
     "last_success": "2026-10-26T13:12:23.628757+00:00",
@@ -1185,13 +1320,13 @@
     "full_descriptions": 25
   },
   "jobspy:f49db42f7609e800": {
-    "last_success": "2026-10-27T18:52:34.248754+00:00",
+    "last_success": "2026-10-27T22:20:59.423431+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
-    "review": 1,
-    "rejected": 24,
-    "full_descriptions": 0
+    "review": 0,
+    "rejected": 25,
+    "full_descriptions": 7
   },
   "jobspy:f5643d7891555dcc": {
     "last_success": "2026-10-26T20:36:44.735932+00:00",
@@ -1203,13 +1338,13 @@
     "full_descriptions": 25
   },
   "jobspy:f600aeee834183b4": {
-    "last_success": "2026-10-27T18:50:34.501065+00:00",
+    "last_success": "2026-10-27T22:18:59.523086+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
-    "review": 8,
-    "rejected": 17,
-    "full_descriptions": 10
+    "review": 11,
+    "rejected": 14,
+    "full_descriptions": 17
   },
   "posts:233b30a94114788547e3": {
     "last_success": "2026-10-27T15:25:02.860779+00:00",
@@ -1286,924 +1421,6 @@
   "queue:linkedin_details": {
     "version": 1,
     "entries": {
-      "linkedin:9d403bd93cd7637955badf09": {
-        "job": {
-          "title": "Full Stack Software Engineer, New Grad - Quora (Remote)",
-          "company": "Quora",
-          "location": "USA",
-          "url": "https://www.linkedin.com/jobs/view/4482023455",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-21T00:00:00+00:00",
-          "is_remote": true,
-          "description": "",
-          "job_id": "linkedin:9d403bd93cd7637955badf09",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4482023455",
-          "application_url": "",
-          "aliases": [
-            "7e80976d54bf7b83"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4482023455"
-          ],
-          "work_mode": "remote",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-21T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:34.500972+00:00",
-          "last_seen_at": "2026-10-27T18:50:34.500973+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:f600aeee834183b4",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:9e0c02a0173deac84241a348": {
-        "job": {
-          "title": "Frontend Developer",
-          "company": "Goldschmitt and Associates (G&A)",
-          "location": "USA",
-          "url": "https://www.linkedin.com/jobs/view/4482203207",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-27T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:9e0c02a0173deac84241a348",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4482203207",
-          "application_url": "",
-          "aliases": [
-            "e532db601c29c611"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4482203207"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-27T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:51:11.347453+00:00",
-          "last_seen_at": "2026-10-27T18:51:11.347454+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:9e2c0f814daaa3ea",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:9e4f07471b043297d46ff188": {
-        "job": {
-          "title": "Application Developer",
-          "company": "Consertus",
-          "location": "USA",
-          "url": "https://www.linkedin.com/jobs/view/4474558058",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-23T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:9e4f07471b043297d46ff188",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4474558058",
-          "application_url": "",
-          "aliases": [
-            "e1329ab568db449c"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4474558058"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-23T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:52:34.248378+00:00",
-          "last_seen_at": "2026-10-27T18:52:34.248379+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:f49db42f7609e800",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:9ec91cfff1ab84334200917f": {
-        "job": {
-          "title": "Frontend Engineer, Ads",
-          "company": "Reddit, Inc.",
-          "location": "San Francisco, CA, USA",
-          "url": "https://www.linkedin.com/jobs/view/4466319321",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-24T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:9ec91cfff1ab84334200917f",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4466319321",
-          "application_url": "",
-          "aliases": [
-            "63a809ccb3c05cc7"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4466319321"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-24T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:53.255538+00:00",
-          "last_seen_at": "2026-10-27T18:50:53.255540+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:1e542372a7182cd4",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:a1b7d3c16fa85d08d3880716": {
-        "job": {
-          "title": "Full Stack Developer - G2i Talent Pool",
-          "company": "G2i",
-          "location": "USA",
-          "url": "https://www.linkedin.com/jobs/view/4481852097",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-27T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:a1b7d3c16fa85d08d3880716",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4481852097",
-          "application_url": "",
-          "aliases": [
-            "516e67e7f7790bb9"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4481852097"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-27T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:53:00.731366+00:00",
-          "last_seen_at": "2026-10-27T18:53:00.731368+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:456ba2f89bffd6b7",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:a8d9ec85c2d7292942e2f6de": {
-        "job": {
-          "title": "Full Stack Developer",
-          "company": "PDG Consulting - now part of Fincons Group",
-          "location": "Los Angeles, CA, USA",
-          "url": "https://www.linkedin.com/jobs/view/4481114793",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-21T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:a8d9ec85c2d7292942e2f6de",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4481114793",
-          "application_url": "",
-          "aliases": [
-            "a70c3bbe58f506d2"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4481114793"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-21T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:52:12.461039+00:00",
-          "last_seen_at": "2026-10-27T18:52:12.461040+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:932247cea50b10a7",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:b760143ab0569edef824c4e2": {
-        "job": {
-          "title": "Web Front-End Developer",
-          "company": "Lenovo",
-          "location": "North Carolina, USA",
-          "url": "https://www.linkedin.com/jobs/view/4423955711",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-24T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:b760143ab0569edef824c4e2",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4423955711",
-          "application_url": "",
-          "aliases": [
-            "b261a1f8120b8531"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4423955711"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-24T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:51:11.347806+00:00",
-          "last_seen_at": "2026-10-27T18:51:11.347807+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:9e2c0f814daaa3ea",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:bb666829009556d4ad78e9df": {
-        "job": {
-          "title": "Frontend Engineer",
-          "company": "TalentHop",
-          "location": "USA",
-          "url": "https://www.linkedin.com/jobs/view/4481857639",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-27T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:bb666829009556d4ad78e9df",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4481857639",
-          "application_url": "",
-          "aliases": [
-            "dcf57e587637d35d"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4481857639"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-27T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:53.255226+00:00",
-          "last_seen_at": "2026-10-27T18:50:53.255228+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:1e542372a7182cd4",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:c909469f616746eef66c23a2": {
-        "job": {
-          "title": "Product, Platform & Enterprise Full Stack Software Engineer I/II (Remote - US)",
-          "company": "BNSF Railway",
-          "location": "USA",
-          "url": "https://www.linkedin.com/jobs/view/4445772682",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-23T00:00:00+00:00",
-          "is_remote": true,
-          "description": "",
-          "job_id": "linkedin:c909469f616746eef66c23a2",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4445772682",
-          "application_url": "",
-          "aliases": [
-            "78f29d7b56657d2b"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4445772682"
-          ],
-          "work_mode": "remote",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-23T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:34.500643+00:00",
-          "last_seen_at": "2026-10-27T18:50:34.500645+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:f600aeee834183b4",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:ca929a3d260b2586925b7365": {
-        "job": {
-          "title": "Simulation Software Engineer",
-          "company": "Intuitive Machines",
-          "location": "USA",
-          "url": "https://www.linkedin.com/jobs/view/4474341024",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-23T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:ca929a3d260b2586925b7365",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4474341024",
-          "application_url": "",
-          "aliases": [
-            "33d98a1441864a46"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4474341024"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-23T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:34.500727+00:00",
-          "last_seen_at": "2026-10-27T18:50:34.500728+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:f600aeee834183b4",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:d30c8630ae2fd50d72673d48": {
-        "job": {
-          "title": "Full Stack Developer (Remote)",
-          "company": "GovCIO",
-          "location": "USA",
-          "url": "https://www.linkedin.com/jobs/view/4484026797",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-27T00:00:00+00:00",
-          "is_remote": true,
-          "description": "",
-          "job_id": "linkedin:d30c8630ae2fd50d72673d48",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4484026797",
-          "application_url": "",
-          "aliases": [
-            "d7fc74f54ad88979"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4484026797"
-          ],
-          "work_mode": "remote",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-27T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:53.255309+00:00",
-          "last_seen_at": "2026-10-27T18:50:53.255310+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:1e542372a7182cd4",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:d4af96424fd5e5d030fdb695": {
-        "job": {
-          "title": "Backend Engineer, Solving",
-          "company": "Jobgether",
-          "location": "USA",
-          "url": "https://www.linkedin.com/jobs/view/4481173944",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-22T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:d4af96424fd5e5d030fdb695",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4481173944",
-          "application_url": "",
-          "aliases": [
-            "6d84d995bdff2533"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4481173944"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-22T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:51:56.156741+00:00",
-          "last_seen_at": "2026-10-27T18:51:56.156742+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:8d3c84c3ef0f70f9",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:d6cf3eec7063e94abf617c96": {
-        "job": {
-          "title": "Backend Engineer",
-          "company": "Astra-l",
-          "location": "Only, TN, USA",
-          "url": "https://www.linkedin.com/jobs/view/4482015738",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-21T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:d6cf3eec7063e94abf617c96",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4482015738",
-          "application_url": "",
-          "aliases": [
-            "14d2fdc8d5c99daf"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4482015738"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-21T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:52:34.248677+00:00",
-          "last_seen_at": "2026-10-27T18:52:34.248679+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:f49db42f7609e800",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:df18dfd343095141a260eb70": {
-        "job": {
-          "title": "Back End Developer",
-          "company": "Underdog: Verified engineers. Interview-ready. Searching confidentially. And companies apply to you",
-          "location": "USA",
-          "url": "https://www.linkedin.com/jobs/view/4479036631",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-27T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:df18dfd343095141a260eb70",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4479036631",
-          "application_url": "",
-          "aliases": [
-            "c4f0de2aa6728716"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4479036631"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-27T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:51:56.156031+00:00",
-          "last_seen_at": "2026-10-27T18:51:56.156033+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:8d3c84c3ef0f70f9",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:e49a0c058464a197fed2cd6e": {
-        "job": {
-          "title": "Staff Frontend Engineer",
-          "company": "NewtonX",
-          "location": "USA",
-          "url": "https://www.linkedin.com/jobs/view/4464129206",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-22T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:e49a0c058464a197fed2cd6e",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4464129206",
-          "application_url": "",
-          "aliases": [
-            "eca8a867f77e5349"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4464129206"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-22T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:53.255684+00:00",
-          "last_seen_at": "2026-10-27T18:50:53.255686+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:1e542372a7182cd4",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:e6b07ded646078e9fcf4840e": {
-        "job": {
-          "title": "Software Engineer",
-          "company": "FutureFit AI",
-          "location": "USA",
-          "url": "https://www.linkedin.com/jobs/view/4461992511",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-26T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:e6b07ded646078e9fcf4840e",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4461992511",
-          "application_url": "",
-          "aliases": [
-            "9e79d15f766cc621"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4461992511"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-26T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:53.255424+00:00",
-          "last_seen_at": "2026-10-27T18:50:53.255425+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:1e542372a7182cd4",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:e7db1bd94ca0784e9dc80f78": {
-        "job": {
-          "title": "Software Engineer - Full Stack",
-          "company": "Evlo AI",
-          "location": "San Diego, CA, USA",
-          "url": "https://www.linkedin.com/jobs/view/4482697252",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-25T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:e7db1bd94ca0784e9dc80f78",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4482697252",
-          "application_url": "",
-          "aliases": [
-            "5ddc9323eae628c3"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4482697252"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-25T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:51:35.219411+00:00",
-          "last_seen_at": "2026-10-27T18:51:35.219412+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:9ced97a97dc8a112",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:eeed587fd9f3e17285b6c34d": {
-        "job": {
-          "title": "AI Software Engineer (Remote)",
-          "company": "M3 USA",
-          "location": "Fort Washington, PA, USA",
-          "url": "https://www.linkedin.com/jobs/view/4473955471",
-          "platform": "Linkedin",
-          "date_posted": "2026-10-22T00:00:00+00:00",
-          "is_remote": true,
-          "description": "",
-          "job_id": "linkedin:eeed587fd9f3e17285b6c34d",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4473955471",
-          "application_url": "",
-          "aliases": [
-            "20b088e22dab0e33"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4473955471"
-          ],
-          "work_mode": "remote",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-10-22T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-10-27T18:50:34.500795+00:00",
-          "last_seen_at": "2026-10-27T18:50:34.500796+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:f600aeee834183b4",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
       "linkedin:f6fac27278045b43910d859a": {
         "job": {
           "title": "Software Engineer, Credit Card",
@@ -2234,8 +1451,8 @@
           "source_description": "",
           "posted_at": "2026-10-22T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-10-27T18:51:56.156707+00:00",
-          "last_seen_at": "2026-10-27T18:51:56.156708+00:00",
+          "first_seen_at": "2026-10-27T22:20:24.044886+00:00",
+          "last_seen_at": "2026-10-27T22:20:24.044888+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -2251,9 +1468,11 @@
           "decision": {}
         },
         "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
+        "updated_at": "2026-10-27T22:21:40.028010+00:00",
         "status": "pending",
-        "attempts": 0
+        "attempts": 1,
+        "last_attempt": "2026-10-27T22:21:40.028010+00:00",
+        "retry_after": "2026-10-28T01:21:40.028010+00:00"
       },
       "linkedin:f7c901528cfc745819a25ddb": {
         "job": {
@@ -2285,8 +1504,8 @@
           "source_description": "",
           "posted_at": "2026-10-27T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-10-27T18:52:12.460235+00:00",
-          "last_seen_at": "2026-10-27T18:52:12.460236+00:00",
+          "first_seen_at": "2026-10-27T22:20:40.802488+00:00",
+          "last_seen_at": "2026-10-27T22:20:40.802490+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -2302,7 +1521,7 @@
           "decision": {}
         },
         "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
+        "updated_at": "2026-10-27T22:21:40.028010+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -2336,8 +1555,8 @@
           "source_description": "",
           "posted_at": "2026-10-26T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-10-27T18:52:12.460364+00:00",
-          "last_seen_at": "2026-10-27T18:52:12.460365+00:00",
+          "first_seen_at": "2026-10-27T22:20:40.802733+00:00",
+          "last_seen_at": "2026-10-27T22:20:40.802734+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -2353,12 +1572,777 @@
           "decision": {}
         },
         "queued_at": "2026-10-27T18:53:25.093092+00:00",
-        "updated_at": "2026-10-27T18:53:25.093092+00:00",
+        "updated_at": "2026-10-27T22:21:40.028010+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:02623cd32a8f43c8d689ae03": {
+        "job": {
+          "title": "Full Stack Engineer",
+          "company": "Intelligems",
+          "location": "Denver, CO, USA",
+          "url": "https://www.linkedin.com/jobs/view/4483695037",
+          "platform": "Linkedin",
+          "date_posted": "2026-10-27T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:02623cd32a8f43c8d689ae03",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4483695037",
+          "application_url": "",
+          "aliases": [
+            "58ed7d08cbaf4f0f"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4483695037"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-10-27T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-10-27T22:19:18.164634+00:00",
+          "last_seen_at": "2026-10-27T22:19:18.164636+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:1e542372a7182cd4",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-10-27T22:21:40.028010+00:00",
+        "updated_at": "2026-10-27T22:21:40.028010+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:1f235dd7b05968a2864e4d96": {
+        "job": {
+          "title": "Front End Software Engineer, Media Player",
+          "company": "Reddit, Inc.",
+          "location": "USA",
+          "url": "https://www.linkedin.com/jobs/view/4466443420",
+          "platform": "Linkedin",
+          "date_posted": "2026-10-24T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:1f235dd7b05968a2864e4d96",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4466443420",
+          "application_url": "",
+          "aliases": [
+            "826b9d7f9e9b9d05"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4466443420"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-10-24T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-10-27T22:19:18.165192+00:00",
+          "last_seen_at": "2026-10-27T22:19:18.165194+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:1e542372a7182cd4",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-10-27T22:21:40.028010+00:00",
+        "updated_at": "2026-10-27T22:21:40.028010+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:34a9f06c4d1abc234c0c74e9": {
+        "job": {
+          "title": "Front-end Engineer 5 SEO - Shopping (Remote-eligible)",
+          "company": "Capital One",
+          "location": "McLean, VA, USA",
+          "url": "https://www.linkedin.com/jobs/view/4476199697",
+          "platform": "Linkedin",
+          "date_posted": "2026-10-27T00:00:00+00:00",
+          "is_remote": true,
+          "description": "",
+          "job_id": "linkedin:34a9f06c4d1abc234c0c74e9",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4476199697",
+          "application_url": "",
+          "aliases": [
+            "387b8a4305c34e70"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4476199697"
+          ],
+          "work_mode": "remote",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-10-27T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-10-27T22:19:18.164709+00:00",
+          "last_seen_at": "2026-10-27T22:19:18.164711+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:1e542372a7182cd4",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-10-27T22:21:40.028010+00:00",
+        "updated_at": "2026-10-27T22:21:40.028010+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:384a73c0ec4bd55e5c7421bd": {
+        "job": {
+          "title": "Software Engineer, Backend & Distributed Systems (REMOTE)",
+          "company": "The Home Depot",
+          "location": "Atlanta, GA, USA",
+          "url": "https://www.linkedin.com/jobs/view/4483668874",
+          "platform": "Linkedin",
+          "date_posted": "2026-10-27T00:00:00+00:00",
+          "is_remote": true,
+          "description": "",
+          "job_id": "linkedin:384a73c0ec4bd55e5c7421bd",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4483668874",
+          "application_url": "",
+          "aliases": [
+            "7f167919173f44a4"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4483668874"
+          ],
+          "work_mode": "remote",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-10-27T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-10-27T22:18:59.521476+00:00",
+          "last_seen_at": "2026-10-27T22:18:59.521479+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:f600aeee834183b4",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-10-27T22:21:40.028010+00:00",
+        "updated_at": "2026-10-27T22:21:40.028010+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:4fb5dfdb9fdb9c72b64ec1f1": {
+        "job": {
+          "title": "Full Stack Software Engineer, Support Operations",
+          "company": "ClickHouse",
+          "location": "USA",
+          "url": "https://www.linkedin.com/jobs/view/4481398581",
+          "platform": "Linkedin",
+          "date_posted": "2026-10-22T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:4fb5dfdb9fdb9c72b64ec1f1",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4481398581",
+          "application_url": "",
+          "aliases": [
+            "05a7ed41673135c6"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4481398581"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-10-22T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-10-27T22:19:59.535091+00:00",
+          "last_seen_at": "2026-10-27T22:19:59.535092+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:9ced97a97dc8a112",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-10-27T22:21:40.028010+00:00",
+        "updated_at": "2026-10-27T22:21:40.028010+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:558c875688ca51dd97c59dcf": {
+        "job": {
+          "title": "Frontend Software Engineer — Secure Mission Systems",
+          "company": "Rackner",
+          "location": "USA",
+          "url": "https://www.linkedin.com/jobs/view/4444275627",
+          "platform": "Linkedin",
+          "date_posted": "2026-10-22T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:558c875688ca51dd97c59dcf",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4444275627",
+          "application_url": "",
+          "aliases": [
+            "d334a07b7f3fe992"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4444275627"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-10-22T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-10-27T22:19:36.434507+00:00",
+          "last_seen_at": "2026-10-27T22:19:36.434509+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:9e2c0f814daaa3ea",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-10-27T22:21:40.028010+00:00",
+        "updated_at": "2026-10-27T22:21:40.028010+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:852fe0c50f1e073aa08fbad6": {
+        "job": {
+          "title": "Frontend Software Engineer - Secret",
+          "company": "Parsons Corporation",
+          "location": "Virginia, USA",
+          "url": "https://www.linkedin.com/jobs/view/4482718859",
+          "platform": "Linkedin",
+          "date_posted": "2026-10-22T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:852fe0c50f1e073aa08fbad6",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4482718859",
+          "application_url": "",
+          "aliases": [
+            "f1fd5915392f89dd"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4482718859"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-10-22T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-10-27T22:19:36.434438+00:00",
+          "last_seen_at": "2026-10-27T22:19:36.434440+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:9e2c0f814daaa3ea",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-10-27T22:21:40.028010+00:00",
+        "updated_at": "2026-10-27T22:21:40.028010+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:b3c1bd9d1f9f19834efd337d": {
+        "job": {
+          "title": "Frontend Engineer",
+          "company": "TalentHop",
+          "location": "USA",
+          "url": "https://www.linkedin.com/jobs/view/4482229231",
+          "platform": "Linkedin",
+          "date_posted": "2026-10-27T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:b3c1bd9d1f9f19834efd337d",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4482229231",
+          "application_url": "",
+          "aliases": [
+            "0839908112ab1e6a"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4482229231"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-10-27T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-10-27T22:19:18.164394+00:00",
+          "last_seen_at": "2026-10-27T22:19:18.164396+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:1e542372a7182cd4",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-10-27T22:21:40.028010+00:00",
+        "updated_at": "2026-10-27T22:21:40.028010+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:b5a59bdc924fa6d51125582b": {
+        "job": {
+          "title": "Staff Backend Engineer (FDE)",
+          "company": "MeeruAI",
+          "location": "USA",
+          "url": "https://www.linkedin.com/jobs/view/4483528724",
+          "platform": "Linkedin",
+          "date_posted": "2026-10-23T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:b5a59bdc924fa6d51125582b",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4483528724",
+          "application_url": "",
+          "aliases": [
+            "66e9623801bff9d5"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4483528724"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-10-23T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-10-27T22:20:40.803506+00:00",
+          "last_seen_at": "2026-10-27T22:20:40.803507+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:932247cea50b10a7",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-10-27T22:21:40.028010+00:00",
+        "updated_at": "2026-10-27T22:21:40.028010+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:b5cd5c6ce8c728ba4c5341a9": {
+        "job": {
+          "title": "Software Engineer, New Grad | Remote - Full-time",
+          "company": "TalentHop",
+          "location": "USA",
+          "url": "https://www.linkedin.com/jobs/view/4482210943",
+          "platform": "Linkedin",
+          "date_posted": "2026-10-27T00:00:00+00:00",
+          "is_remote": true,
+          "description": "",
+          "job_id": "linkedin:b5cd5c6ce8c728ba4c5341a9",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4482210943",
+          "application_url": "",
+          "aliases": [
+            "d7b329eefd1851d5"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4482210943"
+          ],
+          "work_mode": "remote",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-10-27T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-10-27T22:18:59.521609+00:00",
+          "last_seen_at": "2026-10-27T22:18:59.521612+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:f600aeee834183b4",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-10-27T22:21:40.028010+00:00",
+        "updated_at": "2026-10-27T22:21:40.028010+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:b85d8028b55ccffdd8e86532": {
+        "job": {
+          "title": "Associate Software Engineer",
+          "company": "TalentHop",
+          "location": "USA",
+          "url": "https://www.linkedin.com/jobs/view/4482218882",
+          "platform": "Linkedin",
+          "date_posted": "2026-10-27T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:b85d8028b55ccffdd8e86532",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4482218882",
+          "application_url": "",
+          "aliases": [
+            "0337ef103d7d373c"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4482218882"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-10-27T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-10-27T22:18:59.521296+00:00",
+          "last_seen_at": "2026-10-27T22:18:59.521316+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:f600aeee834183b4",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-10-27T22:21:40.028010+00:00",
+        "updated_at": "2026-10-27T22:21:40.028010+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:d09b9e060196c7897f7959c8": {
+        "job": {
+          "title": "Software Engineer",
+          "company": "TalentHop",
+          "location": "USA",
+          "url": "https://www.linkedin.com/jobs/view/4482214959",
+          "platform": "Linkedin",
+          "date_posted": "2026-10-27T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:d09b9e060196c7897f7959c8",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4482214959",
+          "application_url": "",
+          "aliases": [
+            "6e5cd1737490aec8"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4482214959"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-10-27T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-10-27T22:20:40.802283+00:00",
+          "last_seen_at": "2026-10-27T22:20:40.802288+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:932247cea50b10a7",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-10-27T22:21:40.028010+00:00",
+        "updated_at": "2026-10-27T22:21:40.028010+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:e0d44418da49f893f93fa572": {
+        "job": {
+          "title": "Frontend Developer",
+          "company": "Precision Technologies",
+          "location": "USA",
+          "url": "https://www.linkedin.com/jobs/view/4484210582",
+          "platform": "Linkedin",
+          "date_posted": "2026-10-27T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:e0d44418da49f893f93fa572",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4484210582",
+          "application_url": "",
+          "aliases": [
+            "1196a5aea80cbb86"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4484210582"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-10-27T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-10-27T22:19:36.433702+00:00",
+          "last_seen_at": "2026-10-27T22:19:36.433704+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:9e2c0f814daaa3ea",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-10-27T22:21:40.028010+00:00",
+        "updated_at": "2026-10-27T22:21:40.028010+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:f62ab8314c5f07735f29152b": {
+        "job": {
+          "title": "Full Stack Engineer",
+          "company": "Underdog: Verified engineers. Interview-ready. Searching confidentially. And companies apply to you",
+          "location": "USA",
+          "url": "https://www.linkedin.com/jobs/view/4477194050",
+          "platform": "Linkedin",
+          "date_posted": "2026-10-27T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:f62ab8314c5f07735f29152b",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4477194050",
+          "application_url": "",
+          "aliases": [
+            "c3c7e49aa37cf241"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4477194050"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-10-27T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-10-27T22:19:18.164833+00:00",
+          "last_seen_at": "2026-10-27T22:19:18.164835+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:1e542372a7182cd4",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-10-27T22:21:40.028010+00:00",
+        "updated_at": "2026-10-27T22:21:40.028010+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:facd60474599dd9d7f7eeb60": {
+        "job": {
+          "title": "Developer, Frontend",
+          "company": "1Password",
+          "location": "USA",
+          "url": "https://www.linkedin.com/jobs/view/4466437607",
+          "platform": "Linkedin",
+          "date_posted": "2026-10-25T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:facd60474599dd9d7f7eeb60",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4466437607",
+          "application_url": "",
+          "aliases": [
+            "d4daec71ffda3bc6"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4466437607"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-10-25T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-10-27T22:19:36.433947+00:00",
+          "last_seen_at": "2026-10-27T22:19:36.433949+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:9e2c0f814daaa3ea",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-10-27T22:21:40.028010+00:00",
+        "updated_at": "2026-10-27T22:21:40.028010+00:00",
         "status": "pending",
         "attempts": 0
       }
     },
-    "updated_at": "2026-10-27T19:23:20.968077+00:00"
+    "updated_at": "2026-10-27T22:21:40.028010+00:00"
   },
   "rotation:posts": {
     "offset": 3,
