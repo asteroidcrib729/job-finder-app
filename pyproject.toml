@@ -26,7 +26,7 @@ job-finder-evaluate = "job_finder.evaluation.benchmark:main"
 job-finder-feedback = "job_finder.evaluation.feedback:main"
 
 [build-system]
-requires = ["uv_build==0.12.9"]
+requires = ["uv_build==0.13.7"]
 build-backend = "uv_build"
 
 [tool.uv.build-backend]
