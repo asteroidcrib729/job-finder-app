@@ -1,141 +1,93 @@
 {
   "adaptive:linkedin_details": {
-    "request_limit": 7,
+    "request_limit": 4,
     "delay_seconds": 10,
-    "updated_at": "2026-11-18T11:53:15.636249+00:00"
+    "updated_at": "2026-11-18T20:40:08.746228+00:00"
   },
   "attempt:linkedin_details": {
-    "last_attempt": "2026-11-18T11:53:15.636249+00:00",
+    "last_attempt": "2026-11-18T20:40:08.746228+00:00",
     "reason": "blocked"
   },
   "cache:linkedin": {
-    "entries": {
-      "https://www.linkedin.com/jobs/view/4318354760": {
-        "fetched_at": "2026-11-18T11:53:15.636249+00:00",
-        "payload": {
-          "description": "Are you passionate about creating robust and scalable software solutions?\nJoin us as a Full Stack Developer and play a key role in building impactful applications. We’re looking for someone with a strong technical background, problem-solving mindset, and collaborative attitude to help shape our innovative projects.\nResponsibilities\nDesign, develop, and implement scalable software applications using C# and .NET Core.\nBuild and optimize Web APIs with a focus on best practices.\nWork with JavaScript, jQuery, and other front-end technologies to deliver seamless user experiences.\nWrite clean, efficient, and maintainable code with a focus on performance and scalability.\nCollaborate with developers, product managers, and stakeholders to deliver new features and enhancements.\nTroubleshoot, debug and upgrade the software to ensure optimal functionality.\nLead by example, providing technical guidance and mentorship to the team.\nQualifications\nEducation: Bachelor’s Degree in Computer Science or a related field.\nExperience: 2 years of hands-on experience in software development, including front-end and back-end work.\nTechnical Skills:\nStrong expertise in C#, .NET Core, MVC, and Microservices architecture.\nProficiency in JavaScript, jQuery, and other front-end frameworks.\nKnowledge of database management and integration.\nSoft Skills:\nExcellent verbal and written communication skills.\nStrong analytical, problem-solving, and organizational abilities.\nA collaborative team player with a proactive attitude.\nWhy Join Us?\nCompetitive salary and comprehensive benefits.\nPerformance bonuses based on your contributions and team achievements.\nThe opportunity to work on industry-leading projects.\nLocation: This is a full-time, onsite role based in Karachi.",
-          "source_url": ""
-        }
-      },
-      "https://www.linkedin.com/jobs/view/4466319321": {
-        "fetched_at": "2026-11-18T11:53:15.636249+00:00",
-        "payload": {
-          "description": "Reddit is a community of communities. It's built on shared interests, passion, and trust, and is home to the most open and authentic conversations on the internet. Every day, Reddit users submit, vote, and comment on the topics they care most about. With 100,000+ active communities and approximately 130 million daily active unique visitors, Reddit is one of the internet's largest sources of information. For more information, visit www.redditinc.com.\nTeam Description\nThe Brand Ad Formats team drives the development of ad formats that help advertisers maximize reach and brand impact. They focus on high-visibility, awareness-driven solutions that create memorable experiences for Reddit users. By delivering guaranteed placements and engaging ad interactions, they support major brand initiatives and help advertisers achieve measurable outcomes. The team is building fully customizable interactive formats and AI-driven ads that incorporate User-Generated Content (UGC). Moving forward, we will be doubling down on Video Ads, with the goal of turning Reddit into an industry leader and a 'must buy' for advertisers to promote video content.\nRole Description\nThe Brand Ad Formats team is seeking a skilled Frontend engineer with a product-focused mindset to join the team.\nResponsibilities:\nBuild Ad experiences and create patterns for Reddit's web app that enhance our ads' performance and functionality.\nCollaborate across product, design, and engineering teams to innovate and implement sophisticated solutions for complex challenges.\nEngage in the full development cycle: design, develop, QA, experiment, analyze, and deploy.\nRequired Qualifications:\n3+ years of experience in Web Engineering\nProficient in Typescript and Javascript\nA willingness to tackle the challenges of creating data-intensive, highly responsive, and fault-tolerant apps\nExperience with automated testing best practices, code quality / design patterns, observability, etc.\nSkilled at performing insightful code reviews, and receiving feedback themself\nExperience leveraging GenAI tools to increase software engineering productivity\nExcellent communication skills: able to collaborate with teams in a fully remote environment, and discuss complex topics with technical and non-technical audiences\nPreferred Qualifications:\nExperience working on ad tech\nExperience working on consumer facing sites (high production value at scale)\nTechnologies used on the team include:\nLanguages: Typescript, HTML, CSS, Go\nFrameworks: React, Thrift, gRPC\nTools: Kubernetes, Docker, Codex, Cursor\nPay Transparency:\nThis job posting may span more than one career level.\nIn addition to base salary, this job is eligible to receive equity in the form of restricted stock units, and depending on the position offered, it may also be eligible to receive a commission. Additionally, Reddit offers a wide range of benefits to U.S.-based employees, including medical, dental, and vision insurance, 401(k) program with employer match, generous time off for vacation, and parental leave. To learn more, please visit https://www.redditinc.com/careers/.\nTo provide greater transparency to candidates, we share base salary ranges for all US-based job postings regardless of state. We set standard base pay ranges for all roles based on function, level, and country location, benchmarked against similar stage growth companies. Final offer amounts are determined by multiple factors including, skills, depth of work experience and relevant licenses/credentials, and may vary from the amounts listed below.\nThe base salary range for this position is:\n$164,200—$229,900 USD\nIn select roles and locations, the interviews will be recorded, transcribed and summarized by artificial intelligence (AI). You will have the opportunity to opt out of recording, transcription and summarization prior to any scheduled interviews.\nDuring the interview, we will collect the following categories of personal information: Identifiers, Professional and Employment-Related Information, Sensory Information (audio/video recording), and any other categories of personal information you choose to share with us. We will use this information to evaluate your application for employment or an independent contractor role, as applicable. We will not sell your personal information or disclose it to any third party for their marketing purposes. We will delete any recording of your interview promptly after making a hiring decision. For more information about how we will handle your personal information, including our retention of it, please refer to our Candidate Privacy Policy for Potential Employees and Contractors.\nReddit is proud to be an equal opportunity employer, and is committed to building a workforce representative of the diverse communities we serve. Reddit is committed to providing reasonable accommodations for qualified individuals with disabilities and disabled veterans in our job application procedures. If, due to a disability, you need an accommodation during the interview process, please let your recruiter know.",
-          "source_url": ""
-        }
-      },
-      "https://www.linkedin.com/jobs/view/4484040948": {
-        "fetched_at": "2026-11-18T11:53:15.636249+00:00",
-        "payload": {
-          "description": "Job Purpose\nWe are looking for a highly skilled Java Developer with strong experience in Spring Boot and Microservices architecture. The ideal candidate will design, develop, and maintain scalable backend services in a cloud-native environment.\nKey Result Areas\n• Design and develop RESTful APIs using Java 8/11/17\n• Build microservices using Spring Boot\n• Implement service-to-service communication (REST, Kafka, etc.)\n• Work with relational and NoSQL databases\n• Write clean, testable, production-grade code\n• Participate in architecture discussions and technical design\n• Implement security using JWT/OAuth2\n• Optimize application performance and scalability\n• Follow CI/CD and DevOps practices\n• Troubleshoot production issues and perform root cause analysis\nKnowledge, Skills and Experience\n• Strong experience in Java & OOP concepts\n• Hands-on experience with Spring Boot\n• Experience building Microservices architecture\n• Experience with REST APIs\n• Database experience (SQL, PostgreSQL, Oracle, MongoDB)\n• Understanding of Docker & Kubernetes\nExperience with Git\n• Familiarity with CI/CD pipelines",
-          "source_url": ""
-        }
-      },
-      "https://www.linkedin.com/jobs/view/4485350681": {
-        "fetched_at": "2026-11-18T11:53:15.636249+00:00",
-        "payload": {
-          "description": "Backend Engineer - Node.js / TypeScript\nLocation: Remote| Full-Time\nOur hiring partner is pioneering a platform backed by $14M from top-tier investors, enabling enterprises to deploy authenticated AI agents for mission-critical workflows.\nTheir technology solves a fundamental challenge: securely accessing and transforming data trapped behind complex authentication barriers. We’ve automated weeks-long manual processes into minutes for industry leaders. Join our growing team to build the infrastructure that makes every business system AI-accessible.\nYour Mission\nArchitect core systems that allow AI agents to securely navigate authenticated environments—from dynamic web interfaces to legacy systems—transforming unstructured data into actionable intelligence at scale.\nKey Responsibilities\nBuild Resilient AI Agents : Develop systems that automate complex logins (including MFA), extract unstructured data, and handle dynamic web interfaces without APIs.\nEngineer Secure Foundations : Create authentication workflows for diverse platforms and scalable APIs for enterprise-grade solutions.\nDesign Data Infrastructure : Implement GCP-based data pipelines, optimize PostgreSQL performance, and ensure integrity for millions of records.\nShip End-to-End Systems : Develop third-party integrations, testing suites, and observability tools with a focus on reliability.\nCollaborate Strategically : Work with senior engineers on system architecture and product teams to solve real customer challenges.\nTech Stack Deep Dive\nCore : TypeScript, Node.js, PostgreSQL, Python\nInfra : GCP, Docker, GitHub Actions (CI/CD)\nAutomation : Custom web agents, Puppeteer/Playwright (experience a plus)\nWho You Are\n3+ years backend engineering experience shipping production systems.\nTechnical Mastery :\nProficient in modern backends (Node.js/TypeScript preferred)\nExperience with REST APIs, cloud platforms (GCP/AWS/Azure), and databases\nFamiliarity with containerization (Docker) and CI/CD pipelines\nCultural Fit :\nAutonomy : Own outcomes end-to-end in ambiguous environments\nCraftsmanship : Balance best practices with pragmatic delivery\nCuriosity : Continuously explore authentication, security, and AI/automation\nCommunication : Document decisions and align cross-functional teams\nNice-to-Haves\nData engineering/ETL pipeline experience\nKnowledge of OAuth, SAML, or security protocols\nStartup experience or open-source contributions\nMonitoring tools (Prometheus, Grafana, etc.)\nWhy Join\nImpact Critical Infrastructure : Your code enables AI to access 90% of enterprise data currently locked behind logins.\nFounder-Level Equity : Significant ownership in a well-funded startup.\nStrong Team : Learn from former founders and early engineers who scaled 0→1 products.\nFor Builders of the AI-Authenticated Future\nIf you’re driven to solve foundational challenges at the intersection of security, AI, and enterprise systems—apply now. Let’s make every business system AI-accessible.\nMust be authorized to work in the U.S. No visa sponsorship.",
-          "source_url": ""
-        }
-      },
-      "https://www.linkedin.com/jobs/view/4489380906": {
-        "fetched_at": "2026-11-18T11:53:15.636249+00:00",
-        "payload": {
-          "description": "Develop scalable, secure applications using Java/JEE, Angular, React.js, SQL, Spring, and more. Work with cross-functional teams to build, test, and refine code that powers clients' platforms. This role focuses on continuous learning and growth across modern full-stack Java technologies.\nAbout the Company\nBeaconfire is based in Central NJ, specializing in Software Development, Web Development, and Business Intelligence. The company is looking for candidates with a strong background in Software Engineering or Computer Science for a Java / Software Developer position.\nAbout the Role\nThe Java / Software / MERN / MEAN Engineer will be responsible for developing applications and writing scalable, secure, maintainable code that powers clients’ platforms.\nResponsibilities\nDevelop applications using Java/JEE (and higher), Angular 2+, React.js, SQL, Spring, HTML5, CSS, JavaScript, TypeScript, MongoDB, Express.js, among other tools.\nWrite scalable, secure, maintainable code that powers clients’ platforms.\nCreate, deploy, and maintain automated system tests.\nWork with Testers to understand defects opened and resolve them in a timely manner.\nSupport continuous improvement by investigating alternatives and technologies and presenting these for architectural review.\nCollaborate effectively with other team members to accomplish shared user story and sprint goals.\nQualifications\nExperience in programming languages: Java, JavaScript, and Python.\nDecent understanding of the software development life cycle (SDLC).\nBasic programming skills using object-oriented programming (OOP) languages with in-depth knowledge of common APIs and data structures like Collections, Maps, Lists, Sets, etc.\nKnowledge of relational databases (e.g., SQL Server, Oracle) and basic SQL query language skills.\nRequired Skills\nMaster’s Degree in Computer Science (CS).\n0–1 year of practical experience in Java coding.\nExperience using Spring, Maven, and Angular frameworks, HTML, CSS.\nKnowledge of other contemporary Java technologies (e.g., WebLogic, RabbitMQ, Tomcat, etc.).\nKnowledge of JSP, J2EE, and JDBC.\nLocation: Remote to start\nSalary: $65,000.00 to $80,000.00 /year\nBeaconFire is an e-verified company, and we provide H1B visa sponsorship to all qualified international candidates.",
-          "source_url": ""
-        }
-      },
-      "https://www.linkedin.com/jobs/view/4489727790": {
-        "fetched_at": "2026-11-18T11:53:15.636249+00:00",
-        "payload": {
-          "description": "We are looking for a Middle+ Full-Stack Web Developer with strong Python/Django experience to join our team at Logics Drive in Lahore. The ideal candidate should have 3-5 years of commercial development experience, including at least 3+ years with Python and 2+ years working with Django in production environments. You should be comfortable working across the full web stack, from APIs and databases to frontend interfaces, deployments, integrations, and production troubleshooting.\nAbout the Role\nWe build complete web products, not isolated layers. You’ll be expected to work across the full development lifecycle, from designing APIs and building practical admin interfaces to deploying and running applications on the server. Django and DRF are where you'll spend most of your time, but if your curiosity stops at the API boundary, this isn't the right fit.\nYou'll work on products used by government entities, healthcare providers, and businesses across the GCC: web platforms and dashboards, APIs consumed by our own clients and third parties, and integrations with payment gateways, telecom, and messaging services.\nRequirements\n3+ years Python\n2+ years Django in production, working on real systems rather than tutorials or one internal tool\nComfortable working from the command line\nEnglish sufficient for written technical communication with clients and teammates. It's our daily working language\nOwnership: you follow a task from spec to production and stay with it afterwards\nWillingness to mentor juniors and review peers' code\nWilling to work on-site from our Lahore office\nCore - What You Must Be Strong At\nDjango + DRF in production: serializers, viewsets, permissions, versioning, pagination\nPostgreSQL beyond CRUD: you read EXPLAIN, write migrations that don't lock large tables, and treat an N+1 in a serializer as your bug\nCelery + Redis: background jobs, scheduling, retries, idempotency\nIntegrations end-to-end: payment gateways, SMS/OTP, WhatsApp and Telegram Business APIs, OAuth/SSO, government and telecom endpoints, including the ones with bad docs and sandboxes that don't match production\nBilingual web: Arabic/English translations, RTL layouts, Hijri dates where required\nTests where things break: integrations, permissions, money, state machines\nFull-Stack, Meaning Web\nWe're not asking you to be a designer. We are asking you not to be blocked by anything between the database and the browser.\nFrontend good enough to build and maintain a working interface: Vue or React, plus solid HTML/CSS and vanilla JavaScript\nDjango templates, forms, and a customized admin, since a lot of internal tooling lives there\nYou understand how the browser actually works: requests, cookies and sessions, CORS, caching, and how to read the network tab when something breaks\nYou can get your own work deployed and diagnose it afterwards: Docker, a Linux server, nginx, CI pipelines, log\nComfortable in the Terminal\nA lot of our work happens on servers with no interface. You should be at home in a shell: navigating a Linux box over SSH, reading logs and diagnosing a misbehaving service, scripting things you'd otherwise repeat, using Git from the command line including the situations a GUI hides from you, and working with Docker, manage.py, and database and API tooling directly. We don't care which editor you use. We care that a production config file doesn't stop you.\nAgentic Development\nOur developers work with AI agents, not just autocomplete.\nYou should be able to:\nDrive a coding agent such as Claude Code or similar through a real task in an existing codebase: scoping the work, feeding it the right context, and reviewing what comes back with the same skepticism you'd apply to a junior's PR\nWrite and maintain the project scaffolding agents depend on, including CLAUDE.md / AGENTS.md files, custom commands, and MCP configs, so the whole team benefits, not just you\nRecognize the failure modes: confidently wrong migrations, tests written to pass rather than to test, silently dropped edge cases, quietly growing duplication\nKnow when not to reach for an agent. A subtle race condition or a payment reconciliation bug is usually faster to reason about yourself\nWe're pragmatic about this: we care that you ship correct, maintainable code faster, not which tool got you there\nNice to Have\nFastAPI, async Django, WebSockets/Channels\nPayment gateway experience with KNET, Ottu, Tap, MyFatoorah, or similar, including refunds, reconciliation, and webhook replay\nExperience with Arabic-language products or GCC clients\nSQL for analytics, exports, scheduled reports\nOn-prem or air-gapped deployment. Some of our products ship to client infrastructure\nOpen-source contributions or a code portfolio we can read\nNote: This is a strictly on-site position based in Lahore, Pakistan. Only apply if you are willing and available to work from our Lahore office.\nHow to Apply\nEmail your CV to info@logicsdrive.com with the subject line \"Full-Stack Django Developer\". Include a link to your GitHub or any code we can read.",
-          "source_url": ""
-        }
-      },
-      "https://www.linkedin.com/jobs/view/4489785394": {
-        "fetched_at": "2026-11-18T11:53:15.636249+00:00",
-        "payload": {
-          "description": "Company Description Dune AI builds robots for warehouse automation. We’re preparing to launch our first product and are hiring a recent graduate (class of 2026) who can help optimize the system while working on customer deployments.\nWhat you’ll do\nWrite and maintain C++ software that runs on our robots, from low-level hardware interfaces to higher-level control logic.\nIntegrate and deploy our robotic system at client facilities.\nWork closely with mechanical and electrical engineers on a small team.\nWhat we’re looking for\nA degree in Computer Science, AI, Electrical Engineering, Mechatronics, or a related field.\nVery strong C/C++ experience through projects, internships, or competitions such as ICPC.\nA solid grasp of object-oriented design.\nHonesty, humility, and a desire to learn and improve every day.\nA desire to help Pakistan through volunteer work, supporting our university RoboCup program.\nWhat we’re NOT looking for\n100% vibe coders.\nNice to have\nEmbedded experience with microcontrollers like STM32, RTOS, or communication protocols (CAN, SPI, TCP/UDP).\nFamiliarity with Linux, Git, and Python.\nStrong mathematical background (linear algebra/probability)",
-          "source_url": ""
-        }
-      },
-      "https://www.linkedin.com/jobs/view/4490435346": {
-        "fetched_at": "2026-11-18T11:53:15.636249+00:00",
-        "payload": {
-          "description": "Job Title: Backend Engineer, Data & Integrations\nCompany: Solen Software Group\nLocation: Karachi/Lahore, Pakistan\nEmployment Type: Full-time, Contract\nAbout Solen\nSolen Software Group is a long-term owner and operator of mission-critical B2B software companies. We acquire proven, profitable businesses and partner with their teams to build lasting market leaders. Unlike traditional private equity firms, Solen invests with permanent capital: we buy to keep, not to sell.\nAbout The Role\nAs our Backend Engineer, Data & Integrations, you will own the integrations and data foundations behind our AI platform: connecting the sources our research, M&A and operations teams rely on, organizing that information, and making sure it is accurate and available to the right people.\nWe want to start with what our first workflows need, not with a large data warehouse. What we learn from those workflows will tell us which warehouse and reporting capabilities we actually need, and you will help decide and build them.\nKey Responsibilities\nFirst priorities\nConnect the sources needed for our first research and M&A workflows, such as public datasets (for example US Census, BLS and SEC EDGAR), paid data providers, our CRM and internal documents.\nOrganize that information so it is consistent, accurate and easy to use, with clear definitions of what a company, industry, deal or person means.\nMake sure each person and agent can access only the data they are allowed to see.\nIntegrations\nBuild and maintain integrations through APIs, webhooks and connectors, including tools such as Salesforce, Slack, Microsoft 365 and data providers.\nBring meeting transcripts, emails and documents into a shared, searchable store, applying the team's permission and redaction rules.\nExtract structured data from PDFs, spreadsheets and call transcripts, using LLM-assisted pipelines where they help.\nLater, connect the accounting, ERP and operating systems of the companies we acquire through a standard approach.\nData quality and foundations\nClean and link messy records across sources, including the relationships between industries, suppliers, customers and acquirers.\nAdd automated data quality checks and alerts so problems are caught before they reach a decision.\nAs needs become clear, design the warehouse, data model and reporting the team needs, sized for today with room to grow.\nEngineering practice\nWrite well-tested, versioned code in Git, with monitoring for every integration.\nFollow good security practice for credentials, access and sensitive data.\nDocument sources, integrations and definitions so others can use the data without help.\nKey Requirements\nBachelor's degree in Computer Science, Engineering, Mathematics or a related field.\n3 or more years of backend or data software engineering in production.\nStrong Python and SQL.\nExperience building and maintaining API integrations (REST, webhooks, authentication) with third-party systems.\nExperience working with messy, incomplete data from many sources and making it reliable.\nWorking knowledge of a cloud platform (AWS, GCP or Azure) and Git.\nAn AI-first way of working: you use coding agents such as Claude Code or Codex every day.\nComfortable working with financial data, such as P&L, balance sheet, customer and transaction data.\nClear written and spoken English.\nEmployment Type: Independent Contractor\nNice to have\nExperience with a cloud data warehouse (for example Postgres, BigQuery or Snowflake), a transformation tool such as dbt or an orchestrator such as Airflow, Dagster or Prefect.\nExperience building dashboards in Power BI, Tableau or a similar tool.\nExperience with document extraction, LLM-assisted pipelines or MCP servers.\nExperience with data in banking, financial services or another regulated industry.\nExperience with graph databases.\nWhat Will Set You Apart\nWe are looking for a strong engineer who takes pride in data that people can trust and wants to build foundations that last.\nOwner: you treat every integration and data source as your system and keep it clean, documented and reliable.\nPragmatic: you build what the current workflows need, not the most complex version, and design it so it can grow.\nCareful with detail: you check your numbers, catch errors early and flag issues before someone else finds them.\nBusiness-minded: you want to understand how the data is used in a deal or a board report, not only how it moves.\nSolen-isms (How We Operate)\nOwnership Mindset: We own the mission. We don't wait to be told. We lead, fix, and build as if it were ours. When problems arise, we run toward them, not away.\nBenchmark to Best: We seek out excellence. We measure ourselves against the best and adapt quickly, always looking for the edge that moves us forward.\nOpenly Self-Critical: Leaders go first: they surface their misses early, ask for direct feedback, and turn “game film” into better decisions and better systems.\nDisagree & Commit: Leaders disagree openly and constructively, regardless of title or tenure, because truth is how we avoid bureaucracy and benchmark to best.\nFigureitoutiveness: Embracing challenges, fostering growth, and taking initiative, leaders thrive on hard work and high failure tolerance.\nMutual Elevation: Committed to growth, elevating teams, developing future leaders, and removing barriers to mastery and joy.\nLearn-it-alls: Learn-it-alls, not know-it-alls, embracing failure as part of growth and progress.\nPioneering: Pioneering driven by opportunity, using first principles thinking and unbound by tradition or rules.\nWill to Win: Leaders relentlessly pursue potential, reject mediocrity, and get what they tolerate.\nDialectical: We learn through conversation. We ask, listen, question, and evolve — valuing disagreement as a tool for alignment and deeper understanding.\nFrugality: Achieving more with less, focusing on quality, long-term value, and company-wide responsibility.\nCandor: We communicate with integrity, transparency, and respect in all conversations.\nKaizen: Kaizen is continuous improvement as a way of life. Leaders make hundreds of small upgrades that compound, turning lessons into standards and standards into durable systems.\nRecruitment Disclaimer\nSolen Software Group will never request payment, banking information, or other sensitive personal or financial details during any stage of the recruitment process. All official communication will come from a verified @solensoftwaregroup.com email address. Any outreach outside these standards should be disregarded and reported through our official channels.\nWe thank all applicants for their interest in joining Solen Software Group. Only candidates selected for an interview will be contacted.",
-          "source_url": ""
-        }
-      },
-      "https://www.linkedin.com/jobs/view/4490724970": {
-        "fetched_at": "2026-11-18T11:53:15.636249+00:00",
-        "payload": {
-          "description": "Experience Required: 6 8 Years\nWork Authorization: U.S. Citizenship Required\nJob Summary\nWe are seeking an experienced Full-Stack AI Developer with strong expertise in React, Next.js, TypeScript, Node.js, NestJS, and Snowflake to design, develop, and maintain scalable, enterprise-grade web applications integrated with modern data platforms and Generative AI technologies. The ideal candidate will have hands-on experience developing end-to-end applications, including frontend interfaces, backend APIs, database architecture, and AI-powered features. This role requires strong software engineering fundamentals, advanced SQL capabilities, and the ability to integrate AI services such as Snowflake Cortex Analyst and Claude API into enterprise applications.\nThe successful candidate will independently manage the complete application development lifecycle, from data modeling and backend integration to frontend implementation, deployment, performance optimization, and ongoing enhancements.\nKey Responsibilities\nFull-Stack Application Development\nDesign, develop, and maintain scalable full-stack web applications using React, Next.js, and TypeScript.\nBuild responsive, reusable, and maintainable frontend components following modern web development practices.\nDevelop robust backend applications and services using Node.js and NestJS.\nImplement RESTful APIs to support seamless communication between frontend applications and backend services.\nDevelop modular application architectures with clear separation between presentation, business logic, API, and data layers.\nBuild new application features and enhance existing platforms based on evolving business requirements.\nApply software engineering best practices, including clean code, automated testing, documentation, and version control.\nSnowflake Data Engineering & Optimization\nDesign, develop, and optimize Snowflake-based data models supporting enterprise applications and analytics.\nWrite advanced Snowflake SQL queries involving complex joins, Common Table Expressions (CTEs), views, and Dynamic Tables.\nDevelop efficient data access patterns and optimize SQL queries for performance, scalability, and cost efficiency.\nCreate and maintain Snowflake views and transformation logic to support application requirements.\nIntegrate Snowflake datasets with backend services and APIs.\nImplement data validation, data consistency checks, and performance monitoring.\nSupport data ingestion and transformation workflows involving enterprise data sources.\nGenerative AI & Intelligent Application Development\nDesign and integrate AI-powered capabilities into enterprise web applications.\nDevelop natural-language data interaction and analytics features using Snowflake Cortex Analyst.\nIntegrate Large Language Model (LLM) APIs, including Claude API, into backend services and user-facing applications.\nImplement AI-assisted querying, data interpretation, intelligent search, and workflow automation capabilities.\nDevelop secure and reliable communication between AI services, application APIs, and enterprise datasets.\nEnsure AI-generated outputs are appropriately validated, grounded in reliable enterprise data, and presented through intuitive interfaces.\nEvaluate and optimize AI integrations for response quality, latency, reliability, and cost.\nBackend Engineering & API Development\nDevelop scalable backend services using Node.js, NestJS, and TypeScript.\nDesign, implement, and optimize REST APIs for application and data integration.\nImplement Redis caching to improve API response times and application performance.\nDevelop authentication, authorization, request validation, and error-handling mechanisms.\nIntegrate backend applications with Snowflake, external APIs, and other enterprise systems.\nApply security, performance optimization, and reliability best practices across backend services.\nDevOps, Deployment & Application Maintenance\nContainerize applications and supporting services using Docker and Docker Compose.\nSupport application deployment, configuration management, and environment setup.\nWork effectively within monorepo development environments.\nCollaborate with development, product, data engineering, and business teams.\nTroubleshoot application defects, API integration issues, and performance bottlenecks.\nParticipate in code reviews, technical design discussions, and continuous improvement activities.\nMaintain technical documentation covering application architecture, APIs, deployment procedures, and operational support.\nRequired Qualifications\nBachelor's degree in Computer Science, Software Engineering, Information Technology, or a related discipline, or equivalent professional experience.\n6 8 years of hands-on full-stack software development experience.\nStrong proficiency in React, Next.js, and TypeScript for modern frontend application development.\nExtensive experience developing backend services using Node.js and NestJS.\nStrong hands-on experience with Snowflake SQL, including complex CTEs, joins, views, Dynamic Tables, and query optimization.\nExperience designing, developing, integrating, and optimizing RESTful APIs.\nHands-on experience implementing Redis caching for application performance optimization.\nProficiency with Docker and Docker Compose for containerized development and deployment.\nStrong understanding of modern full-stack application architecture and software design principles.\nExperience working within monorepo environments.\nSolid understanding of relational databases, data modeling, and application data integration.\nAbility to independently deliver end-to-end technical solutions, from database design and backend development to frontend implementation.\nStrong analytical, debugging, troubleshooting, and problem-solving skills.\nExcellent written and verbal communication skills.\nAbility to collaborate effectively with cross-functional teams while independently managing development tasks.\nU.S. Citizenship is mandatory.\nPreferred Qualifications\nHands-on experience with Snowflake Cortex, Cortex Analyst, or related Snowflake AI capabilities.\nExperience integrating Generative AI models and LLM APIs, particularly Claude API.\nFamiliarity with LangGraph, AI agents, and agentic workflow orchestration.\nExperience designing ETL/ELT pipelines and enterprise data ingestion workflows.\nKnowledge of SharePoint data integration and CSV-based ingestion processes.\nFamiliarity with Salesforce data models, Account IDs, object relationships, and CRM data integration.\nExperience with AWS services, particularly EC2 and AWS Secrets Manager.\nUnderstanding of AI-powered analytics, natural-language querying, and intelligent application features.\nExperience implementing automated testing, CI/CD pipelines, and cloud-based application deployment.\nKnowledge of application monitoring, API observability, and performance tuning.\nCore Technical Skills\nFrontend: React.js, Next.js, TypeScript, JavaScript, Responsive Web Development\nBackend: Node.js, NestJS, REST APIs, API Integration, Redis\nDatabase & Data Engineering: Snowflake, Snowflake SQL, Dynamic Tables, Views, CTEs, Query Optimization, Data Modeling\nGenerative AI: Snowflake Cortex, Cortex Analyst, Claude API, LLM Integration, AI-Powered Applications\nDevOps & Deployment: Docker, Docker Compose, Git, Monorepo Architecture\nCloud & Integration: AWS, EC2, Secrets Manager, SharePoint, Salesforce\nAdditional Technologies: LangGraph, AI Agents, ETL/ELT, CSV Ingestion, CI/CD\nExpected Outcomes\nDevelop reliable, maintainable, and scalable full-stack applications with well-defined frontend, backend, and data architectures.\nDeliver high-performance backend APIs and optimized Snowflake queries supporting enterprise workloads.\nIntegrate practical AI-powered features that improve application functionality, data accessibility, and user productivity.\nMaintain strong application performance through efficient caching, query optimization, and scalable software architecture.\nEnsure software solutions follow modern engineering, security, testing, and maintainability standards.\nDeliver complete, production-ready solutions with minimal supervision.\nIdeal Candidate Profile\nThe ideal candidate is a hands-on Full-Stack AI Developer with a proven track record of building enterprise web applications using React, Next.js, TypeScript, Node.js, NestJS, and Snowflake .\nThe candidate should demonstrate strong end-to-end development capabilities, advanced Snowflake SQL skills, proficiency in REST API development, and experience integrating modern Generative AI technologies into practical business applications.\nExperience with Snowflake Cortex Analyst, Claude API, Redis, Docker, and enterprise data integration will be highly advantageous.",
-          "source_url": ""
-        }
-      }
-    },
-    "updated_at": "2026-11-18T11:53:15.636249+00:00"
+    "entries": {},
+    "updated_at": "2026-11-18T20:40:08.746228+00:00"
   },
   "cache:posts": {
     "entries": {
-      "https://www.linkedin.com/posts/aitomic-jobs_salesforce-developer-activity-7526513434201436160-TcH1": {
-        "fetched_at": "2026-11-18T11:54:55.914542+00:00",
+      "https://pe.linkedin.com/posts/js-investments-limited_position-senior-dot-net-developer-location-activity-7212353489551712261-Igb4": {
+        "fetched_at": "2026-11-18T20:40:09.105527+00:00",
         "payload": {
           "status": "active",
-          "text": "Opportunity alert: Salesforce Developer\n\nSalesforce Developer at myob-2. We’re a leading business management solution with a core purpose: helping more businesses in Australia and New Zealand start, survive and succeed. At MYOB, we believe what’s good for one business is good for all business—and for all…\n\nKey details\nOrganization: myob-2\nOpportunity type: Job\nSector: Information Technology\nLocation: Melbourne, Australia, Australia\nWork mode: Hybrid\nDeadline: Deadline not specified\nCompensation: Not specified\n\nWho should consider this\n5+ years of hands-on Salesforce development experience, with strong capability across Apex, LWC, Flows, Triggers and API integrations. Demonstrated experience across Sales Cloud and Service Cloud, with Experience Cloud and Platform Events experience highly regarded. Strong experience integrating Salesforce with external platforms using REST/SOAP APIs...\n\nWhat to review on Aitomic Jobs\nFull description, responsibilities or submission instructions, eligibility requirements, benefits or compensation notes, and the official source link.\n\nFull details and official application link\nhttps://lnkd.in/d63fHZc8\n\n#AitomicJobs #Opportunities #CareerOpportunity #Jobs #Hiring #Technology #Australia",
-          "posted_at": "2026-11-12T05:17:18.570Z"
+          "text": "Position: Senior Dot Net Developer\n\nLocation: Karachi\n\nJob Role Summary:\nAs a Senior Dot NET Developer, you will be supporting the development and maintenance of software solutions tailored to the specific needs of asset management operations. You will work closely with teams to understand business requirements and translate them into functional software components.\n \nKey Responsibilities:\n- Design, code, test and manage various applications.\n\n- Follow outlined standards of quality related to code and systems.\n\n- Develop automated tests and conduct performance-tuning.\n\n- Developing web-based applications in .NET, Angular, C#, HTML, JavaScript, ASP.\n\n- Working with MS SQL Server and MySQL. \n\nEducation:\nBachelor's degree in Computer Science or relevant field.\n\nExperience:\n4 to 5 years of experience utilizing the .NET software framework.\nInterested candidates can apply at careers@jsil.com mentioning “Senior Dot Net Developer” in the email subject line.",
+          "posted_at": "2024-06-28T07:17:50.918Z"
         }
       },
-      "https://www.linkedin.com/posts/haluk-sayar-34635811_cop31-zeroemissionmobility-cop31-share-7524444889644871680-0YvB": {
-        "fetched_at": "2026-11-18T11:54:55.914542+00:00",
+      "https://www.linkedin.com/posts/aimnode-technologies_job-title-nodejs-developer-location-karachi-activity-7176828931122053120-mDsE": {
+        "fetched_at": "2026-11-18T20:40:09.105527+00:00",
         "payload": {
           "status": "active",
-          "text": "At COP31, our panel From Climate Targets to Market Deployment: Scaling Zero-Emission Mobility Across Markets will explore how different markets can accelerate the rollout of zero-emission mobility.\n📅 10 November 2026, 13:30–14:15\n📍 Türkiye Pavilion, Room 3, Blue Zone\nAttendance requires COP31 Blue Zone accreditation.\n#COP31 #ZeroEmissionMobility \n \nChris Heron, Ioana Petcu, Feng An, Ph.D., Michiel Langezaal, Kristian Ruby, E-Mobility Europe, Avrasya E-Mobilite Derneği (Eski isim AVERE), Turkish Association for Energy Economics / Enerji Ekonomisi Derneği, International Association for Energy Economics",
-          "posted_at": "2026-11-06T12:17:39.424Z"
+          "text": "Job Title: Node.js Developer\nLocation: Karachi\nCompany: AimNode Technologies\nJob Type: Full-time\n\nJob Description:\nWe are seeking a talented Node.js Developer to join our team. As a Node.js Developer, you will be responsible for designing and implementing server-side web application logic, as well as integrating user-facing elements developed by front-end developers. You should have a strong understanding of JavaScript and asynchronous programming. The ideal candidate is passionate about building scalable, high-performance web applications using Node.js and related technologies.\n\nResponsibilities:\n- Develop and maintain server-side logic using Node.js\n- Design and implement RESTful APIs for web services\n- Collaborate with front-end developers to integrate user-facing elements with server-side logic\n- Optimize application performance for maximum speed and scalability\n- Implement security and data protection measures\n- Write clean, maintainable, and testable code\n- Stay up-to-date with emerging technologies and best practices\n\nRequirements:\n- Proven experience as a Node.js Developer or similar role\n- Strong proficiency in JavaScript and asynchronous programming\n- Experience with Node.js frameworks such as Express.js or Koa.js\n- Knowledge of database technologies such as MongoDB, MySQL, or PostgreSQL\n- Familiarity with front-end technologies such as HTML, CSS, and JavaScript\n- Experience with version control systems (e.g., Git)\n- Excellent problem-solving and communication skills\n- Bachelor's degree in Computer Science, Engineering, or a related field (preferred)\n\nHow to Apply:\nInterested candidates should submit their resume, along with a cover letter detailing their relevant experience and why they are a good fit for the position. Please also include links to any relevant portfolios or projects. Applications can be sent to devawaisdeveloper@gmail.com with the subject line \"Node.js Developer.\"",
+          "posted_at": "2024-03-22T06:35:56.173Z"
         }
       },
-      "https://www.linkedin.com/posts/jawahar-sridharan-6ba77698_paypal-paypalcareers-internship-share-7524433711875014656-lK67": {
-        "fetched_at": "2026-11-18T11:54:55.914542+00:00",
+      "https://www.linkedin.com/posts/global-jobs-opportunity_front-end-developer-nextjs-location-activity-7515724297680809985-NZIl": {
+        "fetched_at": "2026-11-18T20:40:09.105527+00:00",
         "payload": {
           "status": "active",
-          "text": "Hello People!  \n\n\n🔵 𝗣𝗮𝘆𝗣𝗮𝗹 𝗜𝗻𝗱𝗶𝗮 | 𝟮𝟬𝟮𝟳 𝗜𝗻𝘁𝗲𝗿𝗻𝘀𝗵𝗶𝗽𝘀\n\n📢 Applications will be open from November 9–16, 2026.\n\n🎓 𝗘𝗹𝗶𝗴𝗶𝗯𝗶𝗹𝗶𝘁𝘆\n• Pursuing a bachelor’s or PhD degree at an accredited Indian institution\n• Graduating in 2028\n• Master’s students are not eligible at this time\n• Internship duration: 3 months\n\n\n🔗 Eligible students can explore opportunities on the PayPal Careers – University Hiring site.\nPlease note that referrals are very limited.\n\n\n#PayPal #PayPalCareers #Internship #UniversityHiring #Students #CareerOpportunities",
-          "posted_at": "2026-11-06T11:33:14.420Z"
+          "text": "🚀 Front-End Developer (Next.js)\n📍 Location: Near Jail Chowrangi, Karachi\nWork Arrangement: On-site\n💼 Job Type: Full-Time\n💰 Salary: Negotiable\nPosted: 2026-10-13\n\n🔗 Full details: https://lnkd.in/dH8JtUTf",
+          "posted_at": "2026-10-13T10:45:07.970Z"
         }
       },
-      "https://www.linkedin.com/posts/jensen-huang-in-the-matrix-learning-how-ugcPost-7526476851985211392-OLOm": {
-        "fetched_at": "2026-11-18T11:54:55.914542+00:00",
+      "https://www.linkedin.com/posts/hafiz-muhammad-saad-hr_hiring-frontend-engineer-react-nextjs-share-7518337823704346624-jjte": {
+        "fetched_at": "2026-11-18T20:40:09.105527+00:00",
         "payload": {
           "status": "active",
-          "text": "Jensen Huang in the Matrix, learning how Chinese spies work\n\nWait till the end👀\n\nMade with AI by Arminn_Ai\n▌Editor’s Note —\nMazhar Pasha\n6:08 AM · Nov 12, 2026",
-          "posted_at": ""
+          "text": "Hiring: *Frontend Engineer* (React / Next.js / TypeScript) \n📍 Employment Type: Full-Time \n💼 Experience Required: 4+ Years \n Location: *Karachi (Hybrid/Remote)* \n\nAbout the Role\n Were looking for a highly skilled Frontend Engineer with deep expertise in React, Next.js, and TypeScript to help build fast, accessible, and scalable web applications. In this role, you'll take ownership of features from concept to deployment, collaborating closely with product, design, and backend teams to deliver exceptional user experiences.\n Key Responsibilities\n✅ Build and maintain production-grade applications using React, Next.js, and TypeScript ✅ Design reusable, scalable, and well-tested frontend architectures \n✅ Implement SSR, SSG, and ISR using the Next.js App Router \n✅ Integrate REST and GraphQL APIs while managing client/server state efficiently \n✅ Optimize applications for performance, accessibility (WCAG), and SEO\n✅ Convert Figma designs into pixel-perfect, responsive user interfaces \n✅ Write unit, integration, and end-to-end tests and participate in code reviews \n✅ Contribute to CI/CD pipelines and frontend tooling improvements\n\n Required Qualifications \n✔ 4+ years of professional frontend development experience \n✔ Expert-level proficiency in React and modern JavaScript (ES6+) \n✔ Strong hands-on experience with TypeScript in production environments \n✔ Extensive experience with Next.js (App Router, routing, rendering strategies, data fetching) \n✔ Solid understanding of state management tools such as Redux Toolkit, Zustand, and TanStack Query (React Query) \n✔ Experience with Tailwind CSS, CSS Modules, or CSS-in-JS solutions\n ✔ Proficiency with Git and collaborative development workflows \n✔ Experience with testing frameworks such as Jest, React Testing Library, Cypress, or Playwright \n\nNice to Have \n➕ Experience working with monorepos (Turborepo, Nx) \n➕ Familiarity with Node.js and full-stack development \n➕ Knowledge of design systems and component libraries (Radix UI, shadcn/ui, MUI) \n➕ Experience with GraphQL (Apollo, urql) \n➕ Exposure to cloud platforms such as Vercel or AWS and observability tools\n\n How to Apply \nSend your resume to afshan.iqbal@conurets.com\n\n🚀 Daily Jobs | ATS Resume Tips | Interview Guidance\n🔹 LinkedIn: https://lnkd.in/dpy2K9zr\n🔹 Facebook: https://lnkd.in/dMa_nRid\n🔹 WhatsApp:https://lnkd.in/dYhFB_2Z",
+          "posted_at": "2026-10-20T15:50:21.589Z"
         }
       },
-      "https://www.linkedin.com/posts/josephcass_breaking-brookfield-announces-huge-27-billion-share-7523323322541969408-zmpB": {
-        "fetched_at": "2026-11-18T11:54:55.914542+00:00",
+      "https://www.linkedin.com/posts/karachi-jobsz_hiring-full-stack-web-developer-key-responsibilities-activity-7495034246613573632-U4Tb": {
+        "fetched_at": "2026-11-18T20:40:09.105527+00:00",
         "payload": {
           "status": "active",
-          "text": "BREAKING: Brookfield announces HUGE $27 BILLION AI data centre project in the UK! \n\nBrookfield has partnered with British energy company Drax Group and AI business Radiant to develop one of the UK’s largest AI data centres at Drax Power Station in the north of England. \n\nBloomberg reports that the project could attract more than $27 Billion billion in investment, with an initial $3.3 Billion planned for the first phase, backed by Brookfield’s partnership with the Qatar Investment Authority.\n\nThe idea is to build the data centre alongside an existing power station, giving it access to the enormous amounts of electricity needed to run AI technology. Drax CEO Will Gardiner said: “If constructed in full, this project could become one of the largest data centres in the UK.” Brookfield's Connor Teskey recently said of AI infrastructure: \"there is no shortage of capital - and there is no shortage of demand.\"\n\nBig news for European AI infrastructure!\n\nFollow Joseph Cass for finance news and insights.",
-          "posted_at": "2026-11-03T10:00:57.048Z"
+          "text": "Hiring: Full-Stack Web Developer\n\nKey Responsibilities:\n\nDevelop modern, responsive web applications using React.js / Next.js\nBuild scalable backend services and RESTful / GraphQL APIs (Node.js or Python/FastAPI)\nIntegrate AI/ML model APIs and manage inference endpoints\nDesign and maintain relational and NoSQL databases (PostgreSQL, MongoDB)\nSet up and maintain CI/CD pipelines (GitHub Actions, Docker, Kubernetes)\nDeploy and manage cloud infrastructure on AWS, GCP, or Azure\nImplement authentication, authorization, and security best practices\nMonitor application performance, uptime, and optimize for Core Web Vitals\nUse AI app builders (Lovable, Replit, v0) to rapidly prototype and scaffold new web features\n\nRequirements:\n\n3+ years of full-stack web development experience\nProficiency in React.js and at least one backend framework (Node.js/Express or Python/FastAPI)\nSolid understanding of databases, data modeling, and query optimization\nExperience with containerization (Docker) and basic Kubernetes orchestration\nFamiliarity with cloud services: storage, serverless functions, and managed databases\nUnderstanding of web security: OWASP Top 10, OAuth 2.0, JWT\nDemonstrated hands-on proficiency with AI development tools: Claude, Gemini, ChatGPT, Cursor, Lovable, and Replit — portfolio evidence required\n\nLocation: Korangi Industrial Area, Karachi.\nApply now by sending your CV to: hr.talent@ideas.com.pk",
+          "posted_at": "2026-08-17T08:30:15.340Z"
         }
       },
-      "https://www.linkedin.com/posts/trmlabs_at-2005-utc-on-october-29-approximately-activity-7521757016516628480-UBCU": {
-        "fetched_at": "2026-11-18T11:54:55.914542+00:00",
+      "https://www.linkedin.com/posts/karachi-jobsz_were-hiring-web-developer-frontend-php-activity-7476920524120604672-0VQx": {
+        "fetched_at": "2026-11-18T20:40:09.105527+00:00",
         "payload": {
           "status": "active",
-          "text": "At 20:05 UTC on October 29, approximately USD 6.36 billion began moving out of Binance wallets across ten blockchains, most of it in about 20 minutes. It is the largest crypto theft on record, roughly four times the Bybit hack of February 2025.\n\nTRM Labs attributes the attack to TraderTraitor, North Korea’s elite state-sponsored hacking unit, based on robust on-chain and off-chain intelligence. The same group was named by the FBI in the Bybit hack, and the staging, the Tornado Cash funding and the pre-signed transactions all match earlier North Korea-linked heists.\n\nThe response has been fast. Tether, Circle, Ripple, World Liberty Financial and Arbitrum’s Security Council have frozen roughly USD 2.7 billion. But the attacker still controls about USD 2.4 billion in assets beyond any issuer’s reach, and is racing to convert and move them.\n\nTRM continues to work with Binance and the Beacon Network to track the funds and alert partners in real time. The story is still developing, and we will share more as the investigation unfolds.\n\nRead our full analysis: https://lnkd.in/e-9KjvPB",
-          "posted_at": "2026-10-30T02:17:00.224Z"
+          "text": "We're Hiring: Web Developer (Frontend + PHP / Next.js)\n\nPARADIGM DIGITAL SOLUTIONS (PVT) LTD is looking for a skilled Web Developer to build, maintain, and keep our websites running in top shape.\n\nIf you write clean code, care about performance, and like owning a site end-to-end, we'd love to hear from you.\n\nWhat we're looking for:\nStrong hands-on experience with HTML and CSS\nSolid PHP development skills\nProven experience with Next.js (and React, which it's built on)\nExperience with site health management diagnosing and fixing technical issues, performance monitoring, and general upkeep\nAttention to detail and a problem-solving mindset\nAbility to work independently and meet deadlines\n\n📍 Location: DMCHS, Karachi (Onsite)\n🕘 Shift Timing: 8:00 PM – 5:00 AM\n🏢 Job Type: Onsite, Full-time\n\nSend your resume and portfolio to hr@paradigmdigitals.com",
+          "posted_at": "2026-06-28T08:52:47.387Z"
+        }
+      },
+      "https://www.linkedin.com/posts/pakistan-it-jobs_hiring-backend-developer-nodejs-karachi-activity-7389224553194881024-m6qX": {
+        "fetched_at": "2026-11-18T20:40:09.105527+00:00",
+        "payload": {
+          "status": "active",
+          "text": "Hiring: Backend Developer (Node.js) – Karachi, Onsite\nWe’re looking for a passionate Backend Developer with strong expertise in Node.js to join our growing tech team in Karachi.\n\nWhat We’re Looking For:\n2+ years of hands-on experience with Node.js & Express.js\nStrong understanding of APIs, RESTful services & database design (MongoDB/MySQL)\nExperience with version control (Git)\nProblem-solving mindset & teamwork attitude\n\nWhat You’ll Do:\nBuild and maintain scalable backend systems\nCollaborate with frontend and mobile teams\nOptimize APIs for performance and security\n\n📍 Location: Karachi (Onsite)\n 🕒 Job Type: Full-time\nsend your cv at : hr@asoratech.com",
+          "posted_at": "2025-10-29T09:00:18.607Z"
+        }
+      },
+      "https://www.linkedin.com/posts/sherin-lee-joseph_hiring-angular-developer-nodejs-nextjs-activity-7463223113414168577-lRUk": {
+        "fetched_at": "2026-11-18T20:40:09.105527+00:00",
+        "payload": {
+          "status": "active",
+          "text": "Hiring: Angular Developer | Node.js | Next.js\nLocation: Karachi, Pakistan\nExperience: 4–6 Years\nJob Type: Full-Time\n\nWe are looking for a talented Angular Developer with strong experience in Node.js and Next.js to join our growing development team.\n\nRequired Skills:Angular,Node.js,Next.js,TypeScript\nREST APIs,MongoDB / PostgreSQL,Git\n\nResponsibilities: \nBuild scalable web applications\nDevelop responsive frontend interfaces\nCreate backend APIs using Node.js\nCollaborate with designers and developers\nOptimize application performance and scalability\n\nInterested candidates can apply - DM/email(sherin_lee@mvisionit.com)",
+          "posted_at": "2026-05-21T13:44:10.171Z"
         }
       }
     },
-    "updated_at": "2026-11-18T11:54:55.914542+00:00"
+    "updated_at": "2026-11-18T20:40:09.105527+00:00"
   },
   "cache:rozee": {
     "entries": {},
-    "updated_at": "2026-11-18T11:54:55.862640+00:00"
+    "updated_at": "2026-11-18T20:40:08.979739+00:00"
   },
   "feed:remotive": {
-    "last_attempt": "2026-11-18T11:55:02.058937+00:00",
-    "last_success": "2026-11-18T11:55:02.058937+00:00",
+    "last_attempt": "2026-11-18T20:40:15.887686+00:00",
+    "last_success": "2026-11-18T20:40:15.887686+00:00",
     "unique": 0,
     "qualified": 0,
     "review": 0,
@@ -143,8 +95,8 @@
     "full_descriptions": 0
   },
   "feed:wwr": {
-    "last_attempt": "2026-11-18T11:55:02.190591+00:00",
-    "last_success": "2026-11-18T11:55:02.190591+00:00",
+    "last_attempt": "2026-11-18T20:40:16.024859+00:00",
+    "last_success": "2026-11-18T20:40:16.024859+00:00",
     "unique": 0,
     "qualified": 0,
     "review": 0,
@@ -155,16 +107,16 @@
     "last_success": "2026-10-29T18:34:25.246089+00:00"
   },
   "health:posts:yahoo": {
-    "last_success": "2026-11-18T11:55:00.492390+00:00"
+    "last_success": "2026-11-18T20:40:15.166251+00:00"
   },
   "jobspy:05a7339ccbca312e": {
-    "last_success": "2026-11-18T01:01:27.736004+00:00",
-    "raw": 4,
-    "unique": 4,
+    "last_success": "2026-11-18T20:37:48.726636+00:00",
+    "raw": 3,
+    "unique": 3,
     "qualified": 0,
     "review": 0,
-    "rejected": 4,
-    "full_descriptions": 4
+    "rejected": 3,
+    "full_descriptions": 3
   },
   "jobspy:0930cd84b775eb4a": {
     "last_success": "2026-11-18T11:50:00.445268+00:00",
@@ -194,13 +146,13 @@
     "full_descriptions": 1
   },
   "jobspy:2ba684532f92b59e": {
-    "last_success": "2026-11-18T01:01:26.409357+00:00",
-    "raw": 1,
-    "unique": 1,
-    "qualified": 0,
+    "last_success": "2026-11-18T20:37:47.354045+00:00",
+    "raw": 3,
+    "unique": 3,
+    "qualified": 1,
     "review": 0,
-    "rejected": 1,
-    "full_descriptions": 1
+    "rejected": 2,
+    "full_descriptions": 3
   },
   "jobspy:2e43096f1b960dff": {
     "last_success": "2026-10-26T20:35:17.257536+00:00",
@@ -221,13 +173,13 @@
     "full_descriptions": 1
   },
   "jobspy:38dac69116d3c76e": {
-    "last_success": "2026-11-18T01:01:41.432838+00:00",
+    "last_success": "2026-11-18T20:38:00.979857+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
-    "review": 6,
-    "rejected": 19,
-    "full_descriptions": 4
+    "review": 7,
+    "rejected": 18,
+    "full_descriptions": 0
   },
   "jobspy:3acd114688309471": {
     "last_success": "2026-10-26T13:16:43.354311+00:00",
@@ -266,12 +218,12 @@
     "full_descriptions": 1
   },
   "jobspy:456ba2f89bffd6b7": {
-    "last_success": "2026-11-18T11:52:50.147674+00:00",
+    "last_success": "2026-11-18T20:39:57.144453+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
-    "review": 2,
-    "rejected": 23,
+    "review": 3,
+    "rejected": 22,
     "full_descriptions": 0
   },
   "jobspy:48eff308264948d5": {
@@ -302,13 +254,13 @@
     "full_descriptions": 25
   },
   "jobspy:5a4a0958f8e32e84": {
-    "last_success": "2026-11-18T11:53:15.636226+00:00",
+    "last_success": "2026-11-18T20:40:08.746206+00:00",
     "raw": 7,
     "unique": 7,
     "qualified": 0,
     "review": 3,
     "rejected": 4,
-    "full_descriptions": 1
+    "full_descriptions": 0
   },
   "jobspy:5aec78d19fa3c488": {
     "last_success": "2026-10-26T20:36:16.273553+00:00",
@@ -329,11 +281,11 @@
     "full_descriptions": 25
   },
   "jobspy:697ca8ca3ab7aa30": {
-    "last_success": "2026-11-18T11:51:57.765577+00:00",
-    "raw": 17,
-    "unique": 17,
+    "last_success": "2026-11-18T20:39:19.712726+00:00",
+    "raw": 16,
+    "unique": 16,
     "qualified": 0,
-    "review": 5,
+    "review": 4,
     "rejected": 12,
     "full_descriptions": 0
   },
@@ -347,13 +299,13 @@
     "full_descriptions": 3
   },
   "jobspy:75a6ec1c92addf72": {
-    "last_success": "2026-11-18T01:01:27.096702+00:00",
-    "raw": 2,
-    "unique": 2,
-    "qualified": 0,
+    "last_success": "2026-11-18T20:37:48.050643+00:00",
+    "raw": 3,
+    "unique": 3,
+    "qualified": 1,
     "review": 0,
     "rejected": 2,
-    "full_descriptions": 2
+    "full_descriptions": 3
   },
   "jobspy:7c683ac77a7891df": {
     "last_success": "2026-10-26T13:11:44.380239+00:00",
@@ -365,13 +317,13 @@
     "full_descriptions": 25
   },
   "jobspy:7d42061eb22bd9e4": {
-    "last_success": "2026-11-18T11:51:30.118803+00:00",
+    "last_success": "2026-11-18T20:39:11.511580+00:00",
     "raw": 25,
-    "unique": 26,
-    "qualified": 1,
-    "review": 4,
-    "rejected": 21,
-    "full_descriptions": 2
+    "unique": 25,
+    "qualified": 0,
+    "review": 5,
+    "rejected": 20,
+    "full_descriptions": 0
   },
   "jobspy:7ea6953079cf86fb": {
     "last_success": "2026-10-26T20:34:06.463297+00:00",
@@ -392,13 +344,13 @@
     "full_descriptions": 2
   },
   "jobspy:88573ab0282308c3": {
-    "last_success": "2026-11-18T11:50:43.340408+00:00",
-    "raw": 25,
-    "unique": 25,
-    "qualified": 1,
+    "last_success": "2026-11-18T20:38:49.952719+00:00",
+    "raw": 23,
+    "unique": 23,
+    "qualified": 0,
     "review": 9,
-    "rejected": 15,
-    "full_descriptions": 1
+    "rejected": 14,
+    "full_descriptions": 0
   },
   "jobspy:8bf5691f934003fc": {
     "last_success": "2026-11-18T11:50:01.224909+00:00",
@@ -410,13 +362,13 @@
     "full_descriptions": 0
   },
   "jobspy:8d3c84c3ef0f70f9": {
-    "last_success": "2026-11-18T11:52:39.419672+00:00",
+    "last_success": "2026-11-18T20:39:42.497661+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
     "review": 3,
     "rejected": 22,
-    "full_descriptions": 1
+    "full_descriptions": 0
   },
   "jobspy:932247cea50b10a7": {
     "last_success": "2026-11-18T11:53:00.759404+00:00",
@@ -446,13 +398,13 @@
     "full_descriptions": 1
   },
   "jobspy:9e2c0f814daaa3ea": {
-    "last_success": "2026-11-18T11:51:19.111413+00:00",
+    "last_success": "2026-11-18T20:39:01.028038+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
-    "review": 1,
-    "rejected": 24,
-    "full_descriptions": 1
+    "review": 0,
+    "rejected": 25,
+    "full_descriptions": 0
   },
   "jobspy:a5e85e1d9cdcef50": {
     "last_success": "2026-10-26T20:41:05.706314+00:00",
@@ -518,13 +470,13 @@
     "full_descriptions": 25
   },
   "jobspy:c1437b145efe8212": {
-    "last_success": "2026-11-18T11:51:58.721687+00:00",
-    "raw": 7,
-    "unique": 7,
-    "qualified": 2,
-    "review": 1,
-    "rejected": 4,
-    "full_descriptions": 2
+    "last_success": "2026-11-18T20:39:20.699283+00:00",
+    "raw": 5,
+    "unique": 5,
+    "qualified": 0,
+    "review": 2,
+    "rejected": 3,
+    "full_descriptions": 0
   },
   "jobspy:c3aa6e77462b7ed1": {
     "last_success": "2026-11-18T11:50:30.352680+00:00",
@@ -536,12 +488,12 @@
     "full_descriptions": 3
   },
   "jobspy:c5d5a60cbbe0b8f3": {
-    "last_success": "2026-11-18T11:52:28.851643+00:00",
-    "raw": 16,
-    "unique": 16,
+    "last_success": "2026-11-18T20:39:31.034849+00:00",
+    "raw": 14,
+    "unique": 14,
     "qualified": 0,
-    "review": 5,
-    "rejected": 11,
+    "review": 4,
+    "rejected": 10,
     "full_descriptions": 0
   },
   "jobspy:c9912c83d071d927": {
@@ -554,13 +506,13 @@
     "full_descriptions": 0
   },
   "jobspy:ca57136b9f3f20eb": {
-    "last_success": "2026-11-18T11:53:14.599626+00:00",
-    "raw": 5,
-    "unique": 5,
+    "last_success": "2026-11-18T20:40:07.906895+00:00",
+    "raw": 4,
+    "unique": 4,
     "qualified": 0,
-    "review": 1,
-    "rejected": 4,
-    "full_descriptions": 1
+    "review": 2,
+    "rejected": 2,
+    "full_descriptions": 0
   },
   "jobspy:d521773e3ff80bc0": {
     "last_success": "2026-10-26T20:32:59.466948+00:00",
@@ -590,31 +542,31 @@
     "full_descriptions": 2
   },
   "jobspy:e658e60cbe1030fc": {
-    "last_success": "2026-11-18T01:01:25.749361+00:00",
+    "last_success": "2026-11-18T20:37:46.670226+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
-    "review": 5,
-    "rejected": 20,
-    "full_descriptions": 1
+    "review": 6,
+    "rejected": 19,
+    "full_descriptions": 0
   },
   "jobspy:ec171cf453203d61": {
-    "last_success": "2026-11-17T16:06:51.581814+00:00",
+    "last_success": "2026-11-18T20:37:08.324653+00:00",
+    "raw": 8,
+    "unique": 8,
+    "qualified": 0,
+    "review": 4,
+    "rejected": 4,
+    "full_descriptions": 0
+  },
+  "jobspy:f0010df233070912": {
+    "last_success": "2026-11-18T20:37:14.069305+00:00",
     "raw": 11,
     "unique": 11,
     "qualified": 0,
     "review": 3,
     "rejected": 8,
-    "full_descriptions": 1
-  },
-  "jobspy:f0010df233070912": {
-    "last_success": "2026-11-17T16:10:19.033199+00:00",
-    "raw": 14,
-    "unique": 14,
-    "qualified": 0,
-    "review": 3,
-    "rejected": 11,
-    "full_descriptions": 1
+    "full_descriptions": 0
   },
   "jobspy:f0d527d9cdc6a307": {
     "last_success": "2026-10-26T13:12:23.628757+00:00",
@@ -635,12 +587,12 @@
     "full_descriptions": 25
   },
   "jobspy:f49db42f7609e800": {
-    "last_success": "2026-11-18T11:50:29.555474+00:00",
+    "last_success": "2026-11-18T20:38:37.098105+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
-    "review": 1,
-    "rejected": 24,
+    "review": 3,
+    "rejected": 22,
     "full_descriptions": 0
   },
   "jobspy:f5643d7891555dcc": {
@@ -653,13 +605,13 @@
     "full_descriptions": 25
   },
   "jobspy:f600aeee834183b4": {
-    "last_success": "2026-11-18T01:02:04.634945+00:00",
+    "last_success": "2026-11-18T20:38:12.057745+00:00",
     "raw": 25,
     "unique": 25,
     "qualified": 0,
-    "review": 2,
-    "rejected": 23,
-    "full_descriptions": 1
+    "review": 3,
+    "rejected": 22,
+    "full_descriptions": 0
   },
   "posts:233b30a94114788547e3": {
     "last_success": "2026-10-27T15:25:02.860779+00:00",
@@ -718,12 +670,12 @@
     "full_descriptions": 0
   },
   "posts:f9b960d1cddb3042871a": {
-    "last_success": "2026-11-17T04:00:03.389941+00:00",
-    "unique": 5,
+    "last_success": "2026-11-18T20:40:13.755659+00:00",
+    "unique": 6,
     "qualified": 0,
     "review": 0,
-    "rejected": 5,
-    "full_descriptions": 5
+    "rejected": 6,
+    "full_descriptions": 6
   },
   "probe:google": {
     "last_attempt": "2026-10-27T18:04:35.114896+00:00",
@@ -736,159 +688,6 @@
   "queue:linkedin_details": {
     "version": 1,
     "entries": {
-      "linkedin:d2344daec37d40c6654b92f5": {
-        "job": {
-          "title": "Frontend (ReactJS) Palantir Foundry’s",
-          "company": "Software Technology Inc.",
-          "location": "New Jersey, USA",
-          "url": "https://www.linkedin.com/jobs/view/4490350542",
-          "platform": "Linkedin",
-          "date_posted": "2026-11-12T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:d2344daec37d40c6654b92f5",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4490350542",
-          "application_url": "",
-          "aliases": [
-            "9b8c7b3d5ff75d4c"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4490350542"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-11-12T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-11-18T11:51:19.111060+00:00",
-          "last_seen_at": "2026-11-18T11:51:19.111062+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:9e2c0f814daaa3ea",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-11-15T16:26:41.685121+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:e49a0c058464a197fed2cd6e": {
-        "job": {
-          "title": "Staff Frontend Engineer",
-          "company": "NewtonX",
-          "location": "USA",
-          "url": "https://www.linkedin.com/jobs/view/4464129206",
-          "platform": "Linkedin",
-          "date_posted": "2026-11-12T00:00:00+00:00",
-          "is_remote": null,
-          "description": "",
-          "job_id": "linkedin:e49a0c058464a197fed2cd6e",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4464129206",
-          "application_url": "",
-          "aliases": [
-            "eca8a867f77e5349"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4464129206"
-          ],
-          "work_mode": "unknown",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-11-12T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:16.707953+00:00",
-          "last_seen_at": "2026-11-18T11:50:16.707955+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:1e542372a7182cd4",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-11-15T16:26:41.685121+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
-      "linkedin:fe217e972275f4bb01b38ad1": {
-        "job": {
-          "title": "Fullstack Software Engineer (Remote)",
-          "company": "Joblet-AI",
-          "location": "USA",
-          "url": "https://www.linkedin.com/jobs/view/4490220933",
-          "platform": "Linkedin",
-          "date_posted": "2026-11-15T00:00:00+00:00",
-          "is_remote": true,
-          "description": "",
-          "job_id": "linkedin:fe217e972275f4bb01b38ad1",
-          "recruiter_email": "",
-          "is_priority_location": false,
-          "source_id": "li-4490220933",
-          "application_url": "",
-          "aliases": [
-            "5dc434ae9789a8a8"
-          ],
-          "source_urls": [
-            "https://www.linkedin.com/jobs/view/4490220933"
-          ],
-          "work_mode": "remote",
-          "description_status": "missing",
-          "job_level": "",
-          "job_type": "",
-          "kind": "vacancy",
-          "source_title": "",
-          "source_description": "",
-          "posted_at": "2026-11-15T00:00:00+00:00",
-          "expires_at": "",
-          "first_seen_at": "2026-11-16T06:39:16.128454+00:00",
-          "last_seen_at": "2026-11-16T06:39:16.128455+00:00",
-          "date_source": "source",
-          "active_status": "unknown",
-          "candidate_locations": "",
-          "salary_min": null,
-          "salary_max": null,
-          "salary_currency": "",
-          "salary_interval": "",
-          "salary_text": "",
-          "salary_source": "unknown",
-          "query_id": "jobspy:f600aeee834183b4",
-          "search_track": "global_remote",
-          "evidence_warnings": [],
-          "decision": {}
-        },
-        "queued_at": "2026-11-15T16:26:41.685121+00:00",
-        "updated_at": "2026-11-16T06:40:06.565369+00:00",
-        "status": "pending",
-        "attempts": 0
-      },
       "linkedin:0ae4da0a0afec3c98a1dc409": {
         "job": {
           "title": "Forward Deployed Engineer (TypeScript + AI) - Remote - USA",
@@ -919,8 +718,8 @@
           "source_description": "",
           "posted_at": "2026-11-12T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:39.419342+00:00",
-          "last_seen_at": "2026-11-18T11:52:39.419343+00:00",
+          "first_seen_at": "2026-11-18T20:39:42.497584+00:00",
+          "last_seen_at": "2026-11-18T20:39:42.497585+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -936,9 +735,11 @@
           "decision": {}
         },
         "queued_at": "2026-11-15T22:56:54.715047+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
-        "attempts": 0
+        "attempts": 1,
+        "last_attempt": "2026-11-18T20:40:08.746228+00:00",
+        "retry_after": "2026-11-18T23:40:08.746228+00:00"
       },
       "linkedin:1481c6179dc5fe0de29fe88a": {
         "job": {
@@ -1378,8 +1179,8 @@
           "source_description": "",
           "posted_at": "2026-11-12T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:39.419042+00:00",
-          "last_seen_at": "2026-11-18T11:52:39.419043+00:00",
+          "first_seen_at": "2026-11-18T20:39:42.497496+00:00",
+          "last_seen_at": "2026-11-18T20:39:42.497496+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -1395,7 +1196,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-15T22:56:54.715047+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -1582,8 +1383,8 @@
           "source_description": "",
           "posted_at": "2026-11-12T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:16.708285+00:00",
-          "last_seen_at": "2026-11-18T11:50:16.708287+00:00",
+          "first_seen_at": "2026-11-18T20:38:25.109288+00:00",
+          "last_seen_at": "2026-11-18T20:38:25.109289+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -1599,7 +1400,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-15T22:56:54.715047+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -1735,8 +1536,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T01:02:04.634446+00:00",
-          "last_seen_at": "2026-11-18T01:02:04.634447+00:00",
+          "first_seen_at": "2026-11-18T20:38:12.057420+00:00",
+          "last_seen_at": "2026-11-18T20:38:12.057421+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -1752,7 +1553,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-16T06:40:06.565369+00:00",
-        "updated_at": "2026-11-18T01:02:47.116527+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -1837,8 +1638,8 @@
           "source_description": "",
           "posted_at": "2026-11-12T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:51:19.110885+00:00",
-          "last_seen_at": "2026-11-18T11:51:19.110887+00:00",
+          "first_seen_at": "2026-11-18T20:39:01.027778+00:00",
+          "last_seen_at": "2026-11-18T20:39:01.027779+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -1854,7 +1655,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-16T06:40:06.565369+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -1888,8 +1689,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:29.555032+00:00",
-          "last_seen_at": "2026-11-18T11:50:29.555033+00:00",
+          "first_seen_at": "2026-11-18T20:38:37.097981+00:00",
+          "last_seen_at": "2026-11-18T20:38:37.097982+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -1905,7 +1706,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-16T06:40:06.565369+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -1939,8 +1740,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:50.146925+00:00",
-          "last_seen_at": "2026-11-18T11:52:50.146927+00:00",
+          "first_seen_at": "2026-11-18T20:39:57.144104+00:00",
+          "last_seen_at": "2026-11-18T20:39:57.144105+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -1956,7 +1757,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-16T06:40:06.565369+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -1990,8 +1791,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T01:02:04.634489+00:00",
-          "last_seen_at": "2026-11-18T01:02:04.634490+00:00",
+          "first_seen_at": "2026-11-18T20:38:12.057456+00:00",
+          "last_seen_at": "2026-11-18T20:38:12.057457+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -2007,7 +1808,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-16T06:40:06.565369+00:00",
-        "updated_at": "2026-11-18T01:02:47.116527+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -2143,8 +1944,8 @@
           "source_description": "",
           "posted_at": "2026-11-16T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:50.146513+00:00",
-          "last_seen_at": "2026-11-18T11:52:50.146515+00:00",
+          "first_seen_at": "2026-11-18T20:38:12.057255+00:00",
+          "last_seen_at": "2026-11-18T20:38:12.057256+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -2154,13 +1955,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:456ba2f89bffd6b7",
+          "query_id": "jobspy:f600aeee834183b4",
           "search_track": "global_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-16T19:42:23.674977+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -2296,8 +2097,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:50.146711+00:00",
-          "last_seen_at": "2026-11-18T11:52:50.146712+00:00",
+          "first_seen_at": "2026-11-18T20:38:12.057587+00:00",
+          "last_seen_at": "2026-11-18T20:38:12.057588+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -2307,13 +2108,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:456ba2f89bffd6b7",
+          "query_id": "jobspy:f600aeee834183b4",
           "search_track": "global_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-16T19:42:23.674977+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -2398,8 +2199,8 @@
           "source_description": "",
           "posted_at": "2026-11-16T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:39.418474+00:00",
-          "last_seen_at": "2026-11-18T11:52:39.418476+00:00",
+          "first_seen_at": "2026-11-18T20:39:42.497208+00:00",
+          "last_seen_at": "2026-11-18T20:39:42.497209+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -2415,7 +2216,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-16T19:42:23.674977+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -2500,8 +2301,8 @@
           "source_description": "",
           "posted_at": "2026-11-16T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:29.554422+00:00",
-          "last_seen_at": "2026-11-18T11:50:29.554423+00:00",
+          "first_seen_at": "2026-11-18T20:38:37.097676+00:00",
+          "last_seen_at": "2026-11-18T20:38:37.097677+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -2517,7 +2318,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-16T19:42:23.674977+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -2551,8 +2352,8 @@
           "source_description": "",
           "posted_at": "2026-11-12T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:16.708010+00:00",
-          "last_seen_at": "2026-11-18T11:50:16.708012+00:00",
+          "first_seen_at": "2026-11-18T20:38:25.109153+00:00",
+          "last_seen_at": "2026-11-18T20:38:25.109154+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -2568,7 +2369,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-16T19:42:23.674977+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -2683,7 +2484,7 @@
           "location": "USA",
           "url": "https://www.linkedin.com/jobs/view/4488870218",
           "platform": "Linkedin",
-          "date_posted": "2026-11-17T00:00:00+00:00",
+          "date_posted": "2026-11-18T00:00:00+00:00",
           "is_remote": null,
           "description": "",
           "job_id": "linkedin:8b64adc57bea1675727e2018",
@@ -2704,10 +2505,10 @@
           "kind": "vacancy",
           "source_title": "",
           "source_description": "",
-          "posted_at": "2026-11-17T00:00:00+00:00",
+          "posted_at": "2026-11-18T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:53:00.758037+00:00",
-          "last_seen_at": "2026-11-18T11:53:00.758039+00:00",
+          "first_seen_at": "2026-11-18T20:40:07.125356+00:00",
+          "last_seen_at": "2026-11-18T20:40:07.125357+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -2723,7 +2524,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-16T19:42:23.674977+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -2808,8 +2609,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:50.146855+00:00",
-          "last_seen_at": "2026-11-18T11:52:50.146857+00:00",
+          "first_seen_at": "2026-11-18T20:39:57.144069+00:00",
+          "last_seen_at": "2026-11-18T20:39:57.144070+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -2825,7 +2626,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-16T19:42:23.674977+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -2910,8 +2711,8 @@
           "source_description": "",
           "posted_at": "2026-11-16T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:29.554481+00:00",
-          "last_seen_at": "2026-11-18T11:50:29.554483+00:00",
+          "first_seen_at": "2026-11-18T20:38:37.097705+00:00",
+          "last_seen_at": "2026-11-18T20:38:37.097706+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -2927,7 +2728,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-16T19:42:23.674977+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -3012,8 +2813,8 @@
           "source_description": "",
           "posted_at": "2026-11-16T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:51:30.117874+00:00",
-          "last_seen_at": "2026-11-18T11:51:30.117876+00:00",
+          "first_seen_at": "2026-11-18T20:38:00.979477+00:00",
+          "last_seen_at": "2026-11-18T20:38:00.979478+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -3023,13 +2824,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:7d42061eb22bd9e4",
+          "query_id": "jobspy:38dac69116d3c76e",
           "search_track": "pakistan_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-16T19:42:23.674977+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 1,
         "last_attempt": "2026-11-18T11:53:15.636249+00:00",
@@ -3167,8 +2968,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:53:00.758901+00:00",
-          "last_seen_at": "2026-11-18T11:53:00.758903+00:00",
+          "first_seen_at": "2026-11-18T20:40:07.125714+00:00",
+          "last_seen_at": "2026-11-18T20:40:07.125715+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -3184,7 +2985,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-16T19:42:23.674977+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -3218,8 +3019,8 @@
           "source_description": "",
           "posted_at": "2026-11-12T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:43.340056+00:00",
-          "last_seen_at": "2026-11-18T11:50:43.340058+00:00",
+          "first_seen_at": "2026-11-18T20:37:22.172178+00:00",
+          "last_seen_at": "2026-11-18T20:37:22.172179+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -3229,13 +3030,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:88573ab0282308c3",
+          "query_id": "jobspy:41e87a037c362f54",
           "search_track": "pakistan_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-16T19:42:23.674977+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -3269,8 +3070,8 @@
           "source_description": "",
           "posted_at": "2026-11-16T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:29.554534+00:00",
-          "last_seen_at": "2026-11-18T11:50:29.554536+00:00",
+          "first_seen_at": "2026-11-18T20:38:37.097734+00:00",
+          "last_seen_at": "2026-11-18T20:38:37.097735+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -3286,7 +3087,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-16T19:42:23.674977+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -3320,8 +3121,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:50.146776+00:00",
-          "last_seen_at": "2026-11-18T11:52:50.146778+00:00",
+          "first_seen_at": "2026-11-18T20:38:12.057487+00:00",
+          "last_seen_at": "2026-11-18T20:38:12.057488+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -3331,13 +3132,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:456ba2f89bffd6b7",
+          "query_id": "jobspy:f600aeee834183b4",
           "search_track": "global_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-17T03:59:55.202430+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -3371,8 +3172,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:29.555082+00:00",
-          "last_seen_at": "2026-11-18T11:50:29.555084+00:00",
+          "first_seen_at": "2026-11-18T20:40:07.125800+00:00",
+          "last_seen_at": "2026-11-18T20:40:07.125801+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -3382,13 +3183,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:f49db42f7609e800",
+          "query_id": "jobspy:932247cea50b10a7",
           "search_track": "global_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-17T03:59:55.202430+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -3422,8 +3223,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:16.707844+00:00",
-          "last_seen_at": "2026-11-18T11:50:16.707846+00:00",
+          "first_seen_at": "2026-11-18T20:38:25.109101+00:00",
+          "last_seen_at": "2026-11-18T20:38:25.109102+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -3439,7 +3240,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-17T03:59:55.202430+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -3473,8 +3274,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:50.147057+00:00",
-          "last_seen_at": "2026-11-18T11:52:50.147059+00:00",
+          "first_seen_at": "2026-11-18T20:38:12.057560+00:00",
+          "last_seen_at": "2026-11-18T20:38:12.057561+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -3484,13 +3285,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:456ba2f89bffd6b7",
+          "query_id": "jobspy:f600aeee834183b4",
           "search_track": "global_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-17T03:59:55.202430+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -3626,8 +3427,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:53:00.759156+00:00",
-          "last_seen_at": "2026-11-18T11:53:00.759158+00:00",
+          "first_seen_at": "2026-11-18T20:40:07.125826+00:00",
+          "last_seen_at": "2026-11-18T20:40:07.125827+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -3643,7 +3444,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-17T03:59:55.202430+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -3677,8 +3478,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:53:00.758985+00:00",
-          "last_seen_at": "2026-11-18T11:53:00.758987+00:00",
+          "first_seen_at": "2026-11-18T20:40:07.125764+00:00",
+          "last_seen_at": "2026-11-18T20:40:07.125765+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -3694,7 +3495,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-17T03:59:55.202430+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -3779,8 +3580,8 @@
           "source_description": "",
           "posted_at": "2026-11-16T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:43.339466+00:00",
-          "last_seen_at": "2026-11-18T11:50:43.339467+00:00",
+          "first_seen_at": "2026-11-18T20:37:46.669856+00:00",
+          "last_seen_at": "2026-11-18T20:37:46.669857+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -3790,13 +3591,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:88573ab0282308c3",
+          "query_id": "jobspy:e658e60cbe1030fc",
           "search_track": "pakistan_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-17T03:59:55.202430+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -3881,8 +3682,8 @@
           "source_description": "",
           "posted_at": "2026-11-16T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:29.554586+00:00",
-          "last_seen_at": "2026-11-18T11:50:29.554587+00:00",
+          "first_seen_at": "2026-11-18T20:38:37.097761+00:00",
+          "last_seen_at": "2026-11-18T20:38:37.097762+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -3898,7 +3699,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-17T03:59:55.202430+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -3932,8 +3733,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:29.554979+00:00",
-          "last_seen_at": "2026-11-18T11:50:29.554981+00:00",
+          "first_seen_at": "2026-11-18T20:38:37.097953+00:00",
+          "last_seen_at": "2026-11-18T20:38:37.097954+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -3949,7 +3750,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-17T03:59:55.202430+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -4034,8 +3835,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:53:00.758839+00:00",
-          "last_seen_at": "2026-11-18T11:53:00.758841+00:00",
+          "first_seen_at": "2026-11-18T20:40:07.125688+00:00",
+          "last_seen_at": "2026-11-18T20:40:07.125689+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -4051,7 +3852,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-17T03:59:55.202430+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -4085,8 +3886,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:39.418743+00:00",
-          "last_seen_at": "2026-11-18T11:52:39.418745+00:00",
+          "first_seen_at": "2026-11-18T20:39:42.497327+00:00",
+          "last_seen_at": "2026-11-18T20:39:42.497328+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -4102,7 +3903,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-17T03:59:55.202430+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -4136,8 +3937,8 @@
           "source_description": "",
           "posted_at": "2026-11-16T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:43.339575+00:00",
-          "last_seen_at": "2026-11-18T11:50:43.339577+00:00",
+          "first_seen_at": "2026-11-18T20:37:22.171913+00:00",
+          "last_seen_at": "2026-11-18T20:37:22.171914+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -4147,13 +3948,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:88573ab0282308c3",
+          "query_id": "jobspy:41e87a037c362f54",
           "search_track": "pakistan_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-17T03:59:55.202430+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -4289,8 +4090,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:29.554804+00:00",
-          "last_seen_at": "2026-11-18T11:50:29.554806+00:00",
+          "first_seen_at": "2026-11-18T20:38:37.097869+00:00",
+          "last_seen_at": "2026-11-18T20:38:37.097870+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -4306,7 +4107,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-17T03:59:55.202430+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -4442,8 +4243,8 @@
           "source_description": "",
           "posted_at": "2026-11-16T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:39.418534+00:00",
-          "last_seen_at": "2026-11-18T11:52:39.418536+00:00",
+          "first_seen_at": "2026-11-18T20:39:42.497236+00:00",
+          "last_seen_at": "2026-11-18T20:39:42.497237+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -4459,7 +4260,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-17T03:59:55.202430+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -4493,8 +4294,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:50.147146+00:00",
-          "last_seen_at": "2026-11-18T11:52:50.147148+00:00",
+          "first_seen_at": "2026-11-18T20:38:12.057531+00:00",
+          "last_seen_at": "2026-11-18T20:38:12.057532+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -4504,13 +4305,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:456ba2f89bffd6b7",
+          "query_id": "jobspy:f600aeee834183b4",
           "search_track": "global_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-17T03:59:55.202430+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -4544,8 +4345,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:29.554862+00:00",
-          "last_seen_at": "2026-11-18T11:50:29.554863+00:00",
+          "first_seen_at": "2026-11-18T20:38:37.097899+00:00",
+          "last_seen_at": "2026-11-18T20:38:37.097900+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -4561,7 +4362,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-17T03:59:55.202430+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -4646,8 +4447,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:39.418804+00:00",
-          "last_seen_at": "2026-11-18T11:52:39.418806+00:00",
+          "first_seen_at": "2026-11-18T20:39:42.497357+00:00",
+          "last_seen_at": "2026-11-18T20:39:42.497358+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -4663,7 +4464,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-17T03:59:55.202430+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -4799,8 +4600,8 @@
           "source_description": "",
           "posted_at": "2026-11-16T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:16.707378+00:00",
-          "last_seen_at": "2026-11-18T11:50:16.707380+00:00",
+          "first_seen_at": "2026-11-18T20:38:25.108900+00:00",
+          "last_seen_at": "2026-11-18T20:38:25.108901+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -4816,7 +4617,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-17T16:10:31.285531+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -4901,8 +4702,8 @@
           "source_description": "",
           "posted_at": "2026-11-16T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:43.339527+00:00",
-          "last_seen_at": "2026-11-18T11:50:43.339528+00:00",
+          "first_seen_at": "2026-11-18T20:37:22.171967+00:00",
+          "last_seen_at": "2026-11-18T20:37:22.171968+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -4912,13 +4713,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:88573ab0282308c3",
+          "query_id": "jobspy:41e87a037c362f54",
           "search_track": "pakistan_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-17T16:10:31.285531+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -5003,8 +4804,8 @@
           "source_description": "",
           "posted_at": "2026-11-17T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:43.339150+00:00",
-          "last_seen_at": "2026-11-18T11:50:43.339152+00:00",
+          "first_seen_at": "2026-11-18T20:37:46.669766+00:00",
+          "last_seen_at": "2026-11-18T20:37:46.669766+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -5014,13 +4815,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:88573ab0282308c3",
+          "query_id": "jobspy:e658e60cbe1030fc",
           "search_track": "pakistan_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-17T16:10:31.285531+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -5105,8 +4906,8 @@
           "source_description": "",
           "posted_at": "2026-11-17T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:29.554060+00:00",
-          "last_seen_at": "2026-11-18T11:50:29.554062+00:00",
+          "first_seen_at": "2026-11-18T20:38:37.097593+00:00",
+          "last_seen_at": "2026-11-18T20:38:37.097594+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -5122,7 +4923,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-17T16:10:31.285531+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -5156,8 +4957,8 @@
           "source_description": "",
           "posted_at": "2026-11-17T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:29.554358+00:00",
-          "last_seen_at": "2026-11-18T11:50:29.554360+00:00",
+          "first_seen_at": "2026-11-18T20:40:07.125500+00:00",
+          "last_seen_at": "2026-11-18T20:40:07.125500+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -5167,13 +4968,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:f49db42f7609e800",
+          "query_id": "jobspy:932247cea50b10a7",
           "search_track": "global_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-17T16:10:31.285531+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -5207,8 +5008,8 @@
           "source_description": "",
           "posted_at": "2026-11-16T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:51:19.110188+00:00",
-          "last_seen_at": "2026-11-18T11:51:19.110190+00:00",
+          "first_seen_at": "2026-11-18T20:39:01.027456+00:00",
+          "last_seen_at": "2026-11-18T20:39:01.027457+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -5224,7 +5025,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-17T16:10:31.285531+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -5309,8 +5110,8 @@
           "source_description": "",
           "posted_at": "2026-11-16T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:16.707325+00:00",
-          "last_seen_at": "2026-11-18T11:50:16.707327+00:00",
+          "first_seen_at": "2026-11-18T20:38:25.108871+00:00",
+          "last_seen_at": "2026-11-18T20:38:25.108872+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -5326,7 +5127,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-17T16:10:31.285531+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -5411,8 +5212,8 @@
           "source_description": "",
           "posted_at": "2026-11-14T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:16.707742+00:00",
-          "last_seen_at": "2026-11-18T11:50:16.707744+00:00",
+          "first_seen_at": "2026-11-18T20:38:25.109045+00:00",
+          "last_seen_at": "2026-11-18T20:38:25.109046+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -5428,7 +5229,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-17T16:10:31.285531+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -5462,8 +5263,8 @@
           "source_description": "",
           "posted_at": "2026-11-12T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:16.708338+00:00",
-          "last_seen_at": "2026-11-18T11:50:16.708340+00:00",
+          "first_seen_at": "2026-11-18T20:38:25.109315+00:00",
+          "last_seen_at": "2026-11-18T20:38:25.109316+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -5479,7 +5280,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-17T16:10:31.285531+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -5564,8 +5365,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:50.147216+00:00",
-          "last_seen_at": "2026-11-18T11:52:50.147218+00:00",
+          "first_seen_at": "2026-11-18T20:38:12.057616+00:00",
+          "last_seen_at": "2026-11-18T20:38:12.057617+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -5575,13 +5376,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:456ba2f89bffd6b7",
+          "query_id": "jobspy:f600aeee834183b4",
           "search_track": "global_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-17T16:10:31.285531+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -5666,8 +5467,8 @@
           "source_description": "",
           "posted_at": "2026-11-17T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:50.146234+00:00",
-          "last_seen_at": "2026-11-18T11:52:50.146237+00:00",
+          "first_seen_at": "2026-11-18T20:39:57.143786+00:00",
+          "last_seen_at": "2026-11-18T20:39:57.143787+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -5683,7 +5484,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-17T16:10:31.285531+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -5819,8 +5620,8 @@
           "source_description": "",
           "posted_at": "2026-11-17T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:43.339218+00:00",
-          "last_seen_at": "2026-11-18T11:50:43.339220+00:00",
+          "first_seen_at": "2026-11-18T20:37:22.171805+00:00",
+          "last_seen_at": "2026-11-18T20:37:22.171806+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -5830,13 +5631,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:88573ab0282308c3",
+          "query_id": "jobspy:41e87a037c362f54",
           "search_track": "pakistan_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-17T16:10:31.285531+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -5870,8 +5671,8 @@
           "source_description": "",
           "posted_at": "2026-11-17T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:53:00.757910+00:00",
-          "last_seen_at": "2026-11-18T11:53:00.757913+00:00",
+          "first_seen_at": "2026-11-18T20:40:07.125443+00:00",
+          "last_seen_at": "2026-11-18T20:40:07.125444+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -5887,7 +5688,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-17T16:10:31.285531+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -5921,8 +5722,8 @@
           "source_description": "",
           "posted_at": "2026-11-16T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:57.072693+00:00",
-          "last_seen_at": "2026-11-18T11:50:57.072695+00:00",
+          "first_seen_at": "2026-11-18T20:37:22.171942+00:00",
+          "last_seen_at": "2026-11-18T20:37:22.171944+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -5938,7 +5739,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-17T16:10:31.285531+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -5972,8 +5773,8 @@
           "source_description": "",
           "posted_at": "2026-11-12T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:43.340152+00:00",
-          "last_seen_at": "2026-11-18T11:50:43.340158+00:00",
+          "first_seen_at": "2026-11-18T20:37:46.670094+00:00",
+          "last_seen_at": "2026-11-18T20:37:46.670095+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -5983,13 +5784,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:88573ab0282308c3",
+          "query_id": "jobspy:e658e60cbe1030fc",
           "search_track": "pakistan_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-18T01:02:47.116527+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -6023,8 +5824,8 @@
           "source_description": "",
           "posted_at": "2026-11-14T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:43.339753+00:00",
-          "last_seen_at": "2026-11-18T11:50:43.339754+00:00",
+          "first_seen_at": "2026-11-18T20:37:46.669949+00:00",
+          "last_seen_at": "2026-11-18T20:37:46.669950+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -6034,13 +5835,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:88573ab0282308c3",
+          "query_id": "jobspy:e658e60cbe1030fc",
           "search_track": "pakistan_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-18T01:02:47.116527+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -6125,8 +5926,8 @@
           "source_description": "",
           "posted_at": "2026-11-14T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:16.707687+00:00",
-          "last_seen_at": "2026-11-18T11:50:16.707689+00:00",
+          "first_seen_at": "2026-11-18T20:38:25.109016+00:00",
+          "last_seen_at": "2026-11-18T20:38:25.109017+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -6142,7 +5943,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-18T01:02:47.116527+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -6278,8 +6079,8 @@
           "source_description": "",
           "posted_at": "2026-11-17T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:53:13.613668+00:00",
-          "last_seen_at": "2026-11-18T11:53:13.613670+00:00",
+          "first_seen_at": "2026-11-18T20:39:42.497176+00:00",
+          "last_seen_at": "2026-11-18T20:39:42.497177+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -6289,13 +6090,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:9ced97a97dc8a112",
+          "query_id": "jobspy:8d3c84c3ef0f70f9",
           "search_track": "global_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-18T01:02:47.116527+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -6329,8 +6130,8 @@
           "source_description": "",
           "posted_at": "2026-11-14T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:51:19.110608+00:00",
-          "last_seen_at": "2026-11-18T11:51:19.110610+00:00",
+          "first_seen_at": "2026-11-18T20:39:01.027661+00:00",
+          "last_seen_at": "2026-11-18T20:39:01.027662+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -6346,7 +6147,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-18T01:02:47.116527+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -6380,8 +6181,8 @@
           "source_description": "",
           "posted_at": "2026-11-17T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:50.146317+00:00",
-          "last_seen_at": "2026-11-18T11:52:50.146319+00:00",
+          "first_seen_at": "2026-11-18T20:38:12.057173+00:00",
+          "last_seen_at": "2026-11-18T20:38:12.057174+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -6391,13 +6192,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:456ba2f89bffd6b7",
+          "query_id": "jobspy:f600aeee834183b4",
           "search_track": "global_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-18T01:02:47.116527+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -6431,8 +6232,8 @@
           "source_description": "",
           "posted_at": "2026-11-15T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T01:02:04.634375+00:00",
-          "last_seen_at": "2026-11-18T01:02:04.634376+00:00",
+          "first_seen_at": "2026-11-18T20:38:12.057310+00:00",
+          "last_seen_at": "2026-11-18T20:38:12.057311+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -6448,7 +6249,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-18T01:02:47.116527+00:00",
-        "updated_at": "2026-11-18T01:02:47.116527+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -6482,8 +6283,8 @@
           "source_description": "",
           "posted_at": "2026-11-17T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:39.418117+00:00",
-          "last_seen_at": "2026-11-18T11:52:39.418122+00:00",
+          "first_seen_at": "2026-11-18T20:39:42.497018+00:00",
+          "last_seen_at": "2026-11-18T20:39:42.497019+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -6499,7 +6300,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-18T01:02:47.116527+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -6533,8 +6334,8 @@
           "source_description": "",
           "posted_at": "2026-11-17T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:16.707018+00:00",
-          "last_seen_at": "2026-11-18T11:50:16.707020+00:00",
+          "first_seen_at": "2026-11-18T20:38:25.108758+00:00",
+          "last_seen_at": "2026-11-18T20:38:25.108760+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -6550,7 +6351,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-18T01:02:47.116527+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -6584,8 +6385,8 @@
           "source_description": "",
           "posted_at": "2026-11-17T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:39.418414+00:00",
-          "last_seen_at": "2026-11-18T11:52:39.418416+00:00",
+          "first_seen_at": "2026-11-18T20:39:42.497146+00:00",
+          "last_seen_at": "2026-11-18T20:39:42.497147+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -6601,7 +6402,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-18T01:02:47.116527+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -6635,8 +6436,8 @@
           "source_description": "",
           "posted_at": "2026-11-14T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:16.707790+00:00",
-          "last_seen_at": "2026-11-18T11:50:16.707792+00:00",
+          "first_seen_at": "2026-11-18T20:38:25.109073+00:00",
+          "last_seen_at": "2026-11-18T20:38:25.109074+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -6652,7 +6453,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-18T01:02:47.116527+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -6686,8 +6487,8 @@
           "source_description": "",
           "posted_at": "2026-11-17T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:50.146449+00:00",
-          "last_seen_at": "2026-11-18T11:52:50.146451+00:00",
+          "first_seen_at": "2026-11-18T20:38:12.057228+00:00",
+          "last_seen_at": "2026-11-18T20:38:12.057228+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -6697,13 +6498,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:456ba2f89bffd6b7",
+          "query_id": "jobspy:f600aeee834183b4",
           "search_track": "global_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-18T01:02:47.116527+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -6788,8 +6589,8 @@
           "source_description": "",
           "posted_at": "2026-11-17T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:50.146382+00:00",
-          "last_seen_at": "2026-11-18T11:52:50.146384+00:00",
+          "first_seen_at": "2026-11-18T20:38:12.057143+00:00",
+          "last_seen_at": "2026-11-18T20:38:12.057144+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -6799,13 +6600,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:456ba2f89bffd6b7",
+          "query_id": "jobspy:f600aeee834183b4",
           "search_track": "global_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-18T01:02:47.116527+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -6839,8 +6640,8 @@
           "source_description": "",
           "posted_at": "2026-11-17T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:16.707264+00:00",
-          "last_seen_at": "2026-11-18T11:50:16.707266+00:00",
+          "first_seen_at": "2026-11-18T20:38:12.057200+00:00",
+          "last_seen_at": "2026-11-18T20:38:12.057201+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -6850,13 +6651,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:1e542372a7182cd4",
+          "query_id": "jobspy:f600aeee834183b4",
           "search_track": "global_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-18T01:02:47.116527+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -6941,8 +6742,8 @@
           "source_description": "",
           "posted_at": "2026-11-14T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:50.146581+00:00",
-          "last_seen_at": "2026-11-18T11:52:50.146583+00:00",
+          "first_seen_at": "2026-11-18T20:38:12.057334+00:00",
+          "last_seen_at": "2026-11-18T20:38:12.057335+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -6952,13 +6753,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:456ba2f89bffd6b7",
+          "query_id": "jobspy:f600aeee834183b4",
           "search_track": "global_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-18T01:02:47.116527+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -6992,8 +6793,8 @@
           "source_description": "",
           "posted_at": "2026-11-12T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:39.419274+00:00",
-          "last_seen_at": "2026-11-18T11:52:39.419276+00:00",
+          "first_seen_at": "2026-11-18T20:39:42.497552+00:00",
+          "last_seen_at": "2026-11-18T20:39:42.497552+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -7009,7 +6810,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-18T11:53:15.636249+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -7145,8 +6946,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:49:55.135661+00:00",
-          "last_seen_at": "2026-11-18T11:49:55.135663+00:00",
+          "first_seen_at": "2026-11-18T20:37:08.324555+00:00",
+          "last_seen_at": "2026-11-18T20:37:08.324556+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -7162,7 +6963,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-18T11:53:15.636249+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -7247,8 +7048,8 @@
           "source_description": "",
           "posted_at": "2026-11-17T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:29.553969+00:00",
-          "last_seen_at": "2026-11-18T11:50:29.553972+00:00",
+          "first_seen_at": "2026-11-18T20:38:37.097560+00:00",
+          "last_seen_at": "2026-11-18T20:38:37.097561+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -7264,7 +7065,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-18T11:53:15.636249+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -7298,8 +7099,8 @@
           "source_description": "",
           "posted_at": "2026-11-12T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:51:19.111001+00:00",
-          "last_seen_at": "2026-11-18T11:51:19.111003+00:00",
+          "first_seen_at": "2026-11-18T20:39:01.027833+00:00",
+          "last_seen_at": "2026-11-18T20:39:01.027833+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -7315,7 +7116,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-18T11:53:15.636249+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -7349,8 +7150,8 @@
           "source_description": "",
           "posted_at": "2026-11-16T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:51:30.117697+00:00",
-          "last_seen_at": "2026-11-18T11:51:30.117698+00:00",
+          "first_seen_at": "2026-11-18T20:38:00.979368+00:00",
+          "last_seen_at": "2026-11-18T20:38:00.979388+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -7360,13 +7161,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:7d42061eb22bd9e4",
+          "query_id": "jobspy:38dac69116d3c76e",
           "search_track": "pakistan_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-18T11:53:15.636249+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -7400,8 +7201,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:51:30.118251+00:00",
-          "last_seen_at": "2026-11-18T11:51:30.118253+00:00",
+          "first_seen_at": "2026-11-18T20:38:00.979585+00:00",
+          "last_seen_at": "2026-11-18T20:38:00.979586+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -7411,13 +7212,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:7d42061eb22bd9e4",
+          "query_id": "jobspy:38dac69116d3c76e",
           "search_track": "pakistan_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-18T11:53:15.636249+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -7502,8 +7303,8 @@
           "source_description": "",
           "posted_at": "2026-11-15T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:39.418678+00:00",
-          "last_seen_at": "2026-11-18T11:52:39.418680+00:00",
+          "first_seen_at": "2026-11-18T20:39:42.497300+00:00",
+          "last_seen_at": "2026-11-18T20:39:42.497301+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -7519,7 +7320,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-18T11:53:15.636249+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -7553,8 +7354,8 @@
           "source_description": "",
           "posted_at": "2026-11-12T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:50.147293+00:00",
-          "last_seen_at": "2026-11-18T11:52:50.147295+00:00",
+          "first_seen_at": "2026-11-18T20:38:12.057650+00:00",
+          "last_seen_at": "2026-11-18T20:38:12.057650+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -7564,13 +7365,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:456ba2f89bffd6b7",
+          "query_id": "jobspy:f600aeee834183b4",
           "search_track": "global_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-18T11:53:15.636249+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -7604,8 +7405,8 @@
           "source_description": "",
           "posted_at": "2026-11-15T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:50:43.339690+00:00",
-          "last_seen_at": "2026-11-18T11:50:43.339692+00:00",
+          "first_seen_at": "2026-11-18T20:37:22.171991+00:00",
+          "last_seen_at": "2026-11-18T20:37:22.171992+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -7615,13 +7416,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:88573ab0282308c3",
+          "query_id": "jobspy:41e87a037c362f54",
           "search_track": "pakistan_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-18T11:53:15.636249+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -7655,8 +7456,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:51:05.169242+00:00",
-          "last_seen_at": "2026-11-18T11:51:05.169244+00:00",
+          "first_seen_at": "2026-11-18T20:37:14.069221+00:00",
+          "last_seen_at": "2026-11-18T20:37:14.069222+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -7666,13 +7467,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:6f8f31f9e8e59893",
+          "query_id": "jobspy:f0010df233070912",
           "search_track": "karachi_local",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-18T11:53:15.636249+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -7706,8 +7507,8 @@
           "source_description": "",
           "posted_at": "2026-11-18T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:51:19.109876+00:00",
-          "last_seen_at": "2026-11-18T11:51:19.109878+00:00",
+          "first_seen_at": "2026-11-18T20:39:01.027070+00:00",
+          "last_seen_at": "2026-11-18T20:39:01.027088+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -7723,7 +7524,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-18T11:53:15.636249+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -7757,8 +7558,8 @@
           "source_description": "",
           "posted_at": "2026-11-17T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:50.146070+00:00",
-          "last_seen_at": "2026-11-18T11:52:50.146072+00:00",
+          "first_seen_at": "2026-11-18T20:39:57.143757+00:00",
+          "last_seen_at": "2026-11-18T20:39:57.143758+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -7774,7 +7575,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-18T11:53:15.636249+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -7808,8 +7609,8 @@
           "source_description": "",
           "posted_at": "2026-11-13T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:51:05.169312+00:00",
-          "last_seen_at": "2026-11-18T11:51:05.169314+00:00",
+          "first_seen_at": "2026-11-18T20:37:14.069157+00:00",
+          "last_seen_at": "2026-11-18T20:37:14.069159+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -7819,13 +7620,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:6f8f31f9e8e59893",
+          "query_id": "jobspy:f0010df233070912",
           "search_track": "karachi_local",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-18T11:53:15.636249+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -7859,8 +7660,8 @@
           "source_description": "",
           "posted_at": "2026-11-18T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:51:30.116999+00:00",
-          "last_seen_at": "2026-11-18T11:51:30.117013+00:00",
+          "first_seen_at": "2026-11-18T20:38:00.978892+00:00",
+          "last_seen_at": "2026-11-18T20:38:00.978911+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -7870,13 +7671,13 @@
           "salary_interval": "",
           "salary_text": "",
           "salary_source": "unknown",
-          "query_id": "jobspy:7d42061eb22bd9e4",
+          "query_id": "jobspy:38dac69116d3c76e",
           "search_track": "pakistan_remote",
           "evidence_warnings": [],
           "decision": {}
         },
         "queued_at": "2026-11-18T11:53:15.636249+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -7910,8 +7711,8 @@
           "source_description": "",
           "posted_at": "2026-11-12T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:50.147353+00:00",
-          "last_seen_at": "2026-11-18T11:52:50.147355+00:00",
+          "first_seen_at": "2026-11-18T20:39:57.144288+00:00",
+          "last_seen_at": "2026-11-18T20:39:57.144289+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -7927,7 +7728,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-18T11:53:15.636249+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -8216,8 +8017,8 @@
           "source_description": "",
           "posted_at": "2026-11-17T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:51:57.764617+00:00",
-          "last_seen_at": "2026-11-18T11:51:57.764619+00:00",
+          "first_seen_at": "2026-11-18T20:39:19.712223+00:00",
+          "last_seen_at": "2026-11-18T20:39:19.712223+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -8233,7 +8034,7 @@
           "decision": {}
         },
         "queued_at": "2026-11-18T11:53:15.636249+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       },
@@ -8369,8 +8170,620 @@
           "source_description": "",
           "posted_at": "2026-11-18T00:00:00+00:00",
           "expires_at": "",
-          "first_seen_at": "2026-11-18T11:52:50.145998+00:00",
-          "last_seen_at": "2026-11-18T11:52:50.146000+00:00",
+          "first_seen_at": "2026-11-18T20:38:12.057084+00:00",
+          "last_seen_at": "2026-11-18T20:38:12.057085+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:f600aeee834183b4",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T11:53:15.636249+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:046bbd877ca0d2c6897bb0e3": {
+        "job": {
+          "title": "Full-Stack Engineer (Backend Leaning)",
+          "company": "ElevenLabs",
+          "location": "New York, NY, USA",
+          "url": "https://www.linkedin.com/jobs/view/4474353940",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-14T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:046bbd877ca0d2c6897bb0e3",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4474353940",
+          "application_url": "",
+          "aliases": [
+            "ca5f532cfb3f2add"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4474353940"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-14T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:38:12.057362+00:00",
+          "last_seen_at": "2026-11-18T20:38:12.057363+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:f600aeee834183b4",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:04e89eb7bc8449a722be8615": {
+        "job": {
+          "title": "Full Stack Developer",
+          "company": "ibex",
+          "location": "Karāchi, Sindh, Pakistan",
+          "url": "https://www.linkedin.com/jobs/view/4318354760",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-16T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:04e89eb7bc8449a722be8615",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4318354760",
+          "application_url": "",
+          "aliases": [
+            "f642b36b1349dc73"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4318354760"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-16T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:37:08.324441+00:00",
+          "last_seen_at": "2026-11-18T20:37:08.324442+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:ec171cf453203d61",
+          "search_track": "karachi_local",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:0ff18e7dd307c28d744d6878": {
+        "job": {
+          "title": "Back End Developer-Remote",
+          "company": "The E.W. Scripps Company",
+          "location": "Lansing, MI, USA",
+          "url": "https://www.linkedin.com/jobs/view/4492060336",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-18T00:00:00+00:00",
+          "is_remote": true,
+          "description": "",
+          "job_id": "linkedin:0ff18e7dd307c28d744d6878",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4492060336",
+          "application_url": "",
+          "aliases": [
+            "dc10e510b36a2348"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4492060336"
+          ],
+          "work_mode": "remote",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-18T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:38:37.097357+00:00",
+          "last_seen_at": "2026-11-18T20:38:37.097359+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:f49db42f7609e800",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:2ee4a9e37471974ac2ddefaa": {
+        "job": {
+          "title": "Application Developer",
+          "company": "Craftbridge Digital",
+          "location": "Austin, TX, USA",
+          "url": "https://www.linkedin.com/jobs/view/4491865856",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-18T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:2ee4a9e37471974ac2ddefaa",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4491865856",
+          "application_url": "",
+          "aliases": [
+            "7ccdf617b629b7c8"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4491865856"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-18T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:39:42.496955+00:00",
+          "last_seen_at": "2026-11-18T20:39:42.496955+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:8d3c84c3ef0f70f9",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:3028dd91a86515391bbb24d0": {
+        "job": {
+          "title": "Full Stack Engineer",
+          "company": "Torentify",
+          "location": "USA",
+          "url": "https://www.linkedin.com/jobs/view/4492069186",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-18T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:3028dd91a86515391bbb24d0",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4492069186",
+          "application_url": "",
+          "aliases": [
+            "ada43aeda6c04514"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4492069186"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-18T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:38:12.056824+00:00",
+          "last_seen_at": "2026-11-18T20:38:12.056841+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:f600aeee834183b4",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:3703f4b2b23a5295e659fadb": {
+        "job": {
+          "title": "Backend python AI Engineer with Agentic Automation (healthcare)",
+          "company": "E-IT",
+          "location": "USA",
+          "url": "https://www.linkedin.com/jobs/view/4491852748",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-18T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:3703f4b2b23a5295e659fadb",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4491852748",
+          "application_url": "",
+          "aliases": [
+            "2a6e91a317e17e77"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4491852748"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-18T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:38:37.097525+00:00",
+          "last_seen_at": "2026-11-18T20:38:37.097526+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:f49db42f7609e800",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:3d5f76657e4105e5f6886f78": {
+        "job": {
+          "title": "Backend Engineer, Data & Integrations",
+          "company": "Solen Software Group",
+          "location": "Karachi Division, Sindh, Pakistan",
+          "url": "https://www.linkedin.com/jobs/view/4490435346",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-17T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:3d5f76657e4105e5f6886f78",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4490435346",
+          "application_url": "",
+          "aliases": [
+            "46e468f5ea15dea3"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4490435346"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-17T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:37:08.324153+00:00",
+          "last_seen_at": "2026-11-18T20:37:08.324170+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:ec171cf453203d61",
+          "search_track": "karachi_local",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:409ed93d4843577c18a8ad3e": {
+        "job": {
+          "title": "Fullstack Software Engineer (Remote)",
+          "company": "Joblet-AI",
+          "location": "USA",
+          "url": "https://www.linkedin.com/jobs/view/4491861734",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-18T00:00:00+00:00",
+          "is_remote": true,
+          "description": "",
+          "job_id": "linkedin:409ed93d4843577c18a8ad3e",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4491861734",
+          "application_url": "",
+          "aliases": [
+            "223cc27f45d028c7"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4491861734"
+          ],
+          "work_mode": "remote",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-18T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:38:12.056971+00:00",
+          "last_seen_at": "2026-11-18T20:38:12.056972+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:f600aeee834183b4",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:4bc66995bc33b7ea5b54c7db": {
+        "job": {
+          "title": "React Developer",
+          "company": "Georgia IT, Inc.",
+          "location": "USA",
+          "url": "https://www.linkedin.com/jobs/view/4490486441",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-17T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:4bc66995bc33b7ea5b54c7db",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4490486441",
+          "application_url": "",
+          "aliases": [
+            "951a9dd10755a29a"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4490486441"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-17T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:39:01.027334+00:00",
+          "last_seen_at": "2026-11-18T20:39:01.027335+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:9e2c0f814daaa3ea",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:62c27ae1708803c1e68c2e08": {
+        "job": {
+          "title": "Software Engineer II",
+          "company": "Tempus AI",
+          "location": "USA",
+          "url": "https://www.linkedin.com/jobs/view/4483688212",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-18T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:62c27ae1708803c1e68c2e08",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4483688212",
+          "application_url": "",
+          "aliases": [
+            "ecafb2b2f98166ff"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4483688212"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-18T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:38:37.097423+00:00",
+          "last_seen_at": "2026-11-18T20:38:37.097425+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:f49db42f7609e800",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:64697a50269f63f2d09d4689": {
+        "job": {
+          "title": "Java Software Engineer",
+          "company": "BeaconFire Inc.",
+          "location": "New Jersey, USA",
+          "url": "https://www.linkedin.com/jobs/view/4489380906",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-15T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:64697a50269f63f2d09d4689",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4489380906",
+          "application_url": "",
+          "aliases": [
+            "e678f90b97f24be2"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4489380906"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-15T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:38:12.057282+00:00",
+          "last_seen_at": "2026-11-18T20:38:12.057283+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:f600aeee834183b4",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:68a3d52fce94934b5dda59d0": {
+        "job": {
+          "title": "Fullstack Software Engineer (Remote)",
+          "company": "Joblet-AI",
+          "location": "USA",
+          "url": "https://www.linkedin.com/jobs/view/4491862652",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-18T00:00:00+00:00",
+          "is_remote": true,
+          "description": "",
+          "job_id": "linkedin:68a3d52fce94934b5dda59d0",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4491862652",
+          "application_url": "",
+          "aliases": [
+            "9fefd37ba98ea540"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4491862652"
+          ],
+          "work_mode": "remote",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-18T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:39:57.143649+00:00",
+          "last_seen_at": "2026-11-18T20:39:57.143650+00:00",
           "date_source": "source",
           "active_status": "unknown",
           "candidate_locations": "",
@@ -8385,17 +8798,731 @@
           "evidence_warnings": [],
           "decision": {}
         },
-        "queued_at": "2026-11-18T11:53:15.636249+00:00",
-        "updated_at": "2026-11-18T11:53:15.636249+00:00",
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:697a6b104fa625ab10f6a892": {
+        "job": {
+          "title": "Back End Developer-Remote",
+          "company": "The E.W. Scripps Company",
+          "location": "Frankfort, KY, USA",
+          "url": "https://www.linkedin.com/jobs/view/4492051638",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-18T00:00:00+00:00",
+          "is_remote": true,
+          "description": "",
+          "job_id": "linkedin:697a6b104fa625ab10f6a892",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4492051638",
+          "application_url": "",
+          "aliases": [
+            "a64bbd583b2b2c82"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4492051638"
+          ],
+          "work_mode": "remote",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-18T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:38:37.097206+00:00",
+          "last_seen_at": "2026-11-18T20:38:37.097224+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:f49db42f7609e800",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:792335cf91115fc6d24f6631": {
+        "job": {
+          "title": "Back End Developer-Remote",
+          "company": "The E.W. Scripps Company",
+          "location": "Tallahassee, FL, USA",
+          "url": "https://www.linkedin.com/jobs/view/4492044941",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-18T00:00:00+00:00",
+          "is_remote": true,
+          "description": "",
+          "job_id": "linkedin:792335cf91115fc6d24f6631",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4492044941",
+          "application_url": "",
+          "aliases": [
+            "6973bbe337dca7ba"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4492044941"
+          ],
+          "work_mode": "remote",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-18T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:40:07.125327+00:00",
+          "last_seen_at": "2026-11-18T20:40:07.125327+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:932247cea50b10a7",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:8a86fccec6132f7f0bbd0210": {
+        "job": {
+          "title": "Back End Developer",
+          "company": "Underdog: Verified engineers. Interview-ready. Searching confidentially. And companies apply to you",
+          "location": "USA",
+          "url": "https://www.linkedin.com/jobs/view/4492024905",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-18T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:8a86fccec6132f7f0bbd0210",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4492024905",
+          "application_url": "",
+          "aliases": [
+            "65ff8c5c979c5b15"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4492024905"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-18T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:39:42.496727+00:00",
+          "last_seen_at": "2026-11-18T20:39:42.496744+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:8d3c84c3ef0f70f9",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:9ec91cfff1ab84334200917f": {
+        "job": {
+          "title": "Frontend Engineer, Ads",
+          "company": "Reddit, Inc.",
+          "location": "San Francisco, CA, USA",
+          "url": "https://www.linkedin.com/jobs/view/4466319321",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-15T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:9ec91cfff1ab84334200917f",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4466319321",
+          "application_url": "",
+          "aliases": [
+            "63a809ccb3c05cc7"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4466319321"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-15T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:38:25.108929+00:00",
+          "last_seen_at": "2026-11-18T20:38:25.108930+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:1e542372a7182cd4",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:d2344daec37d40c6654b92f5": {
+        "job": {
+          "title": "Frontend (ReactJS) Palantir Foundry’s",
+          "company": "Software Technology Inc.",
+          "location": "New Jersey, USA",
+          "url": "https://www.linkedin.com/jobs/view/4490350542",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-12T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:d2344daec37d40c6654b92f5",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4490350542",
+          "application_url": "",
+          "aliases": [
+            "9b8c7b3d5ff75d4c"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4490350542"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-12T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:39:01.027862+00:00",
+          "last_seen_at": "2026-11-18T20:39:01.027863+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:9e2c0f814daaa3ea",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:e1060969683b936cb6821e88": {
+        "job": {
+          "title": "Staff Backend Engineer, Hierarchy",
+          "company": "ClickUp",
+          "location": "USA",
+          "url": "https://www.linkedin.com/jobs/view/4326120336",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-18T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:e1060969683b936cb6821e88",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4326120336",
+          "application_url": "",
+          "aliases": [
+            "7da9f7617078e179"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4326120336"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-18T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:39:42.496875+00:00",
+          "last_seen_at": "2026-11-18T20:39:42.496877+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:8d3c84c3ef0f70f9",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:e18f8a820b1be8ca578ee744": {
+        "job": {
+          "title": "Forward Deployed Software Engineer",
+          "company": "Air",
+          "location": "Pittsburgh, PA, USA",
+          "url": "https://www.linkedin.com/jobs/view/4447985754",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-18T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:e18f8a820b1be8ca578ee744",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4447985754",
+          "application_url": "",
+          "aliases": [
+            "4df2bd4d9d929bdd"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4447985754"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-18T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:38:12.057049+00:00",
+          "last_seen_at": "2026-11-18T20:38:12.057050+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:f600aeee834183b4",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:e2cab1069c731fd7a3ebb854": {
+        "job": {
+          "title": "Back End Developer-Remote",
+          "company": "The E.W. Scripps Company",
+          "location": "Springfield, IL, USA",
+          "url": "https://www.linkedin.com/jobs/view/4492053561",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-18T00:00:00+00:00",
+          "is_remote": true,
+          "description": "",
+          "job_id": "linkedin:e2cab1069c731fd7a3ebb854",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4492053561",
+          "application_url": "",
+          "aliases": [
+            "d4395f762ecd871b"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4492053561"
+          ],
+          "work_mode": "remote",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-18T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:40:07.125293+00:00",
+          "last_seen_at": "2026-11-18T20:40:07.125294+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:932247cea50b10a7",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:e49a0c058464a197fed2cd6e": {
+        "job": {
+          "title": "Staff Frontend Engineer",
+          "company": "NewtonX",
+          "location": "USA",
+          "url": "https://www.linkedin.com/jobs/view/4464129206",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-12T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:e49a0c058464a197fed2cd6e",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4464129206",
+          "application_url": "",
+          "aliases": [
+            "eca8a867f77e5349"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4464129206"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-12T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:38:25.109127+00:00",
+          "last_seen_at": "2026-11-18T20:38:25.109128+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:1e542372a7182cd4",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:e5a4fa2b9bce65a0df26354e": {
+        "job": {
+          "title": "Embedded Software Engineer I",
+          "company": "Tandem Diabetes Care",
+          "location": "San Diego, CA, USA",
+          "url": "https://www.linkedin.com/jobs/view/4491478776",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-18T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:e5a4fa2b9bce65a0df26354e",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4491478776",
+          "application_url": "",
+          "aliases": [
+            "a8e6d18a3dc5d0a0"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4491478776"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-18T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:39:57.143723+00:00",
+          "last_seen_at": "2026-11-18T20:39:57.143724+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:456ba2f89bffd6b7",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:e6340a9686f1fff321507418": {
+        "job": {
+          "title": ".Net Developer",
+          "company": "Netrolynx AI",
+          "location": "USA",
+          "url": "https://www.linkedin.com/jobs/view/4491311890",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-18T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:e6340a9686f1fff321507418",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4491311890",
+          "application_url": "",
+          "aliases": [
+            "6b61b72687c048d8"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4491311890"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-18T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:38:12.057017+00:00",
+          "last_seen_at": "2026-11-18T20:38:12.057018+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:f600aeee834183b4",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:e932bb11cc1d2a6a04fba736": {
+        "job": {
+          "title": "Front End Developer",
+          "company": "Accenture Federal Services",
+          "location": "Columbia, MD, USA",
+          "url": "https://www.linkedin.com/jobs/view/4490530618",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-12T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:e932bb11cc1d2a6a04fba736",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4490530618",
+          "application_url": "",
+          "aliases": [
+            "5839848613e5a3c9"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4490530618"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-12T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:39:01.027991+00:00",
+          "last_seen_at": "2026-11-18T20:39:01.027992+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:9e2c0f814daaa3ea",
+          "search_track": "global_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:f98a8ae080bb4286c8073ca5": {
+        "job": {
+          "title": "Kotlin Engineer",
+          "company": "SME Careers",
+          "location": "Pakistan",
+          "url": "https://www.linkedin.com/jobs/view/4473052885",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-17T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:f98a8ae080bb4286c8073ca5",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4473052885",
+          "application_url": "",
+          "aliases": [
+            "db7a1b4df698b5d3"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4473052885"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-17T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:38:00.979342+00:00",
+          "last_seen_at": "2026-11-18T20:38:00.979343+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:38dac69116d3c76e",
+          "search_track": "pakistan_remote",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
+        "status": "pending",
+        "attempts": 0
+      },
+      "linkedin:fdbd70e5794cc69e7a33473a": {
+        "job": {
+          "title": "Software Engineer.MGN Pak - Digital Corporate WDS.Corporate & Investment Banking Group-PAKCOE",
+          "company": "Mashreq",
+          "location": "Karachi Division, Sindh, Pakistan",
+          "url": "https://www.linkedin.com/jobs/view/4484040948",
+          "platform": "Linkedin",
+          "date_posted": "2026-11-17T00:00:00+00:00",
+          "is_remote": null,
+          "description": "",
+          "job_id": "linkedin:fdbd70e5794cc69e7a33473a",
+          "recruiter_email": "",
+          "is_priority_location": false,
+          "source_id": "li-4484040948",
+          "application_url": "",
+          "aliases": [
+            "46cbc6f031047f9c"
+          ],
+          "source_urls": [
+            "https://www.linkedin.com/jobs/view/4484040948"
+          ],
+          "work_mode": "unknown",
+          "description_status": "missing",
+          "job_level": "",
+          "job_type": "",
+          "kind": "vacancy",
+          "source_title": "",
+          "source_description": "",
+          "posted_at": "2026-11-17T00:00:00+00:00",
+          "expires_at": "",
+          "first_seen_at": "2026-11-18T20:37:08.324368+00:00",
+          "last_seen_at": "2026-11-18T20:37:08.324387+00:00",
+          "date_source": "source",
+          "active_status": "unknown",
+          "candidate_locations": "",
+          "salary_min": null,
+          "salary_max": null,
+          "salary_currency": "",
+          "salary_interval": "",
+          "salary_text": "",
+          "salary_source": "unknown",
+          "query_id": "jobspy:ec171cf453203d61",
+          "search_track": "karachi_local",
+          "evidence_warnings": [],
+          "decision": {}
+        },
+        "queued_at": "2026-11-18T20:40:08.746228+00:00",
+        "updated_at": "2026-11-18T20:40:08.746228+00:00",
         "status": "pending",
         "attempts": 0
       }
     },
-    "updated_at": "2026-11-18T11:53:15.636249+00:00"
+    "updated_at": "2026-11-18T20:40:08.746228+00:00"
   },
   "rotation:posts": {
-    "offset": 2,
-    "updated_at": "2026-11-18T11:55:02.058531+00:00"
+    "offset": 3,
+    "updated_at": "2026-11-18T20:40:15.887516+00:00"
   },
   "rozee:363d786037541af2cc10": {
     "last_success": "2026-11-16T19:42:36.197495+00:00",
